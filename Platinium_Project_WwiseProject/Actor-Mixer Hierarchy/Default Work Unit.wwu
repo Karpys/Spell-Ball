@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Cartoon1" ID="{1E7EA047-CA34-454E-B9FF-69C9F99F1113}" ShortID="993382774">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cartoon1" ID="{4A746B16-801E-4B6C-8375-BBC8A10562C3}">
+							<Language>SFX</Language>
+							<AudioFile>Cartoon1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="187795624"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Cartoon1" ID="{4A746B16-801E-4B6C-8375-BBC8A10562C3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

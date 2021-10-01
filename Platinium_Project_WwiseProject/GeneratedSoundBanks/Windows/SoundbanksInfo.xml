@@ -16,10 +16,20 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2323962443">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3187507146" Name="Play_Test" ObjectPath="\Events\Default Work Unit\Play_SFX\Play_Test" DurationType="OneShot" DurationMin="1.176000" DurationMax="1.176000">
+					<IncludedMemoryFiles>
+						<File Id="187795624" Language="SFX">
+							<ShortName>Cartoon1.wav</ShortName>
+							<Path>SFX\Cartoon1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
