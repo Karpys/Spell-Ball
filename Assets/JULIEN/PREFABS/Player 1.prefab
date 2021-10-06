@@ -142,8 +142,8 @@ GameObject:
   - component: {fileID: 6171701169539152471}
   - component: {fileID: 6171701169539152465}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
+  m_Name: Player 1
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6171701169539152463}
-  m_LocalRotation: {x: 0, y: 0.5345475, z: 0, w: 0.8451385}
+  m_LocalRotation: {x: 0, y: -0.94375974, z: 0, w: 0.33063206}
   m_LocalPosition: {x: -2, y: 1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -192,7 +192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa582e1c2d424494eba35d7847b28087, type: 2}
+  - {fileID: 2100000, guid: 529ba764c6abadf4c984382f7c4dc272, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 003d1e0a6b9224243a5db45fe48a9ce4, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: b8dc51bc72cade34c8e8fbf8d433bf03, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
