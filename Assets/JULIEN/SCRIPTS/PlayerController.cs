@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
 
     private bool isHoldingBall = false;
+    private bool balleIsTake = false;
 
     void Start()
     {
@@ -88,7 +89,10 @@ public class PlayerController : MonoBehaviour
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
-        balleRB.AddForce(transform.forward * power, ForceMode.Impulse);
+
+        balleRB.AddForce(transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+        Balle.instance.combo++;
+        balleIsTake = true;
 
         isHoldingBall = false;
     }
@@ -129,6 +133,11 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             canGrabBall = false;
+            
+            if (!balleIsTake)
+                Balle.instance.combo = 0;
+
+            balleIsTake = false;
         }
     }
 }
