@@ -7,9 +7,9 @@ public class Balle : MonoBehaviour
     public int combo;
     public float comboSpeed;
 
-    public int comboSet;
-
     private Rigidbody rb;
+
+    public TrailRenderer trail;
 
     public static Balle instance = null;
     private void Awake()
@@ -28,7 +28,35 @@ public class Balle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TrailCombo();
         //combo = comboSet;
+    }
+
+    public void TrailCombo()
+    {
+        switch(combo)
+        {
+            case 0:
+            case 1:
+                trail.startColor = Color.white;
+                trail.endColor = Color.white;
+                break;
+
+            case 2:
+                trail.startColor = Color.yellow;
+                trail.endColor = Color.yellow;
+                break;
+
+            case 3:
+                trail.startColor = Color.HSVToRGB(0.1f, 1f, 1f);
+                trail.endColor = Color.HSVToRGB(0.1f, 1f, 1f);
+                break;
+
+            case 4:
+                trail.startColor = Color.red;
+                trail.endColor = Color.red;
+                break;
+        }
     }
 
     /*public void OnTriggerEnter(Collider other)
@@ -38,5 +66,7 @@ public class Balle : MonoBehaviour
             combo = 0;
         }
     }*/
+
+
 
 }
