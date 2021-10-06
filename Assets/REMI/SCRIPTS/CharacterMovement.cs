@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float _speed;
+    public CharacterValues Stats;
+    public RollManager Roll_Manager;
     public CharacterController _controller;
     public GameObject CharacterVisual;
     private Vector2 MovementInput;
-    [SerializeField]
-    private float rotationspeed;
+    
 
     public void OnMove(InputAction.CallbackContext ctx) => MovementInput = ctx.ReadValue<Vector2>();
 
     public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());
+
+    public void OnRoll(InputAction.CallbackContext ctx) => TryRoll(ctx.ReadValueAsButton());
 
     void Start()
     {
@@ -25,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         Move();
+        RollController();
     }
 
     public void Move()
@@ -33,8 +34,50 @@ public class CharacterMovement : MonoBehaviour
         float Axey = MovementInput.y;
 
         Vector3 Axes = transform.right * Axex + transform.forward * Axey;
-        Vector3 Move = Axes * _speed * Time.deltaTime;
-        _controller.Move(Move);
+        Vector3 Move = Axes ;
+        
+
+        if(Stats.CanMove)
+        {
+            Stats.LastMove = Move;
+            Move = Move * Stats.Speed * Time.deltaTime;
+            _controller.Move(Move);   
+        }
+        else if(Roll_Manager.IsRolling)
+        {
+            Move = Stats.LastMove * Roll_Manager.RollSpeed * Time.deltaTime;
+            _controller.Move(Move);
+        }
+
+        
+    }
+
+    public void RollController()
+    {
+        if (Roll_Manager.RollCd >= 0)
+        {
+            Roll_Manager.RollCd -= Time.deltaTime;
+        }
+
+        if(Roll_Manager.RollDuration >= 0)
+        {
+            Roll_Manager.RollDuration -= Time.deltaTime;
+        }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
+        {
+            Roll_Manager.HasReset = true;
+            Stats.CanMove = true;
+        }
+    }
+
+    public void TryRoll(bool Roll)
+    {
+        if(Roll && Roll_Manager.CanRoll)
+        {
+            Roll_Manager.RollCd = Roll_Manager.RollCdSet;
+            Roll_Manager.RollDuration = Roll_Manager.RollDurationSet;
+            Stats.CanMove = false;
+            Roll_Manager.HasReset = false;
+        }
     }
 
     void RotatePlayer(Vector2 lookDirection)
@@ -43,6 +86,27 @@ public class CharacterMovement : MonoBehaviour
             return;
 
         CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
-            Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), rotationspeed);
+            Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
+    }
+
+    [System.Serializable]
+    public struct CharacterValues
+    {
+        public float Speed;
+        public float rotationspeed;
+        public bool CanMove;
+        public Vector3 LastMove;
+    }
+    [System.Serializable]
+    public struct RollManager
+    {
+        public bool IsRolling => RollDuration > 0;
+        public float RollCd;
+        public float RollCdSet;
+        public float RollDuration;
+        public float RollDurationSet;
+        public float RollSpeed;
+        public bool HasReset;
+        public bool CanRoll  => RollCd < 0;
     }
 }
