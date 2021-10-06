@@ -9,6 +9,7 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController _controller;
     public GameObject CharacterVisual;
     private Vector2 MovementInput;
+    public Vector2 MovementDir;
     
 
     public void OnMove(InputAction.CallbackContext ctx) => MovementInput = ctx.ReadValue<Vector2>();
@@ -26,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Move();
         RollController();
+        MovementDir = MovementInput;
     }
 
     public void Move()
@@ -41,7 +43,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Stats.LastMove = Move;
             Move = Move * Stats.Speed * Time.deltaTime;
-            _controller.Move(Move);   
+            _controller.Move(Move);
         }
         else if(Roll_Manager.IsRolling)
         {
