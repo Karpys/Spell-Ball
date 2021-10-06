@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 8321706773528243573}
   - component: {fileID: 8321706773528243572}
   - component: {fileID: 8321706773528243571}
+  - component: {fileID: 8827649957874818234}
   m_Layer: 6
   m_Name: Balle
   m_TagString: Untagged
@@ -267,3 +268,26 @@ MonoBehaviour:
   combo: 0
   comboSpeed: 2
   trail: {fileID: 8321706772911627944}
+  ballColor: {fileID: 0}
+--- !u!114 &8827649957874818234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321706773528243570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b86f4effa64014daf9e21ed543e78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RB: {r: 1, g: 0, b: 1, a: 2}
+  RV: {r: 1, g: 1, b: 0, a: 2}
+  RO: {r: 2, g: 0.6, b: 0, a: 2}
+  BV: {r: 0, g: 1, b: 1, a: 2}
+  BO: {r: 1, g: 0.6, b: 1, a: 2}
+  VO: {r: 1, g: 1.6, b: 0, a: 2}
+  RBV: {r: 1, g: 1, b: 1, a: 3}
+  RBO: {r: 2, g: 0.6, b: 1, a: 3}
+  OBV: {r: 1, g: 1.6, b: 1, a: 3}
+  RVO: {r: 2, g: 1.6, b: 0, a: 3}
