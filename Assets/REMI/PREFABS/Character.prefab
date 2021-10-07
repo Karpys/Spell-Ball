@@ -93,12 +93,13 @@ MonoBehaviour:
     RollCd: 0
     RollCdSet: 2
     RollDuration: 0
-    RollDurationSet: 0.2
+    RollDurationSet: 0.5
     RollSpeed: 30
     HasReset: 0
   _controller: {fileID: 9161171297372144952}
   CharacterVisual: {fileID: 8880468141465490594}
   MovementDir: {x: 0, y: 0}
+  Anim: {fileID: 3016966911618478461}
 --- !u!114 &9161171297372144954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8913709
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -249,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.45327467
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z

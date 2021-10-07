@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject CharacterVisual;
     private Vector2 MovementInput;
     public Vector2 MovementDir;
+    public Animator Anim;
     
 
     public void OnMove(InputAction.CallbackContext ctx) => MovementInput = ctx.ReadValue<Vector2>();
@@ -75,6 +76,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if(Roll && Roll_Manager.CanRoll)
         {
+            Anim.Play("Roll");
+            RotatePlayerMovement(MovementDir);
             Roll_Manager.RollCd = Roll_Manager.RollCdSet;
             Roll_Manager.RollDuration = Roll_Manager.RollDurationSet;
             Stats.CanMove = false;
@@ -82,13 +85,25 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    void RotatePlayer(Vector2 lookDirection)
+    public void RotatePlayerMovement(Vector2 MoveDirection)
     {
-        if (lookDirection == Vector2.zero)
+        if (Stats.LastMove == Vector3.zero)
             return;
 
-        CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
-            Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
+        CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation,
+            Quaternion.LookRotation(new Vector3(Stats.LastMove.x, 0, Stats.LastMove.z).normalized), Stats.rotationspeed);
+    }
+
+    void RotatePlayer(Vector2 lookDirection)
+    {
+        if(!Roll_Manager.IsRolling)
+        {
+            if (lookDirection == Vector2.zero)
+                return;
+
+            CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
+                Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
+        }
     }
 
     [System.Serializable]
