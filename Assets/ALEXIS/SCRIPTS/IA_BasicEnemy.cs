@@ -7,8 +7,9 @@ public class IA_BasicEnemy : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public List<GameObject> players;
-    public Transform playerMov1;
-    public Transform playerMov2;
+    Transform playerMov1;
+    Transform playerMov2;
+    public int lifeBEnemy = 1;
     int r;
     bool playerIsInRange;
 
@@ -25,6 +26,7 @@ public class IA_BasicEnemy : MonoBehaviour
     void Update()
     {
         CheckPlayerIsInRange();
+        CheckLifeEnemy();
     }
 
     public void CheckPlayerIsInRange()
@@ -40,8 +42,14 @@ public class IA_BasicEnemy : MonoBehaviour
                 enemy.SetDestination(playerMov1.position);
             }
         }
+    }
 
-
+    public void CheckLifeEnemy()
+    {
+        if (lifeBEnemy <= 0)
+        {
+            Destroy(gameObject);
+        }       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,4 +70,14 @@ public class IA_BasicEnemy : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Balle")
+        {
+            lifeBEnemy -= 1;
+            
+        }
+    }
 }
+

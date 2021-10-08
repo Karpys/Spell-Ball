@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Balle
   - Player1
   layers:
   - Default
