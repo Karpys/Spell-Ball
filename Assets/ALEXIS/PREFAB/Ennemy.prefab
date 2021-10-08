@@ -133,8 +133,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 371949442412338520}
-  playerMov: {fileID: 0}
-  walkRange: 50
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 65
+  players: []
+  lifeBEnemy: 2
