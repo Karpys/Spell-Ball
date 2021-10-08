@@ -34,7 +34,7 @@ public class Balle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckColorInfuse();
+        //CheckColorInfuse();
         TrailCombo();
         //combo = comboSet;
     }
@@ -88,6 +88,8 @@ public class Balle : MonoBehaviour
             ballColor.color = ColorInfuse.instance.RV;
         else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
             ballColor.color = ColorInfuse.instance.RO;
+        else
+            ballColor.color = Color.red;
 
     }
 
