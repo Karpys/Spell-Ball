@@ -11,8 +11,8 @@ public class Manager_NumbPlayers: MonoBehaviour
     int id = 0;
     [HideInInspector]
     public int number = 0;
-    GameObject player1;
-    GameObject player2;
+    public GameObject player1;
+    public GameObject player2;
     [HideInInspector]
     public bool unlockMove;
 
@@ -43,8 +43,8 @@ public class Manager_NumbPlayers: MonoBehaviour
 
     private void AttribuatePlayerList()
     {
-        player1 = listPlayers[0];
-        player2 = listPlayers[1];
+       /* player1 = listPlayers[0];
+        player2 = listPlayers[1];*/
 
         unlockMove = true;
     }

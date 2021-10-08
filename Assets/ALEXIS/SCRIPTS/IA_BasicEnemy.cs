@@ -7,8 +7,9 @@ public class IA_BasicEnemy : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public List<GameObject> players;
-    Transform playerMov1;
-    Transform playerMov2;
+    public Transform playerMov1;
+    public Transform playerMov2;
+    public Manager_NumbPlayers ManagePlayer;
     public int lifeBEnemy = 1;
     int r;
     bool playerIsInRange;
@@ -17,8 +18,12 @@ public class IA_BasicEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerMov1 = GameObject.FindWithTag("Player").transform;
-        playerMov2 = GameObject.FindWithTag("Player1").transform;
+        /*playerMov1 = GameObject.FindWithTag("Player").transform;
+        playerMov2 = GameObject.FindWithTag("Player1").transform;*/
+        ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+        playerMov1 = ManagePlayer.player1.transform;
+        playerMov2 = ManagePlayer.player2.transform;
+
         r = Random.Range(0, 5);
     }
 
@@ -75,8 +80,9 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Balle")
         {
-            lifeBEnemy -= 1;
             
+            lifeBEnemy -= collision.gameObject.GetComponent<Balle>().combo;
+
         }
     }
 }
