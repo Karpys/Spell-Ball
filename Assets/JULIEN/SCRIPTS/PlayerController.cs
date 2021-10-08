@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());
 
+    public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton());
+
     void Update()
     {
         Ray ray = new Ray(transform.localPosition, transform.localPosition + new Vector3(movementInput.x, 0, movementInput.y));
@@ -119,6 +121,33 @@ public class PlayerController : MonoBehaviour
         isHoldingBall = true;
     }
 
+    public void TryInfuse(bool buttonPressed)
+    {
+        if (!buttonPressed) return;
+        if (!isHoldingBall) return;
+
+        Transform balleT = grabPosition.Find("Balle");
+        print(balleT);
+        if (balleT == null) return;
+        balle = balleT.gameObject;
+
+        balle.transform.SetParent(null);
+
+        SphereCollider ballCollider = balle.GetComponent<SphereCollider>();
+        ballCollider.enabled = true;
+
+        Rigidbody balleRB = balle.GetComponent<Rigidbody>();
+        balleRB.isKinematic = false;
+        balleRB.useGravity = true;
+        balleRB.freezeRotation = false;
+
+        balleRB.AddForce(transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+        Balle.instance.combo++;
+        balleIsTake = true;
+        Balle.instance.InfuseColorRed();
+        isHoldingBall = false;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 6 && !isHoldingBall)
@@ -135,7 +164,14 @@ public class PlayerController : MonoBehaviour
             canGrabBall = false;
             
             if (!balleIsTake)
+            {
                 Balle.instance.combo = 0;
+                Rigidbody balleRB = balle.GetComponent<Rigidbody>();
+                Vector3 dir = balleRB.velocity.normalized;
+                balleRB.velocity = new Vector3(0,0,0);
+                balleRB.AddForce(dir * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+            }
+
 
             balleIsTake = false;
         }
