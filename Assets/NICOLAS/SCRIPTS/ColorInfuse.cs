@@ -9,12 +9,8 @@ public class ColorInfuse : MonoBehaviour
     public Color RO = Color.red + Color.HSVToRGB(0.1f, 1f, 1f);
     public Color BV = Color.blue + Color.green;
     public Color BO = Color.blue + Color.HSVToRGB(0.1f, 1f, 1f);
-    public Color VO = Color.green + Color.HSVToRGB(0.1f, 1f, 1f);
-    public Color RBV = Color.HSVToRGB(0, 0, 0.45f);
-    public Color RBO = Color.red + Color.blue + Color.HSVToRGB(0.1f, 1f, 1f);
-    public Color OBV = Color.blue + Color.green + Color.HSVToRGB(0.1f, 1f, 1f);
-    public Color RVO = Color.red + Color.green + Color.HSVToRGB(0.1f, 1f, 1f);
-    public Color ALL = Color.white;
+    public Color VO = Color.green + Color.HSVToRGB(0.15f, 1f, 1f);
+
 
     public static ColorInfuse instance;
 
