@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemyBasic: {fileID: 371949442412338524, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
-  n: 50
+  n: 2
 --- !u!4 &609098619
 Transform:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488728887}
   - component: {fileID: 1488728886}
-  - component: {fileID: 1488728888}
+  - component: {fileID: 1488728889}
   m_Layer: 0
   m_Name: Player Manager
   m_TagString: Untagged
@@ -1005,8 +1005,8 @@ MonoBehaviour:
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488728888}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+      - m_Target: {fileID: 1488728889}
+        m_TargetAssemblyTypeName: Manager_NumbPlayers, Assembly-CSharp
         m_MethodName: AddPlayer
         m_Mode: 1
         m_Arguments:
@@ -1067,7 +1067,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488728888
+--- !u!114 &1488728889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488728885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7681e80d636a5429c55ecc805d39a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf2b3231507510449b1c496c5fd36a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   listPlayers:

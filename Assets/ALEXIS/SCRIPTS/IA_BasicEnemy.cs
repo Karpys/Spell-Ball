@@ -10,15 +10,12 @@ public class IA_BasicEnemy : MonoBehaviour
     public Transform playerMov1;
     public Transform playerMov2;
     int r;
-    GameObject test;
     bool playerIsInRange;
 
 
-    Test recupValue;
     // Start is called before the first frame update
     void Start()
     {
-        recupValue = FindObjectOfType<Test>();
         playerMov1 = GameObject.FindWithTag("Player").transform;
         playerMov2 = GameObject.FindWithTag("Player1").transform;
         r = Random.Range(0, 5);

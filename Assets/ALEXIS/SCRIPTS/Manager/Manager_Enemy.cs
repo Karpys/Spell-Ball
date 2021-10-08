@@ -5,12 +5,12 @@ using UnityEngine;
 public class Manager_Enemy : MonoBehaviour
 {
     public Transform prefabEnemyBasic;
-    Test recupValue;
+    Manager_NumbPlayers recupValue;
     public int n = 2;
     // Start is called before the first frame update
     void Start()
     {
-        recupValue = FindObjectOfType<Test>();
+        recupValue = FindObjectOfType<Manager_NumbPlayers>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Manager_Enemy : MonoBehaviour
         {
             for (int i = 0; i < n; i++)
             {
-                Instantiate(prefabEnemyBasic, new Vector3(i, 0, 0), Quaternion.identity);
+                Instantiate(prefabEnemyBasic, new Vector3(Random.Range(-42, 42), 0, Random.Range(22, -50)), Quaternion.identity);
             }
         }
 
