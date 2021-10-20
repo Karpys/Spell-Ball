@@ -158,7 +158,16 @@ public class PlayerController : MonoBehaviour
         balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
         ComboManager.instance.combo++;
         balleIsTake = true;
-        Balle.instance.InfuseColorRed();
+
+        if (gameObject.name == "Character(Clone)")
+            Balle.instance.InfuseColorRed();
+        else if (gameObject.name == "Character 1(Clone)")
+            Balle.instance.InfuseColorOrange();
+        else if (gameObject.name == "Character 2(Clone)")
+            Balle.instance.InfuseColorBleu();
+        else if (gameObject.name == "Character 3(Clone)")
+            Balle.instance.InfuseColorGreen();
+
         isHoldingBall = false;
     }
 
