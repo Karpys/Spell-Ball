@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemyBasic: {fileID: 371949442412338522, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
-  n: 50
+  n: 90
 --- !u!4 &675042013
 Transform:
   m_ObjectHideFlags: 0
