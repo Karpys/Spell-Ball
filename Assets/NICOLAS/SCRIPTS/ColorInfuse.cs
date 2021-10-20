@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ColorInfuse : MonoBehaviour
 {
+    public Color orange = Color.HSVToRGB(0.1f, 1f, 1f);
     public Color RB = Color.red + Color.blue;
     public Color RV = Color.red + Color.green;
     public Color RO = Color.red + Color.HSVToRGB(0.1f, 1f, 1f);
