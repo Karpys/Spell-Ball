@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ac1a7023a5d26124fab4ce704e7d9bf0, type: 2}
 --- !u!1 &66851767
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,8 +314,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121061485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: -25}
-  m_LocalScale: {x: 100, y: 1, z: 2322.3}
+  m_LocalPosition: {x: 0, y: -0.5, z: -102.7}
+  m_LocalScale: {x: 67.645004, y: 1, z: 227.00252}
   m_Children: []
   m_Father: {fileID: 485890305}
   m_RootOrder: 4
@@ -409,8 +409,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433422281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50, y: 2.5, z: 0}
-  m_LocalScale: {x: 1, y: 5, z: 780.5}
+  m_LocalPosition: {x: 32.7, y: 2.5, z: 0}
+  m_LocalScale: {x: 4.0232, y: 5, z: 780.5}
   m_Children: []
   m_Father: {fileID: 485890305}
   m_RootOrder: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemyBasic: {fileID: 371949442412338522, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
-  n: 0
+  n: 1
 --- !u!4 &515847459
 Transform:
   m_ObjectHideFlags: 0
@@ -863,7 +863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515847457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.458857, y: -27.83548, z: -56.69982}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -896,7 +896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539756677}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.5, z: 25}
+  m_LocalPosition: {x: 0, y: 2.5, z: 11}
   m_LocalScale: {x: 7.8088, y: 5, z: 100}
   m_Children: []
   m_Father: {fileID: 485890305}
@@ -1274,7 +1274,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.04
+  orthographic size: 18.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1364,7 +1364,7 @@ MonoBehaviour:
       enableBigTilePrepass: 0
       isFptlEnabled: 0
   clearColorMode: 0
-  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
+  backgroundColorHDR: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 0}
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
@@ -1571,8 +1571,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827340786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50, y: 2.5, z: -26}
-  m_LocalScale: {x: 1, y: 5, z: 330.18}
+  m_LocalPosition: {x: -33.4, y: 2.5, z: -26}
+  m_LocalScale: {x: 4.5066, y: 5, z: 330.18}
   m_Children: []
   m_Father: {fileID: 485890305}
   m_RootOrder: 1

@@ -14,6 +14,8 @@ public class IA_BasicEnemy : MonoBehaviour
     int r;
     bool playerIsInRange;
 
+    [SerializeField] private GameObject ParticleEffectOnHit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +84,8 @@ public class IA_BasicEnemy : MonoBehaviour
         {
             ComboManager.instance.combo = gameObject.GetComponent<Manager_Life>().damages;
             gameObject.GetComponent<Manager_Life>().OnDamage.Invoke();
-
+            GameObject Parti = Instantiate(ParticleEffectOnHit, collision.transform.position, transform.rotation);
+            Parti.GetComponent<ParticleManager>().ApplyColor(collision.gameObject.GetComponent<Balle>().trail.startColor);
             ComboManager.instance.combo = 0;
         }
     }

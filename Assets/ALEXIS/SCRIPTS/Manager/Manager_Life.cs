@@ -16,6 +16,8 @@ public class Manager_Life : MonoBehaviour
     public UnityEvent OnDamage;
     public UnityEvent OnHeal;
 
+    [SerializeField] private GameObject Visual;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,8 @@ public class Manager_Life : MonoBehaviour
 
     public void DamageHealth()
     {
+        ShakerEntity Shake = Visual.AddComponent<ShakerEntity>();
+        Shake.SetShakeParameters(0.25f, 0.2f, 10f, new Vector3(1, 0, 1));
         currentLife -= damages;
     }
 
