@@ -21,6 +21,7 @@ public class Balle : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        ballColor.color = Color.white;
     }
 
     // Start is called before the first frame update

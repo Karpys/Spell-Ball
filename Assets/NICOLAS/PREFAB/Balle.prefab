@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combo: 0
-  comboSpeed: 2
+  comboSpeed: 10
   trail: {fileID: 8321706772911627944}
   ballColor: {fileID: 0}
 --- !u!114 &8827649957874818234
@@ -287,7 +287,3 @@ MonoBehaviour:
   BV: {r: 0, g: 1, b: 1, a: 2}
   BO: {r: 1, g: 0.6, b: 1, a: 2}
   VO: {r: 1, g: 1.6, b: 0, a: 2}
-  RBV: {r: 1, g: 1, b: 1, a: 3}
-  RBO: {r: 2, g: 0.6, b: 1, a: 3}
-  OBV: {r: 1, g: 1.6, b: 1, a: 3}
-  RVO: {r: 2, g: 1.6, b: 0, a: 3}
