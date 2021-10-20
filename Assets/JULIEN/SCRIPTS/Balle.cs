@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Balle : MonoBehaviour
 {
@@ -89,7 +88,7 @@ public class Balle : MonoBehaviour
             ballColor.color = ColorInfuse.instance.RO;
         else
             ballColor.color = Color.red;
-
+        
     }
 
     public void InfuseColorBleu()
@@ -100,6 +99,8 @@ public class Balle : MonoBehaviour
             ballColor.color = ColorInfuse.instance.BV;
         else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
             ballColor.color = ColorInfuse.instance.BO;
+        else
+            ballColor.color = Color.blue;
 
     }
 
@@ -111,6 +112,8 @@ public class Balle : MonoBehaviour
             ballColor.color = ColorInfuse.instance.RV;
         else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
             ballColor.color = ColorInfuse.instance.VO;
+        else
+            ballColor.color = Color.green;
 
     }
 
@@ -122,6 +125,8 @@ public class Balle : MonoBehaviour
             ballColor.color = ColorInfuse.instance.VO;
         else if (ballColor.color == Color.red)
             ballColor.color = ColorInfuse.instance.RO;
+        else
+            ballColor.color = ColorInfuse.instance.orange;
     }
 
 }
