@@ -152,27 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a557652ea45209e4bb4131b114caa4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShakeInput:
-    m_Name: Shake Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 02d7a00f-7ba9-473f-95a6-b6b85e67fb08
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2d4480e4-fd0d-4803-82af-d92e5d191e31
-      m_Path: <Keyboard>/a
-      m_Interactions: Tap
-      m_Processors: 
-      m_Groups: 
-      m_Action: Shake Input
-      m_Flags: 0
-  CameraPosition: {fileID: 345535782}
+  Entity: {fileID: 0}
   ReplaceTime: 0.5
-  _duration: 3
-  _frequence: 10
-  _shakeForce: 500
+  _duration: 0.25
+  _frequence: 15
+  _shakeForce: 3
 --- !u!4 &168730263
 Transform:
   m_ObjectHideFlags: 0
