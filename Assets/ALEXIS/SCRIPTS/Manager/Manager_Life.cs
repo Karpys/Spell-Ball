@@ -1,48 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Manager_Life : MonoBehaviour
 {
     public int maxHealth;
-    [SerializeField] private int damages;
+    public int damages;
+    [SerializeField] private float currentLife;
+
     public int heal;
     float regen = 5f;
 
-    [SerializeField] private float currentLife;
 
-
+    public UnityEvent OnDamage;
+    public UnityEvent OnHeal;
 
     // Start is called before the first frame update
     void Start()
     {
+        OnDamage.AddListener(DamageHealth);
+        OnHeal.AddListener(HealHealth);
         currentLife = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         DestructionOfThis();
-        RegenAuto();
     }
 
     private void DestructionOfThis()
     {
-        if(currentLife <= 0)
+        if(this.gameObject.tag != "Player")
         {
-            Destroy(gameObject);
+            if (currentLife <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 
-    public void DamageHealth(int dgt)
+    public void DamageHealth()
     {
-        currentLife -= dgt;
+        currentLife -= damages;
     }
 
-    public void HealHealth(int soin)
+    public void HealHealth()
     {
-        currentLife += soin;
+        currentLife += heal;
     }
 
     private void RegenAuto()
@@ -53,48 +60,12 @@ public class Manager_Life : MonoBehaviour
 
             if(regen <= 0)
             {
-                HealHealth(heal);
+                HealHealth();
                 regen = 5f;
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-
-        if(collision.gameObject.tag == "Balle")
-        {
-            if(this.gameObject.tag != "Player")
-            {
-                int d = collision.gameObject.GetComponent<Balle>().combo;
-                DamageHealth(d);
-            }
-        }
-
-        if (collision.gameObject.tag == "Boss")
-        {
-            DamageHealth(damages);
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(this.gameObject.tag == "Player")
-        {
-            if (other.gameObject.tag == "Ennemy")
-            {
-                int d = 1;
-                DamageHealth(d);
-            }
-            else if (other.gameObject.tag == "Boss")
-            {
-                int d = 3;
-                DamageHealth(d);
-            }
-        }
-
-    }
 
 
 }
