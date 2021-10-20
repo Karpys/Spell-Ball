@@ -104,10 +104,10 @@ public class PlayerController : MonoBehaviour
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
        
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
 
-        
-        Balle.instance.combo++;
+
+        ComboManager.instance.combo++;
         balleIsTake = true;
 
         isHoldingBall = false;
@@ -155,8 +155,8 @@ public class PlayerController : MonoBehaviour
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
 
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
-        Balle.instance.combo++;
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
+        ComboManager.instance.combo++;
         balleIsTake = true;
         Balle.instance.InfuseColorRed();
         isHoldingBall = false;
@@ -179,11 +179,11 @@ public class PlayerController : MonoBehaviour
             
             if (!balleIsTake)
             {
-                Balle.instance.combo = 0;
+                ComboManager.instance.combo = 0;
                 Rigidbody balleRB = balle.GetComponent<Rigidbody>();
                 Vector3 dir = balleRB.velocity.normalized;
                 balleRB.velocity = new Vector3(0,0,0);
-                balleRB.AddForce(dir * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+                balleRB.AddForce(dir * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
             }
 
 

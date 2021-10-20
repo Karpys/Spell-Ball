@@ -81,7 +81,7 @@ public class IA_BasicEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Balle")
         {
             
-            lifeBEnemy -= collision.gameObject.GetComponent<Balle>().combo;
+            lifeBEnemy -= collision.gameObject.GetComponent<ComboManager>().combo;
 
         }
     }

@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Balle : MonoBehaviour
 {
-    [Header("combo")]
-    public int combo;
-    public float comboSpeed;
     public TrailRenderer trail;
-
+ 
     private Rigidbody rb;
     private float timer = 0;
 
@@ -28,21 +26,18 @@ public class Balle : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        combo = 0;
         // rb.AddForce(new Vector3(Random.Range(-50, 50), 0, Random.Range(-100, 100)), ForceMode.Impulse);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //CheckColorInfuse();
         TrailCombo();
-        //combo = comboSet;
     }
 
     public void TrailCombo()
     {
-        switch(combo)
+        switch(ComboManager.instance.combo)
         {
             case 0:
             case 1:
@@ -65,7 +60,10 @@ public class Balle : MonoBehaviour
                 trail.endColor = Color.red;
                 break;
         }
+
     }
+
+
 
     void CheckColorInfuse()
     {
