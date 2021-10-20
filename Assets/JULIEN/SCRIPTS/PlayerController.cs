@@ -17,33 +17,48 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
 
     private bool isHoldingBall = false;
+    private bool balleIsTake = false;
+
+    public GameObject CharacterVisual;
+
+    public Manager_NumbPlayers ManagePlayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+        if(!ManagePlayer.player1)
+        {
+        ManagePlayer.player1 = gameObject;
+        }else
+        {
+        ManagePlayer.player2 = gameObject;
+        }
     }
 
-    public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    /*public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
 
-    public void OnSprint(InputAction.CallbackContext ctx) => ChangeSprintValue(ctx.ReadValueAsButton());
+    public void OnSprint(InputAction.CallbackContext ctx) => ChangeSprintValue(ctx.ReadValueAsButton());*/
 
     public void OnGrabBall(InputAction.CallbackContext ctx) => TryGrabBall(ctx.ReadValueAsButton());
 
     public void OnThrowBall(InputAction.CallbackContext ctx) => TryThrowBall(ctx.ReadValueAsButton());
 
-    public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());
+    /*public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());*/
+
+    public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton());
 
     void Update()
     {
-        Ray ray = new Ray(transform.localPosition, transform.localPosition + new Vector3(movementInput.x, 0, movementInput.y));
+        /*Ray ray = new Ray(transform.localPosition, transform.localPosition + new Vector3(movementInput.x, 0, movementInput.y));
 
         if (!Physics.Raycast(ray, Time.deltaTime * speed + 0.5f, wallMask))
         {
             rb.MovePosition(transform.localPosition += new Vector3(movementInput.x, 0, movementInput.y) * speed * Time.deltaTime);
-        }
+        }*/
     }
 
-    void RotatePlayer(Vector2 lookDirection)
+    /*void RotatePlayer(Vector2 lookDirection)
     {
         if (lookDirection == Vector2.zero)
             return;
@@ -57,7 +72,7 @@ public class PlayerController : MonoBehaviour
             speed = 20f;
         else
             speed = 5f;
-    }
+    }*/
 
     void SetCanGrab(bool canGrab)
     {
@@ -88,7 +103,12 @@ public class PlayerController : MonoBehaviour
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
-        balleRB.AddForce(transform.forward * power, ForceMode.Impulse);
+       
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+
+        
+        Balle.instance.combo++;
+        balleIsTake = true;
 
         isHoldingBall = false;
     }
@@ -115,6 +135,33 @@ public class PlayerController : MonoBehaviour
         isHoldingBall = true;
     }
 
+    public void TryInfuse(bool buttonPressed)
+    {
+        if (!buttonPressed) return;
+        if (!isHoldingBall) return;
+
+        Transform balleT = grabPosition.Find("Balle");
+        print(balleT);
+        if (balleT == null) return;
+        balle = balleT.gameObject;
+
+        balle.transform.SetParent(null);
+
+        SphereCollider ballCollider = balle.GetComponent<SphereCollider>();
+        ballCollider.enabled = true;
+
+        Rigidbody balleRB = balle.GetComponent<Rigidbody>();
+        balleRB.isKinematic = false;
+        balleRB.useGravity = true;
+        balleRB.freezeRotation = false;
+
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+        Balle.instance.combo++;
+        balleIsTake = true;
+        Balle.instance.InfuseColorRed();
+        isHoldingBall = false;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 6 && !isHoldingBall)
@@ -129,6 +176,18 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             canGrabBall = false;
+            
+            if (!balleIsTake)
+            {
+                Balle.instance.combo = 0;
+                Rigidbody balleRB = balle.GetComponent<Rigidbody>();
+                Vector3 dir = balleRB.velocity.normalized;
+                balleRB.velocity = new Vector3(0,0,0);
+                balleRB.AddForce(dir * (power + (Balle.instance.combo * Balle.instance.comboSpeed)), ForceMode.Impulse);
+            }
+
+
+            balleIsTake = false;
         }
     }
 }

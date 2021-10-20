@@ -39,6 +39,13 @@ public class CharacterMovement : MonoBehaviour
         Vector3 Axes = transform.right * Axex + transform.forward * Axey;
         Vector3 Move = Axes ;
         
+        if(MovementDir == Vector2.zero)
+        {
+            Anim.SetBool("Running", false);
+        }else
+        {
+            Anim.SetBool("Running", true);
+        }
 
         if(Stats.CanMove)
         {
@@ -118,11 +125,14 @@ public class CharacterMovement : MonoBehaviour
     public struct RollManager
     {
         public bool IsRolling => RollDuration > 0;
+        [HideInInspector]
         public float RollCd;
         public float RollCdSet;
+        [HideInInspector]
         public float RollDuration;
         public float RollDurationSet;
         public float RollSpeed;
+        [HideInInspector]
         public bool HasReset;
         public bool CanRoll  => RollCd < 0;
     }

@@ -44,14 +44,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "Infuse",
-                    "type": "Button",
-                    "id": "a7bfb9e7-dfe5-4353-b198-129f6f4ee48c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -206,17 +198,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Throw Ball",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "507bed78-e6d9-4fdc-846d-e12bdad28702",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Infuse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

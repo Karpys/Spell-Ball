@@ -24,7 +24,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-
+        SceneManager.LoadScene("Main_Scene_V1");
     }
 
     public void OptionsButton()
@@ -34,7 +34,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void QuitButton()
     {
-       
+        Application.Quit();
     }
 
     IEnumerator Wait1s()
