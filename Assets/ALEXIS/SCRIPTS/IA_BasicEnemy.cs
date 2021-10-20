@@ -76,14 +76,15 @@ public class IA_BasicEnemy : MonoBehaviour
 
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Balle")
-    //    {
-            
-    //        lifeBEnemy -= collision.gameObject.GetComponent<Balle>().combo;
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Balle")
+        {
+            ComboManager.instance.combo = gameObject.GetComponent<Manager_Life>().damages;
+            gameObject.GetComponent<Manager_Life>().OnDamage.Invoke();
 
-    //    }
-    //}
+            ComboManager.instance.combo = 0;
+        }
+    }
 }
 
