@@ -29,7 +29,6 @@ public class CharacterMovement : MonoBehaviour
         Move();
         RollController();
         MovementDir = MovementInput;
-        CameraShakeManager.CameraShake.Shake();
     }
 
     public void Move()

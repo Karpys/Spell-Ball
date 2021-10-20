@@ -19,7 +19,7 @@ public class AddComponentTest : MonoBehaviour
         if (Input.triggered)
         {
             ShakerEntity entity = Entity.AddComponent<ShakerEntity>();
-            entity.SetShakeParameters(0.25f, 10f, 15f, new Vector3(0, 1, 0));
+            entity.SetShakeParameters(new Vector3(1, 1, 1));
         }
     }
 }

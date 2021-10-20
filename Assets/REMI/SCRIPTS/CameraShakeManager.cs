@@ -7,7 +7,7 @@ public class CameraShakeManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] private Transform Entity;
+    [SerializeField] private Transform CameraHolder;
 
     private Vector3 OnStopLocation;
     private float _timerPerlin;
@@ -41,19 +41,21 @@ public class CameraShakeManager : MonoBehaviour
         if(timerShake <= _duration && IsShaking)
         {
             timerShake += Time.deltaTime;
-            Entity.localPosition = GetVector3() * _shakeForce;
+            CameraHolder.localPosition = GetVector3() * _shakeForce;
             _timerPerlin += Time.deltaTime * _frequence;
         }
         else if(timerReplace<=ReplaceTime)
         {
             if (IsShaking)
             {
-                OnStopLocation = Entity.localPosition;
+                OnStopLocation = CameraHolder.localPosition;
                 IsShaking = false;
             }
             timerReplace += Time.deltaTime;
-            Entity.localPosition = Vector3.Lerp(OnStopLocation, Vector3.zero, timerReplace / ReplaceTime);
+            CameraHolder.localPosition = Vector3.Lerp(OnStopLocation, Vector3.zero, timerReplace / ReplaceTime);
         }
+
+        CameraShakeManager.CameraShake.Shake(0.5f,5.0f,10.0f);
 
     }
 
@@ -70,18 +72,17 @@ public class CameraShakeManager : MonoBehaviour
         _duration = _durationDefault;
         _frequence = _frequenceDefault;
     }
-    public void Shake(float force)
+    public void Shake(float duration)
     {
         SetShakeParameters();
-        _shakeForce = force;
-    }
-    public void Shake(float force, float duration)
-    {
-        _shakeForce = force;
         _duration = duration;
+    }
+    public void Shake(float duration,float force)
+    {
+        _shakeForce = force;
         SetShakeParameters();
     }
-    public void Shake(float force, float duration,float frequence)
+    public void Shake(float duration, float force,float frequence)
     {
         _shakeForce = force;
         _duration = duration;
