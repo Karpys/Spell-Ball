@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Balle
   - Player1
+  - Ennemy
   layers:
   - Default
   - TransparentFX

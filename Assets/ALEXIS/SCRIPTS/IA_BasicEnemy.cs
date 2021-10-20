@@ -59,7 +59,7 @@ public class IA_BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             playerIsInRange = true;
             enemy.SetDestination(other.transform.position);
@@ -68,7 +68,7 @@ public class IA_BasicEnemy : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             playerIsInRange = false;
             r = Random.Range(0, 5);
@@ -76,14 +76,14 @@ public class IA_BasicEnemy : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Balle")
-        {
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Balle")
+    //    {
             
-            lifeBEnemy -= collision.gameObject.GetComponent<ComboManager>().combo;
+    //        lifeBEnemy -= collision.gameObject.GetComponent<Balle>().combo;
 
-        }
-    }
+    //    }
+    //}
 }
 
