@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        CameraFocus.instance.AddTarget(transform);
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
         if(!ManagePlayer.player1)
@@ -128,8 +129,10 @@ public class PlayerController : MonoBehaviour
     public void TryGrabBall(bool buttonPressed)
     {
         if (!buttonPressed) return;
-        if (!canGrabBall) return;
         if (!couldGrabBall) return;
+        _timer += grabDelay;
+        couldGrabBall = false;
+        if (!canGrabBall) return;
         if (isHoldingBall) return;
 
         SphereCollider ballCollider = balle.GetComponent<SphereCollider>();
