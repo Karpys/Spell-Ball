@@ -94,8 +94,14 @@ public class PlayerController : MonoBehaviour
 
 
         Transform balleT = grabPosition.Find("Balle");
+        
         print(balleT);
-        if (balleT == null) return;
+        if (balleT == null)
+        {
+            balleT = grabPosition.Find("Balle(Clone)");
+        }
+        if(balleT == null)
+            return;
         balle = balleT.gameObject;
 
         balle.transform.SetParent(null);

@@ -23,7 +23,14 @@ public class ShakerEntity : MonoBehaviour
     float _durationDefault = 0.25f;
     float _frequenceDefault = 15.0f;
     Vector3 DirectionShake = Vector3.zero;
+
+    Vector3 RandomPerlin;
     // Update is called once per frame
+
+    void Awake()
+    {
+        RandomPerlin = new Vector3(Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100));
+    }
     void Update()
     {
         if (timerShake <= _duration && IsShaking)
@@ -69,15 +76,15 @@ public class ShakerEntity : MonoBehaviour
         Vector3 VecReturn = Vector3.zero;
         if (DirectionShake.x != 0)
         {
-            VecReturn.x = GetPerlinFloat(10);
+            VecReturn.x = GetPerlinFloat(RandomPerlin.x);
         }
         if (DirectionShake.y != 0)
         {
-            VecReturn.y = GetPerlinFloat(3);
+            VecReturn.y = GetPerlinFloat(RandomPerlin.y);
         }
         if (DirectionShake.z != 0)
         {
-            VecReturn.z = GetPerlinFloat(5);
+            VecReturn.z = GetPerlinFloat(RandomPerlin.z);
         }
         return VecReturn;
     }

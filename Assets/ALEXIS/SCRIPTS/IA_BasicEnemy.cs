@@ -14,6 +14,8 @@ public class IA_BasicEnemy : MonoBehaviour
     int r;
     bool playerIsInRange;
 
+    [SerializeField] private GameObject ParticleEffectOnHit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +61,7 @@ public class IA_BasicEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             playerIsInRange = true;
             enemy.SetDestination(other.transform.position);
@@ -68,7 +70,7 @@ public class IA_BasicEnemy : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             playerIsInRange = false;
             r = Random.Range(0, 5);
@@ -80,9 +82,17 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Balle")
         {
+<<<<<<< HEAD
             
             lifeBEnemy -= ComboManager.instance.combo;
 
+=======
+            ComboManager.instance.combo = gameObject.GetComponent<Manager_Life>().damages;
+            gameObject.GetComponent<Manager_Life>().OnDamage.Invoke();
+            GameObject Parti = Instantiate(ParticleEffectOnHit, collision.transform.position, transform.rotation);
+            Parti.GetComponent<ParticleManager>().ApplyColor(collision.gameObject.GetComponent<Balle>().trail.startColor);
+            ComboManager.instance.combo = 0;
+>>>>>>> main
         }
     }
 }
