@@ -82,17 +82,11 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Balle")
         {
-<<<<<<< HEAD
-            
-            lifeBEnemy -= ComboManager.instance.combo;
-
-=======
             ComboManager.instance.combo = gameObject.GetComponent<Manager_Life>().damages;
             gameObject.GetComponent<Manager_Life>().OnDamage.Invoke();
             GameObject Parti = Instantiate(ParticleEffectOnHit, collision.transform.position, transform.rotation);
             Parti.GetComponent<ParticleManager>().ApplyColor(collision.gameObject.GetComponent<Balle>().trail.startColor);
             ComboManager.instance.combo = 0;
->>>>>>> main
         }
     }
 }
