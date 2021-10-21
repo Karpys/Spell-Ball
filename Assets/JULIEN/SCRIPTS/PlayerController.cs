@@ -109,11 +109,11 @@ public class PlayerController : MonoBehaviour
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
-       
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
+        
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed)), ForceMode.Impulse);
 
 
-        ComboManager.instance.combo++;
+        balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
         isHoldingBall = false;
@@ -161,18 +161,18 @@ public class PlayerController : MonoBehaviour
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
 
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
-        ComboManager.instance.combo++;
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed)), ForceMode.Impulse);
+        balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
         if (gameObject.name == "Character(Clone)")
-            Balle.instance.InfuseColorRed();
+            balle.GetComponent<Balle>().InfuseColorRed();
         else if (gameObject.name == "Character 1(Clone)")
-            Balle.instance.InfuseColorOrange();
+            balle.GetComponent<Balle>().InfuseColorOrange();
         else if (gameObject.name == "Character 2(Clone)")
-            Balle.instance.InfuseColorBleu();
+            balle.GetComponent<Balle>().InfuseColorBleu();
         else if (gameObject.name == "Character 3(Clone)")
-            Balle.instance.InfuseColorGreen();
+            balle.GetComponent<Balle>().InfuseColorGreen();
 
         isHoldingBall = false;
     }
@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
             
             if (!balleIsTake)
             {
-                ComboManager.instance.combo = 0;
+                balle.GetComponent<Balle>().combo = 0;
                 Rigidbody balleRB = balle.GetComponent<Rigidbody>();
                 Vector3 dir = balleRB.velocity.normalized;
                 balleRB.velocity = new Vector3(0,0,0);
