@@ -10,24 +10,31 @@ public class BallThrower : MonoBehaviour
     [SerializeField] private GameObject Projectile;
     [SerializeField] private float Power;
     [SerializeField] private float TimeBetweenShot;
+    [SerializeField] private int NbrShoot = 10;
     float timer;
 
     // Update is called once per frame
     void Update()
     {
+        if (NbrShoot <= 0)
+            return;
         timer += Time.deltaTime;
         if (timer >= TimeBetweenShot)
         {
-            GameObject target = GetClosestGameObject(transform.position,ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
-            if (target)
-            {
-                InstantiateBall(target);
-            }
-
-            timer = 0;
+            Shoot();
         }
     }
 
+    void Shoot()
+    {
+        GameObject target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
+        if (target)
+        {
+            NbrShoot--;
+            InstantiateBall(target);
+        }
+        timer = 0;
+    }
 
     void InstantiateBall(GameObject target)
     {

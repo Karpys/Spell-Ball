@@ -7,14 +7,17 @@ public class ParticleManager : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private ParticleSystemRenderer Particle;
+    private ParticleSystem Ps;
     public Material Mat;
     private Material MatCopy;
-    public Shader Shader;
+    private Shader Shader;
 
-    private Color ColorApply;
+    private Color ColorApply = Color.white;
 
     void Awake()
     {
+        Ps = GetComponent<ParticleSystem>();
+        Shader = Mat.shader;
         MatCopy = new Material(Shader);
         MatCopy.CopyPropertiesFromMaterial(Mat);
         Particle = GetComponent<ParticleSystemRenderer>();
@@ -23,13 +26,20 @@ public class ParticleManager : MonoBehaviour
 
     void Start()
     {
-        Particle.material.color = ColorApply;
+        /*if(ColorApply != Color.white)
+            Particle.material.color = ColorApply;*/
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Ps)
+        {
+            if (!Ps.IsAlive())
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void ApplyColor(Color ColorToApply)
