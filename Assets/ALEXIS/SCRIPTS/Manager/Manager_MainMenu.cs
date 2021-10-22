@@ -24,7 +24,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneManager.LoadScene("Main_Scene_V1");
+        SceneManager.LoadScene("Main_Scene_V2");
     }
 
     public void OptionsButton()
