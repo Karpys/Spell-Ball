@@ -15872,7 +15872,7 @@ MonoBehaviour:
   Projectile: {fileID: 819102746}
   Power: 3
   TimeBetweenShot: 0
-  NbrShoot: 1000
+  NbrShoot: 1
 --- !u!1001 &1707252084
 PrefabInstance:
   m_ObjectHideFlags: 0
