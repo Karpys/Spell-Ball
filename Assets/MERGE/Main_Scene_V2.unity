@@ -734,6 +734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrels (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
 --- !u!4 &98758266 stripped
@@ -2556,7 +2560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271470263}
   - component: {fileID: 271470264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,6 +2846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wodden beam square
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
 --- !u!4 &284345728 stripped
@@ -2921,6 +2929,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
       propertyPath: m_Name
       value: Barrels (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
@@ -3323,6 +3335,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
       propertyPath: m_Name
       value: Barrels
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
@@ -4412,6 +4428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrels (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
 --- !u!4 &461037520 stripped
@@ -4568,6 +4588,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
       propertyPath: m_Name
       value: Barrels (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
@@ -4981,6 +5005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
 --- !u!4 &547633217 stripped
@@ -5318,6 +5346,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
       propertyPath: m_Name
       value: Pillard (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
@@ -5751,6 +5783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
 --- !u!4 &625904743 stripped
@@ -6105,6 +6141,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
       propertyPath: m_Name
       value: Barrels
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
@@ -8821,6 +8861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
 --- !u!4 &951959152 stripped
@@ -10560,6 +10604,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
       propertyPath: m_Name
       value: Pillard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
@@ -12342,6 +12390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wodden beam square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
 --- !u!4 &1299898140 stripped
@@ -12543,6 +12595,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
       propertyPath: m_Name
       value: Pillard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
@@ -13133,6 +13189,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
@@ -14132,6 +14192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
 --- !u!4 &1475933081 stripped
@@ -14347,6 +14411,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
       propertyPath: m_Name
       value: Wodden beam square
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
@@ -15124,6 +15192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
 --- !u!4 &1570307154 stripped
@@ -15335,6 +15407,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
       propertyPath: m_Name
       value: Wodden beam square
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0421323a639f38541b1d89a3513c6a72, type: 3}
@@ -15567,6 +15643,7 @@ GameObject:
   - component: {fileID: 1636050704}
   - component: {fileID: 1636050703}
   - component: {fileID: 1636050705}
+  - component: {fileID: 1636050706}
   m_Layer: 0
   m_Name: Player Manager
   m_TagString: Untagged
@@ -15674,6 +15751,19 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   unlockMove: 0
+--- !u!114 &1636050706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636050702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e96cf71909c5024f9f16b8b4ba63040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 1
 --- !u!1001 &1637754311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15884,6 +15974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
 --- !u!4 &1667088808 stripped
@@ -16087,7 +16181,7 @@ MonoBehaviour:
   Projectile: {fileID: 819102746}
   Power: 3
   TimeBetweenShot: 1
-  NbrShoot: 5
+  NbrShoot: 2
 --- !u!1001 &1707252084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16695,7 +16789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768666000}
   - component: {fileID: 1768666001}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18487,6 +18581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
 --- !u!4 &1981471479 stripped
@@ -18622,6 +18720,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
       propertyPath: m_Name
       value: Pillard
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}
@@ -18859,6 +18961,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
       propertyPath: m_Name
       value: Pillard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b35788df2f36a4f96361853269b378, type: 3}

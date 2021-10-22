@@ -307,6 +307,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   grabDelay: 0.5
+  balleLayer: 6
   CharacterVisual: {fileID: 8880468141465490594}
   ManagePlayer: {fileID: 0}
   particleSystem: {fileID: 4642817261295282374}
@@ -463,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.81569284
+      value: 0.13068502
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -471,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.57848525
+      value: -0.99142396
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z

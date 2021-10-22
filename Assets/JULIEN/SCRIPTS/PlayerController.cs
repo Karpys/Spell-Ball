@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float power = 20f;
     [SerializeField] private LayerMask wallMask;
     [SerializeField] private float grabDelay;
+    [SerializeField] private int balleLayer = 6;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -34,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        CameraFocus.instance.AddTarget(transform);
         particule = particleSystem.GetComponent<ParticleManager>();
         particule.destoy = false;
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     /*public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());*/
 
-    public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton());
+    public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton(), ctx);
 
 
     void Update()
@@ -100,14 +100,16 @@ public class PlayerController : MonoBehaviour
         if (!isHoldingBall) return;
 
 
-        Transform balleT = grabPosition.Find("Balle");
-        
-        print(balleT);
-        if (balleT == null)
+        Transform balleT = null;
+        for (int i = 0; i < grabPosition.childCount; i++)
         {
-            balleT = grabPosition.Find("Balle(Clone)");
+            if (grabPosition.GetChild(i).gameObject.layer == balleLayer)
+            {
+                balleT = grabPosition.GetChild(i);
+                break;
+            }
         }
-        if(balleT == null)
+        if (balleT == null)
             return;
         balle = balleT.gameObject;
 
@@ -159,13 +161,20 @@ public class PlayerController : MonoBehaviour
         isHoldingBall = true;
     }
 
-    public void TryInfuse(bool buttonPressed)
+    public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
     {
         if (!buttonPressed) return;
         if (!isHoldingBall) return;
 
-        Transform balleT = grabPosition.Find("Balle");
-        print(balleT);
+        Transform balleT = null;
+        for (int i = 0; i < grabPosition.childCount; i++)
+        {
+            if (grabPosition.GetChild(i).gameObject.layer == balleLayer)
+            {
+                balleT = grabPosition.GetChild(i);
+                break;
+            }
+        }
         if (balleT == null) return;
         balle = balleT.gameObject;
 
@@ -183,11 +192,13 @@ public class PlayerController : MonoBehaviour
         balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
-        StartCoroutine("ColorParticule");
+        StartCoroutine(ColorParticule());
 
         isHoldingBall = false;
         couldGrabBall = false;
         _timer = grabDelay;
+
+        ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
     }
 
     void OnTriggerEnter(Collider other)
@@ -207,11 +218,12 @@ public class PlayerController : MonoBehaviour
             
             if (!balleIsTake)
             {
-                balle.GetComponent<Balle>().combo = 0;
+                Balle balleScript = balle.GetComponent<Balle>();
+                balleScript.combo = 0;
                 Rigidbody balleRB = balle.GetComponent<Rigidbody>();
                 Vector3 dir = balleRB.velocity.normalized;
                 balleRB.velocity = new Vector3(0,0,0);
-                balleRB.AddForce(dir * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
+                balleRB.AddForce(dir * balleScript.comboSpeed, ForceMode.Impulse);
             }
 
 
