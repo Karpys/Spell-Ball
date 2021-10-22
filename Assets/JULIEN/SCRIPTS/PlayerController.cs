@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem particleSystem;
     private ParticleManager particule;
     private float _timer;
+    
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnGrabBall(InputAction.CallbackContext ctx) => TryGrabBall(ctx.ReadValueAsButton());
 
-    public void OnThrowBall(InputAction.CallbackContext ctx) => TryThrowBall(ctx.ReadValueAsButton());
+    public void OnThrowBall(InputAction.CallbackContext ctx) => TryThrowBall(ctx.ReadValueAsButton(), ctx);
 
     /*public void OnLookAround(InputAction.CallbackContext ctx) => RotatePlayer(ctx.ReadValue<Vector2>());*/
 
@@ -93,7 +94,7 @@ public class PlayerController : MonoBehaviour
         return canGrabBall;
     }
 
-    public void TryThrowBall(bool buttonPressed)
+    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
     {
         if (!buttonPressed) return;
         if (!isHoldingBall) return;
@@ -129,6 +130,8 @@ public class PlayerController : MonoBehaviour
         isHoldingBall = false;
         couldGrabBall = false;
         _timer = grabDelay;
+
+        ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
     }
 
     public void TryGrabBall(bool buttonPressed)
