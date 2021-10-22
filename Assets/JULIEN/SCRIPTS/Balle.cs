@@ -105,6 +105,7 @@ public class Balle : MonoBehaviour
             ballColorCopy.color = ColorInfuse.instance.BO;
         else
             ballColorCopy.color = Color.blue;
+
         return Color.blue;
 
     }
@@ -119,6 +120,7 @@ public class Balle : MonoBehaviour
             ballColorCopy.color = ColorInfuse.instance.VO;
         else
             ballColorCopy.color = Color.green;
+
         return Color.green;
     }
 

@@ -49,4 +49,10 @@ public class ParticleManager : MonoBehaviour
         ColorApply = ColorToApply;
     }
 
+    public void ChangeColor(Color ColorToApply)
+    {
+        MatCopy.color = ColorToApply;
+        //Particle.material.color = ColorToApply;
+    }
+
 }

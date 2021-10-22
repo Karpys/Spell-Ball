@@ -209,24 +209,25 @@ public class PlayerController : MonoBehaviour
     {
         if (gameObject.name == "Character(Clone)")
         {
-            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorRed();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
         }
         else if (gameObject.name == "Character 1(Clone)")
         {
-            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorOrange();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
         }
         else if (gameObject.name == "Character 2(Clone)")
         {
-            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorBleu();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
         }            
         else if (gameObject.name == "Character 3(Clone)")
         {
-            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorGreen();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
         }
 
         particleSystem.Play();
         yield return new WaitForSeconds(0.5f);
-        particleSystem.GetComponent<Renderer>().material.color = Color.white;
+        particleSystem.startColor = Color.white;
+        //particleSystem.GetComponent<Renderer>().material.color = Color.white;
 
     }
 }
