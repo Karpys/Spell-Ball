@@ -310,6 +310,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
+  grabDelay: 0.5
   CharacterVisual: {fileID: 8880468141465490594}
   ManagePlayer: {fileID: 0}
   particleSystem: {fileID: 4642817261295282374}

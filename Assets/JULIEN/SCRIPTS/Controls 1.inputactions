@@ -1,5 +1,5 @@
 {
-    "name": "Controls",
+    "name": "Controls 1",
     "maps": [
         {
             "name": "Gameplay",
@@ -68,7 +68,7 @@
                 },
                 {
                     "name": "WASD",
-                    "id": "0485ddc7-0ebd-401e-880e-e634e30144a0",
+                    "id": "011939ac-524e-421e-bf2b-57fa226651ca",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -79,7 +79,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "cfb09152-2122-410b-babf-3e4e3b20cd53",
+                    "id": "376896bd-c2cc-4f3c-b844-95d570402b72",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
@@ -90,7 +90,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "6c2ec2fb-b7e2-4934-8975-e421176ba3dd",
+                    "id": "328b17f9-d555-460f-b1bc-2421e806d575",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
@@ -101,7 +101,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "75a621c3-60a2-42b9-a78d-b7b5cf9d61b7",
+                    "id": "2e794cfa-c9ec-45cc-8342-59e3c576e984",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -112,7 +112,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "bfe6bbe5-5773-45cb-a37c-0692db644ec5",
+                    "id": "be80e1d3-8efd-4cae-91d9-7f24292c15a9",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -123,19 +123,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b7b6df05-2c41-46b3-bfc9-5c1d7ec2025c",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dd2fbaf1-2cc6-49b9-95c8-31bcb54af519",
-                    "path": "<Gamepad>/leftStickPress",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -146,7 +135,7 @@
                 {
                     "name": "",
                     "id": "82cdef70-fc51-45c1-ac59-05ece37b86e4",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -156,8 +145,8 @@
                 },
                 {
                     "name": "",
-                    "id": "a5bd7360-7e49-4acc-8ca8-4ba679be1883",
-                    "path": "<Keyboard>/e",
+                    "id": "d9efccbe-ba26-4554-9d5c-9fc9a42d7bdc",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -178,30 +167,8 @@
                 },
                 {
                     "name": "",
-                    "id": "32aea4f1-8d04-4073-ba97-b555d8e95aa0",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look Around",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "bbb03e2b-d995-48c2-8a0e-9b9834f369a4",
                     "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Throw Ball",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "56c251d6-6bd6-4a63-b7e8-e3cb10c19f7e",
-                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

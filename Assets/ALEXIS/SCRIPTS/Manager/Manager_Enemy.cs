@@ -29,6 +29,7 @@ public class Manager_Enemy : MonoBehaviour
             for (int i = 0; i < n; i++)
             {
                 GameObject En = Instantiate(prefabEnemyBasic, new Vector3(Random.Range(-42, 42), 0, Random.Range(22, -50)), Quaternion.identity);
+                CameraFocus.instance.AddTarget(En.transform);
                 /*En.GetComponent<IA_BasicEnemy>().playerMov1 = recupValue.player1.transform;
                 En.GetComponent<IA_BasicEnemy>().playerMov2 = recupValue.player2.transform;*/
             }

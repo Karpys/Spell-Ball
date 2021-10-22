@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,8 +11,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform grabPosition;
     [SerializeField] private float power = 20f;
     [SerializeField] private LayerMask wallMask;
+    [SerializeField] private float grabDelay;
 
     private bool canGrabBall = false;
+    private bool couldGrabBall = true;
     private GameObject balle;
 
     private Vector2 movementInput;
@@ -25,9 +29,11 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem particleSystem;
     private ParticleManager particule;
+    private float _timer;
 
     void Start()
     {
+        CameraFocus.instance.AddTarget(transform);
         particule = particleSystem.GetComponent<ParticleManager>();
         particule.destoy = false;
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
@@ -54,31 +60,28 @@ public class PlayerController : MonoBehaviour
 
     public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton());
 
+
     void Update()
     {
-        /*Ray ray = new Ray(transform.localPosition, transform.localPosition + new Vector3(movementInput.x, 0, movementInput.y));
+        if (_timer > 0) 
+            _timer -= Time.deltaTime;
 
-        if (!Physics.Raycast(ray, Time.deltaTime * speed + 0.5f, wallMask))
+        if (_timer <= 0)
         {
-            rb.MovePosition(transform.localPosition += new Vector3(movementInput.x, 0, movementInput.y) * speed * Time.deltaTime);
-        }*/
+            couldGrabBall = true;
+            _timer = 0;
+        }
     }
 
-    /*void RotatePlayer(Vector2 lookDirection)
+    void OnGUI()
     {
-        if (lookDirection == Vector2.zero)
-            return;
+        if (GUI.Button(new Rect(250, 0, 250, 50), "Reset grab delay"))
+        {
+            _timer = 0;
+        }
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), 0.2f);
+        GUI.Label(new Rect(250, 50, 250, 50), "Grab delay = " + _timer + " seconds ");
     }
-
-    void ChangeSprintValue(bool isPressing)
-    {
-        if (isPressing)
-            speed = 20f;
-        else
-            speed = 5f;
-    }*/
 
     void SetCanGrab(bool canGrab)
     {
@@ -94,6 +97,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!buttonPressed) return;
         if (!isHoldingBall) return;
+
 
         Transform balleT = grabPosition.Find("Balle");
         
@@ -123,11 +127,16 @@ public class PlayerController : MonoBehaviour
         balleIsTake = true;
 
         isHoldingBall = false;
+        couldGrabBall = false;
+        _timer = grabDelay;
     }
 
     public void TryGrabBall(bool buttonPressed)
     {
         if (!buttonPressed) return;
+        if (!couldGrabBall) return;
+        _timer += grabDelay;
+        couldGrabBall = false;
         if (!canGrabBall) return;
         if (isHoldingBall) return;
 
@@ -174,6 +183,8 @@ public class PlayerController : MonoBehaviour
         StartCoroutine("ColorParticule");
 
         isHoldingBall = false;
+        couldGrabBall = false;
+        _timer = grabDelay;
     }
 
     void OnTriggerEnter(Collider other)
