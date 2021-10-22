@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 8321706773528243572}
   - component: {fileID: 8321706773528243571}
   - component: {fileID: 8827649957874818234}
+  - component: {fileID: 3258306905404220050}
   m_Layer: 6
   m_Name: Balle
   m_TagString: Untagged
@@ -289,3 +290,16 @@ MonoBehaviour:
   BV: {r: 0, g: 1, b: 1, a: 2}
   BO: {r: 1, g: 0.6, b: 1, a: 2}
   VO: {r: 1, g: 1.6, b: 0, a: 2}
+--- !u!114 &3258306905404220050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321706773528243570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b79c09535539954d89472377bf1a148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}

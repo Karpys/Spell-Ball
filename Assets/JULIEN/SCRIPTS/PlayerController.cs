@@ -23,12 +23,14 @@ public class PlayerController : MonoBehaviour
 
     public Manager_NumbPlayers ManagePlayer;
 
-    private ControlerParticulShoot particule;
+    public ParticleSystem particleSystem;
+    private ParticleManager particule;
 
     void Start()
     {
-        particule = GetComponent<ControlerParticulShoot>();
-
+        particule = particleSystem.GetComponent<ParticleManager>();
+        particule.destoy = false;
+        particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
         if(!ManagePlayer.player1)
@@ -116,7 +118,7 @@ public class PlayerController : MonoBehaviour
         
         balleRB.AddForce(CharacterVisual.transform.forward * (power + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed)), ForceMode.Impulse);
 
-        particule.particule.GetComponent<ParticleSystem>().Play();
+        particleSystem.Play();
         balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
@@ -169,14 +171,7 @@ public class PlayerController : MonoBehaviour
         balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
-        if (gameObject.name == "Character(Clone)")
-            balle.GetComponent<Balle>().InfuseColorRed();
-        else if (gameObject.name == "Character 1(Clone)")
-            balle.GetComponent<Balle>().InfuseColorOrange();
-        else if (gameObject.name == "Character 2(Clone)")
-            balle.GetComponent<Balle>().InfuseColorBleu();
-        else if (gameObject.name == "Character 3(Clone)")
-            balle.GetComponent<Balle>().InfuseColorGreen();
+        StartCoroutine("ColorParticule");
 
         isHoldingBall = false;
     }
@@ -208,5 +203,30 @@ public class PlayerController : MonoBehaviour
 
             balleIsTake = false;
         }
+    }
+
+    public IEnumerator ColorParticule()
+    {
+        if (gameObject.name == "Character(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorRed();
+        }
+        else if (gameObject.name == "Character 1(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorOrange();
+        }
+        else if (gameObject.name == "Character 2(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorBleu();
+        }            
+        else if (gameObject.name == "Character 3(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorGreen();
+        }
+
+        particleSystem.Play();
+        yield return new WaitForSeconds(0.5f);
+        particleSystem.GetComponent<Renderer>().material.color = Color.white;
+
     }
 }

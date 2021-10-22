@@ -14,6 +14,8 @@ public class ParticleManager : MonoBehaviour
 
     private Color ColorApply = Color.white;
 
+    public bool destoy = true;
+
     void Awake()
     {
         Ps = GetComponent<ParticleSystem>();
@@ -35,7 +37,7 @@ public class ParticleManager : MonoBehaviour
     {
         if (Ps)
         {
-            if (!Ps.IsAlive())
+            if (!Ps.IsAlive() && destoy)
             {
                 Destroy(gameObject);
             }
