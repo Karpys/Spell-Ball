@@ -24,6 +24,7 @@ public class ParticleManager : MonoBehaviour
         MatCopy.CopyPropertiesFromMaterial(Mat);
         Particle = GetComponent<ParticleSystemRenderer>();
         Particle.material = MatCopy;
+        
     }
 
     void Start()
@@ -44,6 +45,10 @@ public class ParticleManager : MonoBehaviour
         }
     }
 
+    public void ApplyRotation(Vector3 NewRotation)
+    {
+        Ps.startRotation3D = NewRotation;
+    }
     public void ApplyColor(Color ColorToApply)
     {
         ColorApply = ColorToApply;
