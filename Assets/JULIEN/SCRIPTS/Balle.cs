@@ -5,12 +5,16 @@ using UnityEngine;
 public class Balle : MonoBehaviour
 {
     public TrailRenderer trail;
- 
+    public int combo;
+    public int comboSpeed;
+
     private Rigidbody rb;
     private float timer = 0;
 
     [Header("infuse color")]
     public Material ballColor;
+    private Material ballColorCopy;
+    public Shader shader;
 
     /*[Header("particule Systeme")]
     public GameObject particule;
@@ -18,7 +22,7 @@ public class Balle : MonoBehaviour
     public Shader shaderParticule;
     private Material particuleColorCopy;*/
 
-    public static Balle instance = null;
+
     private void Awake()
     {
         ballColorCopy = new Material(shader);
@@ -43,7 +47,7 @@ public class Balle : MonoBehaviour
 
     public void TrailCombo()
     {
-        switch(ComboManager.instance.combo)
+        switch(combo)
         {
             case 0:
             case 1:
@@ -69,8 +73,6 @@ public class Balle : MonoBehaviour
 
     }
 
-
-
     void CheckColorInfuse()
     {
         timer += Time.deltaTime;
@@ -87,50 +89,50 @@ public class Balle : MonoBehaviour
 
     public void InfuseColorRed()
     {
-        if (ballColor.color == Color.blue)
-            ballColor.color = ColorInfuse.instance.RB;
-        else if (ballColor.color == Color.green)
-            ballColor.color = ColorInfuse.instance.RV;
-        else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColor.color = ColorInfuse.instance.RO;
+        if (ballColorCopy.color == Color.blue)
+            ballColorCopy.color = ColorInfuse.instance.RB;
+        else if (ballColorCopy.color == Color.green)
+            ballColorCopy.color = ColorInfuse.instance.RV;
+        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
+            ballColorCopy.color = ColorInfuse.instance.RO;
         else
             ballColorCopy.color = Color.red;
     }
 
     public void InfuseColorBleu()
     {
-        if (ballColor.color == Color.red)
-            ballColor.color = ColorInfuse.instance.RB;
-        else if (ballColor.color == Color.green)
-            ballColor.color = ColorInfuse.instance.BV;
-        else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColor.color = ColorInfuse.instance.BO;
+        if (ballColorCopy.color == Color.red)
+            ballColorCopy.color = ColorInfuse.instance.RB;
+        else if (ballColorCopy.color == Color.green)
+            ballColorCopy.color = ColorInfuse.instance.BV;
+        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
+            ballColorCopy.color = ColorInfuse.instance.BO;
         else
             ballColorCopy.color = Color.blue;
     }
 
     public void InfuseColorGreen()
     {
-        if (ballColor.color == Color.blue)
-            ballColor.color = ColorInfuse.instance.BV;
-        else if (ballColor.color == Color.red)
-            ballColor.color = ColorInfuse.instance.RV;
-        else if (ballColor.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColor.color = ColorInfuse.instance.VO;
+        if (ballColorCopy.color == Color.blue)
+            ballColorCopy.color = ColorInfuse.instance.BV;
+        else if (ballColorCopy.color == Color.red)
+            ballColorCopy.color = ColorInfuse.instance.RV;
+        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
+            ballColorCopy.color = ColorInfuse.instance.VO;
         else
             ballColorCopy.color = Color.green;
     }
 
     public void InfuseColorOrange()
     {
-        if (ballColor.color == Color.blue)
-            ballColor.color = ColorInfuse.instance.BO;
-        else if (ballColor.color == Color.green)
-            ballColor.color = ColorInfuse.instance.VO;
-        else if (ballColor.color == Color.red)
-            ballColor.color = ColorInfuse.instance.RO;
+        if (ballColorCopy.color == Color.blue)
+            ballColorCopy.color = ColorInfuse.instance.BO;
+        else if (ballColorCopy.color == Color.green)
+            ballColorCopy.color = ColorInfuse.instance.VO;
+        else if (ballColorCopy.color == Color.red)
+            ballColorCopy.color = ColorInfuse.instance.RO;
         else
-            ballColor.color = ColorInfuse.instance.orange;
+            ballColorCopy.color = ColorInfuse.instance.orange;
     }
 
     /*public IEnumerator InfuseParticule()
