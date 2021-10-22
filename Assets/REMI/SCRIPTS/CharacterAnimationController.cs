@@ -5,11 +5,11 @@ using UnityEngine;
 public class CharacterAnimationController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float CharacterAngle;
-    public Vector3 Direction;
-    
-    public float AngleInput;
-    public Vector3 Coordone;
+    private float CharacterAngle;
+    private Vector3 Direction;
+
+    private float AngleInput;
+    private Vector3 Coordone;
 
     public GameObject CharacterVisual;
     public CharacterMovement Movement;
