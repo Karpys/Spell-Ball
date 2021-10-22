@@ -24,6 +24,9 @@ public class CameraShakeManager : MonoBehaviour
     float _durationDefault = 0.25f;
     float _frequenceDefault = 15.0f;
     // Update is called once per frame
+    /*private float durationslider = 0.5f;
+    private float shakeforceslider = 3f;
+    private float frequenceslider = 15f;*/
 
     private static CameraShakeManager inst;
     public static CameraShakeManager CameraShake { get => inst; }
@@ -106,10 +109,17 @@ public class CameraShakeManager : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 150, 100), "TestCameraShake"))
+        if (GUI.Button(new Rect(10, 10, 200, 50), "TestCameraShake"))
         {
-            Shake();
+            Shake(_duration,_shakeForce,_frequence);
+            
         }
+        /*durationslider = GUI.HorizontalSlider(new Rect(25, 150, 50, 30), durationslider, 0.0F, 10.0F);
+        _duration = durationslider;
+        shakeforceslider = GUI.HorizontalSlider(new Rect(25, 250, 50, 30), shakeforceslider, 0.0F, 10.0F);
+        _shakeForce = shakeforceslider;
+        frequenceslider = GUI.HorizontalSlider(new Rect(25, 360, 50, 30), frequenceslider, 0.0F, 25.0F);
+        _frequence = frequenceslider;*/
     }
 
 
