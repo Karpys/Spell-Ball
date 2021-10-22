@@ -16,12 +16,18 @@ public class Balle : MonoBehaviour
     private Material ballColorCopy;
     public Shader shader;
 
+    /*[Header("particule Systeme")]
+    public GameObject particule;
+    public Material particuleColor;
+    public Shader shaderParticule;
+    private Material particuleColorCopy;*/
 
 
     private void Awake()
     {
         ballColorCopy = new Material(shader);
         ballColorCopy.CopyPropertiesFromMaterial(ballColor);
+
         gameObject.GetComponent<MeshRenderer>().material = ballColorCopy;
     }
 
@@ -35,6 +41,7 @@ public class Balle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //particule.GetComponent<ParticleSystem>().Play();
         TrailCombo();
     }
 
@@ -90,7 +97,6 @@ public class Balle : MonoBehaviour
             ballColorCopy.color = ColorInfuse.instance.RO;
         else
             ballColorCopy.color = Color.red;
-        
     }
 
     public void InfuseColorBleu()
@@ -103,7 +109,6 @@ public class Balle : MonoBehaviour
             ballColorCopy.color = ColorInfuse.instance.BO;
         else
             ballColorCopy.color = Color.blue;
-
     }
 
     public void InfuseColorGreen()
@@ -116,7 +121,6 @@ public class Balle : MonoBehaviour
             ballColorCopy.color = ColorInfuse.instance.VO;
         else
             ballColorCopy.color = Color.green;
-
     }
 
     public void InfuseColorOrange()
@@ -130,5 +134,16 @@ public class Balle : MonoBehaviour
         else
             ballColorCopy.color = ColorInfuse.instance.orange;
     }
+
+    /*public IEnumerator InfuseParticule()
+    {
+        particuleColorCopy.color = ballColorCopy.color;
+        Debug.Log(particuleColorCopy.color);
+        Debug.Log(ballColorCopy.color);
+        particule.GetComponent<ParticleSystem>().Play();
+        yield return new WaitForSeconds(1f);
+        particuleColorCopy.CopyPropertiesFromMaterial(particuleColor);
+        Debug.Log(particuleColorCopy.color);
+    }*/
 
 }
