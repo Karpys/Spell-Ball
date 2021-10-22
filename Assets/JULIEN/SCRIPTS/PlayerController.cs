@@ -23,8 +23,12 @@ public class PlayerController : MonoBehaviour
 
     public Manager_NumbPlayers ManagePlayer;
 
+    private ControlerParticulShoot particule;
+
     void Start()
     {
+        particule = GetComponent<ControlerParticulShoot>();
+
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
         if(!ManagePlayer.player1)
@@ -112,8 +116,8 @@ public class PlayerController : MonoBehaviour
        
         balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
 
-
-        ComboManager.instance.combo++;
+        particule.particule.GetComponent<ParticleSystem>().Play();
+        balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
         isHoldingBall = false;
@@ -135,7 +139,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody ballRB = balle.GetComponent<Rigidbody>();
         ballRB.velocity = new Vector3(0, 0, 0);
         ballRB.useGravity = false;
-        ballRB.freezeRotation = true;
+        ballRB.freezeRotation = false;
         ballRB.isKinematic = true;
 
         isHoldingBall = true;
@@ -159,7 +163,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody balleRB = balle.GetComponent<Rigidbody>();
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
-        balleRB.freezeRotation = false;
+        balleRB.freezeRotation = true;
 
         balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
         ComboManager.instance.combo++;
