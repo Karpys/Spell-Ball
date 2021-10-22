@@ -5,14 +5,10 @@ using UnityEngine;
 public class BallSpeedEffect : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float delayBetween;
-    private int NbrEffect;
+    [SerializeField] private float delayBetween;
+    [SerializeField] private int NbrEffect;
     [SerializeField] private GameObject Effect;
     float timer;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,7 +20,7 @@ public class BallSpeedEffect : MonoBehaviour
             timer = 0;
             CreateEffect();
         }
-        else
+        else if(NbrEffect==0)
         {
             Destroy(gameObject);
         }
@@ -32,7 +28,8 @@ public class BallSpeedEffect : MonoBehaviour
 
     void CreateEffect()
     {
-        Instantiate(Effect, transform.position, transform.rotation);
+        GameObject Obj = Instantiate(Effect, transform.position, transform.rotation);
+        Obj.GetComponent<ParticleManager>().ApplyRotation(new Vector3(0, transform.eulerAngles.y, 0));
 
     }
 }

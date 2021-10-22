@@ -249,8 +249,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 1
+      scalar: 0.5
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4826,3 +4826,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particle: {fileID: 0}
   Mat: {fileID: 2100000, guid: 7c14156cb06d8a14b9b564a3adcc7725, type: 2}
+  destoy: 1

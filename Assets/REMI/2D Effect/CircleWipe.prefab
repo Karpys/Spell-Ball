@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7889759615069629434}
   - component: {fileID: 5581285221235228651}
   - component: {fileID: 4933510401120907319}
+  - component: {fileID: 4850285440109667051}
   m_Layer: 0
   m_Name: CircleWipe
   m_TagString: Untagged
@@ -602,7 +603,7 @@ ParticleSystem:
     randomizeRotationDirection: 0
     maxNumParticles: 1000
     size3D: 0
-    rotation3D: 0
+    rotation3D: 1
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
@@ -4862,3 +4863,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4850285440109667051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107207196388498581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb4adb995743c2429ac4c63dfa26a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 0}
+  Mat: {fileID: 2100000, guid: 572b8740752a7c641b0cdc23b1427fdc, type: 2}
+  destoy: 1

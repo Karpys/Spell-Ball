@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
-    private GameObject balle;
+
+    public GameObject balle;
 
     private Vector2 movementInput;
     private Rigidbody rb;
@@ -25,6 +26,9 @@ public class PlayerController : MonoBehaviour
     private bool balleIsTake = false;
 
     public GameObject CharacterVisual;
+
+    public List<GameObject> BallsInRange = new List<GameObject>();
+    public List<GameObject> EjectedBalls = new List<GameObject>();
 
     public Manager_NumbPlayers ManagePlayer;
 
@@ -53,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnSprint(InputAction.CallbackContext ctx) => ChangeSprintValue(ctx.ReadValueAsButton());*/
 
-    public void OnGrabBall(InputAction.CallbackContext ctx) => TryGrabBall(ctx.ReadValueAsButton());
+    /*public void OnGrabBall(InputAction.CallbackContext ctx) => TryGrabBall(ctx.ReadValueAsButton());*/
 
     public void OnThrowBall(InputAction.CallbackContext ctx) => TryThrowBall(ctx.ReadValueAsButton(), ctx);
 
@@ -94,7 +98,7 @@ public class PlayerController : MonoBehaviour
         return canGrabBall;
     }
 
-    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
+   /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
     {
         if (!buttonPressed) return;
         if (!isHoldingBall) return;
@@ -199,14 +203,56 @@ public class PlayerController : MonoBehaviour
         _timer = grabDelay;
 
         ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
+    }*/
+
+   public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
+   {
+       SetBall();
+       if (balle && _timer <= 0)
+       {
+           _timer = grabDelay;
+           StartCoroutine(ColorParticule()); 
+           ThrowBall();
+        }
     }
 
+
+   public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
+   { 
+       SetBall();
+       if (balle && _timer<=0)
+       {
+           _timer = grabDelay;
+           ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
+           ThrowBall();
+       }
+   }
+
+   public void ThrowBall()
+   {
+       Ball BallStats = balle.GetComponent<Ball>();
+       balle.GetComponent<Balle>().combo++;
+       BallStats.SetSpeed(BallStats.Speed + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed));
+       balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+       BallStats.AddEffect();
+       BallsInRange.Remove(balle);
+       EjectedBalls.Add(balle);
+       balle = null;
+   }
+
+   public void SetBall()
+   {
+       if (BallsInRange.Count > 0)
+       {
+           balle = BallsInRange[0];
+           BallsInRange.Remove(BallsInRange[0]);
+       }
+   }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6 && !isHoldingBall)
+        if (other.gameObject.layer == 6)
         {
-            canGrabBall = true;
-            balle = other.gameObject;
+            BallsInRange.Add(other.gameObject);
         }
     }
 
@@ -214,20 +260,16 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            canGrabBall = false;
-            
-            if (!balleIsTake)
+            if (EjectedBalls.Contains(other.gameObject))
             {
-                Balle balleScript = balle.GetComponent<Balle>();
-                balleScript.combo = 0;
-                Rigidbody balleRB = balle.GetComponent<Rigidbody>();
-                Vector3 dir = balleRB.velocity.normalized;
-                balleRB.velocity = new Vector3(0,0,0);
-                balleRB.AddForce(dir * balleScript.comboSpeed, ForceMode.Impulse);
+                EjectedBalls.Remove(other.gameObject);
             }
-
-
-            balleIsTake = false;
+            else
+            {
+                other.gameObject.GetComponent<Balle>().combo = 0;
+                other.gameObject.GetComponent<Ball>().ResetSpeed();
+                BallsInRange.Remove(other.gameObject);
+            }
         }
     }
 

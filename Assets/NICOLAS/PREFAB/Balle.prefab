@@ -81,7 +81,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.40909004
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -154,9 +154,10 @@ GameObject:
   - component: {fileID: 8321706773528243571}
   - component: {fileID: 8827649957874818234}
   - component: {fileID: 3258306905404220050}
+  - component: {fileID: 1288784995}
   m_Layer: 6
   m_Name: Balle
-  m_TagString: Untagged
+  m_TagString: Balle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +171,7 @@ Transform:
   m_GameObject: {fileID: 8321706773528243570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 8321706772911627943}
   m_Father: {fileID: 0}
@@ -232,8 +233,8 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8321706773528243570}
-  m_Material: {fileID: 13400000, guid: b3691003951791543b9db3c58cdb3e7e, type: 2}
-  m_IsTrigger: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -268,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trail: {fileID: 8321706772911627944}
   combo: 0
-  comboSpeed: 10
+  comboSpeed: 3
   ballColor: {fileID: 2100000, guid: 077f9510d152eff4abdf2e6588614cfe, type: 2}
   shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
 --- !u!114 &8827649957874818234
@@ -303,3 +304,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
+--- !u!114 &1288784995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321706773528243570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4718b92378d2a94d92e7d04fbc5e3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 10
+  CollisionMask:
+    serializedVersion: 2
+    m_Bits: 512
+  Direction: {x: 0, y: 0, z: 0}
+  CollisionParticle: {fileID: 0}

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using static GameUtilities.GameUtilities;
 
 public class IA_BasicEnemy : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class IA_BasicEnemy : MonoBehaviour
     int r;
     bool playerIsInRange;
 
+    
+    [SerializeField] float DelayCheckout = 5.0f;
+    /*[SerializeField] private float Range;*/
+    private GameObject Target;
+    float timerCheckout; 
     [SerializeField] private GameObject ParticleEffectOnHit;
 
 
@@ -22,9 +29,9 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         /*playerMov1 = GameObject.FindWithTag("Player").transform;
         playerMov2 = GameObject.FindWithTag("Player1").transform;*/
-        ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+        /*ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
         playerMov1 = ManagePlayer.player1.transform;
-        playerMov2 = ManagePlayer.player2.transform;
+        playerMov2 = ManagePlayer.player2.transform;*/
 
         r = Random.Range(0, 5);
     }
@@ -32,13 +39,18 @@ public class IA_BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timerCheckout >= DelayCheckout)
+        {
+            timerCheckout = 0;
+            CheckOutClosestPlayer();
+        }
         CheckPlayerIsInRange();
         CheckLifeEnemy();
     }
 
     public void CheckPlayerIsInRange()
     {
-        if(playerIsInRange == false)
+        /*if(playerIsInRange == false)
         {
             if (r <= 3)
             {
@@ -48,9 +60,21 @@ public class IA_BasicEnemy : MonoBehaviour
             {
                 enemy.SetDestination(playerMov1.position);
             }
+        }*/
+        if (Target)
+        {
+            enemy.SetDestination(Target.transform.position);
+        }
+        else
+        {
+            CheckOutClosestPlayer();
         }
     }
 
+    public void CheckOutClosestPlayer()
+    {
+        Target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
+    }
     public void CheckLifeEnemy()
     {
         if (lifeBEnemy <= 0)
@@ -59,26 +83,41 @@ public class IA_BasicEnemy : MonoBehaviour
         }       
     }
 
+    public void GetDamage(GameObject other)
+    {
+        gameObject.GetComponent<Manager_Life>().DamageHealth(other.gameObject.GetComponent<Balle>().combo);
+        other.gameObject.GetComponent<Balle>().combo = 0;
+        GameObject Parti = Instantiate(ParticleEffectOnHit, other.transform.position, transform.rotation);
+        Parti.GetComponent<ParticleManager>().ApplyColor(other.gameObject.GetComponent<Balle>().trail.startColor);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+       /* if (other.gameObject.tag == "Player")
         {
             playerIsInRange = true;
             enemy.SetDestination(other.transform.position);
-        }
+        }*/
+
+       /* if (other.gameObject.tag == "Balle")
+        {
+            //gameObject.GetComponent<Manager_Life>().damages = collision.gameObject.GetComponent<Balle>().combo;
+            
+
+        }*/
 
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        /*if (other.gameObject.tag == "Player")
         {
             playerIsInRange = false;
             r = Random.Range(0, 5);
-        }
+        }*/
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Balle")
         {
@@ -89,6 +128,6 @@ public class IA_BasicEnemy : MonoBehaviour
             Parti.GetComponent<ParticleManager>().ApplyColor(collision.gameObject.GetComponent<Balle>().trail.startColor);
             
         }
-    }
+    }*/
 }
 
