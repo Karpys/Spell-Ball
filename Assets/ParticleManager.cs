@@ -26,8 +26,8 @@ public class ParticleManager : MonoBehaviour
 
     void Start()
     {
-        /*if(ColorApply != Color.white)
-            Particle.material.color = ColorApply;*/
+        if (ColorApply != Color.white)
+            Particle.material.color = ColorApply;
     }
 
     // Update is called once per frame
