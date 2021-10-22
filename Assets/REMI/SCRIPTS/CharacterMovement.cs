@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController _controller;
     public GameObject CharacterVisual;
     private Vector2 MovementInput;
-    public Vector2 MovementDir;
+    [HideInInspector]public Vector2 MovementDir;
     public Animator Anim;
     
 
@@ -49,7 +49,10 @@ public class CharacterMovement : MonoBehaviour
 
         if(Stats.CanMove)
         {
-            Stats.LastMove = Move;
+            if (Move != Vector3.zero)
+            {
+                Stats.LastMove = Move;
+            }
             Move = Move * Stats.Speed * Time.deltaTime;
             _controller.Move(Move);
         }
@@ -64,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void RollController()
     {
-        if (Roll_Manager.RollCd >= 0)
+        if (Roll_Manager.RollCd >= 0 && !Roll_Manager.IsRolling)
         {
             Roll_Manager.RollCd -= Time.deltaTime;
         }
@@ -74,6 +77,7 @@ public class CharacterMovement : MonoBehaviour
             Roll_Manager.RollDuration -= Time.deltaTime;
         }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
         {
+            
             Roll_Manager.HasReset = true;
             Stats.CanMove = true;
         }
@@ -119,7 +123,7 @@ public class CharacterMovement : MonoBehaviour
         public float Speed;
         public float rotationspeed;
         public bool CanMove;
-        public Vector3 LastMove;
+        [HideInInspector] public Vector3 LastMove;
     }
     [System.Serializable]
     public struct RollManager

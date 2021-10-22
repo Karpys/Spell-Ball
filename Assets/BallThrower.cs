@@ -39,7 +39,7 @@ public class BallThrower : MonoBehaviour
     void InstantiateBall(GameObject target)
     {
         GameObject Proj = Instantiate(Projectile, transform.position, transform.rotation);
-        Proj.GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position) * Power,ForceMode.Impulse);
+        Proj.GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position).normalized * Power,ForceMode.Impulse);
     }
 
 }
