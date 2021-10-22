@@ -55,7 +55,7 @@ public class CameraShakeManager : MonoBehaviour
             CameraHolder.localPosition = Vector3.Lerp(OnStopLocation, Vector3.zero, timerReplace / ReplaceTime);
         }
 
-        CameraShakeManager.CameraShake.Shake(0.5f,5.0f,10.0f);
+        /*CameraShakeManager.CameraShake.Shake(0.5f,5.0f,10.0f);*/
 
     }
 
@@ -102,6 +102,14 @@ public class CameraShakeManager : MonoBehaviour
             GetPerlinFloat(10),
             0
         );
+    }
+
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(10, 10, 150, 100), "TestCameraShake"))
+        {
+            Shake();
+        }
     }
 
 
