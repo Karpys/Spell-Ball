@@ -6,23 +6,23 @@ using UnityEngine.Events;
 public class Manager_Life : MonoBehaviour
 {
     public int maxHealth;
-    public int damages;
+    //public int damages;
     [SerializeField] private float currentLife;
 
     public int heal;
     float regen = 5f;
 
 
-    public UnityEvent OnDamage;
-    public UnityEvent OnHeal;
+    /*public UnityEvent OnDamage;
+    public UnityEvent OnHeal;*/
 
     [SerializeField] private GameObject Visual;
 
     // Start is called before the first frame update
     void Start()
     {
-        OnDamage.AddListener(DamageHealth);
-        OnHeal.AddListener(HealHealth);
+        //OnDamage.AddListener(DamageHealth);
+        //OnHeal.AddListener(HealHealth);
         currentLife = maxHealth;
     }
 
@@ -44,11 +44,12 @@ public class Manager_Life : MonoBehaviour
 
     }
 
-    public void DamageHealth()
+    public void DamageHealth(int dmg)
     {
+        Debug.Log("je fais chier mon monde");
         ShakerEntity Shake = Visual.AddComponent<ShakerEntity>();
         Shake.SetShakeParameters(0.25f, 0.2f, 10f, new Vector3(1, 0, 1));
-        currentLife -= damages;
+        currentLife -= dmg;
     }
 
     public void HealHealth()

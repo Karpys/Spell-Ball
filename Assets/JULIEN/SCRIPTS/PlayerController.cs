@@ -23,8 +23,14 @@ public class PlayerController : MonoBehaviour
 
     public Manager_NumbPlayers ManagePlayer;
 
+    public ParticleSystem particleSystem;
+    private ParticleManager particule;
+
     void Start()
     {
+        particule = particleSystem.GetComponent<ParticleManager>();
+        particule.destoy = false;
+        particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
         if(!ManagePlayer.player1)
@@ -109,11 +115,11 @@ public class PlayerController : MonoBehaviour
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
         balleRB.freezeRotation = false;
-       
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
+        
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed)), ForceMode.Impulse);
 
-
-        ComboManager.instance.combo++;
+        particleSystem.Play();
+        balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
 
         isHoldingBall = false;
@@ -135,7 +141,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody ballRB = balle.GetComponent<Rigidbody>();
         ballRB.velocity = new Vector3(0, 0, 0);
         ballRB.useGravity = false;
-        ballRB.freezeRotation = true;
+        ballRB.freezeRotation = false;
         ballRB.isKinematic = true;
 
         isHoldingBall = true;
@@ -159,12 +165,14 @@ public class PlayerController : MonoBehaviour
         Rigidbody balleRB = balle.GetComponent<Rigidbody>();
         balleRB.isKinematic = false;
         balleRB.useGravity = true;
-        balleRB.freezeRotation = false;
+        balleRB.freezeRotation = true;
 
-        balleRB.AddForce(CharacterVisual.transform.forward * (power + (ComboManager.instance.combo * ComboManager.instance.comboSpeed)), ForceMode.Impulse);
-        ComboManager.instance.combo++;
+        balleRB.AddForce(CharacterVisual.transform.forward * (power + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed)), ForceMode.Impulse);
+        balle.GetComponent<Balle>().combo++;
         balleIsTake = true;
-        Balle.instance.InfuseColorRed();
+
+        StartCoroutine("ColorParticule");
+
         isHoldingBall = false;
     }
 
@@ -185,7 +193,7 @@ public class PlayerController : MonoBehaviour
             
             if (!balleIsTake)
             {
-                ComboManager.instance.combo = 0;
+                balle.GetComponent<Balle>().combo = 0;
                 Rigidbody balleRB = balle.GetComponent<Rigidbody>();
                 Vector3 dir = balleRB.velocity.normalized;
                 balleRB.velocity = new Vector3(0,0,0);
@@ -195,5 +203,30 @@ public class PlayerController : MonoBehaviour
 
             balleIsTake = false;
         }
+    }
+
+    public IEnumerator ColorParticule()
+    {
+        if (gameObject.name == "Character(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorRed();
+        }
+        else if (gameObject.name == "Character 1(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorOrange();
+        }
+        else if (gameObject.name == "Character 2(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorBleu();
+        }            
+        else if (gameObject.name == "Character 3(Clone)")
+        {
+            particleSystem.GetComponent<Renderer>().material.color = balle.GetComponent<Balle>().InfuseColorGreen();
+        }
+
+        particleSystem.Play();
+        yield return new WaitForSeconds(0.5f);
+        particleSystem.GetComponent<Renderer>().material.color = Color.white;
+
     }
 }

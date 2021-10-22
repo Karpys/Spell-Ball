@@ -82,11 +82,12 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Balle")
         {
-            ComboManager.instance.combo = gameObject.GetComponent<Manager_Life>().damages;
-            gameObject.GetComponent<Manager_Life>().OnDamage.Invoke();
+            //gameObject.GetComponent<Manager_Life>().damages = collision.gameObject.GetComponent<Balle>().combo;
+            gameObject.GetComponent<Manager_Life>().DamageHealth(collision.gameObject.GetComponent<Balle>().combo);
+            collision.gameObject.GetComponent<Balle>().combo = 0;
             GameObject Parti = Instantiate(ParticleEffectOnHit, collision.transform.position, transform.rotation);
             Parti.GetComponent<ParticleManager>().ApplyColor(collision.gameObject.GetComponent<Balle>().trail.startColor);
-            ComboManager.instance.combo = 0;
+            
         }
     }
 }
