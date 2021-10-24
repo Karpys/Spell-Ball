@@ -98,7 +98,114 @@ public class PlayerController : MonoBehaviour
         return canGrabBall;
     }
 
-   /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
+   
+
+   public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
+   {
+       SetBall();
+       if (balle && _timer <= 0)
+       {
+           _timer = grabDelay;
+           StartCoroutine(ColorParticule()); 
+           ThrowBall();
+        }
+    }
+
+
+   public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
+   { 
+       SetBall();
+       if (balle && _timer<=0)
+       {
+           _timer = grabDelay;
+           ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
+           ThrowBall();
+       }
+   }
+
+   public void ThrowBall()
+   {
+       Ball BallStats = balle.GetComponent<Ball>();
+       balle.GetComponent<Balle>().combo++;
+       BallStats.SetSpeed(BallStats.Speed + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed));
+       balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+       BallStats.AddEffect();
+       BallsInRange.Remove(balle);
+       EjectedBalls.Add(balle);
+
+       if (FreezeFrame.Freezer)
+       {
+           FreezeFrame.Freezer.TryFreeze(0.2f);
+       }
+
+       if (CameraShakeManager.CameraShake)
+       {
+           StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 1, 15, 0.1f));
+       }
+
+       balle = null;
+   }
+
+   public void SetBall()
+   {
+       if (BallsInRange.Count > 0)
+       {
+           balle = BallsInRange[0];
+           BallsInRange.Remove(BallsInRange[0]);
+       }
+   }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            BallsInRange.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            if (EjectedBalls.Contains(other.gameObject))
+            {
+                EjectedBalls.Remove(other.gameObject);
+            }
+            else
+            {
+                other.gameObject.GetComponent<Balle>().combo = 0;
+                other.gameObject.GetComponent<Ball>().ResetSpeed();
+                BallsInRange.Remove(other.gameObject);
+            }
+        }
+    }
+
+    public IEnumerator ColorParticule()
+    {
+        if (gameObject.name == "Character(Clone)")
+        {
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
+        }
+        else if (gameObject.name == "Character 1(Clone)")
+        {
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
+        }
+        else if (gameObject.name == "Character 2(Clone)")
+        {
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
+        }            
+        else if (gameObject.name == "Character 3(Clone)")
+        {
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
+        }
+
+        particleSystem.Play();
+        yield return new WaitForSeconds(0.5f);
+        particleSystem.startColor = Color.white;
+        //particleSystem.GetComponent<Renderer>().material.color = Color.white;
+
+    }
+
+    /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
     {
         if (!buttonPressed) return;
         if (!isHoldingBall) return;
@@ -204,109 +311,4 @@ public class PlayerController : MonoBehaviour
 
         ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
     }*/
-
-   public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
-   {
-       SetBall();
-       if (balle && _timer <= 0)
-       {
-           _timer = grabDelay;
-           StartCoroutine(ColorParticule()); 
-           ThrowBall();
-        }
-    }
-
-
-   public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
-   { 
-       SetBall();
-       if (balle && _timer<=0)
-       {
-           _timer = grabDelay;
-           ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
-           ThrowBall();
-       }
-   }
-
-   public void ThrowBall()
-   {
-       Ball BallStats = balle.GetComponent<Ball>();
-       balle.GetComponent<Balle>().combo++;
-       BallStats.SetSpeed(BallStats.Speed + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed));
-       balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
-       BallStats.AddEffect();
-       BallsInRange.Remove(balle);
-       EjectedBalls.Add(balle);
-
-       if (FreezeFrame.Freezer)
-       {
-           FreezeFrame.Freezer.TryFreeze(0.5f);
-       }
-
-       if (CameraShakeManager.CameraShake)
-       {
-            CameraShakeManager.CameraShake.Shake(0.25f,1,15);
-       }
-
-       balle = null;
-   }
-
-   public void SetBall()
-   {
-       if (BallsInRange.Count > 0)
-       {
-           balle = BallsInRange[0];
-           BallsInRange.Remove(BallsInRange[0]);
-       }
-   }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 6)
-        {
-            BallsInRange.Add(other.gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == 6)
-        {
-            if (EjectedBalls.Contains(other.gameObject))
-            {
-                EjectedBalls.Remove(other.gameObject);
-            }
-            else
-            {
-                other.gameObject.GetComponent<Balle>().combo = 0;
-                other.gameObject.GetComponent<Ball>().ResetSpeed();
-                BallsInRange.Remove(other.gameObject);
-            }
-        }
-    }
-
-    public IEnumerator ColorParticule()
-    {
-        if (gameObject.name == "Character(Clone)")
-        {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
-        }
-        else if (gameObject.name == "Character 1(Clone)")
-        {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
-        }
-        else if (gameObject.name == "Character 2(Clone)")
-        {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
-        }            
-        else if (gameObject.name == "Character 3(Clone)")
-        {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
-        }
-
-        particleSystem.Play();
-        yield return new WaitForSeconds(0.5f);
-        particleSystem.startColor = Color.white;
-        //particleSystem.GetComponent<Renderer>().material.color = Color.white;
-
-    }
 }

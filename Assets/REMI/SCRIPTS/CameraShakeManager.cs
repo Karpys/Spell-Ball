@@ -93,6 +93,12 @@ public class CameraShakeManager : MonoBehaviour
         SetShakeParameters();
     }
 
+    public IEnumerator Shake(float duration, float force, float frequence, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Shake(duration, force, frequence);
+    }
+
     float GetPerlinFloat(float seed)
     {
         return (Mathf.PerlinNoise(seed, _timerPerlin)- 0.5f) * 2;

@@ -10,6 +10,11 @@ public class FreezeFrame : MonoBehaviour
 
     private bool _OnFreeze = false;
 
+    public bool GetFreeze
+    {
+        get { return _OnFreeze; }
+    }
+
     void Awake()
     {
         if (Freezer != null && Freezer != this)
