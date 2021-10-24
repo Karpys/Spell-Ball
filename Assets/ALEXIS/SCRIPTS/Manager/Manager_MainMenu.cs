@@ -8,6 +8,7 @@ public class Manager_MainMenu : MonoBehaviour
     public AnimationClip earlyMenu;
     public GameObject launch;
     public GameObject fadeRef;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,9 @@ public class Manager_MainMenu : MonoBehaviour
         
     }
 
-    public void PlayButton()
+    public void PlayButton(string SceneName)
     {
-        SceneManager.LoadScene("Main_Scene_V2");
+        SceneManager.LoadScene(SceneName);
     }
 
     public void OptionsButton()

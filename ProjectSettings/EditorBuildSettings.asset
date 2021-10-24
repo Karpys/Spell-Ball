@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MERGE/Main_Scene_V2.unity
     guid: d342f0ad8e1d8bf4bbec9a6aeb414218
+  - enabled: 1
+    path: Assets/REMI/SCENES/Scene_Remi.unity
+    guid: 72be4c4a79f9159479e458c552a4bb18
   m_configObjects: {}
