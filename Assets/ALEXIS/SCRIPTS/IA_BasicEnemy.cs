@@ -16,6 +16,8 @@ public class IA_BasicEnemy : MonoBehaviour
     int r;
     bool playerIsInRange;
 
+    public bool CanMove = true;
+
     
     [SerializeField] float DelayCheckout = 5.0f;
     /*[SerializeField] private float Range;*/
@@ -44,8 +46,20 @@ public class IA_BasicEnemy : MonoBehaviour
             timerCheckout = 0;
             CheckOutClosestPlayer();
         }
-        CheckPlayerIsInRange();
+
+        if (CanMove)
+        {
+            CheckPlayerIsInRange();
+        }
         CheckLifeEnemy();
+    }
+
+    public void UpdateMovement()
+    {
+        if (!CanMove)
+        {
+            enemy.SetDestination(transform.position);
+        }
     }
 
     public void CheckPlayerIsInRange()
