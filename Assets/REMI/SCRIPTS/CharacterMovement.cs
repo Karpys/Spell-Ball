@@ -53,12 +53,12 @@ public class CharacterMovement : MonoBehaviour
             {
                 Stats.LastMove = Move;
             }
-            Move = Move * Stats.Speed * Time.deltaTime;
+            Move = Move.normalized * Stats.Speed * Time.deltaTime;
             _controller.Move(Move);
         }
         else if(Roll_Manager.IsRolling)
         {
-            Move = Stats.LastMove * Roll_Manager.RollSpeed * Time.deltaTime;
+            Move = Stats.LastMove.normalized * Roll_Manager.RollSpeed * Time.deltaTime;
             _controller.Move(Move);
         }
 

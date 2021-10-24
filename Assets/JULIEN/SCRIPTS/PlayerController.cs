@@ -237,6 +237,17 @@ public class PlayerController : MonoBehaviour
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
+
+       if (FreezeFrame.Freezer)
+       {
+           FreezeFrame.Freezer.TryFreeze(0.5f);
+       }
+
+       if (CameraShakeManager.CameraShake)
+       {
+            CameraShakeManager.CameraShake.Shake(0.25f,1,15);
+       }
+
        balle = null;
    }
 
