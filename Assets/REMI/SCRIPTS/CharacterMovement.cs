@@ -53,12 +53,12 @@ public class CharacterMovement : MonoBehaviour
             {
                 Stats.LastMove = Move;
             }
-            Move = Move * Stats.Speed * Time.deltaTime;
+            Move = Move.normalized * Stats.Speed * Time.deltaTime;
             _controller.Move(Move);
         }
         else if(Roll_Manager.IsRolling)
         {
-            Move = Stats.LastMove * Roll_Manager.RollSpeed * Time.deltaTime;
+            Move = Stats.LastMove.normalized * Roll_Manager.RollSpeed * Time.deltaTime;
             _controller.Move(Move);
         }
 
@@ -100,7 +100,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Stats.LastMove == Vector3.zero)
             return;
-
+        
         CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation,
             Quaternion.LookRotation(new Vector3(Stats.LastMove.x, 0, Stats.LastMove.z).normalized), Stats.rotationspeed);
     }
@@ -111,7 +111,13 @@ public class CharacterMovement : MonoBehaviour
         {
             if (lookDirection == Vector2.zero)
                 return;
-
+            if (FreezeFrame.Freezer)
+            {
+                if (FreezeFrame.Freezer.GetFreeze)
+                {
+                    return;
+                }
+            }
             CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
                 Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
         }

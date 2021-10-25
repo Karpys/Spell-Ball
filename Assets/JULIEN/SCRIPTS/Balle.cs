@@ -8,7 +8,7 @@ public class Balle : MonoBehaviour
     public int combo;
     public int comboSpeed;
 
-    private Rigidbody rb;
+    /*private Rigidbody rb;*/
     private float timer = 0;
 
     [Header("infuse color")]
@@ -28,7 +28,7 @@ public class Balle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        /*rb = GetComponent<Rigidbody>();*/
         // rb.AddForce(new Vector3(Random.Range(-50, 50), 0, Random.Range(-100, 100)), ForceMode.Impulse);
     }
 

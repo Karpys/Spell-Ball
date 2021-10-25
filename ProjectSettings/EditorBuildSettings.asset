@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/ALEXIS/SCENES/Scene_Alexis.unity
     guid: c32c6718ff620244da7527f14a423249
   - enabled: 1
-    path: Assets/MERGE/Main_Scene_V1.unity
-    guid: f69cffda72d906640be2a76c84f611cf
+    path: Assets/MERGE/Main_Scene_V2.unity
+    guid: d342f0ad8e1d8bf4bbec9a6aeb414218
   m_configObjects: {}

@@ -95,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 9161171297372144902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.888, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 8103684464284601880}
   m_Father: {fileID: 0}
@@ -132,16 +132,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats:
-    Speed: 10
+    Speed: 7
     rotationspeed: 1
     CanMove: 1
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
     RollCd: 0
-    RollCdSet: 0
+    RollCdSet: 0.5
     RollDuration: 0
     RollDurationSet: 0.5
-    RollSpeed: 30
+    RollSpeed: 15
     HasReset: 0
   _controller: {fileID: 9161171297372144952}
   CharacterVisual: {fileID: 8880468141465490594}
@@ -285,10 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec4c12285957f9468a01a23fda5a880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterAngle: 0
-  Direction: {x: 0, y: 0, z: 0}
-  AngleInput: 0
-  Coordone: {x: 0, y: 0, z: 0}
   CharacterVisual: {fileID: 8880468141465490594}
   Movement: {fileID: 9161171297372144903}
   Anim: {fileID: 3016966911618478461}
@@ -311,7 +307,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   grabDelay: 0.5
+  balleLayer: 6
+  balle: {fileID: 0}
   CharacterVisual: {fileID: 8880468141465490594}
+  BallsInRange: []
+  EjectedBalls: []
   ManagePlayer: {fileID: 0}
   particleSystem: {fileID: 4642817261295282374}
 --- !u!135 &1671512321560986209
@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9823921
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -475,7 +475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.18683098
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z
