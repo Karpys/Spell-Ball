@@ -4877,4 +4877,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particle: {fileID: 0}
   Mat: {fileID: 2100000, guid: 572b8740752a7c641b0cdc23b1427fdc, type: 2}
-  destoy: 0
+  destoy: 1

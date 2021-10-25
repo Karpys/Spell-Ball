@@ -24,24 +24,26 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed + 0.5f, CollisionMask))
+        Vector3 forward = transform.forward * Speed * Time.deltaTime;
+        Debug.DrawRay(transform.position,forward * 10, Color.green);
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMask))
         {
             AddEffect();
             Reflect(hit.normal);
             Instantiate(CollisionParticle, transform.position, transform.rotation);
         }
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed + 0.5f, CollisionMaskEnnemy))
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy))
         {
             Reflect(hit.normal);
             ResetSpeedAndCombo();
             hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(gameObject);
         }
+        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 
