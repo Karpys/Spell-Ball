@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
     public Vector3 Direction;
+    public float radius = 1.0f;
 
 
     [SerializeField] private GameObject CollisionParticle;
@@ -29,8 +30,8 @@ public class Ball : MonoBehaviour
         RaycastHit hit;
 
         Vector3 forward = transform.forward * Speed * Time.deltaTime;
-        Debug.DrawRay(transform.position,forward * 10, Color.green);
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMask))
+        Debug.DrawRay(transform.position,forward, Color.green);
+        if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius,CollisionMask))
         {
             AddEffect();
             Reflect(hit.normal);
