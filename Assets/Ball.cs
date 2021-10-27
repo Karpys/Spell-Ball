@@ -8,10 +8,12 @@ public class Ball : MonoBehaviour
     private float BaseSpeed;
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
+    public LayerMask CollisionPlayer;
     public Vector3 Direction;
     public float radius = 1.0f;
 
     public float DelayDamageSelf;//Used for prevent self Damage //
+    private float DelayDamageSelfPlayer; // Same but for the Player//
 
     float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
@@ -28,9 +30,14 @@ public class Ball : MonoBehaviour
     void Update()
     {
 
-        if (DelayDamageSelf > 0)
+        if (DelayDamageSelf >= 0)
         {
             DelayDamageSelf -= Time.deltaTime;
+        }
+
+        if (DelayDamageSelfPlayer >= 0)
+        {
+            DelayDamageSelfPlayer -= Time.deltaTime;
         }
 
 
@@ -56,6 +63,14 @@ public class Ball : MonoBehaviour
                 hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(this.gameObject);
             }
         }
+
+        /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        {
+
+            Reflect(hit.normal);
+            ResetSpeedAndCombo();
+            //DAMAGE PLAYER//
+        }*/
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
