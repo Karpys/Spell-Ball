@@ -114,13 +114,13 @@ public class CharacterMovement : MonoBehaviour
         {
             if (lookDirection == Vector2.zero)
                 return;
-            if (FreezeFrame.Freezer)
+            /*if (FreezeFrame.Freezer)
             {
                 if (FreezeFrame.Freezer.GetFreeze)
                 {
                     return;
                 }
-            }
+            }*/
             CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
                 Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
         }

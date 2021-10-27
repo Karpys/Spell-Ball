@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
 
+    [SerializeField] private bool SetDirectionAtEndFreezeFrame = true;
+
     public GameObject balle;
 
     private Vector2 movementInput;
@@ -128,22 +130,35 @@ public class PlayerController : MonoBehaviour
        Ball BallStats = balle.GetComponent<Ball>();
        balle.GetComponent<Balle>().combo++;
        BallStats.SetSpeed(BallStats.Speed + (balle.GetComponent<Balle>().combo * balle.GetComponent<Balle>().comboSpeed));
-       balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
 
        if (FreezeFrame.Freezer)
        {
-           FreezeFrame.Freezer.TryFreeze(0.2f);
+           if (SetDirectionAtEndFreezeFrame)
+           {
+               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f,0,0.2f),
+               balle.GetComponent<Ball>(),CharacterVisual);
+           }
+           else
+           {
+               balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f));
+           }
        }
+       else
+       {
+           balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+        }
+
 
        if (CameraShakeManager.CameraShake)
        {
            StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 1, 15, 0.1f));
        }
-
-       balle = null;
+       
+        balle = null;
    }
 
    public void SetBall()

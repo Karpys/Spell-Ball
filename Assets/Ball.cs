@@ -11,7 +11,9 @@ public class Ball : MonoBehaviour
     public Vector3 Direction;
     public float radius = 1.0f;
 
+    public float DelayDamageSelf;//Used for prevent self Damage //
 
+    float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
 
     [SerializeField] private GameObject SpeedEffect;
@@ -26,6 +28,12 @@ public class Ball : MonoBehaviour
     void Update()
     {
 
+        if (DelayDamageSelf > 0)
+        {
+            DelayDamageSelf -= Time.deltaTime;
+        }
+
+
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
@@ -38,7 +46,7 @@ public class Ball : MonoBehaviour
             Instantiate(CollisionParticle, transform.position, transform.rotation);
         }
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy))
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy) && DelayDamageSelf<0)
         {
             Reflect(hit.normal);
             ResetSpeedAndCombo();

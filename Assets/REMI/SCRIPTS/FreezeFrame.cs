@@ -31,6 +31,14 @@ public class FreezeFrame : MonoBehaviour
         }
     }
 
+    public void TryFreeze(float duration, Ball Ball, GameObject VisualCharacter)
+    {
+        if (!_OnFreeze)
+        {
+            StartCoroutine(FreezeScreen(duration,Ball,VisualCharacter));
+        }
+    }
+
     IEnumerator FreezeScreen(float duration)
     {
         _OnFreeze = true;
@@ -39,6 +47,18 @@ public class FreezeFrame : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(duration);
 
+        Time.timeScale = TimeScale;
+        _OnFreeze = false;
+    }
+
+    IEnumerator FreezeScreen(float duration,Ball Ball,GameObject VisualCharacter)
+    {
+        _OnFreeze = true;
+        float TimeScale = Time.timeScale;
+        Time.timeScale = 0;
+
+        yield return new WaitForSecondsRealtime(duration);
+        Ball.SetDirection(new Vector3(0, VisualCharacter.transform.eulerAngles.y, 0));
         Time.timeScale = TimeScale;
         _OnFreeze = false;
     }
