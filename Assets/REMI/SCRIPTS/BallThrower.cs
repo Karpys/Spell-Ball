@@ -11,6 +11,9 @@ public class BallThrower : MonoBehaviour
     [SerializeField] private float Power;
     [SerializeField] private float TimeBetweenShot;
     [SerializeField] private int NbrShoot = 10;
+    [SerializeField] private float DelayDmgSelf;
+
+    public float Angle;
     float timer;
 
     // Update is called once per frame
@@ -35,11 +38,14 @@ public class BallThrower : MonoBehaviour
         }
         timer = 0;
     }
-
+    
     void InstantiateBall(GameObject target)
     {
         GameObject Proj = Instantiate(Projectile, transform.position, transform.rotation);
-        Proj.GetComponent<Rigidbody>().AddForce((target.transform.position - transform.position).normalized * Power,ForceMode.Impulse);
+        Proj.GetComponent<Ball>().Speed = Power;
+        Proj.GetComponent<Ball>().LookAtStart(target);
+        Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
     }
+
 
 }

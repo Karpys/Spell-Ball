@@ -48,14 +48,17 @@ public class Ball : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy) && DelayDamageSelf<0)
         {
+            
             Reflect(hit.normal);
             ResetSpeedAndCombo();
-            hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(gameObject);
+            if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out IA_BasicEnemy test))
+            {
+                hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(this.gameObject);
+            }
         }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
-
 
     public void Reflect(Vector3 Normal)
     {
@@ -87,5 +90,16 @@ public class Ball : MonoBehaviour
     {
         ResetSpeed();
         GetComponent<Balle>().combo = 0;
+    }
+
+    public void LookAtStart(GameObject Target)
+    {
+        Vector3 _direction = (new Vector3(Target.transform.position.x,transform.position.y,Target.transform.position.z) - transform.position).normalized;
+
+        //create the rotation we need to be in to look at the target
+        Quaternion _lookRotation = Quaternion.LookRotation(_direction);
+
+        //rotate us over time according to speed until we are in the required rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation,1);
     }
 }

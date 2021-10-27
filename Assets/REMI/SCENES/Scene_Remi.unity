@@ -261,6 +261,8 @@ MonoBehaviour:
   Power: 3
   TimeBetweenShot: 1
   NbrShoot: 2
+  DelayDmgSelf: 0
+  Angle: 0
 --- !u!65 &16040904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2699,6 +2701,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
+--- !u!1 &215761459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 371949442412338522, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
+  m_PrefabInstance: {fileID: 601354021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &215761466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215761459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e243370ce09ee4596b1f6ab3a4484e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+  Power: 10
+  TimeBetweenShot: 0.5
+  NbrShoot: 100
+  DelayDmgSelf: 0.5
+  Angle: 0
 --- !u!4 &218632938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
@@ -6168,7 +6193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 371949442412338522, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 371949442412338523, guid: f69a1ea4ecbbc4645831134ad29aeb79, type: 3}
       propertyPath: CanMove
