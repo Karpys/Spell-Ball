@@ -11,9 +11,9 @@ public class ControllerHaptics : MonoBehaviour
 
     [SerializeField] private bool debug = false;
 
-    private float debugLowFrequency = .0f;
-    private float debugHighFrequency = .0f;
-    private float debugDuration = .0f;
+    [SerializeField] private float debugLowFrequency = .0f;
+    [SerializeField] private float debugHighFrequency = .0f;
+    [SerializeField] private float debugDuration = .0f;
 
     void Awake()
     {
@@ -47,6 +47,16 @@ public class ControllerHaptics : MonoBehaviour
         {
             if (device is IDualMotorRumble)
                 ShakeController(device.deviceId, lowFrequency, highFrequency, duration);
+
+        }
+    }
+
+    public void StopAllControllers(float delay)
+    {
+        foreach (InputDevice device in InputSystem.devices)
+        {
+            if (device is IDualMotorRumble)
+                StartCoroutine(StopHaptics((Gamepad)InputSystem.GetDeviceById(device.deviceId), delay));
         }
     }
 
@@ -56,13 +66,17 @@ public class ControllerHaptics : MonoBehaviour
 
         gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
 
-        StartCoroutine(StopHaptics(gamepad, duration));
+        Debug.Log("Start Shaking " + deviceId);
+        Debug.Log(duration);
+        if (duration >= 0)
+            StartCoroutine(StopHaptics(gamepad, duration));
     }
 
-    private IEnumerator StopHaptics(Gamepad gamepad, float duration)
+    public IEnumerator StopHaptics(Gamepad gamepad, float delay)
     {
-        yield return new WaitForSecondsRealtime(duration);
+        yield return new WaitForSeconds(delay);
 
+        Debug.Log("Stop Shaking " + gamepad.deviceId + " after " + delay + " seconds");
         gamepad.SetMotorSpeeds(.0f, .0f);
     }
 }
