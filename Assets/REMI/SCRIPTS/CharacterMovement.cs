@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[ExecuteAlways]
 public class CharacterMovement : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,9 +10,10 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController _controller;
     public GameObject CharacterVisual;
     private Vector2 MovementInput;
-    [HideInInspector]public Vector2 MovementDir;
+    [HideInInspector] public Vector2 MovementDir;
     public Animator Anim;
-    
+
+    public bool ShowInspector;
 
     public void OnMove(InputAction.CallbackContext ctx) => MovementInput = ctx.ReadValue<Vector2>();
 
@@ -29,6 +31,7 @@ public class CharacterMovement : MonoBehaviour
         Move();
         RollController();
         MovementDir = MovementInput;
+
     }
 
     public void Move()
@@ -111,13 +114,13 @@ public class CharacterMovement : MonoBehaviour
         {
             if (lookDirection == Vector2.zero)
                 return;
-            if (FreezeFrame.Freezer)
+            /*if (FreezeFrame.Freezer)
             {
                 if (FreezeFrame.Freezer.GetFreeze)
                 {
                     return;
                 }
-            }
+            }*/
             CharacterVisual.transform.rotation = Quaternion.Slerp(transform.rotation, 
                 Quaternion.LookRotation(new Vector3(lookDirection.x, 0, lookDirection.y).normalized), Stats.rotationspeed);
         }
@@ -146,4 +149,6 @@ public class CharacterMovement : MonoBehaviour
         public bool HasReset;
         public bool CanRoll  => RollCd < 0;
     }
+
+    
 }
