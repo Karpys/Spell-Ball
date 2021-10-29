@@ -35,7 +35,10 @@ public class PlayerController : MonoBehaviour
     public Manager_NumbPlayers ManagePlayer;
 
     public ParticleSystem particleSystem;
+
     private ParticleManager particule;
+
+    [SerializeField] GameObject SlowDownEffect;
     private float _timer;
     
 
@@ -189,6 +192,7 @@ public class PlayerController : MonoBehaviour
             {
                 other.gameObject.GetComponent<Balle>().combo = 0;
                 other.gameObject.GetComponent<Ball>().ResetSpeed();
+                Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
                 BallsInRange.Remove(other.gameObject);
             }
         }

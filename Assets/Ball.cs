@@ -57,11 +57,12 @@ public class Ball : MonoBehaviour
         {
             
             Reflect(hit.normal);
-            ResetSpeedAndCombo();
             if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out IA_BasicEnemy test))
             {
                 hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(this.gameObject);
             }
+            ResetSpeedAndCombo();
+
         }
 
         /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
