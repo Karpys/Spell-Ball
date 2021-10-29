@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UI_Scale : MonoBehaviour
 {
-    Vector3 test = new Vector3(0.1f, 0.1f, 0.1f);
+    Vector3 scale = new Vector3(0.1f, 0.1f, 0.1f);
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +21,14 @@ public class UI_Scale : MonoBehaviour
 
     public void EnterPointer()
     {
-        this.transform.localScale += test;
+        this.transform.localScale += scale;
 
 
     }
 
     public void ExitEnter()
     {
-        this.transform.localScale -= test;
+        this.transform.localScale -= scale;
 
     }
 

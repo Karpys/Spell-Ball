@@ -9,10 +9,13 @@ using UnityEngine.EventSystems;
 public class UI_MenuPause : MonoBehaviour
 {
     public GameObject targetMenu;
-    public bool isPause = false;
     public Animator animator;
 
+    public bool playerDoPause;
+    public bool unPause = false;
     public GameObject resumeFocus;
+
+    private float timer = 0.8f;
 
     private void Awake()
     {
@@ -22,47 +25,54 @@ public class UI_MenuPause : MonoBehaviour
     void Start()
     {
         animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
-        EventSystem.current.SetSelectedGameObject(null);
 
-        EventSystem.current.SetSelectedGameObject(resumeFocus);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        if (unPause == true)
+        {
+            timer -= Time.deltaTime;
+
+            if(timer < 0)
+            {
+                targetMenu.gameObject.SetActive(false);
+                timer = 0.8f;
+                unPause = false;
+                playerDoPause = false;
+            }
+        }
     }
+    //public void OnStart(InputAction.CallbackContext ctx) => OnPause(ctx.ReadValueAsButton());
+    //public void OnPause(bool isPressing)
+    //{
+
+    //    if (isPressing)
+    //    {
+    //        Pause();
+    //    }
+    //}
 
     public void Resume()
     {
         animator.SetBool("Active", false);
-        StartCoroutine(Wait());
+        unPause = true;
+        Time.timeScale = 1f;
+        EventSystem.current.SetSelectedGameObject(null);
     }
-
     public void Pause()
     {
-        if (isPause == true)
-        {
-
-            animator.SetBool("Active", false);
-            StartCoroutine(Wait());
-
-
-        }
-        else
-        {
-            targetMenu.gameObject.SetActive(true);
-            animator.SetBool("Active", true);
-            isPause = true;
-            Time.timeScale = 0f;
-
-            EventSystem.current.SetSelectedGameObject(null);
-
-            EventSystem.current.SetSelectedGameObject(resumeFocus);
-        }
+        playerDoPause = true;
+        targetMenu.gameObject.SetActive(true);
+        animator.SetBool("Active", true);
+        Time.timeScale = 0f;
 
 
-        
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(resumeFocus);
     }
     public void Options()
     {
@@ -72,15 +82,6 @@ public class UI_MenuPause : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Scene_Alexis");
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(1.5f);
-        targetMenu.gameObject.SetActive(false);
-        Time.timeScale = 1f;
-        isPause = false;
-
     }
 
 

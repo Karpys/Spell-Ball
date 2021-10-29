@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 7944528082658565161}
   - component: {fileID: 397368419370294684}
   - component: {fileID: 1671512321560986209}
+  - component: {fileID: 8134914264294877979}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -270,8 +271,8 @@ MonoBehaviour:
     m_ActionName: Gameplay/Infuse[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 397368419370294684}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 8134914264294877979}
+        m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
         m_MethodName: OnStart
         m_Mode: 0
         m_Arguments:
@@ -325,7 +326,6 @@ MonoBehaviour:
   grabDelay: 0.5
   balleLayer: 6
   balle: {fileID: 0}
-  _pause: {fileID: 0}
   CharacterVisual: {fileID: 8880468141465490594}
   BallsInRange: []
   EjectedBalls: []
@@ -344,6 +344,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8134914264294877979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161171297372144902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdeb45537ca17c7409a62013a2084536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  debugRemi: 0.5
 --- !u!1001 &1485336078494962842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.47918808
+      value: 0.45099944
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -492,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.87771225
+      value: -0.8925243
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z
