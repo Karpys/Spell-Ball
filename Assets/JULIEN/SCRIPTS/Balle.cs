@@ -138,5 +138,9 @@ public class Balle : MonoBehaviour
         return ColorInfuse.instance.orange;
     }
 
+    public void ColorBallReset()
+    {
+        ballColorCopy.color = Color.white;
+    }
 
 }

@@ -101,6 +101,7 @@ public class IA_BasicEnemy : MonoBehaviour
     {
         gameObject.GetComponent<Manager_Life>().DamageHealth(other.gameObject.GetComponent<Balle>().combo);
         other.gameObject.GetComponent<Balle>().combo = 0;
+        other.gameObject.GetComponent<Balle>().ColorBallReset();
         GameObject Parti = Instantiate(ParticleEffectOnHit, other.transform.position, transform.rotation);
         Parti.GetComponent<ParticleManager>().ApplyColor(other.gameObject.GetComponent<Balle>().trail.startColor);
     }
