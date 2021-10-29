@@ -8,9 +8,14 @@ public class Ball : MonoBehaviour
     private float BaseSpeed;
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
+    public LayerMask CollisionPlayer;
     public Vector3 Direction;
+    public float radius = 1.0f;
 
+    public float DelayDamageSelf;//Used for prevent self Damage //
+    private float DelayDamageSelfPlayer; // Same but for the Player//
 
+    float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
 
     [SerializeField] private GameObject SpeedEffect;
@@ -24,27 +29,52 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+
+        if (DelayDamageSelf >= 0)
+        {
+            DelayDamageSelf -= Time.deltaTime;
+        }
+
+        if (DelayDamageSelfPlayer >= 0)
+        {
+            DelayDamageSelfPlayer -= Time.deltaTime;
+        }
+
 
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed + 0.5f, CollisionMask))
+        Vector3 forward = transform.forward * Speed * Time.deltaTime;
+        Debug.DrawRay(transform.position,forward, Color.green);
+        if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius,CollisionMask))
         {
             AddEffect();
             Reflect(hit.normal);
             Instantiate(CollisionParticle, transform.position, transform.rotation);
         }
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed + 0.5f, CollisionMaskEnnemy))
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy) && DelayDamageSelf<0)
         {
+            
             Reflect(hit.normal);
+            if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out IA_BasicEnemy test))
+            {
+                hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(this.gameObject);
+            }
             ResetSpeedAndCombo();
-            hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(gameObject);
+
         }
 
-    }
+        /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        {
 
+            Reflect(hit.normal);
+            ResetSpeedAndCombo();
+            //DAMAGE PLAYER//
+        }*/
+        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+
+    }
 
     public void Reflect(Vector3 Normal)
     {
@@ -76,5 +106,16 @@ public class Ball : MonoBehaviour
     {
         ResetSpeed();
         GetComponent<Balle>().combo = 0;
+    }
+
+    public void LookAtStart(GameObject Target)
+    {
+        Vector3 _direction = (new Vector3(Target.transform.position.x,transform.position.y,Target.transform.position.z) - transform.position).normalized;
+
+        //create the rotation we need to be in to look at the target
+        Quaternion _lookRotation = Quaternion.LookRotation(_direction);
+
+        //rotate us over time according to speed until we are in the required rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation,1);
     }
 }

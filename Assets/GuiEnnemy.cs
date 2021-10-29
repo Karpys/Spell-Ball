@@ -11,8 +11,11 @@ public class GuiEnnemy : MonoBehaviour
     {
         if (GUI.Button(new Rect(10, 150, 200, 50), "Disable Ennemy Movement"))
         {
-            Ennemy.GetComponent<IA_BasicEnemy>().CanMove = !Ennemy.GetComponent<IA_BasicEnemy>().CanMove;
-            Ennemy.GetComponent<IA_BasicEnemy>().UpdateMovement();
+            if (Ennemy)
+            {
+                Ennemy.GetComponent<IA_BasicEnemy>().CanMove = !Ennemy.GetComponent<IA_BasicEnemy>().CanMove;
+                Ennemy.GetComponent<IA_BasicEnemy>().UpdateMovement();
+            }
         }
     }
 }

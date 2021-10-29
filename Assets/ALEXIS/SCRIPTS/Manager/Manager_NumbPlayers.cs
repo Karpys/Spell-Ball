@@ -13,6 +13,8 @@ public class Manager_NumbPlayers: MonoBehaviour
     public int number = 0;
     public GameObject player1;
     public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
     [HideInInspector]
     public bool unlockMove;
 
