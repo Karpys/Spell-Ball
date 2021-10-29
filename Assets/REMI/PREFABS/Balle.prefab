@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7864188510188467676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.49, y: 2, z: -2.33}
+  m_LocalPosition: {x: -4.49, y: 1.5, z: -2.33}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 7864188511610275337}
@@ -171,7 +171,12 @@ MonoBehaviour:
   CollisionMaskEnnemy:
     serializedVersion: 2
     m_Bits: 256
+  CollisionPlayer:
+    serializedVersion: 2
+    m_Bits: 0
   Direction: {x: 0, y: 0, z: 0}
+  radius: 1
+  DelayDamageSelf: 0
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}
 --- !u!1 &7864188511610275336
