@@ -2721,7 +2721,7 @@ MonoBehaviour:
   Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
   Power: 10
   TimeBetweenShot: 0.5
-  NbrShoot: 100
+  NbrShoot: 0
   DelayDmgSelf: 0.5
   Angle: 0
 --- !u!4 &218632938 stripped
