@@ -268,6 +268,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a7bfb9e7-dfe5-4353-b198-129f6f4ee48c
     m_ActionName: Gameplay/Infuse
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 151682d5-c39f-42cf-8a21-6a9432923b9a
+    m_ActionName: Gameplay/START[/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
