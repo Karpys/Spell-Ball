@@ -15,7 +15,7 @@ public class UI_MenuPause : MonoBehaviour
     public bool unPause = false;
     public GameObject resumeFocus;
 
-    private float timer = 0.8f;
+    private float timer = 1.2f;
 
     private void Awake()
     {
@@ -39,21 +39,25 @@ public class UI_MenuPause : MonoBehaviour
             if(timer < 0)
             {
                 targetMenu.gameObject.SetActive(false);
-                timer = 0.8f;
+                timer = 1.2f;
                 unPause = false;
                 playerDoPause = false;
             }
         }
     }
-    //public void OnStart(InputAction.CallbackContext ctx) => OnPause(ctx.ReadValueAsButton());
-    //public void OnPause(bool isPressing)
-    //{
 
-    //    if (isPressing)
-    //    {
-    //        Pause();
-    //    }
-    //}
+    public void OnFocusAgain()
+    {
+
+        if (Time.timeScale == 0f && EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+
+            EventSystem.current.SetSelectedGameObject(resumeFocus);
+
+        }
+
+    }
 
     public void Resume()
     {
