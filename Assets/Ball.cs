@@ -57,9 +57,15 @@ public class Ball : MonoBehaviour
         {
             
             Reflect(hit.normal);
-            if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out IA_BasicEnemy test))
+            if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out Manager_Life test))
             {
-                hit.transform.gameObject.GetComponent<IA_BasicEnemy>().GetDamage(this.gameObject);
+                Balle balle = GetComponent<Balle>();
+                Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
+                managerLife.DamageHealth(balle.combo);
+                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
+
+                balle.combo = 0;
+                balle.ColorBallReset();
             }
             ResetSpeedAndCombo();
 
