@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class Manager_MainMenu : MonoBehaviour
 {
@@ -27,7 +28,18 @@ public class Manager_MainMenu : MonoBehaviour
     {
         
     }
+    public void OnFocus(InputAction.CallbackContext ctx) => CheckFocus(ctx.ReadValue<Vector2>());
 
+    public void CheckFocus(Vector2 mov)
+    {
+        if(EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+
+            EventSystem.current.SetSelectedGameObject(play);
+
+        }
+    }
     public void PlayButton(string SceneName)
     {
         SceneManager.LoadScene(SceneName);

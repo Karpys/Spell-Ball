@@ -26,7 +26,7 @@ public class UI_CallPause : MonoBehaviour
         }
     }
     public void OnStart(InputAction.CallbackContext ctx) => OnPause(ctx.ReadValueAsButton());
-
+    public void OnFocus(InputAction.CallbackContext ctx) => CheckFocus(ctx.ReadValue<Vector2>());
     public void OnPause(bool isPressed)
     {
 
@@ -37,5 +37,12 @@ public class UI_CallPause : MonoBehaviour
             pause = FindObjectOfType<UI_MenuPause>();
             pause.Pause();
         }
+    }
+
+    public void CheckFocus(Vector2 mov)
+    {
+        pause = FindObjectOfType<UI_MenuPause>();
+        pause.OnFocusAgain();   
+    
     }
 }

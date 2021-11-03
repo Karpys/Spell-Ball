@@ -1806,6 +1806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetMenu: {fileID: 1351463430}
   animator: {fileID: 1351463432}
+  playerDoPause: 0
+  unPause: 0
   resumeFocus: {fileID: 1071517192}
 --- !u!1 &1530655769
 GameObject:
@@ -2302,6 +2304,8 @@ MonoBehaviour:
   number: 0
   player1: {fileID: 0}
   player2: {fileID: 0}
+  player3: {fileID: 0}
+  player4: {fileID: 0}
   unlockMove: 0
 --- !u!114 &1931260030
 MonoBehaviour:
