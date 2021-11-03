@@ -120,8 +120,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentLife: 2
-  heal: 0
+  autoRegenAmount: 0
+  autoRegenTimer: 5
+  autoRegen: 0
+  shakeOnDamage: 1
   Visual: {fileID: 7474282477076200796}
+  particleOnDamage: 0
+  ParticleEffectOnHit: {fileID: 6764830057482778676, guid: cd0f189d52b4ca042b1b75fbbd6f6166, type: 3}
+  particleOnHeal: 0
+  ParticleEffectOnHeal: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7474282477076200796
 GameObject:
   m_ObjectHideFlags: 0

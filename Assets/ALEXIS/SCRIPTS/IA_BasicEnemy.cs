@@ -22,8 +22,7 @@ public class IA_BasicEnemy : MonoBehaviour
     [SerializeField] float DelayCheckout = 5.0f;
     /*[SerializeField] private float Range;*/
     private GameObject Target;
-    float timerCheckout; 
-    [SerializeField] private GameObject ParticleEffectOnHit;
+    float timerCheckout;
 
 
     // Start is called before the first frame update
@@ -95,15 +94,6 @@ public class IA_BasicEnemy : MonoBehaviour
         {
             Destroy(gameObject);
         }       
-    }
-
-    public void GetDamage(GameObject other)
-    {
-        gameObject.GetComponent<Manager_Life>().DamageHealth(other.gameObject.GetComponent<Balle>().combo);
-        other.gameObject.GetComponent<Balle>().combo = 0;
-        other.gameObject.GetComponent<Balle>().ColorBallReset();
-        GameObject Parti = Instantiate(ParticleEffectOnHit, other.transform.position, transform.rotation);
-        Parti.GetComponent<ParticleManager>().ApplyColor(other.gameObject.GetComponent<Balle>().trail.startColor);
     }
 
     private void OnTriggerEnter(Collider other)
