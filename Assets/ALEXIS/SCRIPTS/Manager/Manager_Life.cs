@@ -106,4 +106,14 @@ public class Manager_Life : MonoBehaviour
             Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
         }
     }
+
+    public float GetCurentLife()
+    {
+        return currentLife;
+    }
+
+    public void SetCurentLife(float life)
+    {
+        currentLife = life;
+    }
 }
