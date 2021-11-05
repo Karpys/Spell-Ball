@@ -69,6 +69,14 @@ public class Manager_Life : MonoBehaviour
         }
     }
 
+    public void DamageByColor(Balle ball)
+    {
+        if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
+        {
+            DamageHealth(ball.combo);
+        }
+    }
+
     public void DamageHealth(int dmg)
     {
         Debug.Log("je fais chier mon monde");

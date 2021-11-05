@@ -22,6 +22,7 @@ public class CheatManager : MonoBehaviour
     public Text nCountEnnemy;
     public Text nEnnemySpawn;
     public Text nEnnemyLife;
+    public Dropdown typeEnemy;
     private List<GameObject> ennemys = new List<GameObject>();
 
     [Header("Player Life")]
@@ -95,11 +96,40 @@ public class CheatManager : MonoBehaviour
 
     public void SpawnEnnemy()
     {
+
+
         for (int i = 0; i < System.Convert.ToInt32(nEnnemySpawn.text); i++)
         {
             GameObject ennemy = GameObject.Instantiate(ennemyPrefab, new Vector3(Random.Range(-18,5), 2f, Random.Range(-13, 3)), Quaternion.identity);
             ennemy.transform.localScale = Vector3.one;
             ennemy.GetComponent<Manager_Life>().maxHealth = System.Convert.ToInt32(nEnnemyLife.text); //10;
+
+            switch (typeEnemy.value)
+            {
+                case 0:
+                    ennemy.GetComponentInChildren<EnemyColor>().random = true;
+                    break;
+
+                case 1:
+                    ennemy.GetComponentInChildren<EnemyColor>().GetColorCopy().color = Color.white;
+                    break;
+
+                case 2:
+                    ennemy.GetComponentInChildren<EnemyColor>().GetColorCopy().color = Color.red;
+                    break;
+
+                case 3:
+                    ennemy.GetComponentInChildren<EnemyColor>().GetColorCopy().color = ColorInfuse.instance.orange;
+                    break;
+
+                case 4:
+                    ennemy.GetComponentInChildren<EnemyColor>().GetColorCopy().color = Color.blue;
+                    break;
+
+                case 5:
+                    ennemy.GetComponentInChildren<EnemyColor>().GetColorCopy().color = Color.green;
+                    break;
+            }
             ennemys.Add(ennemy);
         }
         nCountEnnemy.text = ennemys.Count.ToString();

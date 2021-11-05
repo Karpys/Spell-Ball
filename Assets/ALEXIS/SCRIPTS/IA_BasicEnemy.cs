@@ -121,7 +121,10 @@ public class IA_BasicEnemy : MonoBehaviour
         }*/
 
     }
-
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
    /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Balle")
