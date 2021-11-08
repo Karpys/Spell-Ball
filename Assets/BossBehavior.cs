@@ -6,12 +6,15 @@ public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<BossState> ListState;
-    [SerializeField] private int ActualState = -1;
+    [SerializeField] public int ActualState = -1;
     public BossHpManager HpManager;
     public bool BossStarted = false;
     void Start()
     {
-        StartState();
+        if (BossStarted)
+        {
+            StartState();
+        }
     }
 
     // Update is called once per frame
@@ -22,17 +25,13 @@ public class BossBehavior : MonoBehaviour
 
     public void StartState()
     {
-        if (ActualState != 0)
+        if (ActualState >= ListState.Count - 1)
         {
-
             ActualState = 0;
-            ActivateState(ActualState);
         }
-        else
-        {
-            //State 0 Deja Actif//
-            return;
-        }
+        DeactivateState(ActualState);
+        ActualState = 0;
+        ActivateState(ActualState);
     }
     public void NextState()
     {

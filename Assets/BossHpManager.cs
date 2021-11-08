@@ -13,7 +13,14 @@ public class BossHpManager : MonoBehaviour
     {
         if (HpBeforeNextState <= 0 && Boss.BossStarted)
         {
-            Boss.NextState();
+            if (Boss.ActualState <= 0)
+            {
+                Boss.StartState();
+            }
+            else
+            {
+                Boss.NextState();
+            }
         }
     }
 
