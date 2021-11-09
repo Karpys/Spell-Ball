@@ -271,29 +271,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Phases:
   - ListAction:
-    - {fileID: 971707882}
+    - {fileID: 1463196460}
+    - {fileID: 1003420857}
+    - {fileID: 1590144041}
+    RandomAction: 0
   - ListAction: []
-  ActualState: -1
+    RandomAction: 0
+  ActualPhase: -1
   BossStarted: 0
+  ListActualAction: []
+  ActualAction: 0
   BossBallThrower:
     BallThrower:
-      Name: Shooter Phase 1 Rapid
+      Name: FastFast
       Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
       Parents:
       - {fileID: 2046094167}
-      - {fileID: 714759152}
-      - {fileID: 1547639966}
       Power: 15
-      Cadence: 0.2
+      Cadence: 0.1
       DelayBeforeFirstShoot: 0
-      NbrProj: 10
-      InfiniteProj: 1
+      NbrProj: 15
+      InfiniteProj: 0
       DirectionMaxMin: {x: 180, y: 180}
       ShootAtPlayer: 1
       DestroyOnHit: 1
       ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 1
+      ProjPerBurst: 3
+      LoopParent: 0
     ThrowerInst: []
   BaseGameObject: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
 --- !u!23 &16040905
@@ -361,8 +365,9 @@ Transform:
   - {fileID: 1823610882}
   - {fileID: 836660461}
   - {fileID: 200793239}
-  - {fileID: 480960599}
-  - {fileID: 971707883}
+  - {fileID: 1463196461}
+  - {fileID: 1003420858}
+  - {fileID: 1590144042}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5516,69 +5521,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
   m_PrefabInstance: {fileID: 303457859}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &480960598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 480960599}
-  - component: {fileID: 480960600}
-  m_Layer: 0
-  m_Name: Shooter Phase 1 Normal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &480960599
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480960598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 16040907}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &480960600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480960598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 0
-  Instantier:
-    BallThrower:
-      Name: Shooter Phase 1 Normal
-      Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
-      Parents:
-      - {fileID: 714759152}
-      Power: 10
-      Cadence: 0.3
-      DelayBeforeFirstShoot: 0
-      NbrProj: 10
-      InfiniteProj: 1
-      DirectionMaxMin: {x: 180, y: 180}
-      ShootAtPlayer: 0
-      DestroyOnHit: 0
-      ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 0
-    ThrowerInst: []
 --- !u!4 &492335077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
@@ -10292,71 +10234,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
---- !u!1 &971707881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 971707883}
-  - component: {fileID: 971707882}
-  m_Layer: 0
-  m_Name: Shooter Phase 1 Rapid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &971707882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971707881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 0
-  Instantier:
-    BallThrower:
-      Name: Shooter Phase 1 Rapid
-      Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
-      Parents:
-      - {fileID: 2046094167}
-      - {fileID: 714759152}
-      - {fileID: 1547639966}
-      Power: 15
-      Cadence: 0.2
-      DelayBeforeFirstShoot: 0
-      NbrProj: 10
-      InfiniteProj: 1
-      DirectionMaxMin: {x: 180, y: 180}
-      ShootAtPlayer: 1
-      DestroyOnHit: 1
-      ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 1
-    ThrowerInst: []
---- !u!4 &971707883
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971707881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 16040907}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &979617836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10634,6 +10511,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
+--- !u!1 &1003420856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003420858}
+  - component: {fileID: 1003420857}
+  m_Layer: 0
+  m_Name: Shooter Fast Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1003420857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003420856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
+  HpBossState: 0
+  Instantier:
+    BallThrower:
+      Name: Shooter Fast Front
+      Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+      Parents:
+      - {fileID: 2046094167}
+      Power: 15
+      Cadence: 0.2
+      DelayBeforeFirstShoot: 0.5
+      NbrProj: 10
+      InfiniteProj: 0
+      DirectionMaxMin: {x: 160, y: 200}
+      ShootAtPlayer: 0
+      DestroyOnHit: 1
+      ActAsABurst: 0
+      ProjPerBurst: 3
+      LoopParent: 0
+    ThrowerInst: []
+--- !u!4 &1003420858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003420856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 16040907}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007438755
 GameObject:
   m_ObjectHideFlags: 0
@@ -14583,6 +14523,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
   m_PrefabInstance: {fileID: 1764959024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1463196459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463196461}
+  - component: {fileID: 1463196460}
+  m_Layer: 0
+  m_Name: Shooter Burst 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1463196460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463196459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
+  HpBossState: 0
+  Instantier:
+    BallThrower:
+      Name: Shooter Burst 3
+      Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+      Parents:
+      - {fileID: 2046094167}
+      - {fileID: 714759152}
+      - {fileID: 1547639966}
+      Power: 15
+      Cadence: 0.5
+      DelayBeforeFirstShoot: 0.5
+      NbrProj: 3
+      InfiniteProj: 0
+      DirectionMaxMin: {x: 180, y: 180}
+      ShootAtPlayer: 1
+      DestroyOnHit: 1
+      ActAsABurst: 1
+      ProjPerBurst: 3
+      LoopParent: 1
+    ThrowerInst: []
+--- !u!4 &1463196461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463196459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 16040907}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1465587763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15671,6 +15676,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
   m_PrefabInstance: {fileID: 1130200569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1590144040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590144042}
+  - component: {fileID: 1590144041}
+  m_Layer: 0
+  m_Name: FastFast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1590144041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590144040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
+  HpBossState: 0
+  Instantier:
+    BallThrower:
+      Name: FastFast
+      Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+      Parents:
+      - {fileID: 2046094167}
+      Power: 15
+      Cadence: 0.1
+      DelayBeforeFirstShoot: 0
+      NbrProj: 15
+      InfiniteProj: 0
+      DirectionMaxMin: {x: 180, y: 180}
+      ShootAtPlayer: 1
+      DestroyOnHit: 1
+      ActAsABurst: 0
+      ProjPerBurst: 3
+      LoopParent: 0
+    ThrowerInst: []
+--- !u!4 &1590144042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590144040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 16040907}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1593079504
 PrefabInstance:
   m_ObjectHideFlags: 0

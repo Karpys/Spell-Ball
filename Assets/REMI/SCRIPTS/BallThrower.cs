@@ -26,6 +26,7 @@ public class BallThrower : MonoBehaviour
 
     [SerializeField] private float DelayDmgSelf = 0.5f;
     public float Angle;
+    public bool Lock = false;
     float timer;
 
     void Start()
@@ -38,21 +39,20 @@ public class BallThrower : MonoBehaviour
     public void SetUpThrower(BossAction.BallThrowerStats Stats)
     {
         ThrowerStats = Stats;
-        /*Projectile = Stats.Projectile;
-        Parent = Stats.Parents;
-        Power = Stats.Power;
-        TimeBetweenShot = Stats.Cadence;
-        NbrShoot = Stats.NbrProj;
-        InfiniteProj = Stats.InfiniteProj;
-        DestroyOnHitWall = Stats.DestroyOnHit;
-        DirectionMaxMin = Stats.DirectionMaxMin;
-        ShootAtClosestPlayer = Stats.ShootAtPlayer;
-        ActAsABurst = Stats.ActAsABurst;
-        ProjPerBurst = Stats.ProjPerBurst;
-        DelayBeforeFirstShoot = Stats.DelayBeforeFirstShoot;
-        StartPositionLoop = Stats.LoopParent;*/
+        /*ThrowerStats.Projectile = Stats.Projectile;
+        ThrowerStats.DirectionMaxMin = Stats.DirectionMaxMin;
+        ThrowerStats.Power = Stats.Power;
+        ThrowerStats.ActAsABurst = Stats.ActAsABurst;
+        ThrowerStats.Cadence = Stats.Cadence;
+        ThrowerStats.DelayBeforeFirstShoot = Stats.DelayBeforeFirstShoot;
+        ThrowerStats.InfiniteProj = Stats.InfiniteProj;
+        ThrowerStats.LoopParent = Stats.LoopParent;
+        ThrowerStats.Name = Stats.Name;
+        ThrowerStats.*/
+        
         ActualStartPosition = 0;
     }
+
 
     public GameObject GetStartPosition()
     {
@@ -77,8 +77,12 @@ public class BallThrower : MonoBehaviour
     {
         //BALLTHROWER NORMAL
         if (ThrowerStats.NbrProj <= 0)
-            //CAN DESTROY GAMEOBJECT//
-            return;
+        {
+            if (BossBehavior.Boss!=null)
+            {
+                BossBehavior.Boss.NextAction();
+            }
+        }
         timer += Time.deltaTime;
         if (timer >= ThrowerStats.Cadence)
         {
@@ -87,6 +91,7 @@ public class BallThrower : MonoBehaviour
                 if (ThrowerStats.ShootAtPlayer)
                 {
                     ShootClosest(GetStartPosition());
+                    ReduceShoot();
                 }
                 else
                 {

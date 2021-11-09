@@ -1,14 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BossAction : MonoBehaviour
 {
     [HideInInspector]
     public BossBehavior Boss;
-
-    public void Start()
-    {
-    }
     public virtual void Activate()
     {
         Boss = FindObjectOfType<BossBehavior>();
@@ -22,7 +20,7 @@ public class BossAction : MonoBehaviour
 
 
     [System.Serializable]
-    public class BallThrowerInstantier
+    public struct BallThrowerInstantier
     {
         public BallThrowerStats BallThrower;
         [HideInInspector]
@@ -30,7 +28,7 @@ public class BossAction : MonoBehaviour
         public void InstAllBallThrower()
         {
             GameObject Parent = BallThrower.Parents[Random.Range(0, BallThrower.Parents.Count - 1)];
-            GameObject Throw = Instantiate(new GameObject("Ball Thrower"), Parent.transform);
+            GameObject Throw = Instantiate(BossBehavior.Boss.BaseGameObject, Parent.transform);
             Throw.AddComponent<BallThrower>().SetUpThrower(BallThrower);
             ThrowerInst.Add(Throw);
         }
@@ -47,7 +45,7 @@ public class BossAction : MonoBehaviour
     }
 
     [System.Serializable]
-    public class BallThrowerStats
+    public struct BallThrowerStats
     {
         public string Name;
         public GameObject Projectile;

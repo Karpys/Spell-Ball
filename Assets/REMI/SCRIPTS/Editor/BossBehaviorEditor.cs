@@ -89,12 +89,33 @@ public class BossBehaviorEditor : Editor
     {
         BossBehavior Boss = target as BossBehavior;
 
+        SerializedProperty Movement = serializedObject.FindProperty("Phases").GetArrayElementAtIndex(phase).
+            FindPropertyRelative("MovementBoss");
+        EditorGUILayout.PropertyField(Movement);
+
+        SerializedProperty Random = serializedObject.FindProperty("Phases").GetArrayElementAtIndex(phase).
+            FindPropertyRelative("RandomAction");
+        EditorGUILayout.PropertyField(Random);
+
         for (int i = 0; i < Boss.Phases[phase].ListAction.Count; i++)
         {
+            EditorGUILayout.BeginHorizontal("hello");
             SerializedProperty Phases = serializedObject.FindProperty("Phases")
                 .GetArrayElementAtIndex(phase).FindPropertyRelative("ListAction").GetArrayElementAtIndex(i);
             EditorGUILayout.PropertyField(Phases);
+            if (GUILayout.Button("X"))
+            {
+                RemoveAction(i);
+            }
+            EditorGUILayout.EndHorizontal();
         }
+    }
+
+    public void RemoveAction(int id)
+    {
+        BossBehavior Boss = target as BossBehavior;
+        DestroyImmediate(Boss.Phases[ActualPhase].ListAction[id].gameObject);
+        Boss.Phases[ActualPhase].ListAction.RemoveAt(id);
     }
     public void DrawShooter()
     {
