@@ -1,77 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<BossState> ListState;
+   /* public List<BossAction> ListAction;*/
+    public List<Phase> Phases;
     [SerializeField] public int ActualState = -1;
-    public BossHpManager HpManager;
     public bool BossStarted = false;
-    void Start()
+
+    public BossAction.BallThrowerInstantier BossBallThrower;
+    public GameObject BaseGameObject;
+
+
+    public void Update()
     {
-        if (BossStarted)
+
+    }
+
+    public void Start()
+    {
+        PlayPhase(0);
+    }
+
+    public void PlayPhase(int id)
+    {
+        foreach (BossAction Action in Phases[id].ListAction)
         {
-            StartState();
+            Action.Activate();
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeactivePhase(int id)
     {
-        
-    }
-
-    public void StartState()
-    {
-        if (ActualState >= ListState.Count - 1)
+        foreach (BossAction Action in Phases[id].ListAction)
         {
-            ActualState = 0;
-        }
-        DeactivateState(ActualState);
-        ActualState = 0;
-        ActivateState(ActualState);
-    }
-    public void NextState()
-    {
-        if (ActualState == ListState.Count - 1)
-        {
-            DeactivateLastState();
-        }
-        else if(ActualState < ListState.Count - 1)
-        {
-            ActivateNextState();
-        }
-        else
-        {
-            Debug.Log("No more State");
+            Action.Deactivate();
         }
     }
+    
 
-    public void ActivateNextState()
+    [System.Serializable]
+    public class Phase
     {
-        //Deactivate Actual State , Start Next State//
-        DeactivateState(ActualState);
-        ActualState += 1;
-        ActivateState(ActualState);
+        public List<BossAction> ListAction;
     }
 
-    public void DeactivateLastState()
-    {
-        //Deactivate Last State//
-        DeactivateState(ActualState);
-        ActualState += 1;
-    }
-
-    public void DeactivateState(int id)
-    {
-        ListState[id].Deactivate();
-    }
-
-    public void ActivateState(int id)
-    {
-        ListState[id].Activate();
-    }
+    
 }
 

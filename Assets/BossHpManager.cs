@@ -5,13 +5,12 @@ using UnityEngine;
 public class BossHpManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int HpBeforeNextState;
-    public BossBehavior Boss;
+    /*public int HpBeforeNextState;
 
     // Update is called once per frame
     void Update()
     {
-        if (HpBeforeNextState <= 0 && Boss.BossStarted)
+        *//*if (HpBeforeNextState <= 0 && Boss.BossStarted)
         {
             if (Boss.ActualState <= 0)
             {
@@ -21,7 +20,7 @@ public class BossHpManager : MonoBehaviour
             {
                 Boss.NextState();
             }
-        }
+        }*//*
     }
 
     public void SetHpBoss(int HpToSet)
@@ -32,5 +31,5 @@ public class BossHpManager : MonoBehaviour
     {
         HpBeforeNextState -= Dmg;
         HpBeforeNextState = Mathf.Max(HpBeforeNextState, 0);
-    }
+    }*/
 }

@@ -7,33 +7,38 @@ using static GameUtilities.GameUtilities;
 public class BallThrower : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject Projectile;
+    [SerializeField] private BossAction.BallThrowerStats ThrowerStats;
+    /*[SerializeField] private GameObject Projectile;
     [SerializeField] private List<GameObject> Parent;
     [SerializeField] private float Power;
     [SerializeField] private float TimeBetweenShot;
     [SerializeField] private int NbrShoot = 10;
     [SerializeField] private bool InfiniteProj;
-    [SerializeField] private float DelayDmgSelf = 0.5f;
     [SerializeField] private Vector2 DirectionMaxMin;
     [SerializeField] private bool ShootAtClosestPlayer;
     [SerializeField] private bool DestroyOnHitWall;
     [SerializeField] private bool ActAsABurst;
     [SerializeField] private int ProjPerBurst;
     [SerializeField] private bool StartPositionLoop;
+    [SerializeField] private float DelayBeforeFirstShoot;*/
+
     [SerializeField] private int ActualStartPosition;
-    [SerializeField] private float DelayBeforeFirstShoot;
+
+    [SerializeField] private float DelayDmgSelf = 0.5f;
     public float Angle;
     float timer;
 
     void Start()
     {
-        timer = TimeBetweenShot - DelayBeforeFirstShoot;
+        name = ThrowerStats.Name;
+        timer = ThrowerStats.Cadence - ThrowerStats.DelayBeforeFirstShoot;
     }
 
     //SETUPTHOWERSTATS//
-    public void SetUpThrower(BossState.BallThrowerStats Stats)
+    public void SetUpThrower(BossAction.BallThrowerStats Stats)
     {
-        Projectile = Stats.Projectile;
+        ThrowerStats = Stats;
+        /*Projectile = Stats.Projectile;
         Parent = Stats.Parents;
         Power = Stats.Power;
         TimeBetweenShot = Stats.Cadence;
@@ -45,17 +50,17 @@ public class BallThrower : MonoBehaviour
         ActAsABurst = Stats.ActAsABurst;
         ProjPerBurst = Stats.ProjPerBurst;
         DelayBeforeFirstShoot = Stats.DelayBeforeFirstShoot;
-        StartPositionLoop = Stats.LoopParent;
+        StartPositionLoop = Stats.LoopParent;*/
         ActualStartPosition = 0;
     }
 
     public GameObject GetStartPosition()
     {
-        if (StartPositionLoop)
+        if (ThrowerStats.LoopParent)
         {
-            GameObject Start = Parent[ActualStartPosition];
+            GameObject Start = ThrowerStats.Parents[ActualStartPosition];
             ActualStartPosition += 1;
-            if (ActualStartPosition >= Parent.Count)
+            if (ActualStartPosition >= ThrowerStats.Parents.Count)
             {
                 ActualStartPosition = 0;
             }
@@ -64,36 +69,36 @@ public class BallThrower : MonoBehaviour
         }
         else
         {
-            return Parent[Random.Range(0, Parent.Count)];
+            return ThrowerStats.Parents[Random.Range(0, ThrowerStats.Parents.Count)];
         }
     }
     // Update is called once per frame
     void Update()
     {
         //BALLTHROWER NORMAL
-        if (NbrShoot <= 0)
+        if (ThrowerStats.NbrProj <= 0)
             //CAN DESTROY GAMEOBJECT//
             return;
         timer += Time.deltaTime;
-        if (timer >= TimeBetweenShot)
+        if (timer >= ThrowerStats.Cadence)
         {
-            if(!ActAsABurst)
+            if(!ThrowerStats.ActAsABurst)
             {
-                if (ShootAtClosestPlayer)
+                if (ThrowerStats.ShootAtPlayer)
                 {
                     ShootClosest(GetStartPosition());
                 }
                 else
                 {
-                    ShootDirection(Random.Range(transform.eulerAngles.y + DirectionMaxMin.x, transform.eulerAngles.y + DirectionMaxMin.y), GetStartPosition());
+                    ShootDirection(Random.Range(transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.x, transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.y), GetStartPosition());
                     ReduceShoot();
                 }
             }
             else
             {
-                if (ShootAtClosestPlayer)
+                if (ThrowerStats.ShootAtPlayer)
                 {
-                    int ShootNbr = ProjPerBurst;
+                    int ShootNbr = ThrowerStats.ProjPerBurst;
                     for (int i = 0; i < ShootNbr; i++)
                     {
                         ShootClosest(GetStartPosition());
@@ -102,10 +107,10 @@ public class BallThrower : MonoBehaviour
                 }
                 else
                 {
-                    int ShootNbr = ProjPerBurst;
+                    int ShootNbr = ThrowerStats.ProjPerBurst;
                     for (int i = 0; i < ShootNbr; i++)
                     {
-                        ShootDirection(Random.Range(transform.eulerAngles.y + DirectionMaxMin.x, transform.eulerAngles.y + DirectionMaxMin.y), GetStartPosition());
+                        ShootDirection(Random.Range(transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.x, transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.y), GetStartPosition());
                     }
 
                     ReduceShoot();
@@ -117,13 +122,13 @@ public class BallThrower : MonoBehaviour
 
     public void ReduceShoot()
     {
-        if (InfiniteProj)
+        if (ThrowerStats.InfiniteProj)
         {
             return;
         }
         else
         {
-            NbrShoot--;
+            ThrowerStats.NbrProj--;
         }
     }
     //OLD
@@ -160,30 +165,30 @@ public class BallThrower : MonoBehaviour
 
     void InstantiateBall(float Direction,GameObject StartPosition)
     {
-        GameObject Proj = Instantiate(Projectile, StartPosition.transform.position, transform.rotation);
-        Proj.GetComponent<Ball>().Speed = Power;
+        GameObject Proj = Instantiate(ThrowerStats.Projectile, StartPosition.transform.position, transform.rotation);
+        Proj.GetComponent<Ball>().Speed = ThrowerStats.Power;
         Proj.GetComponent<Ball>().SetDirection(new Vector3(0,Direction,0));
         Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
-        Proj.GetComponent<Ball>().DestroyOnHitWall = DestroyOnHitWall;
+        Proj.GetComponent<Ball>().DestroyOnHitWall = ThrowerStats.DestroyOnHit;
     }
 
     //DEPEND ON A GAMEOBJECT//
 
     void InstantiateBall(GameObject target,GameObject StartPosition)
     {
-        GameObject Proj = Instantiate(Projectile, StartPosition.transform.position, transform.rotation);
-        Proj.GetComponent<Ball>().Speed = Power;
+        GameObject Proj = Instantiate(ThrowerStats.Projectile, StartPosition.transform.position, transform.rotation);
+        Proj.GetComponent<Ball>().Speed = ThrowerStats.Power;
         Proj.GetComponent<Ball>().LookAtStart(target);
         Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
-        Proj.GetComponent<Ball>().DestroyOnHitWall = DestroyOnHitWall;
+        Proj.GetComponent<Ball>().DestroyOnHitWall = ThrowerStats.DestroyOnHit;
     }
     
 
     //OLD VERSION
     void InstantiateBall(GameObject target)
     {
-        GameObject Proj = Instantiate(Projectile, transform.position, transform.rotation);
-        Proj.GetComponent<Ball>().Speed = Power;
+        GameObject Proj = Instantiate(ThrowerStats.Projectile, transform.position, transform.rotation);
+        Proj.GetComponent<Ball>().Speed = ThrowerStats.Power;
         Proj.GetComponent<Ball>().LookAtStart(target);
         Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
     }

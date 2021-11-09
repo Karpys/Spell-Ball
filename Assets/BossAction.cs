@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossState : MonoBehaviour
+public class BossAction : MonoBehaviour
 {
     [HideInInspector]
     public BossBehavior Boss;
@@ -24,17 +24,15 @@ public class BossState : MonoBehaviour
     [System.Serializable]
     public class BallThrowerInstantier
     {
-        public List<BallThrowerStats> ListBallThrower;
+        public BallThrowerStats BallThrower;
+        [HideInInspector]
         public List<GameObject> ThrowerInst;
         public void InstAllBallThrower()
         {
-            foreach (BallThrowerStats Thrower in ListBallThrower)
-            {
-                GameObject Parent = Thrower.Parents[Random.Range(0, Thrower.Parents.Count - 1)];
-                GameObject Throw = Instantiate(new GameObject("Ball Thrower"), Parent.transform);
-                Throw.AddComponent<BallThrower>().SetUpThrower(Thrower);
-                ThrowerInst.Add(Throw);
-            }
+            GameObject Parent = BallThrower.Parents[Random.Range(0, BallThrower.Parents.Count - 1)];
+            GameObject Throw = Instantiate(new GameObject("Ball Thrower"), Parent.transform);
+            Throw.AddComponent<BallThrower>().SetUpThrower(BallThrower);
+            ThrowerInst.Add(Throw);
         }
 
         public void ClearAllThrower()
@@ -49,8 +47,9 @@ public class BossState : MonoBehaviour
     }
 
     [System.Serializable]
-    public struct BallThrowerStats
+    public class BallThrowerStats
     {
+        public string Name;
         public GameObject Projectile;
         public List<GameObject> Parents;
         public float Power;

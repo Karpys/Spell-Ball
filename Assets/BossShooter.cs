@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossNormalShoot : BossState
+public class BossShooter : BossAction
 {
     // Start is called before the first frame update
     public int HpBossState;
@@ -10,7 +10,7 @@ public class BossNormalShoot : BossState
     public override void Activate()
     {
         base.Activate();
-        Boss.HpManager.SetHpBoss(HpBossState);
+        /*Boss.HpManager.SetHpBoss(HpBossState);*/
         Instantier.InstAllBallThrower();
 
     }
