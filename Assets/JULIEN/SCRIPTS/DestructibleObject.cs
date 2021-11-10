@@ -12,6 +12,7 @@ public class DestructibleObject : MonoBehaviour
     [SerializeField] private bool _shareVertices = false;
     [SerializeField] private bool _smoothVertices = false;
     [SerializeField] private bool _reverseWindTriangles = false;
+    [SerializeField] private float _destroyAfterXSeconds;
 
     public void DestroyObject()
     {
@@ -30,7 +31,8 @@ public class DestructibleObject : MonoBehaviour
             Destroy(prefabParent);
         }
         
-        Instantiate(brokenObject, transform.position, transform.rotation);
+        GameObject broken = Instantiate(brokenObject, transform.position, transform.rotation);
         Destroy(gameObject);
+        Destroy(broken, _destroyAfterXSeconds);
     }
 }
