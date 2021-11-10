@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossMultipleShoot : BossState
+public class BossMultipleShoot : BossAction
 {
     public int HpBossState;
     public override void Activate()
     {
-        Boss.HpManager.SetHpBoss(HpBossState);
+        /*Boss.HpManager.SetHpBoss(HpBossState);*/
         base.Activate();
     }
 

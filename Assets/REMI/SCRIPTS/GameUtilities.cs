@@ -26,7 +26,6 @@ namespace GameUtilities
 
             return ClosestObject;
         }
-
         //Transforme une List en une List de GameObject//
         public static List<GameObject> ListToListGameObjects<T>(List<T> ListObject) where T : Component
         {
