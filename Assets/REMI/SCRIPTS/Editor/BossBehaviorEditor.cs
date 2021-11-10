@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [CustomEditor(typeof(BossBehavior))]
@@ -83,12 +84,17 @@ public class BossBehaviorEditor : Editor
                     break;
             }
         }
-        
-        /*base.OnInspectorGUI();*/
 
+        /*base.OnInspectorGUI();*/
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(Boss);
+            EditorSceneManager.MarkSceneDirty(Boss.gameObject.scene);
+        }
 
         serializedObject.ApplyModifiedProperties();
     }
+
 
 
     public void DrawActualPhase(int phase)

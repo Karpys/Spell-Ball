@@ -95,8 +95,7 @@ public class BossBehavior : MonoBehaviour
         LEFTRIGHT,
         UPDOWN,
     }
-    
-
+   
     [System.Serializable]
     public class Phase
     {
@@ -104,7 +103,5 @@ public class BossBehavior : MonoBehaviour
         public BOSSMOVEMENT MovementBoss = BOSSMOVEMENT.UPDOWN;
         public bool RandomAction;
     }
-
-    
 }
 
