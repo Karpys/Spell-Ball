@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
     public LayerMask CollisionPlayer;
+    public LayerMask CollisionShield;
     public Vector3 Direction;
     public float radius = 1.0f;
 
@@ -78,14 +79,25 @@ public class Ball : MonoBehaviour
 
         }
 
-        /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionShield))
         {
-
             Reflect(hit.normal);
             ResetSpeedAndCombo();
-            //DAMAGE PLAYER//
-        }*/
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+            if(hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
+            {
+                hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
+            }
+
+        }
+
+            /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+            {
+
+                Reflect(hit.normal);
+                ResetSpeedAndCombo();
+                //DAMAGE PLAYER//
+            }*/
+            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 

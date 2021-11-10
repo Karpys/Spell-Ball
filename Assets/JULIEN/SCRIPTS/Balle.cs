@@ -16,9 +16,11 @@ public class Balle : MonoBehaviour
     private Material ballColorCopy;
     public Shader shader;
 
+    public ColorEnum color ;
 
     private void Awake()
     {
+        color = ColorEnum.WHITE;
         ballColorCopy = new Material(shader);
         ballColorCopy.CopyPropertiesFromMaterial(ballColor);
 
@@ -90,7 +92,10 @@ public class Balle : MonoBehaviour
         else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
             ballColorCopy.color = ColorInfuse.instance.RO;
         else
+        {
             ballColorCopy.color = Color.red;
+            color = ColorEnum.RED;
+        }
 
         return Color.red;
     }
@@ -141,6 +146,7 @@ public class Balle : MonoBehaviour
     public void ColorBallReset()
     {
         ballColorCopy.color = Color.white;
+        color = ColorEnum.WHITE;
     }
 
 }

@@ -28,12 +28,12 @@ public class SheildManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        /*time += Time.deltaTime;
         if (time >= 5)
         {
             ChangeLastSheild();
             time = -10000000000;
-        }
+        }*/
 
     }
 
@@ -42,7 +42,9 @@ public class SheildManager : MonoBehaviour
         int count = sheilds.Count - 1;
         Destroy(sheilds[count]);
         sheilds.RemoveAt(count);
-        sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
+        if(count>0)
+            sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
+
     }
 
     ColorEnum RandomColor()
