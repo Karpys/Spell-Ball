@@ -85,61 +85,31 @@ public class Balle : MonoBehaviour
 
     public Color InfuseColorRed()
     {
-        if (ballColorCopy.color == Color.blue)
-            ballColorCopy.color = ColorInfuse.instance.RB;
-        else if (ballColorCopy.color == Color.green)
-            ballColorCopy.color = ColorInfuse.instance.RV;
-        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColorCopy.color = ColorInfuse.instance.RO;
-        else
-        {
-            ballColorCopy.color = Color.red;
-            color = ColorEnum.RED;
-        }
-
+        ballColorCopy.color = Color.red;
+        color = ColorEnum.RED;
+        
         return Color.red;
     }
 
     public Color InfuseColorBleu()
     {
-        if (ballColorCopy.color == Color.red)
-            ballColorCopy.color = ColorInfuse.instance.RB;
-        else if (ballColorCopy.color == Color.green)
-            ballColorCopy.color = ColorInfuse.instance.BV;
-        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColorCopy.color = ColorInfuse.instance.BO;
-        else
-            ballColorCopy.color = Color.blue;
-
+        ballColorCopy.color = Color.blue;
+        color = ColorEnum.BLEU;
         return Color.blue;
 
     }
 
     public Color InfuseColorGreen()
     {
-        if (ballColorCopy.color == Color.blue)
-            ballColorCopy.color = ColorInfuse.instance.BV;
-        else if (ballColorCopy.color == Color.red)
-            ballColorCopy.color = ColorInfuse.instance.RV;
-        else if (ballColorCopy.color == Color.HSVToRGB(0.1f, 1f, 1f))
-            ballColorCopy.color = ColorInfuse.instance.VO;
-        else
-            ballColorCopy.color = Color.green;
-
+        ballColorCopy.color = Color.green;
+        color = ColorEnum.GREEN;
         return Color.green;
     }
 
     public Color InfuseColorOrange()
     {
-        if (ballColorCopy.color == Color.blue)
-            ballColorCopy.color = ColorInfuse.instance.BO;
-        else if (ballColorCopy.color == Color.green)
-            ballColorCopy.color = ColorInfuse.instance.VO;
-        else if (ballColorCopy.color == Color.red)
-            ballColorCopy.color = ColorInfuse.instance.RO;
-        else
-            ballColorCopy.color = ColorInfuse.instance.orange;
-
+        ballColorCopy.color = ColorInfuse.instance.orange;
+        color = ColorEnum.ORANGE;
         return ColorInfuse.instance.orange;
     }
 
