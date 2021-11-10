@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 16040904}
   - component: {fileID: 16040908}
   m_Layer: 0
-  m_Name: BOSS
+  m_Name: ----BOSS-----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,29 +277,33 @@ MonoBehaviour:
   - ListAction: []
     MovementBoss: 1
     RandomAction: 0
+  - ListAction: []
+    MovementBoss: 1
+    RandomAction: 1
+  - ListAction: []
+    MovementBoss: 1
+    RandomAction: 1
   ActualPhase: -1
   BossStarted: 0
   ListActualAction: []
   ActualAction: 0
   BossBallThrower:
     BallThrower:
-      Name: BUUURRST
+      Name: Burst
       Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
-      Parents:
-      - {fileID: 2046094167}
-      - {fileID: 714759152}
-      - {fileID: 1547639966}
-      Power: 15
-      Cadence: 0.1
-      DelayBeforeFirstShoot: 0
-      NbrProj: 10
-      InfiniteProj: 0
-      DirectionMaxMin: {x: 180, y: 180}
-      ShootAtPlayer: 1
+      Power: {x: 10, y: 15}
+      Cadence: {x: 0.2, y: 1}
+      DelayBeforeFirstShoot: 0.5
       DestroyOnHit: 1
-      ActAsABurst: 1
+      Repetition: {x: 15, y: 20, z: 0}
+      InfiniteProj: 0
+      StartPositions:
+      - {fileID: 2046094167}
+      LoopParent: 0
+      ShootAtPlayer: 1
+      DirectionMaxMin: {x: 180, y: 180}
+      ActAsABurst: 0
       ProjPerBurst: 3
-      LoopParent: 1
     ThrowerInst: []
   BaseGameObject: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
   ActionHolder: {fileID: 1767217167}
@@ -5059,39 +5063,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
   m_PrefabInstance: {fileID: 1621040816}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &420347810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 420347811}
-  m_Layer: 0
-  m_Name: --Test--
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &420347811
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420347810}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1388482455}
-  - {fileID: 1194921812}
-  - {fileID: 1823610882}
-  m_Father: {fileID: 1767217168}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427444011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7065,7 +7036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673939225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11750,68 +11721,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f4f6b19f7b7fd47add0c44c0b078a9, type: 3}
---- !u!1 &1194921811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194921812}
-  - component: {fileID: 1194921813}
-  m_Layer: 0
-  m_Name: NormalBallShooter 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1194921812
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194921811}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 420347811}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1194921813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194921811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 150
-  Instantier:
-    BallThrower:
-      Name: 
-      Projectile: {fileID: 0}
-      Parents: []
-      Power: 0
-      Cadence: 0
-      DelayBeforeFirstShoot: 0
-      NbrProj: 0
-      InfiniteProj: 0
-      DirectionMaxMin: {x: 0, y: 0}
-      ShootAtPlayer: 0
-      DestroyOnHit: 0
-      ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 0
-    ThrowerInst: []
 --- !u!1 &1197793829
 GameObject:
   m_ObjectHideFlags: 0
@@ -13636,68 +13545,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
   m_PrefabInstance: {fileID: 1867519068}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1388482453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1388482455}
-  - component: {fileID: 1388482454}
-  m_Layer: 0
-  m_Name: NormalBallShooter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1388482454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388482453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 150
-  Instantier:
-    BallThrower:
-      Name: 
-      Projectile: {fileID: 0}
-      Parents: []
-      Power: 0
-      Cadence: 0
-      DelayBeforeFirstShoot: 0
-      NbrProj: 0
-      InfiniteProj: 0
-      DirectionMaxMin: {x: 0, y: 0}
-      ShootAtPlayer: 0
-      DestroyOnHit: 0
-      ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 0
-    ThrowerInst: []
---- !u!4 &1388482455
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388482453}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 420347811}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1390638675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16859,7 +16706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1744566380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17373,8 +17220,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 420347811}
+  m_Children: []
   m_Father: {fileID: 16040907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18132,68 +17978,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.5660167, z: 15.84968}
   m_Center: {x: -1.27492214e-14, y: 1.2830083, z: 2.8971462}
---- !u!1 &1823610881
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1823610882}
-  - component: {fileID: 1823610883}
-  m_Layer: 0
-  m_Name: NormalBallShooter 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1823610882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823610881}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 420347811}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1823610883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823610881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 150
-  Instantier:
-    BallThrower:
-      Name: 
-      Projectile: {fileID: 0}
-      Parents: []
-      Power: 0
-      Cadence: 0
-      DelayBeforeFirstShoot: 0
-      NbrProj: 0
-      InfiniteProj: 0
-      DirectionMaxMin: {x: 0, y: 0}
-      ShootAtPlayer: 0
-      DestroyOnHit: 0
-      ActAsABurst: 0
-      ProjPerBurst: 0
-      LoopParent: 0
-    ThrowerInst: []
 --- !u!4 &1828706501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}

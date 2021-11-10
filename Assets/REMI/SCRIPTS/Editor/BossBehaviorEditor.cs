@@ -7,7 +7,8 @@ using UnityEngine;
 public class BossBehaviorEditor : Editor
 {
     public int ActualPhase = 0;
-    public string[] PhaseName = new string[]{"Phase 1","Phase 2"};
+    public string[] PhaseName = new string[]{"Phase 1","Phase 2","Phase 3"};
+    public string[] PhaseNames = new string[] { "Phase 1", "Phase 2", "Phase 3","Phase 4" };
     public string[] BossActionType = new string[] {"SHOOTER", "LASER", "MOVEMENT"};
     public int Selection = 0;
     public bool AddAnAction;
@@ -34,10 +35,12 @@ public class BossBehaviorEditor : Editor
 
         BossBehavior Boss = target as BossBehavior;
 
-        
 
-        ActualPhase = GUILayout.Toolbar(ActualPhase, PhaseName);
+
+        ActualPhase = GUILayout.Toolbar(ActualPhase, PhaseNames);
         DrawActualPhase(ActualPhase);
+
+        GUILayout.Space(20);
         if (Draw == DrawPhase.ADDACTION)
         {
             if (GUILayout.Button("Add An Action"))
@@ -106,6 +109,7 @@ public class BossBehaviorEditor : Editor
             SerializedProperty Phases = serializedObject.FindProperty("Phases")
                 .GetArrayElementAtIndex(phase).FindPropertyRelative("ListAction").GetArrayElementAtIndex(i);
             EditorGUILayout.PropertyField(Phases);
+
             if(i!=0)
             {
                 if (GUILayout.Button("⇈"))
@@ -113,6 +117,14 @@ public class BossBehaviorEditor : Editor
                     SwapUpAction(i);
                 }
             }
+            else
+            {
+                if (GUILayout.Button("-----"))
+                {
+
+                }
+            }
+
             if (i != Boss.Phases[phase].ListAction.Count - 1)
             {
                 if (GUILayout.Button("⇊"))
@@ -120,11 +132,19 @@ public class BossBehaviorEditor : Editor
                     SwapDownAction(i);
                 }
             }
-            
+            else
+            {
+                if (GUILayout.Button("-----"))
+                {
+
+                }
+            }
+
             if (GUILayout.Button("X"))
             {
                 RemoveAction(i);
             }
+            
             EditorGUILayout.EndHorizontal();
         }
     }

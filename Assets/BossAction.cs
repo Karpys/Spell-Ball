@@ -27,7 +27,7 @@ public class BossAction : MonoBehaviour
         public List<GameObject> ThrowerInst;
         public void InstAllBallThrower()
         {
-            GameObject Parent = BallThrower.Parents[Random.Range(0, BallThrower.Parents.Count - 1)];
+            GameObject Parent = BallThrower.StartPositions[Random.Range(0, BallThrower.StartPositions.Count - 1)];
             GameObject Throw = Instantiate(BossBehavior.Boss.BaseGameObject, Parent.transform);
             Throw.AddComponent<BallThrower>().SetUpThrower(BallThrower);
             ThrowerInst.Add(Throw);
@@ -47,19 +47,31 @@ public class BossAction : MonoBehaviour
     [System.Serializable]
     public struct BallThrowerStats
     {
+        [Space(10)]
+        [Header("Projectile GameObject Name and Prefab")]
         public string Name;
         public GameObject Projectile;
-        public List<GameObject> Parents;
-        public float Power;
-        public float Cadence;
+        [Space(10)]
+        [Header("Projectile Thrower Stats")]
+        public Vector2 Power;
+        public Vector2 Cadence;
         public float DelayBeforeFirstShoot;
-        public int NbrProj;
-        public bool InfiniteProj;
-        public Vector2 DirectionMaxMin;
-        public bool ShootAtPlayer;
         public bool DestroyOnHit;
+        [Space(10)]
+        [Header("Number of repetitions")]
+        public Vector3Int Repetition;
+        public bool InfiniteProj;
+        [Space(10)]
+        [Header("Start Positions")]
+        public List<GameObject> StartPositions;
+        public bool LoopParent;
+        [Space(10)]
+        [Header("Shoot Direction Options")]
+        public bool ShootAtPlayer;
+        public Vector2 DirectionMaxMin;
+        [Space(10)]
+        [Header("Burst Options")]
         public bool ActAsABurst;
         public int ProjPerBurst;
-        public bool LoopParent;
     }
 }
