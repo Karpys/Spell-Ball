@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(behavior=1)"
+                },
+                {
+                    "name": "FOCUS_UI",
+                    "type": "Value",
+                    "id": "ed3707cb-d7e8-40d6-8502-fd7cf3f8acc9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -148,6 +156,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "START",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abf1e3e2-5ef9-455b-a745-dec84cadd34f",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FOCUS_UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2654b042-180f-49dd-b953-0e59d5fa4b80",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FOCUS_UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17af8e36-cdf8-4a01-a87f-ac38d0d9ddec",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FOCUS_UI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
