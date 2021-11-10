@@ -19,6 +19,8 @@ public class BossBehavior : MonoBehaviour
 
     //EDITOR UTILS//
     public BossAction.BallThrowerInstantier BossBallThrower;
+    public BossAction.LaserInstantier LaserInstantier;
+    public GameObject BaseLaser;
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
 

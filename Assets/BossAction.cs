@@ -45,6 +45,61 @@ public class BossAction : MonoBehaviour
     }
 
     [System.Serializable]
+    public struct LaserInstantier
+    {
+        public List<LaserStats> Stats;
+        [HideInInspector]
+        public List<GameObject> LaserInst;
+
+        public void InstLaser(BossLaser Manager)
+        {
+            foreach (LaserStats stat in Stats)
+            {
+                GameObject Parent = stat.StartPosition;
+                GameObject Laser = Instantiate(BossBehavior.Boss.BaseLaser, Parent.transform);
+                Laser.GetComponent<LaserBehavior>().Stats = stat;
+                Laser.GetComponent<LaserBehavior>().Stats.Manager = Manager;
+                LaserInst.Add(Laser);
+                
+            }
+        }
+        public void DestroyLaser()
+        {
+            LaserInst.Clear();
+        }
+    }
+
+    [System.Serializable]
+    public struct LaserStats
+    {
+
+        [HideInInspector]
+        public BossLaser Manager;
+        [Space(10)]
+        [Header("Nom Du Groupe de Laser (Si multiple Premier Name pris en compte)")]
+        [Space(10)]
+        public string Name;
+        [Header("Durée du Laser et Temps de départ")]
+        public float Duration;
+        public float WaitTime;
+        [Space(10)]
+        [Header("Longueur du Laser / Infiny")]
+        public float Lenght;
+        public bool Infinity;
+
+        [Space(10)] 
+        [Header("Largueur du laser // Se Joue pendant le WaitTime")]
+        public float StartWidth;
+        public float EndWidth;
+        [Space(10)]
+        [Header("Position de départ et Angle du Début et de Fin")]
+        public Vector2 StartEndAngle;
+        public bool PingPong;
+        public GameObject StartPosition;
+
+    }
+
+    [System.Serializable]
     public struct BallThrowerStats
     {
         [Space(10)]

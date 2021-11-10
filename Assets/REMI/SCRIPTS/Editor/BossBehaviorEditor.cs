@@ -29,6 +29,9 @@ public class BossBehaviorEditor : Editor
             SerializedProperty BaseGameObject = serializedObject.FindProperty("BaseGameObject");
             EditorGUILayout.PropertyField(BaseGameObject);
 
+            SerializedProperty BaseLaser = serializedObject.FindProperty("BaseLaser");
+            EditorGUILayout.PropertyField(BaseLaser);
+
             SerializedProperty listActionProperty = serializedObject.FindProperty("Phases");
             EditorGUILayout.PropertyField(listActionProperty);
 
@@ -61,7 +64,7 @@ public class BossBehaviorEditor : Editor
                         EditedObject = CreateBossShooter();
                         break;
                     case 1:
-                        DrawLaser();
+                        EditedObject = CreateLaser();
                         break;
                     default:
                         break;
@@ -187,13 +190,21 @@ public class BossBehaviorEditor : Editor
             EditedObject.name = EditedObject.GetComponent<BossShooter>().Instantier.BallThrower.Name;
             Draw = DrawPhase.ADDACTION;
         }
-        GUILayout.Label("Draw Shooter");
     }
 
     public void DrawLaser()
     {
-
+        SerializedProperty LaserStats = serializedObject.FindProperty("LaserInstantier");
+        EditorGUILayout.PropertyField(LaserStats);
+        if (GUILayout.Button("Valid"))
+        {
+            BossBehavior Boss = target as BossBehavior;
+            EditedObject.GetComponent<BossLaser>().Instantier = Boss.LaserInstantier;
+            EditedObject.name = EditedObject.GetComponent<BossLaser>().Instantier.Stats[0].Name;
+            Draw = DrawPhase.ADDACTION;
+        }
     }
+
     /*public GameObject CreateObjectWithBossAction<T>(T action) where T:BossAction 
     {
         BossBehavior Parent = target as BossBehavior;
@@ -208,6 +219,15 @@ public class BossBehaviorEditor : Editor
         GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
         Obj.AddComponent<BossShooter>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShooter>());
+        return Obj;
+    }
+
+    public GameObject CreateLaser()
+    {
+        BossBehavior boss = target as BossBehavior;
+        GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
+        Obj.AddComponent<BossLaser>();
+        boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossLaser>());
         return Obj;
     }
 
