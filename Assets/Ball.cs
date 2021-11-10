@@ -87,6 +87,8 @@ public class Ball : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
             }
+            else
+                Instantiate(CollisionParticle, transform.position, transform.rotation);
 
         }
 
