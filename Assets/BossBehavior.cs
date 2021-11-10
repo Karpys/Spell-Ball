@@ -16,8 +16,12 @@ public class BossBehavior : MonoBehaviour
     public List<BossAction> ListActualAction;
     public int ActualAction;
 
+
+    //EDITOR UTILS//
     public BossAction.BallThrowerInstantier BossBallThrower;
     public GameObject BaseGameObject;
+    public GameObject ActionHolder;
+
 
     private static BossBehavior inst;
     public static BossBehavior Boss { get => inst; }

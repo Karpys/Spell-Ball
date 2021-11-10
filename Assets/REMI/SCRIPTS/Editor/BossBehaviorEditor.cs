@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -21,6 +21,9 @@ public class BossBehaviorEditor : Editor
         ShowPhase = GUILayout.Toggle(ShowPhase, "Show/Hide");
         if (ShowPhase)
         {
+            SerializedProperty ActionsHolder = serializedObject.FindProperty("ActionHolder");
+            EditorGUILayout.PropertyField(ActionsHolder);
+
             SerializedProperty BaseGameObject = serializedObject.FindProperty("BaseGameObject");
             EditorGUILayout.PropertyField(BaseGameObject);
 
@@ -99,10 +102,25 @@ public class BossBehaviorEditor : Editor
 
         for (int i = 0; i < Boss.Phases[phase].ListAction.Count; i++)
         {
-            EditorGUILayout.BeginHorizontal("hello");
+            EditorGUILayout.BeginHorizontal();
             SerializedProperty Phases = serializedObject.FindProperty("Phases")
                 .GetArrayElementAtIndex(phase).FindPropertyRelative("ListAction").GetArrayElementAtIndex(i);
             EditorGUILayout.PropertyField(Phases);
+            if(i!=0)
+            {
+                if (GUILayout.Button("⇈"))
+                {
+                    SwapUpAction(i);
+                }
+            }
+            if (i != Boss.Phases[phase].ListAction.Count - 1)
+            {
+                if (GUILayout.Button("⇊"))
+                {
+                    SwapDownAction(i);
+                }
+            }
+            
             if (GUILayout.Button("X"))
             {
                 RemoveAction(i);
@@ -111,6 +129,21 @@ public class BossBehaviorEditor : Editor
         }
     }
 
+    public void SwapUpAction(int id)
+    {
+        BossBehavior Boss = target as BossBehavior;
+        BossAction TempAction = Boss.Phases[ActualPhase].ListAction[id];
+        Boss.Phases[ActualPhase].ListAction[id] = Boss.Phases[ActualPhase].ListAction[id-1];
+        Boss.Phases[ActualPhase].ListAction[id - 1] = TempAction;
+    }
+
+    public void SwapDownAction(int id)
+    {
+        BossBehavior Boss = target as BossBehavior;
+        BossAction TempAction = Boss.Phases[ActualPhase].ListAction[id];
+        Boss.Phases[ActualPhase].ListAction[id] = Boss.Phases[ActualPhase].ListAction[id + 1];
+        Boss.Phases[ActualPhase].ListAction[id + 1] = TempAction;
+    }
     public void RemoveAction(int id)
     {
         BossBehavior Boss = target as BossBehavior;
@@ -145,10 +178,10 @@ public class BossBehaviorEditor : Editor
 
     public GameObject CreateBossShooter()
     {
-        BossBehavior Parent = target as BossBehavior;
-        GameObject Obj = Instantiate(Parent.BaseGameObject, Parent.transform);
+        BossBehavior boss = target as BossBehavior;
+        GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
         Obj.AddComponent<BossShooter>();
-        Parent.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShooter>());
+        boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShooter>());
         return Obj;
     }
 
