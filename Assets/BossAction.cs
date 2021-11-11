@@ -129,4 +129,32 @@ public class BossAction : MonoBehaviour
         public bool ActAsABurst;
         public int ProjPerBurst;
     }
+
+
+    [System.Serializable]
+    public struct ShieldStats
+    {
+        [Space(10)]
+        [Header("GameObject Name")]
+        public string Name;
+        [Space(10)]
+        [Header("Nombre Surface de Shield")]
+        public int Number;
+        [Space(10)]
+        [Header("Parent")]
+        public GameObject Parent;
+        [HideInInspector]
+        public GameObject BaseShield;
+    }
+
+    [System.Serializable]
+    public struct ShieldInstantier
+    {
+        public ShieldStats Stats;
+        public void CreateShield()
+        {
+           /* GameObject Shield = Instantiate(BossBehavior.Boss.BaseShield, Stats.Parent.transform);
+            Shield.GetComponent<ShieldManager>().Stats = Stats;*/
+        }
+    }
 }
