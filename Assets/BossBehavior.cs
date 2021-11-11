@@ -22,6 +22,7 @@ public class BossBehavior : MonoBehaviour
     public BossAction.LaserInstantier LaserInstantier;
     public BossAction.ShieldInstantier ShieldStats;
     public GameObject BaseLaser;
+    public GameObject BaseShooter;
     public GameObject BaseShield;
     public GameObject BaseGameObject;
     public GameObject ActionHolder;

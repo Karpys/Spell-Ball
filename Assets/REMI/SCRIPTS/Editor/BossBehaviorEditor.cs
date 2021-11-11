@@ -29,6 +29,9 @@ public class BossBehaviorEditor : Editor
             SerializedProperty BaseGameObject = serializedObject.FindProperty("BaseGameObject");
             EditorGUILayout.PropertyField(BaseGameObject);
 
+            SerializedProperty BaseShooter= serializedObject.FindProperty("BaseShooter");
+            EditorGUILayout.PropertyField(BaseShooter);
+
             SerializedProperty BaseShield = serializedObject.FindProperty("BaseShield");
             EditorGUILayout.PropertyField(BaseShield);
 
@@ -196,7 +199,7 @@ public class BossBehaviorEditor : Editor
         {
             BossBehavior Boss = target as BossBehavior;
             EditedObject.GetComponent<BossShooter>().Instantier = Boss.BossBallThrower;
-            EditedObject.name = EditedObject.GetComponent<BossShooter>().Instantier.BallThrower.Name;
+            EditedObject.name = EditedObject.GetComponent<BossShooter>().Instantier.BallThrower[0].Name;
             Draw = DrawPhase.ADDACTION;
         }
     }

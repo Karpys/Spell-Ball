@@ -7849,6 +7849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1d1c8dd8e8c4e547a0286ec166b9ee7, type: 3}
+--- !u!1 &783149089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7725134926439304005, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+  m_PrefabInstance: {fileID: 1415641206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &785302316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13639,7 +13644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305241, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.6876774
+      value: -3.08
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305241, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13678,6 +13683,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BaseShooter
+      value: 
+      objectReference: {fileID: 6009121967276087187, guid: 24f1aeda22e3d0140b08e5ee6aaa0841, type: 3}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: ShieldStats.Stats.Name
       value: Shield 2
       objectReference: {fileID: 0}
@@ -13699,7 +13708,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BossBallThrower.BallThrower.Cadence.x
-      value: 0.5
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Cadence.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.ActAsABurst
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.RotateSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.ProjPerBurst
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BossBallThrower.BallThrower.Repetition.x
@@ -13718,6 +13747,10 @@ PrefabInstance:
       value: LaserRightLeft
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.ShootAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[0].Lenght
       value: 5
       objectReference: {fileID: 0}
@@ -13727,7 +13760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[0].ListAction.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[0].Duration
@@ -13747,16 +13780,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[0].WaitTime
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[1].Duration
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.DirectionMaxMin.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.DirectionMaxMin.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[0].ListAction.Array.data[0]
       value: 
-      objectReference: {fileID: 1746290230}
+      objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[0].ListAction.Array.data[1]
       value: 
@@ -13766,6 +13807,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Name
+      value: ShootBasique
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Name
+      value: ShootBasique
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Power.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Power.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Power.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Power.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[0].StartPosition
       value: 
       objectReference: {fileID: 1636927130}
@@ -13773,6 +13838,22 @@ PrefabInstance:
       propertyPath: LaserInstantier.Stats.Array.data[1].StartPosition
       value: 
       objectReference: {fileID: 1636927130}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Cadence.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Cadence.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Cadence.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Cadence.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LaserInstantier.Stats.Array.data[0].StartEndAngle.x
       value: 270
@@ -13789,13 +13870,80 @@ PrefabInstance:
       propertyPath: LaserInstantier.Stats.Array.data[1].StartEndAngle.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Projectile
+      value: 
+      objectReference: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Projectile
+      value: 
+      objectReference: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].DestroyOnHit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Repetition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].Repetition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].DestroyOnHit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Repetition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].Repetition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].ShootAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].ShootAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].DirectionMaxMin.x
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].DirectionMaxMin.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].DelayBeforeFirstShoot
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].DelayBeforeFirstShoot
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].StartPositions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].StartPositions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[0].StartPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 783149089}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: BossBallThrower.BallThrower.Array.data[1].StartPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 783149089}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
---- !u!4 &1415641207 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7725134926177220610, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
-  m_PrefabInstance: {fileID: 1415641206}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1415641208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7725134927289547746, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
@@ -16582,57 +16730,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
---- !u!1 &1746290228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1746290229}
-  - component: {fileID: 1746290230}
-  m_Layer: 0
-  m_Name: Shield 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1746290229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746290228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1415641207}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1746290230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746290228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ca1396f027db84bb6f1f84eca7535e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  HpBossState: 0
-  Instantier:
-    Stats:
-      Name: Shield 2
-      Number: 2
-      Parent: {fileID: 1415641208}
-      BaseShield: {fileID: 0}
 --- !u!1 &1746568424 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16b35788df2f36a4f96361853269b378, type: 3}

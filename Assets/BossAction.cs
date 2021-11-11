@@ -22,25 +22,28 @@ public class BossAction : MonoBehaviour
     [System.Serializable]
     public struct BallThrowerInstantier
     {
-        public BallThrowerStats BallThrower;
+        public List<BallThrowerStats> BallThrower;
         [HideInInspector]
         public List<GameObject> ThrowerInst;
-        public void InstAllBallThrower()
+        public void InstAllBallThrower(BossShooter Manager)
         {
-            GameObject Parent = BallThrower.StartPositions[Random.Range(0, BallThrower.StartPositions.Count - 1)];
-            GameObject Throw = Instantiate(BossBehavior.Boss.BaseGameObject, Parent.transform);
-            Throw.AddComponent<BallThrower>().SetUpThrower(BallThrower);
-            ThrowerInst.Add(Throw);
+            foreach (BallThrowerStats Stats in BallThrower)
+            {
+                GameObject Parent = Stats.StartPositions[Random.Range(0, Stats.StartPositions.Count - 1)];
+                GameObject Throw = Instantiate(BossBehavior.Boss.BaseShooter, Parent.transform);
+                /*Throw.AddComponent<BallThrower>().SetUpThrower(Stats);*/
+                Throw.GetComponent<BallThrower>().SetUpThrower(Stats);
+                Throw.GetComponent<BallThrower>().ThrowerStats.Manager = Manager;
+                ThrowerInst.Add(Throw);
+            }
+            
         }
 
-        public void ClearAllThrower()
+        public void DeastroyShooter()
         {
-            foreach (GameObject Obj in ThrowerInst)
-            {
-                Destroy(Obj);
-            }
             ThrowerInst.Clear();
         }
+
 
     }
 
@@ -102,6 +105,8 @@ public class BossAction : MonoBehaviour
     [System.Serializable]
     public struct BallThrowerStats
     {
+        [HideInInspector]
+        public BossShooter Manager;
         [Space(10)]
         [Header("Projectile GameObject Name and Prefab")]
         public string Name;
@@ -125,9 +130,12 @@ public class BossAction : MonoBehaviour
         public bool ShootAtPlayer;
         public Vector2 DirectionMaxMin;
         [Space(10)]
-        [Header("Burst Options")]
-        public bool ActAsABurst;
+        [Header("Splash Options")]
+        public bool ActAsSplash;
         public int ProjPerBurst;
+        public Vector2 MinMaxDirectionSplash;
+        [Space(10)] [Header("Rotate Options / Angle par Secondes")] 
+        public float RotateSpeed;
     }
 
 
