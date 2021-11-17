@@ -12,8 +12,6 @@ public class Ball : MonoBehaviour
     public Vector3 Direction;
     public float radius = 1.0f;
 
-    public bool DestroyOnHitWall;
-
     public float DelayDamageSelf;//Used for prevent self Damage //
     private float DelayDamageSelfPlayer; // Same but for the Player//
 
@@ -50,11 +48,6 @@ public class Ball : MonoBehaviour
         Debug.DrawRay(transform.position,forward, Color.green);
         if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius,CollisionMask))
         {
-            //TEST A SUPPRIMER//
-            if (DestroyOnHitWall)
-            {
-                Destroy(gameObject);
-            }
             AddEffect();
             Reflect(hit.normal);
             Instantiate(CollisionParticle, transform.position, transform.rotation);

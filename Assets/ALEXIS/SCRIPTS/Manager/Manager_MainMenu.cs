@@ -11,33 +11,13 @@ public class Manager_MainMenu : MonoBehaviour
     public GameObject launch;
     public GameObject fadeRef;
 
-    public GameObject optionsMenu;
-
-    [Header("WHICH ONE IS ACTIVE ?")]
-    public int UIIndex;
-
-    [Header("Focus On")]
-    public GameObject play;
-    public GameObject OnGraphics;
-    public GameObject OnQuality;
-    public GameObject OnMaster;
+    public GameObject play, options, quit;
 
 
-
-    //Faire des booleans en fonction si Options est ouvert ou pas////////
-
-    private void OnEnable()
-    {
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(play);
-
-
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        Screen.fullScreen = true;
         launch.GetComponent<Animation>().clip = earlyMenu;
         StartCoroutine(Wait());
 
@@ -52,46 +32,13 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void CheckFocus(Vector2 mov)
     {
-        switch (UIIndex)
+        if(EventSystem.current.currentSelectedGameObject == null)
         {
-            case 3:
-                if (EventSystem.current.currentSelectedGameObject == null)
-                {
-                    EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(null);
 
-                    EventSystem.current.SetSelectedGameObject(OnMaster);
+            EventSystem.current.SetSelectedGameObject(play);
 
-                }
-                break;
-            case 2:
-                if (EventSystem.current.currentSelectedGameObject == null)
-                {
-                    EventSystem.current.SetSelectedGameObject(null);
-
-                    EventSystem.current.SetSelectedGameObject(OnQuality);
-
-                }
-                break;
-            case 1:
-                if (EventSystem.current.currentSelectedGameObject == null)
-                {
-                    EventSystem.current.SetSelectedGameObject(null);
-
-                    EventSystem.current.SetSelectedGameObject(OnGraphics);
-
-                }
-                break;
-            case 0:
-                if (EventSystem.current.currentSelectedGameObject == null)
-                {
-                    EventSystem.current.SetSelectedGameObject(null);
-
-                    EventSystem.current.SetSelectedGameObject(play);
-
-                }
-                break;
         }
-
     }
     public void PlayButton(string SceneName)
     {
@@ -100,8 +47,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void OptionsButton()
     {
-        optionsMenu.gameObject.SetActive(true);
-        launch.gameObject.SetActive(false);
+
     }
 
     public void QuitButton()

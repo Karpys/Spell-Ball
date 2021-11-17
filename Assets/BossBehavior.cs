@@ -1,110 +1,78 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
-using Random = UnityEngine.Random;
 
 public class BossBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-   /* public List<BossAction> ListAction;*/
-    public List<Phase> Phases;
-    [SerializeField] public int ActualPhase = -1;
+    public List<BossState> ListState;
+    [SerializeField] private int ActualState = -1;
+    public BossHpManager HpManager;
     public bool BossStarted = false;
-
-    public List<BossAction> ListActualAction;
-    public int ActualAction;
-
-
-    //EDITOR UTILS//
-    public BossAction.BallThrowerInstantier BossBallThrower;
-    public GameObject BaseGameObject;
-    public GameObject ActionHolder;
-
-
-    private static BossBehavior inst;
-    public static BossBehavior Boss { get => inst; }
-    void Awake()
+    void Start()
     {
-        if (Boss != null && Boss != this)
-            Destroy(gameObject);
-
-        inst = this;
+        StartState();
     }
 
-    public void Start()
+    // Update is called once per frame
+    void Update()
     {
-        LaunchPhase(0);
+        
     }
 
-
-    public void LaunchPhase(int id)
+    public void StartState()
     {
-        ListActualAction.Clear();
-        ListActualAction = Phases[id].ListAction;
-        ActualPhase = id;
-        LaunchAction();
-    }
-
-    public void NextAction()
-    {
-        if (Phases[ActualPhase].RandomAction)
+        if (ActualState != 0)
         {
-            ListActualAction[ActualAction].Deactivate();
-            ActualAction = Random.Range(0, ListActualAction.Count);
-            ListActualAction[ActualAction].Activate();
+
+            ActualState = 0;
+            ActivateState(ActualState);
         }
         else
         {
-            ListActualAction[ActualAction].Deactivate();
-            ActualAction += 1;
-            if (ActualAction >= ListActualAction.Count)
-            {
-                ActualAction = 0;
-            }
-            ListActualAction[ActualAction].Activate();
+            //State 0 Deja Actif//
+            return;
         }
     }
-
-    public void LaunchAction()
+    public void NextState()
     {
-        if (Phases[ActualPhase].RandomAction)
+        if (ActualState == ListState.Count - 1)
         {
-            ActualAction = Random.Range(0, ListActualAction.Count);
-            ListActualAction[ActualAction].Activate();
+            DeactivateLastState();
+        }
+        else if(ActualState < ListState.Count - 1)
+        {
+            ActivateNextState();
         }
         else
         {
-            ActualAction = 0;
-            ListActualAction[ActualAction].Activate();
+            Debug.Log("No more State");
         }
     }
 
-    public void DeactivePhase(int id)
+    public void ActivateNextState()
     {
-        foreach (BossAction Action in Phases[id].ListAction)
-        {
-            Action.Deactivate();
-        }
+        //Deactivate Actual State , Start Next State//
+        DeactivateState(ActualState);
+        ActualState += 1;
+        ActivateState(ActualState);
     }
 
-
-    public enum BOSSMOVEMENT
+    public void DeactivateLastState()
     {
-        LEFTRIGHT,
-        UPDOWN,
-    }
-    
-
-    [System.Serializable]
-    public class Phase
-    {
-        public List<BossAction> ListAction;
-        public BOSSMOVEMENT MovementBoss = BOSSMOVEMENT.UPDOWN;
-        public bool RandomAction;
+        //Deactivate Last State//
+        DeactivateState(ActualState);
+        ActualState += 1;
     }
 
-    
+    public void DeactivateState(int id)
+    {
+        ListState[id].Deactivate();
+    }
+
+    public void ActivateState(int id)
+    {
+        ListState[id].Activate();
+    }
 }
 
