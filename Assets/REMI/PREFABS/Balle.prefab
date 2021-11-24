@@ -174,8 +174,12 @@ MonoBehaviour:
   CollisionPlayer:
     serializedVersion: 2
     m_Bits: 0
+  CollisionShield:
+    serializedVersion: 2
+    m_Bits: 2048
   Direction: {x: 0, y: 0, z: 0}
   radius: 1
+  DestroyOnHitWall: 0
   DelayDamageSelf: 0
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}

@@ -9,8 +9,11 @@ public class Ball : MonoBehaviour
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
     public LayerMask CollisionPlayer;
+    public LayerMask CollisionShield;
     public Vector3 Direction;
     public float radius = 1.0f;
+
+    public bool DestroyOnHitWall;
 
     public float DelayDamageSelf;//Used for prevent self Damage //
     private float DelayDamageSelfPlayer; // Same but for the Player//
@@ -48,6 +51,11 @@ public class Ball : MonoBehaviour
         Debug.DrawRay(transform.position,forward, Color.green);
         if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius,CollisionMask))
         {
+            //TEST A SUPPRIMER//
+            if (DestroyOnHitWall)
+            {
+                Destroy(gameObject);
+            }
             AddEffect();
             Reflect(hit.normal);
             Instantiate(CollisionParticle, transform.position, transform.rotation);
@@ -61,7 +69,7 @@ public class Ball : MonoBehaviour
             {
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
-                managerLife.DamageHealth(balle.combo);
+                managerLife.DamageByColor(balle);
                 managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
 
                 balle.combo = 0;
@@ -71,14 +79,27 @@ public class Ball : MonoBehaviour
 
         }
 
-        /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionShield))
         {
-
             Reflect(hit.normal);
             ResetSpeedAndCombo();
-            //DAMAGE PLAYER//
-        }*/
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+            if(hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
+            {
+                hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
+            }
+            else
+                Instantiate(CollisionParticle, transform.position, transform.rotation);
+
+        }
+
+            /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+            {
+
+                Reflect(hit.normal);
+                ResetSpeedAndCombo();
+                //DAMAGE PLAYER//
+            }*/
+            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 

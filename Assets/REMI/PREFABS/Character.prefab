@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 397368419370294684}
   - component: {fileID: 1671512321560986209}
   - component: {fileID: 8925505963567880456}
+  - component: {fileID: 2747592359170953363}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -135,15 +136,15 @@ MonoBehaviour:
   Stats:
     Speed: 7
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.33333334
+    RollCd: 0.5
     RollCdSet: 0.5
-    RollDuration: -0.33333334
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 15
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 9161171297372144952}
   CharacterVisual: {fileID: 8880468141465490594}
   MovementDir: {x: 0, y: 0}
@@ -286,6 +287,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 868a9aba-6fd9-4fee-bfc8-171d293ac844
     m_ActionName: Gameplay/START
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8925505963567880456}
+        m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
+        m_MethodName: OnFocus
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 85c8ac0f-913f-4608-8884-e739c2c5efab
+    m_ActionName: Gameplay/FOCUS_UI[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ccbab66-1ec1-4205-858b-776021b6bc4c
+    m_ActionName: Gameplay/MouseLeftClick[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -361,6 +382,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
   debugRemi: 0.5
+--- !u!114 &2747592359170953363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161171297372144902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9935108813fbc7a4c939684ff185499a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentLife: 0
+  autoRegenAmount: 0
+  autoRegenTimer: 5
+  autoRegen: 0
+  shakeOnDamage: 1
+  Visual: {fileID: 0}
+  ParticleEffectOnHit: {fileID: 0}
+  ParticleEffectOnHeal: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1485336078494962842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,19 +621,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.69283193
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7210992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
