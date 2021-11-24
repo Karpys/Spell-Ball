@@ -161,8 +161,8 @@ public class BossAction : MonoBehaviour
         public ShieldStats Stats;
         public void CreateShield()
         {
-           /* GameObject Shield = Instantiate(BossBehavior.Boss.BaseShield, Stats.Parent.transform);
-            Shield.GetComponent<ShieldManager>().Stats = Stats;*/
+            GameObject Shield = Instantiate(BossBehavior.Boss.BaseShield, Stats.Parent.transform);
+            Shield.GetComponent<SheildManager>().Stats = Stats;
         }
     }
 }

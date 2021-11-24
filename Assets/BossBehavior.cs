@@ -26,6 +26,7 @@ public class BossBehavior : MonoBehaviour
     public GameObject BaseShield;
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
+    public GameObject ShieldHolder;
 
 
     private static BossBehavior inst;

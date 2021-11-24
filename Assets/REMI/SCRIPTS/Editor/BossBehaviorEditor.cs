@@ -26,6 +26,9 @@ public class BossBehaviorEditor : Editor
             SerializedProperty ActionsHolder = serializedObject.FindProperty("ActionHolder");
             EditorGUILayout.PropertyField(ActionsHolder);
 
+            SerializedProperty ShieldHolder = serializedObject.FindProperty("ShieldHolder");
+            EditorGUILayout.PropertyField(ShieldHolder);
+
             SerializedProperty BaseGameObject = serializedObject.FindProperty("BaseGameObject");
             EditorGUILayout.PropertyField(BaseGameObject);
 
@@ -40,6 +43,9 @@ public class BossBehaviorEditor : Editor
 
             SerializedProperty listActionProperty = serializedObject.FindProperty("Phases");
             EditorGUILayout.PropertyField(listActionProperty);
+
+            
+            
 
         }
 
