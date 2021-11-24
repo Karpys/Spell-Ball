@@ -13,6 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LASER_CONSTANT = 2756076025U;
+        static const AkUniqueID LASER_END = 2510116948U;
+        static const AkUniqueID LASER_START_CHARGE = 4154444698U;
+        static const AkUniqueID LASER_START_RELEASE = 3217810413U;
+        static const AkUniqueID LASER_START_TRIGGER = 3428356050U;
+        static const AkUniqueID PLAY_CONSTANTLASER = 2735923927U;
         static const AkUniqueID PLAYTEST = 96444927U;
     } // namespace EVENTS
 
