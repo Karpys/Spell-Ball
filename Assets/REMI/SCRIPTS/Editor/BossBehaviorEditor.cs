@@ -130,6 +130,10 @@ public class BossBehaviorEditor : Editor
             FindPropertyRelative("RandomAction");
         EditorGUILayout.PropertyField(Random);
 
+        SerializedProperty HpToSet = serializedObject.FindProperty("Phases").GetArrayElementAtIndex(phase).
+            FindPropertyRelative("HpToSet");
+        EditorGUILayout.PropertyField(HpToSet);
+
         for (int i = 0; i < Boss.Phases[phase].ListAction.Count; i++)
         {
             EditorGUILayout.BeginHorizontal();

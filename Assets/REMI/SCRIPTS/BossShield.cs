@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossShield : BossAction
 {
-    public int HpBossState;
+    /*public int HpBossState;*/
     public ShieldInstantier Instantier;
     public override void Activate()
     {

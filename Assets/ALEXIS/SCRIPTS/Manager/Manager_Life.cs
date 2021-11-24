@@ -40,7 +40,7 @@ public class Manager_Life : MonoBehaviour
     void Update()
     {
         CheckDeath();
-
+        currentLife -= 0.3f * Time.deltaTime;
         if (autoRegen)
         {
             if (currentLife < maxHealth)

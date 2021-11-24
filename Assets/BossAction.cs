@@ -41,6 +41,13 @@ public class BossAction : MonoBehaviour
 
         public void DeastroyShooter()
         {
+            foreach (GameObject Thrower in ThrowerInst)
+            {
+                if (Thrower)
+                {
+                    Destroy(Thrower);
+                }
+            }
             ThrowerInst.Clear();
         }
 
@@ -68,6 +75,13 @@ public class BossAction : MonoBehaviour
         }
         public void DestroyLaser()
         {
+            foreach (GameObject Laser in LaserInst)
+            {
+                if (Laser)
+                {
+                    Destroy(Laser);
+                }
+            }
             LaserInst.Clear();
         }
     }

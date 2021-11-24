@@ -10,7 +10,7 @@ public class BossBehavior : MonoBehaviour
     // Start is called before the first frame update
    /* public List<BossAction> ListAction;*/
     public List<Phase> Phases;
-    [SerializeField] public int ActualPhase = -1;
+    [SerializeField] public int ActualPhase = 0;
     public bool BossStarted = false;
 
     public List<BossAction> ListActualAction;
@@ -27,8 +27,7 @@ public class BossBehavior : MonoBehaviour
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
     public GameObject ShieldHolder;
-
-
+    public Manager_Life Life;
     private static BossBehavior inst;
     public static BossBehavior Boss { get => inst; }
     void Awake()
@@ -37,6 +36,7 @@ public class BossBehavior : MonoBehaviour
             Destroy(gameObject);
 
         inst = this;
+        Life = GetComponent<Manager_Life>();
     }
 
     public void Start()
@@ -47,11 +47,15 @@ public class BossBehavior : MonoBehaviour
 
     public void LaunchPhase(int id)
     {
+        BossStarted = true;
         ListActualAction.Clear();
         ListActualAction = Phases[id].ListAction;
         ActualPhase = id;
+        Life.SetCurentLife(Phases[id].HpToSet);
+        Life.maxHealth = Phases[id].HpToSet;
         LaunchAction();
     }
+
 
     public void NextAction()
     {
@@ -70,6 +74,34 @@ public class BossBehavior : MonoBehaviour
                 ActualAction = 0;
             }
             ListActualAction[ActualAction].Activate();
+        }
+    }
+
+    public void NextPhase()
+    {
+        if (BossStarted)
+        {
+            //PREMIERE Phase
+            if (ActualPhase != -1)
+            {
+                ListActualAction[ActualAction].Deactivate();
+            }
+
+            //LAST PHASE
+
+            if (ActualPhase >= Phases.Count - 1)
+            {
+                ListActualAction[ActualAction].Deactivate();
+                //CLAIM END BOSS
+                Debug.Log("Le boss est MOOORT");
+                BossStarted = false;
+                Life.SetCurentLife(15000);
+                return;
+            }
+            ActualAction = 0;
+
+            ActualPhase += 1;
+            LaunchPhase(ActualPhase);
         }
     }
 
@@ -107,6 +139,7 @@ public class BossBehavior : MonoBehaviour
     {
         public List<BossAction> ListAction;
         public BOSSMOVEMENT MovementBoss = BOSSMOVEMENT.UPDOWN;
+        public int HpToSet;
         public bool RandomAction;
     }
 }
