@@ -13,6 +13,9 @@ public class Sheild : MonoBehaviour
     public Shader shaderSheild;
     private Material copieMaterialSheild;
 
+    [Header("shader")]
+    public Shader disolve;
+
     private void Awake()
     {
         copieMaterialSheild = new Material(shaderSheild);
@@ -61,5 +64,10 @@ public class Sheild : MonoBehaviour
                 copieMaterialSheild.color = new Color(1, 0.6f, 0, 0);
                 break;
         }
+    }
+
+    public void ChangeShader()
+    {
+        copieMaterialSheild.shader = disolve;
     }
 }

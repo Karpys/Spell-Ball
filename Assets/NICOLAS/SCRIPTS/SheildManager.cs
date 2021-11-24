@@ -39,12 +39,7 @@ public class SheildManager : MonoBehaviour
 
     public void ChangeLastSheild()
     {
-        int count = sheilds.Count - 1;
-        Destroy(sheilds[count]);
-        sheilds.RemoveAt(count);
-        if(count>0)
-            sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
-
+        StartCoroutine("DestroyShield");
     }
 
     ColorEnum RandomColor()
@@ -66,5 +61,14 @@ public class SheildManager : MonoBehaviour
         return ColorEnum.WHITE;
     }
 
-    
+    public IEnumerator DestroyShield()
+    {
+        int count = sheilds.Count - 1;
+        sheilds[count].GetComponent<Sheild>().ChangeShader();
+        yield return new WaitForSeconds(2f);
+        Destroy(sheilds[count]);
+        sheilds.RemoveAt(count);
+        if(count>0)
+            sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
+    }
 }
