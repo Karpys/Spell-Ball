@@ -40,7 +40,7 @@ public class Manager_Life : MonoBehaviour
     void Update()
     {
         CheckDeath();
-
+        currentLife -= 0.3f * Time.deltaTime;
         if (autoRegen)
         {
             if (currentLife < maxHealth)
@@ -66,6 +66,14 @@ public class Manager_Life : MonoBehaviour
         {
             currentLife = 0;
             OnDeath.Invoke();
+        }
+    }
+
+    public void DamageByColor(Balle ball)
+    {
+        if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
+        {
+            DamageHealth(ball.combo);
         }
     }
 
@@ -105,5 +113,15 @@ public class Manager_Life : MonoBehaviour
         {
             Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
         }
+    }
+
+    public float GetCurentLife()
+    {
+        return currentLife;
+    }
+
+    public void SetCurentLife(float life)
+    {
+        currentLife = life;
     }
 }

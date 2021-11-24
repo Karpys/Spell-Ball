@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 397368419370294684}
   - component: {fileID: 1671512321560986209}
   - component: {fileID: 8925505963567880456}
+  - component: {fileID: 2747592359170953363}
   m_Layer: 7
   m_Name: Character
   m_TagString: Player
@@ -381,6 +382,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
   debugRemi: 0.5
+--- !u!114 &2747592359170953363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161171297372144902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9935108813fbc7a4c939684ff185499a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentLife: 0
+  autoRegenAmount: 0
+  autoRegenTimer: 5
+  autoRegen: 0
+  shakeOnDamage: 1
+  Visual: {fileID: 0}
+  ParticleEffectOnHit: {fileID: 0}
+  ParticleEffectOnHeal: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1485336078494962842
 PrefabInstance:
   m_ObjectHideFlags: 0
