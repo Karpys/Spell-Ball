@@ -16,9 +16,9 @@ public class DoorWithMultipleButton : MonoBehaviour
     private float closingTimer = 0;
     private int doorPhase = 0;
 
-    public List<PressurePlateMultiple> selectedPlate;
-    public List<ColorEnum> selectedColor;
-    public List<ColorEnum> pressedColor;
+    private List<PressurePlateMultiple> selectedPlate;
+    private List<ColorEnum> selectedColor;
+    private List<ColorEnum> pressedColor;
 
     // Start is called before the first frame update
     void Start()
@@ -59,12 +59,18 @@ public class DoorWithMultipleButton : MonoBehaviour
     {
         selectedPlate = new List<PressurePlateMultiple>();
         selectedColor = new List<ColorEnum>();
+        pressedColor = new List<ColorEnum>();
         PressurePlateMultiple[] availablePlate = _buttons.ToArray();
         List<ColorEnum> availableColors = new List<ColorEnum>();
         availableColors.Add(ColorEnum.RED);
         availableColors.Add(ColorEnum.BLEU);
         availableColors.Add(ColorEnum.GREEN);
         availableColors.Add(ColorEnum.ORANGE);
+
+        foreach (PressurePlateMultiple plate in availablePlate)
+        {
+            plate.SetUsedRune(false);
+        }
 
         int numOfPlateToActivate = Random.Range(1, _buttons.Count);
         for (int i = 0; i < numOfPlateToActivate; i++)
@@ -76,7 +82,7 @@ public class DoorWithMultipleButton : MonoBehaviour
                 selectedPlate.Add(availablePlate[index]);
                 selectedColor.Add(availableColors[indexColor]);
                 availablePlate[index].playerColorNeeded = availableColors[indexColor];
-
+                availablePlate[index].SetUsedRune(true);
                 availableColors.RemoveAt(indexColor);
                 availablePlate[index] = null;
             }
