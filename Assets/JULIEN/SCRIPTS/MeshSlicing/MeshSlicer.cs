@@ -38,6 +38,12 @@ public class MeshSlicer : MonoBehaviour
         }
         slicedGameObjects.RemoveRange(0, numberOfCuts - 1);
 
+        for (int i = slicedGameObjects.Count-1; i >= 0; i--)
+        {
+            GameObject slicedPart = slicedGameObjects[i];
+            SetupCollidersAndRigidBodys(ref slicedPart, slicedPart.GetComponent<MeshFilter>().mesh, useGravity);
+        }
+        
         return slicedGameObjects.ToArray();
     }
 
@@ -67,9 +73,6 @@ public class MeshSlicer : MonoBehaviour
         
         positiveObject.GetComponent<MeshFilter>().mesh = positiveSideMeshData;
         negativeObject.GetComponent<MeshFilter>().mesh = negativeSideMeshData;
-
-        SetupCollidersAndRigidBodys(ref positiveObject, positiveSideMeshData, useGravity);
-        SetupCollidersAndRigidBodys(ref negativeObject, negativeSideMeshData, useGravity);
 
         return new [] { positiveObject, negativeObject };
     }

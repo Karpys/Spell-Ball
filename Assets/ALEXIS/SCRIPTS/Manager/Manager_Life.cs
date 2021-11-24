@@ -7,7 +7,7 @@ public class Manager_Life : MonoBehaviour
 {
     public int maxHealth;
     
-    [SerializeField] private float currentLife;
+    [SerializeField] private int currentLife;
 
     [Header("Auto regen settings")]
     [SerializeField] private int autoRegenAmount;
@@ -30,8 +30,10 @@ public class Manager_Life : MonoBehaviour
     public UnityEvent OnHeal;
 
 
+    private bool isDead = false;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentLife = maxHealth;
     }
@@ -39,6 +41,8 @@ public class Manager_Life : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDead) return;
+        
         CheckDeath();
 
         if (autoRegen)
@@ -65,6 +69,7 @@ public class Manager_Life : MonoBehaviour
         if (currentLife <= 0)
         {
             currentLife = 0;
+            isDead = true;
             OnDeath.Invoke();
         }
     }
@@ -105,5 +110,10 @@ public class Manager_Life : MonoBehaviour
         {
             Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
         }
+    }
+
+    public int GetCurrentLife()
+    {
+        return currentLife;
     }
 }
