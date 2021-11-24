@@ -77,6 +77,11 @@ public class BossBehavior : MonoBehaviour
         }
     }
 
+    public void Transition(int Phase)
+    {
+        //FONCTION DE TRANSITION A CALL ICI COROUTINE//
+    }
+
     public void NextPhase()
     {
         if (BossStarted)
@@ -98,9 +103,11 @@ public class BossBehavior : MonoBehaviour
                 Life.SetCurentLife(15000);
                 return;
             }
-            ActualAction = 0;
 
+            ActualAction = 0;
             ActualPhase += 1;
+
+            //TRANSITION VERS PROCHAINE PHASE PAS CALL LAUNCH PHASE TT DE SUITE//
             LaunchPhase(ActualPhase);
         }
     }

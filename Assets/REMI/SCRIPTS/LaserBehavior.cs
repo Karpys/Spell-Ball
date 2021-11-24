@@ -21,6 +21,7 @@ public class LaserBehavior : MonoBehaviour
     }
     void Start()
     {
+        //SOUNDS:START TRIGGER LASER//
         transform.eulerAngles = new Vector3(0, Stats.StartEndAngle.x, 0);
         if (Stats.Infinity)
         {
