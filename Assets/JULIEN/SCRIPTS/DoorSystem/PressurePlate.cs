@@ -9,14 +9,17 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] private List<GameObject> _doorsGameObjects;
     [SerializeField] private int _numberOfPlayersToActivate;
     [SerializeField] private float _timeBeforeClosing;
+    [SerializeField] private int _numberOfColorCorrectMinimumToActivate;
+    [SerializeField] private List<ColorEnum> _colorNeededToActivate;
 
     private List<IDoor> _doors;
     private float timer;
-    private int _currentNumbOfPlayer;
+    private List<PlayerController> _playersController;
 
     private void Awake()
     {
         _doors = new List<IDoor>();
+        _playersController = new List<PlayerController>();
         foreach (GameObject _doorGO in _doorsGameObjects)
         {
             _doors.Add(_doorGO.GetComponent<IDoor>());
@@ -32,7 +35,8 @@ public class PressurePlate : MonoBehaviour
             {
                 foreach (IDoor door in _doors)
                 {
-                    door.CloseDoor();
+                    if (door.getDoorState() == DoorState.OPEN)
+                        door.CloseDoor();
                 }
             }
         }
@@ -42,23 +46,50 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.GetComponent<CharacterController>() != null)
         {
-            _currentNumbOfPlayer++;
-            if (_currentNumbOfPlayer >= _numberOfPlayersToActivate)
+            PlayerController _player = other.GetComponent<PlayerController>();
+            if (!_playersController.Contains(_player)) _playersController.Add(_player);
+            if (_playersController.Count >= _numberOfPlayersToActivate)
             {
-                foreach (IDoor door in _doors)
+                if (hasAllColorNeeded())
                 {
-                    if (door.getDoorState() == DoorState.CLOSE)
-                        door.OpenDoor();
+                    foreach (IDoor door in _doors)
+                    {
+                        if (door.getDoorState() == DoorState.CLOSE)
+                            door.OpenDoor();
+                    }
                 }
             }
         }
+    }
+
+    private bool hasAllColorNeeded()
+    {
+        List<ColorEnum> currentOnPlate = new List<ColorEnum>();
+        for (int i = 0; i < _playersController.Count; i++)
+        {
+            currentOnPlate.Add(_playersController[i].GetPlayerColor());
+        }
+
+        bool isValid = true;
+        int numbOfCorrectColor = _colorNeededToActivate.Count;
+        for (int i = 0; i < _colorNeededToActivate.Count; i++)
+        {
+            if (!currentOnPlate.Contains(_colorNeededToActivate[i]))
+            {
+                isValid = false;
+                numbOfCorrectColor--;
+            }
+        }
+        
+
+        return isValid || numbOfCorrectColor >= _numberOfColorCorrectMinimumToActivate;
     }
     
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<CharacterController>() != null)
         {
-            if (_currentNumbOfPlayer >= _numberOfPlayersToActivate)
+            if (_playersController.Count >= _numberOfPlayersToActivate && hasAllColorNeeded())
             {
                 timer = _timeBeforeClosing;
             }
@@ -69,7 +100,8 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.GetComponent<CharacterController>() != null)
         {
-            _currentNumbOfPlayer--;
+            PlayerController _player = other.GetComponent<PlayerController>();
+            if (!_playersController.Contains(_player)) _playersController.Remove(_player);
         }
     }
 

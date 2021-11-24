@@ -314,6 +314,7 @@ MonoBehaviour:
     m_Bits: 0
   grabDelay: 0.5
   balleLayer: 6
+  playerColor: 3
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 8880468141465490594}

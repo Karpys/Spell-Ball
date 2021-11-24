@@ -7,7 +7,7 @@ public class Manager_Life : MonoBehaviour
 {
     public int maxHealth;
     
-    [SerializeField] private int currentLife;
+    [SerializeField] private float currentLife;
 
     [Header("Auto regen settings")]
     [SerializeField] private int autoRegenAmount;
@@ -74,12 +74,18 @@ public class Manager_Life : MonoBehaviour
         }
     }
 
-    public void DamageByColor(Balle ball)
-    {
-        if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
-        {
-            DamageHealth(ball.combo);
-        }
+    public void DamageByColor(Balle ball)
+
+    {
+
+        if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
+
+        {
+
+            DamageHealth(ball.combo);
+
+        }
+
     }
 
     public void DamageHealth(int dmg)
@@ -120,13 +126,19 @@ public class Manager_Life : MonoBehaviour
         }
     }
 
-    public float GetCurentLife()
-    {
-        return currentLife;
+    public float GetCurentLife()
+
+    {
+
+        return currentLife;
+
     }
 
-    public void SetCurentLife(float life)
-    {
-        currentLife = life;
+    public void SetCurentLife(float life)
+
+    {
+
+        currentLife = life;
+
     }
 }
