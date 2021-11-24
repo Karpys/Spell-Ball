@@ -1,19 +1,47 @@
 fileFormatVersion: 2
-guid: e5973deb5c1e0464eb4b0b5e7772f65f
+guid: 615d8b952a040db4b9464df76417643c
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Crystal
-    second: {fileID: 2100000, guid: 1d1fa010ecb1f404294e2e8852e085b9, type: 2}
+      name: Earings
+    second: {fileID: 2100000, guid: cec4e97fe2df4554b9db3f1b909cf0b3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: d0f04913100c98f428a4df3974418951, type: 2}
+      name: ID BODY
+    second: {fileID: 2100000, guid: c01e9defa16ae8146be60b71755e4186, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ID BOOTS
+    second: {fileID: 2100000, guid: e9abec6e65334ea4c80a08aff2cbe0b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ID Foulard
+    second: {fileID: 2100000, guid: cceb3aad9cfc6f74aad70a342fbb0d03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ID Gants
+    second: {fileID: 2100000, guid: 63a78a48a423ca94a9c6e3230978017c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tshirt
+    second: {fileID: 2100000, guid: ab655b0428590d446a3d0539dbf58105, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 8f643a69b97e2fd4e83a58de88f2766b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +123,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.55
+    globalScale: 55
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5973deb5c1e0464eb4b0b5e7772f65f
+guid: 1f5a516d2d0b9ec429bcb19de6b0f64d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Crystal
-    second: {fileID: 2100000, guid: 1d1fa010ecb1f404294e2e8852e085b9, type: 2}
+      name: Bag
+    second: {fileID: 2100000, guid: 80cbb7c51cdd44644a87df2774852e9a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: d0f04913100c98f428a4df3974418951, type: 2}
+      name: Crystals
+    second: {fileID: 2100000, guid: 2afcce6b97b7ce5468e7ea885324202b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: detail01
+    second: {fileID: 2100000, guid: 56312bb1e503aa642bc07c3f22215da1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: detail02
+    second: {fileID: 2100000, guid: ff8f7ed06e096c2428c611196194a3ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
