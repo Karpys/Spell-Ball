@@ -49,12 +49,22 @@ public class PlayerController : MonoBehaviour
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+
         if(!ManagePlayer.player1)
         {
-        ManagePlayer.player1 = gameObject;
-        }else
+            ManagePlayer.player1 = gameObject;
+        }
+        else if (!ManagePlayer.player2)
         {
-        ManagePlayer.player2 = gameObject;
+            ManagePlayer.player2 = gameObject;
+        }
+        else if (!ManagePlayer.player3)
+        {
+            ManagePlayer.player3 = gameObject;
+        }
+        else if (!ManagePlayer.player4)
+        {
+            ManagePlayer.player4 = gameObject;
         }
     }
 

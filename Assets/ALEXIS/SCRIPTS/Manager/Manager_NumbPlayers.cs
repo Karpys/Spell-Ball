@@ -35,8 +35,11 @@ public class Manager_NumbPlayers: MonoBehaviour
     public void AddPlayer()
     {
         id = 1;
-        manager.playerPrefab = listPlayers[id];
-        number += 1;
+        if(number<3)
+            number += 1;
+        manager.playerPrefab = listPlayers[number];
+        //AttribuatePlayerList();
+
         if (number >= 2)
         {
             AttribuatePlayerList();
@@ -47,7 +50,12 @@ public class Manager_NumbPlayers: MonoBehaviour
     {
        /* player1 = listPlayers[0];
         player2 = listPlayers[1];*/
-
+       
         unlockMove = true;
+    }
+
+    public PlayerInputManager GetManager_NumPlayers()
+    {
+        return manager;
     }
 }
