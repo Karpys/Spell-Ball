@@ -10,7 +10,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>D:\Programme\Wwise 2021.1.4.7707</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../Platinium_Project_WwiseProject/Platinium_Project_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../Platinium_Project/Platinium_Project_WwiseProject/Platinium_Project_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>

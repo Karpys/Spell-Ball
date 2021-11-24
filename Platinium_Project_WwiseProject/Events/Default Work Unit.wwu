@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayTest" ID="{56179C20-FEF1-4EE1-A12D-09F863771A1B}">
+					<ChildrenList>
+						<Action Name="" ID="{D8374B22-B878-4EEE-B16F-7451C3ECA903}" ShortID="276441367">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Boss1_LaserBeam_Constant_01_LP" ID="{3120B0A3-60A8-4995-9F8A-4035FA434AD9}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

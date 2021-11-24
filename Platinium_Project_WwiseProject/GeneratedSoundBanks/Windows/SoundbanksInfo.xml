@@ -16,10 +16,20 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
+		<SoundBank Id="2228651116" Language="SFX" Hash="513368542">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="96444927" Name="PlayTest" ObjectPath="\Events\Default Work Unit\PlayTest" DurationType="OneShot" DurationMin="2.691187" DurationMax="2.691187">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

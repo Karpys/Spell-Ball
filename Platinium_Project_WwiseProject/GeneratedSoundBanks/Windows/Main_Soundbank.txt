@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	96444927	PlayTest			\Default Work Unit\PlayTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	379137550	SFX_Boss1_LaserBeam_Constant_01_LP	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_01_LP_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\SFX_Boss1_LaserBeam_Constant_01_LP		516772
+

@@ -1,6 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Laser" ID="{60632F83-19F5-46CD-B2F2-0615FAC5163C}" ShortID="545426589">
+					<ChildrenList>
+						<Sound Name="SFX_Boss1_LaserBeam_Constant_01_LP" ID="{3120B0A3-60A8-4995-9F8A-4035FA434AD9}" ShortID="137170318">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Constant_01_LP" ID="{A095F7AC-E345-4B26-953A-B6573999DBAC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Constant_01_LP.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="379137550"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Constant_01_LP" ID="{A095F7AC-E345-4B26-953A-B6573999DBAC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_Constant_LP_02" ID="{A3C1E266-D128-400B-A79B-344F01414360}" ShortID="910832637">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Constant_LP_02" ID="{B2B89D75-39BB-4A86-A9E2-718B5C662341}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Constant_LP_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="877675493"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Constant_LP_02" ID="{B2B89D75-39BB-4A86-A9E2-718B5C662341}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_Constant_LP_03" ID="{103B7C23-09F9-4676-85ED-0A5F9D75DB38}" ShortID="993148277">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Constant_LP_03" ID="{744A5A4F-9B6A-4F66-B07F-C7D2A1EEF704}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Constant_LP_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="468871439"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Constant_LP_03" ID="{744A5A4F-9B6A-4F66-B07F-C7D2A1EEF704}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_End" ID="{34277673-8DCE-4109-B9DC-92BC75BC0A77}" ShortID="767162243">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_End" ID="{EF4CD716-11D1-4D92-ADD3-AB16DE11603A}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_End.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="120772766"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_End" ID="{EF4CD716-11D1-4D92-ADD3-AB16DE11603A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_Start_Charge" ID="{4C93521A-1E80-449C-95E2-84D5D0237E70}" ShortID="828059827">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Start_Charge" ID="{33EDBC82-9B69-44B9-8258-8C588F9832D7}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Start_Charge.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="216173574"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Start_Charge" ID="{33EDBC82-9B69-44B9-8258-8C588F9832D7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_Start_Relase" ID="{581B33C4-58F2-4654-A2AA-DF5E010AF43B}" ShortID="1009344268">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Start_Relase" ID="{E95F16C4-6810-44CE-8905-582305EDEF25}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Start_Relase.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="535052771"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Start_Relase" ID="{E95F16C4-6810-44CE-8905-582305EDEF25}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_Boss1_LaserBeam_Start_Trigg" ID="{1BE72032-103D-48DD-8CAD-283750A91000}" ShortID="677953666">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Boss1_LaserBeam_Start_Trigg" ID="{05286072-7D1F-4757-B9A6-9DFEB11803EC}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Boss1_LaserBeam_Start_Trigg.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="523821600"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Boss1_LaserBeam_Start_Trigg" ID="{05286072-7D1F-4757-B9A6-9DFEB11803EC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
