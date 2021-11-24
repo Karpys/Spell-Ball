@@ -113,7 +113,7 @@ MonoBehaviour:
   lastSield: 0
   materialSheild: {fileID: 2100000, guid: 406a2a89201b2914bb480d837164cc2c, type: 2}
   shaderSheild: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  disolve: {fileID: -6465566751694194690, guid: 4c21f361170e91441886c9bf8233438b, type: 3}
+  disolve: {fileID: -6465566751694194690, guid: 12b4bb4d78ed5de429396476853e84ec, type: 3}
 --- !u!135 &3533278386008427494
 SphereCollider:
   m_ObjectHideFlags: 0
