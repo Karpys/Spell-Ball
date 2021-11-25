@@ -19,6 +19,11 @@ public class BossBehavior : MonoBehaviour
 
     //EDITOR UTILS//
     public BossAction.BallThrowerInstantier BossBallThrower;
+    public BossAction.LaserInstantier LaserInstantier;
+    public BossAction.ShieldInstantier ShieldStats;
+    public GameObject BaseLaser;
+    public GameObject BaseShooter;
+    public GameObject BaseShield;
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
 
@@ -95,8 +100,7 @@ public class BossBehavior : MonoBehaviour
         LEFTRIGHT,
         UPDOWN,
     }
-    
-
+   
     [System.Serializable]
     public class Phase
     {
@@ -104,7 +108,5 @@ public class BossBehavior : MonoBehaviour
         public BOSSMOVEMENT MovementBoss = BOSSMOVEMENT.UPDOWN;
         public bool RandomAction;
     }
-
-    
 }
 
