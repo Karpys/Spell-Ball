@@ -9,10 +9,15 @@ public class UI_Focus_MenuPause : MonoBehaviour
 
     [Header("BUTTONS")]
     public GameObject play;
+    public Animator animatorRef;
+
 
 
     private void OnEnable()
     {
+        animatorRef = this.gameObject.GetComponent<Animator>();
+        animatorRef.SetBool("Active", true);
+
         play.gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
 
         EventSystem.current.SetSelectedGameObject(null);
@@ -23,5 +28,13 @@ public class UI_Focus_MenuPause : MonoBehaviour
         refMenu = FindObjectOfType<UI_MenuPause>();
         refMenu.UIIndex = 0;
     }
+    public void ENTER()
+    {
+        animatorRef.SetBool("Active", false);
+    }
 
+    public void QUIT()
+    {
+        animatorRef.SetBool("Deactive", false);
+    }
 }

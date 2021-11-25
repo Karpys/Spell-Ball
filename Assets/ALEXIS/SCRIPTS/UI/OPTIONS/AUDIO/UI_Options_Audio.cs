@@ -159,7 +159,7 @@ public class UI_Options_Audio : MonoBehaviour
 
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         EventSystem.current.SetSelectedGameObject(null);
         refMenuAudio.SetActive(false);
         refChooseOptions.SetActive(true);

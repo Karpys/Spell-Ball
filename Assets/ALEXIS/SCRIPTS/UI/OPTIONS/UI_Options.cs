@@ -78,7 +78,7 @@ public class UI_Options : MonoBehaviour
 
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         EventSystem.current.SetSelectedGameObject(null);
         buttonBack.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         BaseOp.gameObject.SetActive(false);
@@ -88,14 +88,14 @@ public class UI_Options : MonoBehaviour
 
     IEnumerator WaitGraph()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         EventSystem.current.SetSelectedGameObject(null);
         Graph.gameObject.SetActive(true);
         chooseOp.gameObject.SetActive(false);
     }
     IEnumerator WaitAudio()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         EventSystem.current.SetSelectedGameObject(null);
         Audio.gameObject.SetActive(true);
         chooseOp.gameObject.SetActive(false);
