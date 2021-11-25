@@ -45,21 +45,21 @@ public class UI_Options : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnGraph()
     {
-        Graph.gameObject.SetActive(true);
-        chooseOp.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
         animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitGraph");
     }
 
     public void OnAudio()
     {
-        Audio.gameObject.SetActive(true);
-        chooseOp.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
         animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitAudio");
     }
 
     public void OnResetSettings(string SceneName)
@@ -70,12 +70,34 @@ public class UI_Options : MonoBehaviour
 
     public void OnBack()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitEndAnim");
 
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSeconds(1);
+        EventSystem.current.SetSelectedGameObject(null);
         buttonBack.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         BaseOp.gameObject.SetActive(false);
         mainMenu.gameObject.SetActive(true);
-        animref.SetBool("QUIT_OP", true);
-
         mainMenu.GetComponent<Animator>().SetBool("ENTER", true);
+    }
+
+    IEnumerator WaitGraph()
+    {
+        yield return new WaitForSeconds(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        Graph.gameObject.SetActive(true);
+        chooseOp.gameObject.SetActive(false);
+    }
+    IEnumerator WaitAudio()
+    {
+        yield return new WaitForSeconds(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        Audio.gameObject.SetActive(true);
+        chooseOp.gameObject.SetActive(false);
     }
 }

@@ -39,11 +39,17 @@ public class UI_Options_Graphics : MonoBehaviour
     Manager_MainMenu refMenuMain;
     UI_MenuPause refMenuPause;
 
+    public Animator animatorRef;
+    private void Start()
+    {
+        animatorRef = gameObject.GetComponent<Animator>();
+    }
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(quality);
 
+        animatorRef.SetBool("ENTER_GRA", true);
 
         PlayerPrefs.SetInt("SaveExist", 1);
         PlayerPrefs.Save();
@@ -149,12 +155,31 @@ public class UI_Options_Graphics : MonoBehaviour
     public void OnBack()
     {
         back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        EventSystem.current.SetSelectedGameObject(null);
+        animatorRef.SetBool("QUIT_GRA", true);
+        StartCoroutine("WaitEndAnim");
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSeconds(1f);
+        EventSystem.current.SetSelectedGameObject(null);
         refMenuGraph.SetActive(false);
         refChooseOptions.SetActive(true);
     }
 
-    
+    public void ENTER()
+    {
+        animatorRef.SetBool("ENTER_GRA", false);
+    }
+
+    public void QUIT()
+    {
+        animatorRef.SetBool("QUIT_GRA", false);
+    }
 }
+
+
 
 [System.Serializable]
 public class ResItem

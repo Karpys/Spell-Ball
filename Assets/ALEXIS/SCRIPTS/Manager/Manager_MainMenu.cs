@@ -13,6 +13,8 @@ public class Manager_MainMenu : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    public string SceneName;
+
     [Header("WHICH ONE IS ACTIVE ?")]
     public int UIIndex;
 
@@ -102,13 +104,16 @@ public class Manager_MainMenu : MonoBehaviour
         }
 
     }
-    public void PlayButton(string SceneName)
+    public void PlayButton()
     {
-        SceneManager.LoadScene(SceneName);
+        EventSystem.current.SetSelectedGameObject(null);
+        animRef.SetBool("QUIT", true);
+        StartCoroutine("WaitPlay");
     }
 
     public void OptionsButton()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         animRef.SetBool("QUIT", true);
         StartCoroutine("WaitEndAnim");
         //launch.gameObject.SetActive(false);
@@ -141,8 +146,12 @@ public class Manager_MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         launch.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(true);
+    }
 
-
+    IEnumerator WaitPlay()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneName);
     }
     #endregion
 }

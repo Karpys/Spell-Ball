@@ -42,6 +42,8 @@ public class UI_Options_Audio : MonoBehaviour
     Manager_MainMenu refMenuMain;
     UI_MenuPause refMenuPause;
 
+    public Animator animatorRef;
+
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -50,6 +52,8 @@ public class UI_Options_Audio : MonoBehaviour
 
         PlayerPrefs.SetInt("SaveExist", 1);
         PlayerPrefs.Save();
+
+        animatorRef.SetBool("ENTER_AU", true);
 
         //Check Which scene is currently active
         Scene currentScene = SceneManager.GetActiveScene();
@@ -108,14 +112,9 @@ public class UI_Options_Audio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        animatorRef = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnSliderMaster(float volume)
     {
 
@@ -143,6 +142,25 @@ public class UI_Options_Audio : MonoBehaviour
     public void OnBack()
     {
         back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        EventSystem.current.SetSelectedGameObject(null);
+        animatorRef.SetBool("QUIT_AU", true);
+        StartCoroutine("WaitEndAnim");
+    }
+
+    public void ENTER()
+    {
+        animatorRef.SetBool("ENTER_AU", false);
+    }
+
+    public void QUIT()
+    {
+        animatorRef.SetBool("QUIT_AU", false);
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSeconds(1f);
+        EventSystem.current.SetSelectedGameObject(null);
         refMenuAudio.SetActive(false);
         refChooseOptions.SetActive(true);
     }
