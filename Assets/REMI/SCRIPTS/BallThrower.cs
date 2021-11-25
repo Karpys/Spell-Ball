@@ -7,7 +7,7 @@ using static GameUtilities.GameUtilities;
 public class BallThrower : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private BossAction.BallThrowerStats ThrowerStats;
+    [SerializeField] public BossAction.BallThrowerStats ThrowerStats;
     /*[SerializeField] private GameObject Projectile;
     [SerializeField] private List<GameObject> Parent;
     [SerializeField] private float Power;
@@ -17,7 +17,7 @@ public class BallThrower : MonoBehaviour
     [SerializeField] private Vector2 DirectionMaxMin;
     [SerializeField] private bool ShootAtClosestPlayer;
     [SerializeField] private bool DestroyOnHitWall;
-    [SerializeField] private bool ActAsABurst;
+    [SerializeField] private bool ActAsSplash;
     [SerializeField] private int ProjPerBurst;
     [SerializeField] private bool StartPositionLoop;
     [SerializeField] private float DelayBeforeFirstShoot;*/
@@ -43,7 +43,7 @@ public class BallThrower : MonoBehaviour
         /*ThrowerStats.Projectile = Stats.Projectile;
         ThrowerStats.DirectionMaxMin = Stats.DirectionMaxMin;
         ThrowerStats.Power = Stats.Power;
-        ThrowerStats.ActAsABurst = Stats.ActAsABurst;
+        ThrowerStats.ActAsSplash = Stats.ActAsSplash;
         ThrowerStats.Cadence = Stats.Cadence;
         ThrowerStats.DelayBeforeFirstShoot = Stats.DelayBeforeFirstShoot;
         ThrowerStats.InfiniteProj = Stats.InfiniteProj;
@@ -79,15 +79,13 @@ public class BallThrower : MonoBehaviour
         //BALLTHROWER NORMAL
         if (ThrowerStats.Repetition.z <= 0)
         {
-            if (BossBehavior.Boss!=null)
-            {
-                BossBehavior.Boss.NextAction();
-            }
+            Destroy(gameObject);
+            ThrowerStats.Manager.EndShooter();
         }
         timer += Time.deltaTime;
         if (timer >= Random.Range(ThrowerStats.Cadence.x, ThrowerStats.Cadence.y))
         {
-            if(!ThrowerStats.ActAsABurst)
+            if(!ThrowerStats.ActAsSplash)
             {
                 if (ThrowerStats.ShootAtPlayer)
                 {
@@ -102,29 +100,27 @@ public class BallThrower : MonoBehaviour
             }
             else
             {
-                if (ThrowerStats.ShootAtPlayer)
+                int ShootNbr = ThrowerStats.ProjPerBurst;
+                float AnglePerIt = (ThrowerStats.MinMaxDirectionSplash.x - ThrowerStats.MinMaxDirectionSplash.y) / ThrowerStats.ProjPerBurst;
+                float Angle = 0;
+                for (int i = 0; i < ShootNbr; i++)
                 {
-                    int ShootNbr = ThrowerStats.ProjPerBurst;
-                    for (int i = 0; i < ShootNbr; i++)
-                    {
-                        ShootClosest(GetStartPosition());
-                    }
-                    ReduceShoot();
+                    ShootDirection(transform.eulerAngles.y + Angle, GetStartPosition());
+                    Angle += AnglePerIt;
                 }
-                else
-                {
-                    int ShootNbr = ThrowerStats.ProjPerBurst;
-                    for (int i = 0; i < ShootNbr; i++)
-                    {
-                        ShootDirection(Random.Range(transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.x, transform.eulerAngles.y + ThrowerStats.DirectionMaxMin.y), GetStartPosition());
-                    }
 
-                    ReduceShoot();
-                }
+                ReduceShoot();
             }
         }
+
+        RotateThrower();
     }
 
+
+    public void RotateThrower()
+    {
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + (ThrowerStats.RotateSpeed * Time.deltaTime), 0);
+    }
 
     public void ReduceShoot()
     {

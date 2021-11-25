@@ -6,23 +6,24 @@ public class SheildManager : MonoBehaviour
 {
     public GameObject prefabShield;
     public List<GameObject> sheilds;
-    public int nSpawn;
-
+    public BossAction.ShieldStats Stats;
     float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i  = 0;i<nSpawn;i++)
+        
+        for(int i  = 0;i< Stats.Number; i++)
         {            
             GameObject shield = GameObject.Instantiate(prefabShield, gameObject.transform.position, Quaternion.identity);
             shield.GetComponent<Sheild>().SetColor(RandomColor());
             shield.transform.localScale = new Vector3(shield.transform.localScale.x + 0.25f * i, shield.transform.localScale.y + 0.25f * i, shield.transform.localScale.z + 0.25f * i); 
             shield.transform.SetParent(gameObject.transform);
             sheilds.Add(shield);
-            if (i + 1 == nSpawn)
+            if (i + 1 == Stats.Number)
                 shield.GetComponent<Sheild>().lastSield = true;
         }
+        BossBehavior.Boss.NextAction();
     }
 
     // Update is called once per frame

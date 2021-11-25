@@ -463,13 +463,13 @@ MonoBehaviour:
   ActualAction: 0
   BossBallThrower:
     BallThrower:
-      Name: Burst
+      Name: Normal Shoot
       Projectile: {fileID: 7864188510188467676, guid: 006370bcec9a24548aa4067cc01984b5, type: 3}
       Power: {x: 10, y: 15}
-      Cadence: {x: 0.2, y: 1}
+      Cadence: {x: 0.5, y: 1}
       DelayBeforeFirstShoot: 0.5
       DestroyOnHit: 1
-      Repetition: {x: 15, y: 20, z: 0}
+      Repetition: {x: 10, y: 10, z: 0}
       InfiniteProj: 0
       StartPositions:
       - {fileID: 7725134926439304005}
@@ -479,6 +479,21 @@ MonoBehaviour:
       ActAsABurst: 0
       ProjPerBurst: 3
     ThrowerInst: []
+  LaserInstantier:
+    Stats:
+    - Manager: {fileID: 0}
+      Name: LaserFouFou
+      Duration: 2
+      WaitTime: 1
+      Lenght: 5
+      Infinity: 1
+      StartWidth: 0
+      EndWidth: 1
+      StartEndAngle: {x: 270, y: 90}
+      PingPong: 1
+      StartPosition: {fileID: 7725134925856980108}
+    LaserInst: []
+  BaseLaser: {fileID: 9054846381830404985, guid: 9b9d6bd29e3bb82438eed4043489dda9, type: 3}
   BaseGameObject: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
   ActionHolder: {fileID: 7725134926177220637}
 --- !u!114 &7725134926590305246
