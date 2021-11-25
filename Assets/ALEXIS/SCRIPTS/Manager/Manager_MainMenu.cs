@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class Manager_MainMenu : MonoBehaviour
 {
-    public AnimationClip earlyMenu;
+    //public AnimationClip earlyMenu;
     public GameObject launch;
     public GameObject fadeRef;
 
@@ -22,31 +22,40 @@ public class Manager_MainMenu : MonoBehaviour
     public GameObject OnQuality;
     public GameObject OnMaster;
 
+    [Header("Animator")]
+    public Animator animRef;
+    public float tempsAnim = 1f;
 
 
-    //Faire des booleans en fonction si Options est ouvert ou pas////////
 
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(play);
 
+        if (!PlayerPrefs.HasKey("SaveExist"))
+        {
+            Screen.fullScreen = true;
+            Screen.SetResolution(1920, 1080, true);
+            QualitySettings.SetQualityLevel(2);
+        }
 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Screen.fullScreen = true;
-        launch.GetComponent<Animation>().clip = earlyMenu;
+        //Screen.fullScreen = true;
+        //launch.GetComponent<Animation>().clip = earlyMenu;
         StartCoroutine(Wait());
 
+        animRef = launch.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void OnFocus(InputAction.CallbackContext ctx) => CheckFocus(ctx.ReadValue<Vector2>());
 
@@ -100,8 +109,10 @@ public class Manager_MainMenu : MonoBehaviour
 
     public void OptionsButton()
     {
-        optionsMenu.gameObject.SetActive(true);
-        launch.gameObject.SetActive(false);
+        animRef.SetBool("QUIT", true);
+        StartCoroutine("WaitEndAnim");
+        //launch.gameObject.SetActive(false);
+        //optionsMenu.gameObject.SetActive(true);
     }
 
     public void QuitButton()
@@ -109,16 +120,29 @@ public class Manager_MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    #region Coroutine
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(0.2f);
-        
-        launch.GetComponent<Animation>().Play();
+
+        //launch.GetComponent<Animation>().Play();
         launch.SetActive(true);
         fadeRef.SetActive(false);
+        animRef.SetBool("ENTER", true);
 
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(play);
     }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSeconds(tempsAnim);
+        EventSystem.current.SetSelectedGameObject(null);
+        launch.gameObject.SetActive(false);
+        optionsMenu.gameObject.SetActive(true);
+
+
+    }
+    #endregion
 }

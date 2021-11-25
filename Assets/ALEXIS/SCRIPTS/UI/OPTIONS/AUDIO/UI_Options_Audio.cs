@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_Options_Audio : MonoBehaviour
 {
@@ -27,19 +28,45 @@ public class UI_Options_Audio : MonoBehaviour
     public Slider vfxS;
     public Slider musicS;
 
-    float volM = 50;
-    float volV = 50;
-    float volMu = 50;
+    [Header("CheckScene")]
+    public string scene1;
+    public string scene2;
 
-    Manager_MainMenu refMenu;
+    [HideInInspector]
+    public float volM = 50;
+    [HideInInspector]
+    public float volV = 50;
+    [HideInInspector]
+    public float volMu = 50;
+
+    Manager_MainMenu refMenuMain;
+    UI_MenuPause refMenuPause;
+
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(master);
 
-        refMenu = FindObjectOfType<Manager_MainMenu>();
-        refMenu.UIIndex = 3;
 
+        PlayerPrefs.SetInt("SaveExist", 1);
+        PlayerPrefs.Save();
+
+        //Check Which scene is currently active
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == scene1)
+        {
+            refMenuMain = FindObjectOfType<Manager_MainMenu>();
+            refMenuMain.UIIndex = 3;
+        }
+        else if (sceneName == scene2)
+        {
+            refMenuPause = FindObjectOfType<UI_MenuPause>();
+            refMenuPause.UIIndex = 3;
+        }
+
+        //SAUVEGARDE
         if (PlayerPrefs.HasKey("volumeMaster"))
         {
             volM = PlayerPrefs.GetFloat("volumeMaster");
@@ -115,6 +142,7 @@ public class UI_Options_Audio : MonoBehaviour
 
     public void OnBack()
     {
+        back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         refMenuAudio.SetActive(false);
         refChooseOptions.SetActive(true);
     }

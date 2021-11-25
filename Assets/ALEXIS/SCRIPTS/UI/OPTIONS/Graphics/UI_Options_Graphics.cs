@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UI_Options_Graphics : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class UI_Options_Graphics : MonoBehaviour
     public Dropdown resolutionD;
     public Toggle fullscreenT;
 
+    [Header("CheckScene")]
+    public string scene1;
+    public string scene2;
+
     bool onFullScreen = true;
     public List<ResItem> resolutionDetails;
 
@@ -31,15 +36,34 @@ public class UI_Options_Graphics : MonoBehaviour
     int res = 0;
     int saveFullscreen = 1;
 
-    Manager_MainMenu refMenu;
+    Manager_MainMenu refMenuMain;
+    UI_MenuPause refMenuPause;
+
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(quality);
 
-        refMenu = FindObjectOfType<Manager_MainMenu>();
-        refMenu.UIIndex = 2;
 
+        PlayerPrefs.SetInt("SaveExist", 1);
+        PlayerPrefs.Save();
+
+        //Check Which scene is currently active
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == scene1)
+        {
+            refMenuMain = FindObjectOfType<Manager_MainMenu>();
+            refMenuMain.UIIndex = 2;
+        }
+        else if (sceneName == scene2)
+        {
+            refMenuPause = FindObjectOfType<UI_MenuPause>();
+            refMenuPause.UIIndex = 2;
+        }
+
+        //SAUVEGARDE
         if (PlayerPrefs.HasKey("qualityIndex"))
         {
             int qual = PlayerPrefs.GetInt("qualityIndex");
@@ -120,9 +144,11 @@ public class UI_Options_Graphics : MonoBehaviour
     {
         Screen.SetResolution(resolutionDetails[resIndex].horizontal, resolutionDetails[resIndex].vertical, onFullScreen);
         PlayerPrefs.SetInt("resIndex", resIndex);
+        PlayerPrefs.Save();
     }
     public void OnBack()
     {
+        back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         refMenuGraph.SetActive(false);
         refChooseOptions.SetActive(true);
     }
