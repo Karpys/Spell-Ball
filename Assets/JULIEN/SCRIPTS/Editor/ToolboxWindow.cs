@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Codice.CM.Client.Differences.Merge;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,7 +26,14 @@ public class ToolboxWindows : EditorWindow
     private string m_savePath = null;
     private string m_prefabDestroyerPath = null;
 
-    private int _numberOfPiecesDestroyed;
+    private int _numberOfPiecesDestroyed = 2;
+    
+    private bool _isSolid;
+    private bool _shareVertices;
+    private bool _useGravity;
+    private bool _smoothVerticies;
+    private bool _reverseWindTriangles;
+    private bool _optimizeMesh;
 
     [MenuItem("Toolbox/Utilities")]
     static void InitWindows()
@@ -154,36 +158,38 @@ public class ToolboxWindows : EditorWindow
             _objectToDestroy = (GameObject) EditorGUILayout.ObjectField(_objectToDestroy, typeof(GameObject), true);
             GUILayout.EndHorizontal();
 
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("Prefab path");
-            if (GUILayout.Button("Select prefab path"))
-            {
-                m_prefabDestroyerPath = EditorUtility.SaveFilePanel("Choose where to save the new prefab", Application.dataPath, "object_destroyed", "prefab");
-            }
-            GUILayout.EndHorizontal();
+
+            _numberOfPiecesDestroyed = EditorGUILayout.IntField("Number of cuts", _numberOfPiecesDestroyed);
             
-            _numberOfPiecesDestroyed = EditorGUILayout.IntSlider("Number of pieces", _numberOfPiecesDestroyed, 0, 100);
+            _isSolid = EditorGUILayout.Toggle("Is Solid", _isSolid);
+            _shareVertices = EditorGUILayout.Toggle("Share Verticies", _shareVertices);
+            _useGravity = EditorGUILayout.Toggle("Use Gravity", _useGravity);
+            _reverseWindTriangles = EditorGUILayout.Toggle("Reverse Win Triangles", _reverseWindTriangles);
+            _smoothVerticies = EditorGUILayout.Toggle("Smooth Verticies", _smoothVerticies);
+            
+            _optimizeMesh = EditorGUILayout.Toggle("Optimize Mesh", _optimizeMesh);
 
             if (GUILayout.Button("Slice object"))
             {
-                if (m_prefabDestroyerPath != null && m_prefabDestroyerPath.Length > 0 && _objectToDestroy != null)
+                if (_objectToDestroy != null && _numberOfPiecesDestroyed > 1)
                 {
-                    if (m_prefabDestroyerPath.StartsWith(Application.dataPath))
+                    GameObject[] parts = MeshSlicer.Slice(_objectToDestroy, _numberOfPiecesDestroyed, _isSolid, _reverseWindTriangles, _useGravity, _shareVertices, _smoothVerticies);
+
+                    GameObject prefabParent = new GameObject(_objectToDestroy.name + "_destroyed");
+
+                    prefabParent.AddComponent<MaterialSetter>().SetMaterials(_objectToDestroy.GetComponent<MeshRenderer>().sharedMaterials);
+
+                    string meshGUID = System.Guid.NewGuid().ToString();
+
+                    foreach (GameObject part in parts)
                     {
-                        string relativePath = "Assets" + m_prefabDestroyerPath.Substring(Application.dataPath.Length);
-
-                        MeshDestroyer meshDestroyer = new MeshDestroyer();
-                        List<GameObject> list = meshDestroyer.DestroyMesh(_objectToDestroy, _numberOfPiecesDestroyed / 2);
-
-                        GameObject prefabParent = new GameObject(_objectToDestroy.name + "_destroyed");
-
-                        foreach (GameObject part in list)
-                        {
-                            part.transform.parent = prefabParent.transform;
-                        }
-
-                        PrefabUtility.SaveAsPrefabAsset(prefabParent, relativePath);
+                        part.transform.parent = prefabParent.transform;
+                        MeshSaver.SaveMesh(part.GetComponent<MeshFilter>().sharedMesh, part.name, _objectToDestroy.name + "_" + meshGUID, _optimizeMesh);
                     }
+
+                    prefabParent.transform.localRotation = _objectToDestroy.transform.localRotation;
+
+                    Selection.objects = new Object[] { prefabParent };
                 }
             }
 

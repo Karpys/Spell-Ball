@@ -16,6 +16,10 @@ public class Sheild : MonoBehaviour
     [Header("shader")]
     public Shader disolve;
 
+    private bool alphaSet = false;
+    private Color tempShield;
+    private float time;
+    private bool startTime;
     private void Awake()
     {
         copieMaterialSheild = new Material(shaderSheild);
@@ -32,13 +36,25 @@ public class Sheild : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lastSield)
+        if (lastSield && !alphaSet)
         {
+            //Debug.Log("a marche");
             copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
+            tempShield = copieMaterialSheild.color;
+            //Debug.Log(tempShield);
+            /*disolve.GetPropertyDefaultVectorValue(disolve.FindPropertyIndex("Color")).Set(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
+            Debug.Log(disolve.GetPropertyDefaultVectorValue(disolve.FindPropertyIndex("Color"))+ " a marche pas ");*/
+            alphaSet = true;
         }
-        else
+        else if (!alphaSet)
         {
             copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0);
+        }
+
+        if(startTime && time > -1)
+        {
+            time -= Time.deltaTime;
+            copieMaterialSheild.SetFloat("_time", time);
         }
     }
 
@@ -68,6 +84,19 @@ public class Sheild : MonoBehaviour
 
     public void ChangeShader()
     {
+        //Debug.Log(disolve.FindPropertyIndex("Color"));
+        //disolve.GetPropertyDefaultVectorValue((disolve.FindPropertyIndex("Color") * -1) - 1).Equals(copieMaterialSheild.color);// .Set(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
+        
+        Color temp = copieMaterialSheild.color;
         copieMaterialSheild.shader = disolve;
+        copieMaterialSheild.SetColor("_Color", tempShield);
+        Debug.Log(copieMaterialSheild.GetColor("_Color"));
+        startTime = true;
+        time = 1;
+        //Debug.Log(disolve.GetPropertyDefaultVectorValue((disolve.FindPropertyIndex("Color") * -1) - 1));
+
+        //float time = 1;
+
+
     }
 }
