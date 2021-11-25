@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 8580540049611797821}
   - component: {fileID: 2078180319808418952}
   - component: {fileID: 1037787364555090805}
+  - component: {fileID: 9006607160491191650}
   m_Layer: 7
   m_Name: Character 2
   m_TagString: Player
@@ -94,7 +95,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7383534235245227026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.696497, y: 10.744943, z: -14.528144}
+  m_LocalPosition: {x: 0, y: 0.888, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 7575762179524929292}
@@ -273,6 +274,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 151682d5-c39f-42cf-8a21-6a9432923b9a
     m_ActionName: Gameplay/START
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed3707cb-d7e8-40d6-8502-fd7cf3f8acc9
+    m_ActionName: Gameplay/FOCUS_UI[/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID/rightStick,/DualShock4GamepadHID/dpad]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -313,6 +318,7 @@ MonoBehaviour:
     m_Bits: 0
   grabDelay: 0.5
   balleLayer: 6
+  playerColor: 1
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 7091290609593122230}
@@ -334,6 +340,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9006607160491191650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383534235245227026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9935108813fbc7a4c939684ff185499a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentLife: 0
+  autoRegenAmount: 0
+  autoRegenTimer: 5
+  autoRegen: 0
+  shakeOnDamage: 1
+  Visual: {fileID: 0}
+  ParticleEffectOnHit: {fileID: 0}
+  ParticleEffectOnHeal: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHeal:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4053654656135438492
 PrefabInstance:
   m_ObjectHideFlags: 0

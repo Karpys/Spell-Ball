@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallMask;
     [SerializeField] private float grabDelay;
     [SerializeField] private int balleLayer = 6;
+    [SerializeField] private ColorEnum playerColor;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -49,12 +50,22 @@ public class PlayerController : MonoBehaviour
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+
         if(!ManagePlayer.player1)
         {
-        ManagePlayer.player1 = gameObject;
-        }else
+            ManagePlayer.player1 = gameObject;
+        }
+        else if (!ManagePlayer.player2)
         {
-        ManagePlayer.player2 = gameObject;
+            ManagePlayer.player2 = gameObject;
+        }
+        else if (!ManagePlayer.player3)
+        {
+            ManagePlayer.player3 = gameObject;
+        }
+        else if (!ManagePlayer.player4)
+        {
+            ManagePlayer.player4 = gameObject;
         }
     }
 
@@ -200,19 +211,19 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator ColorParticule()
     {
-        if (gameObject.name == "Character(Clone)")
+        if (playerColor == ColorEnum.RED)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
         }
-        else if (gameObject.name == "Character 1(Clone)")
+        else if (playerColor == ColorEnum.ORANGE)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
         }
-        else if (gameObject.name == "Character 2(Clone)")
+        else if (playerColor == ColorEnum.BLEU)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
         }            
-        else if (gameObject.name == "Character 3(Clone)")
+        else if (playerColor == ColorEnum.GREEN)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
         }
@@ -222,6 +233,11 @@ public class PlayerController : MonoBehaviour
         particleSystem.startColor = Color.white;
         //particleSystem.GetComponent<Renderer>().material.color = Color.white;
 
+    }
+
+    public ColorEnum GetPlayerColor()
+    {
+        return playerColor;
     }
 
     /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
