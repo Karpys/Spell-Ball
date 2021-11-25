@@ -16,10 +16,76 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1168216129">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2756076025" Name="Laser_Constant" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Constant" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2510116948" Name="Laser_End" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_End" DurationType="OneShot" DurationMin="3.980729" DurationMax="3.980729">
+					<IncludedMemoryFiles>
+						<File Id="120772766" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_End.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_End_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4154444698" Name="Laser_Start_Charge" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Charge" DurationType="OneShot" DurationMin="6.013688" DurationMax="6.013688">
+					<IncludedMemoryFiles>
+						<File Id="216173574" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Charge.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Charge_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3217810413" Name="Laser_Start_Release" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Release" DurationType="OneShot" DurationMin="3.828063" DurationMax="3.828063">
+					<IncludedMemoryFiles>
+						<File Id="535052771" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Relase.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3428356050" Name="Laser_Start_Trigger" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Trigger" DurationType="OneShot" DurationMin="1.973521" DurationMax="1.973521">
+					<IncludedMemoryFiles>
+						<File Id="523821600" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Trigg.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2735923927" Name="Play_ConstantLaser" ObjectPath="\Events\Default Work Unit\LaserEvent\Play_ConstantLaser" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
+						</File>
+						<File Id="468871439" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_03.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="877675493" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_02.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_02_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="96444927" Name="PlayTest" ObjectPath="\Events\Default Work Unit\PlayTest" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

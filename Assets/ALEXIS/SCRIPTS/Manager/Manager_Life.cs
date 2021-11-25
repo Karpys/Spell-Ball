@@ -44,7 +44,6 @@ public class Manager_Life : MonoBehaviour
         if (isDead) return;
         
         CheckDeath();
-
         if (autoRegen)
         {
             if (currentLife < maxHealth)
@@ -75,17 +74,11 @@ public class Manager_Life : MonoBehaviour
     }
 
     public void DamageByColor(Balle ball)
-
     {
-
         if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
-
         {
-
             DamageHealth(ball.combo);
-
         }
-
     }
 
     public void DamageHealth(int dmg)
@@ -127,18 +120,12 @@ public class Manager_Life : MonoBehaviour
     }
 
     public float GetCurentLife()
-
     {
-
         return currentLife;
-
     }
 
     public void SetCurentLife(float life)
-
     {
-
         currentLife = life;
-
     }
 }

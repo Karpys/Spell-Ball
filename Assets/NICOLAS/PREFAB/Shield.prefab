@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 1439565992329249072}
   - component: {fileID: 1439565992329249075}
   - component: {fileID: 1439565992329249074}
-  - component: {fileID: 1439565992329249073}
   - component: {fileID: 1439565992329249076}
-  - component: {fileID: 3533278386008427494}
+  - component: {fileID: 3486896916583361348}
   m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1439565992329249073
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439565992329249231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1439565992329249076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +99,9 @@ MonoBehaviour:
   lastSield: 0
   materialSheild: {fileID: 2100000, guid: 406a2a89201b2914bb480d837164cc2c, type: 2}
   shaderSheild: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
---- !u!135 &3533278386008427494
-SphereCollider:
+  disolve: {fileID: -6465566751694194690, guid: 12b4bb4d78ed5de429396476853e84ec, type: 3}
+--- !u!136 &3486896916583361348
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,6 +110,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.50000006
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.46, z: 0}
