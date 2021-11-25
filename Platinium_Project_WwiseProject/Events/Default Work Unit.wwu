@@ -14,6 +14,76 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="LaserEvent" ID="{096F42FD-D05D-487B-846D-125A02F8F606}" ShortID="925684898">
+					<ChildrenList>
+						<Event Name="Laser_Start_Trigger" ID="{9742BD1B-B56C-49F0-B058-4615294CA6B0}">
+							<ChildrenList>
+								<Action Name="" ID="{AFC11D34-4CC2-48C4-8EFD-2F82DB87B32E}" ShortID="572286131">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Boss1_LaserBeam_Start_Trigg" ID="{1BE72032-103D-48DD-8CAD-283750A91000}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_Start_Charge" ID="{DF9F9DED-2ED8-4BCB-AB1C-275089CBEC9E}">
+							<ChildrenList>
+								<Action Name="" ID="{34F87759-D3E4-4526-B859-FD3E3F04EE74}" ShortID="1065672901">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Boss1_LaserBeam_Start_Charge" ID="{4C93521A-1E80-449C-95E2-84D5D0237E70}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_Start_Release" ID="{EA8E1A99-2C63-4F74-9E84-A6AA68E70EFB}">
+							<ChildrenList>
+								<Action Name="" ID="{7F78707C-9A67-4071-B366-8A24CCAD8E23}" ShortID="926571916">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Boss1_LaserBeam_Start_Relase" ID="{581B33C4-58F2-4654-A2AA-DF5E010AF43B}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_Constant" ID="{6E8A5BB5-7EF6-4E4D-AF8B-F2AE41EFB94C}">
+							<ChildrenList>
+								<Action Name="" ID="{B30636DD-2456-44B3-A9F1-41AAB954F38A}" ShortID="437036841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Boss1_LaserBeam_Constant_01_LP" ID="{3120B0A3-60A8-4995-9F8A-4035FA434AD9}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_End" ID="{0FAAB09F-FC9D-48DA-9709-BD557E5E0EAA}">
+							<ChildrenList>
+								<Action Name="" ID="{8BEF6C20-D8B6-4D61-821B-BE3ADC2F0155}" ShortID="348714250">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Boss1_LaserBeam_End" ID="{34277673-8DCE-4109-B9DC-92BC75BC0A77}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ConstantLaser" ID="{C56D7E6A-FECA-4215-873D-027FAC7EACAA}">
+							<ChildrenList>
+								<Action Name="" ID="{6993F5CA-D4EE-4EFC-B6EC-DB3E5E187891}" ShortID="468586028">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ConstantLaser" ID="{1EC360B3-6025-410A-BAAF-EE09EBC0E6ED}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

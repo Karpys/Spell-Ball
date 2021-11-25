@@ -732,9 +732,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Test:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3285c696a4d03b947a3404aa77ea6643, type: 2}
+    Self: {fileID: 1853435473}
+    Sounds:
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 3adfb1f92778be748ba0459cc7feb601, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 7e180774eae637c48ae93887fddfbb0d, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 596eeefaab6584349a07c1834e9af6ee, type: 2}
+      KillPrevious: 1
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 4f7fc188d59c6e44aaa1c6e3abe41701, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 27bb07ecaf5f63243a88c029db9dc338, type: 2}
+      KillPrevious: 1
+      IsReplable: 0
+      HasPlayed: 0
+  idPlay: 0
 --- !u!4 &1853435475
 Transform:
   m_ObjectHideFlags: 0
