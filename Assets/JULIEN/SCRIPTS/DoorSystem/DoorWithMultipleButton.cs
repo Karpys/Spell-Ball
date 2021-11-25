@@ -123,7 +123,7 @@ public class DoorWithMultipleButton : MonoBehaviour
                     {
                         _door.OpenDoor();
 
-                        closingTimer = _delayBeforeClosing[doorPhase];
+                        closingTimer = doorPhase < _delayBeforeClosing.Count ? _delayBeforeClosing[doorPhase] : _delayBeforeClosing[_delayBeforeClosing.Count - 1];
                     }
                 }
             }

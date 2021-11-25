@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.66866064, z: -0, w: 0.74356776}
+  m_LocalRotation: {x: -0, y: -0.18255737, z: -0, w: 0.98319525}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2318,15 +2318,15 @@ MonoBehaviour:
   Stats:
     Speed: 10
     rotationspeed: 1
-    CanMove: 0
+    CanMove: 1
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: 0
+    RollCd: -0.33333334
     RollCdSet: 0
-    RollDuration: 0.5
+    RollDuration: -0.24116126
     RollDurationSet: 0.5
     RollSpeed: 30
-    HasReset: 0
+    HasReset: 1
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}
@@ -2481,7 +2481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2497,11 +2497,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
