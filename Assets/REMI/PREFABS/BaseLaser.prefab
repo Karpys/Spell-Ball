@@ -142,15 +142,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82356ed0679d88b4aba2200b468090ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LaserSounds:
+    Self: {fileID: 9054846381830404985}
+    Sounds:
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 3adfb1f92778be748ba0459cc7feb601, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 7e180774eae637c48ae93887fddfbb0d, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 596eeefaab6584349a07c1834e9af6ee, type: 2}
+      KillPrevious: 1
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 077d1a93782f883418742eae6f77bb11, type: 2}
+      KillPrevious: 0
+      IsReplable: 0
+      HasPlayed: 0
+    - Sound:
+        idInternal: 0
+        valueGuidInternal: 
+        WwiseObjectReference: {fileID: 11400000, guid: 27bb07ecaf5f63243a88c029db9dc338, type: 2}
+      KillPrevious: 1
+      IsReplable: 0
+      HasPlayed: 0
   Stats:
-    Name: 
     Manager: {fileID: 0}
+    Name: 
     Duration: 0
+    WaitTime: 0
     Lenght: 0
     Infinity: 0
+    StartWidth: 0
+    EndWidth: 0
     StartEndAngle: {x: 0, y: 0}
+    PingPong: 0
     StartPosition: {fileID: 0}
   Line: {fileID: 7016873727855902364}
   Layer:
     serializedVersion: 2
     m_Bits: 4294967295
+  Laserstate: 0
