@@ -148,10 +148,10 @@ public class Balle : MonoBehaviour
     {
         foreach (ParticleSystem particle in _particleSystem)
         {
-            particle.startColor = ColorInfuse.instance.orange;
+            particle.startColor = Color.yellow;
         }
         
-        ballLight.color = ColorInfuse.instance.orange;
+        ballLight.color = Color.yellow;
         
         // ballColorCopy.color = ColorInfuse.instance.orange;
         color = ColorEnum.ORANGE;

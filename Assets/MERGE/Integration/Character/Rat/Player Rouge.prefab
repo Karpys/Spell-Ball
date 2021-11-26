@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.6135944, z: -0, w: 0.7896214}
+  m_LocalRotation: {x: -0, y: -0.9971749, z: -0, w: 0.07511486}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2189,19 +2189,7 @@ MonoBehaviour:
     m_ActionId: cd604157-63d4-40af-b8bd-218962054f20
     m_ActionName: Gameplay/Sprint[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 919132148916143358}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnThrowBall
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c199d446-add7-4b90-b684-53bb0ad7dcca
     m_ActionName: Gameplay/Grab Balle[/Keyboard/e]
   - m_PersistentCalls:
@@ -2319,15 +2307,15 @@ MonoBehaviour:
   Stats:
     Speed: 10
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.019666
+    RollCd: 0
     RollCdSet: 0
-    RollDuration: -0.24739169
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 30
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}

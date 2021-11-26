@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
        SetBall();
        if (balle && _timer <= 0)
        {
+           print("INFUSE");
            _timer = grabDelay;
            StartCoroutine(ColorParticule()); 
            ThrowBall();

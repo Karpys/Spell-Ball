@@ -1898,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheat
       objectReference: {fileID: 0}
+    - target: {fileID: 2407916503580155422, guid: fdc1667b204116742a1fa7facd10ff34, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc1667b204116742a1fa7facd10ff34, type: 3}
 --- !u!1 &126104273
@@ -6920,7 +6924,7 @@ RectTransform:
   - {fileID: 1098458220}
   - {fileID: 1621225676}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10482,6 +10486,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 225204911, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: Instantier.BallThrower.Array.data[0].Projectile
+      value: 
+      objectReference: {fileID: 3755601250249571268, guid: 465c7b486b7a0a145bc1ffd618eef5f9, type: 3}
     - target: {fileID: 7725134926590305236, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_Name
       value: ----BOSS-----
@@ -10528,6 +10536,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305241, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725134926590305246, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926741503109, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
@@ -24324,7 +24336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: abc3b0198e184d7458cad63fb36d906e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: abc3b0198e184d7458cad63fb36d906e, type: 3}
       propertyPath: m_LocalScale.x

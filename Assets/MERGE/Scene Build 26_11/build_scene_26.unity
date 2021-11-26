@@ -2215,6 +2215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheat
       objectReference: {fileID: 0}
+    - target: {fileID: 2407916503580155422, guid: fdc1667b204116742a1fa7facd10ff34, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc1667b204116742a1fa7facd10ff34, type: 3}
 --- !u!1 &148175845
