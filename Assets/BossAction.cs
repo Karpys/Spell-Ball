@@ -131,6 +131,7 @@ public class BossAction : MonoBehaviour
         public Vector2 Cadence;
         public float DelayBeforeFirstShoot;
         public bool DestroyOnHit;
+        public bool Returnable;
         [Space(10)]
         [Header("Number of repetitions")]
         public Vector3Int Repetition;

@@ -168,10 +168,12 @@ public class BallThrower : MonoBehaviour
     void InstantiateBall(float Direction,GameObject StartPosition)
     {
         GameObject Proj = Instantiate(ThrowerStats.Projectile, StartPosition.transform.position, transform.rotation);
-        Proj.GetComponent<Ball>().Speed = Random.Range(ThrowerStats.Power.x,ThrowerStats.Power.y);
-        Proj.GetComponent<Ball>().SetDirection(new Vector3(0,Direction,0));
-        Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
-        Proj.GetComponent<Ball>().DestroyOnHitWall = ThrowerStats.DestroyOnHit;
+        Ball ball = Proj.GetComponent<Ball>();
+        ball.Speed = Random.Range(ThrowerStats.Power.x,ThrowerStats.Power.y);
+        ball.SetDirection(new Vector3(0,Direction,0));
+        ball.DelayDamageSelf = DelayDmgSelf;
+        ball.DestroyOnHitWall = ThrowerStats.DestroyOnHit;
+        ball.Returnable = ThrowerStats.Returnable;
     }
 
     //DEPEND ON A GAMEOBJECT//
@@ -179,10 +181,12 @@ public class BallThrower : MonoBehaviour
     void InstantiateBall(GameObject target,GameObject StartPosition)
     {
         GameObject Proj = Instantiate(ThrowerStats.Projectile, StartPosition.transform.position, transform.rotation);
-        Proj.GetComponent<Ball>().Speed = Random.Range(ThrowerStats.Power.x, ThrowerStats.Power.y);
-        Proj.GetComponent<Ball>().LookAtStart(target);
-        Proj.GetComponent<Ball>().DelayDamageSelf = DelayDmgSelf;
-        Proj.GetComponent<Ball>().DestroyOnHitWall = ThrowerStats.DestroyOnHit;
+        Ball ball = Proj.GetComponent<Ball>();
+        ball.Speed = Random.Range(ThrowerStats.Power.x, ThrowerStats.Power.y);
+        ball.LookAtStart(target);
+        ball.DelayDamageSelf = DelayDmgSelf;
+        ball.DestroyOnHitWall = ThrowerStats.DestroyOnHit;
+        ball.Returnable = ThrowerStats.Returnable;
     }
     
 
