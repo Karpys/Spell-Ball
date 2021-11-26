@@ -7243,7 +7243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e96cf71909c5024f9f16b8b4ba63040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 1
+  debug: 0
   debugLowFrequency: 0
   debugHighFrequency: 0
   debugDuration: 0

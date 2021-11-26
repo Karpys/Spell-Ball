@@ -96,12 +96,14 @@ public class PlayerController : MonoBehaviour
 
     void OnGUI()
     {
+        /*
         if (GUI.Button(new Rect(250, 0, 250, 50), "Reset grab delay"))
         {
             _timer = 0;
         }
 
         GUI.Label(new Rect(250, 50, 250, 50), "Grab delay = " + _timer + " seconds ");
+        */
     }
 
     void SetCanGrab(bool canGrab)
