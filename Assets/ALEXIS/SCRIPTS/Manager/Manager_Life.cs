@@ -80,6 +80,10 @@ public class Manager_Life : MonoBehaviour
             DamageHealth(ball.combo);
         }
     }
+    public void Damage(Balle ball)
+    {
+        DamageHealth(ball.combo);
+    }
 
     public void DamageHealth(int dmg)
     {
@@ -95,11 +99,14 @@ public class Manager_Life : MonoBehaviour
 
     public void SummonHitParticle(Vector3 position, Quaternion rotation, Color? particleColor = null)
     {
-        GameObject Parti = Instantiate(ParticleEffectOnHit, position, rotation);
-        
-        if (particleColor.HasValue)
+        if (ParticleEffectOnHit)
         {
-            Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
+            GameObject Parti = Instantiate(ParticleEffectOnHit, position, rotation);
+            
+            if (particleColor.HasValue)
+            {
+                Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
+            }
         }
     }
 
