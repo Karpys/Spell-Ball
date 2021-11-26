@@ -136,7 +136,7 @@ public class BallThrower : MonoBehaviour
     //OLD
     void ShootClosest()
     {
-        GameObject target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<AddComponentTest>().ToList()));
+        GameObject target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
         if (target)
         {
             ReduceShoot();
@@ -149,7 +149,7 @@ public class BallThrower : MonoBehaviour
     //NEW
     void ShootClosest(GameObject StartPosition)
     {
-        GameObject target = GetClosestGameObject(StartPosition.transform.position, ListToListGameObjects(FindObjectsOfType<AddComponentTest>().ToList()));
+        GameObject target = GetClosestGameObject(StartPosition.transform.position, ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
         if (target)
         {
             InstantiateBall(target, StartPosition);
