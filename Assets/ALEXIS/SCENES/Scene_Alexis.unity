@@ -2042,7 +2042,7 @@ MonoBehaviour:
   vfxS: {fileID: 1906536751}
   musicS: {fileID: 1064097342}
   scene1: Scene_Alexis
-  scene2: Merge_S2
+  scene2: build_scene_26
   volM: 50
   volV: 50
   volMu: 50
@@ -4589,7 +4589,7 @@ MonoBehaviour:
   resolutionD: {fileID: 942990320}
   fullscreenT: {fileID: 1665277451}
   scene1: Scene_Alexis
-  scene2: Merge_S2
+  scene2: build_scene_26
   resolutionDetails:
   - horizontal: 1920
     vertical: 1080
@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonGraph: {fileID: 1891100264}
   scene1: Scene_Alexis
-  scene2: Merge_S2
+  scene2: build_scene_26
   animref: {fileID: 962234515}
 --- !u!95 &962234515
 Animator:
@@ -8178,7 +8178,7 @@ MonoBehaviour:
   launch: {fileID: 1522142288}
   fadeRef: {fileID: 139742005}
   optionsMenu: {fileID: 880261718}
-  SceneName: Merge_S2
+  SceneName: build_scene_26
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}
