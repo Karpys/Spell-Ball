@@ -2018,6 +2018,7 @@ GameObject:
   - component: {fileID: 919132148916143360}
   - component: {fileID: 919132148916143361}
   - component: {fileID: 919132148916143362}
+  - component: {fileID: -665358926089597103}
   m_Layer: 7
   m_Name: Player Rouge
   m_TagString: Player
@@ -2253,7 +2254,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Infuse[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -665358926089597103}
         m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
         m_MethodName: OnStart
         m_Mode: 0
@@ -2269,7 +2270,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/START
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -665358926089597103}
         m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
         m_MethodName: OnFocus
         m_Mode: 0
@@ -2332,6 +2333,20 @@ MonoBehaviour:
   MovementDir: {x: 0, y: 0}
   Anim: {fileID: 4817139692052885286}
   ShowInspector: 1
+--- !u!114 &-665358926089597103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9122807134000420660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdeb45537ca17c7409a62013a2084536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  debugRemi: 0.5
 --- !u!1001 &8240409814443939932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2442,14 +2457,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6121061463467310174, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &2785953460734911488 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
-  m_PrefabInstance: {fileID: 8240409814443939932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2785953460734911503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
+  m_PrefabInstance: {fileID: 8240409814443939932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2785953460734911488 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8240409815053842384
