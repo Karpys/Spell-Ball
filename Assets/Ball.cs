@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour
     public float DelayDamageSelf;//Used for prevent self Damage //
     private float DelayDamageSelfPlayer; // Same but for the Player//
 
+    public bool Returnable;
+
     float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
 

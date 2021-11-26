@@ -187,8 +187,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            BallsInRange.Add(other.gameObject);
-            print(other.gameObject.name + " is in range");
+            if (other.gameObject.GetComponent<Ball>().Returnable)
+            {
+                BallsInRange.Add(other.gameObject);
+            }
         }
     }
 
@@ -196,16 +198,19 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            if (EjectedBalls.Contains(other.gameObject))
+            if (other.gameObject.GetComponent<Ball>().Returnable)
             {
-                EjectedBalls.Remove(other.gameObject);
-            }
-            else
-            {
-                other.gameObject.GetComponent<Balle>().combo = 0;
-                other.gameObject.GetComponent<Ball>().ResetSpeed();
-                Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
-                BallsInRange.Remove(other.gameObject);
+                if (EjectedBalls.Contains(other.gameObject))
+                {
+                    EjectedBalls.Remove(other.gameObject);
+                }
+                else
+                {
+                    other.gameObject.GetComponent<Balle>().combo = 0;
+                    other.gameObject.GetComponent<Ball>().ResetSpeed();
+                    Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
+                    BallsInRange.Remove(other.gameObject);
+                }
             }
         }
     }

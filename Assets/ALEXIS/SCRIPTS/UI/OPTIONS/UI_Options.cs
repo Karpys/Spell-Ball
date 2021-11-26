@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UI_Options : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class UI_Options : MonoBehaviour
     public GameObject buttonAud;
     public GameObject buttonBack;
 
+    UI_Options_Audio audioMenu;
+    UI_Options_Graphics graphMenu;
+
+    public Animator animref;
 
     private void OnEnable()
     {
@@ -32,35 +37,67 @@ public class UI_Options : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioMenu = FindObjectOfType<UI_Options_Audio>();
+        graphMenu = FindObjectOfType<UI_Options_Graphics>();
+        animref = chooseOp.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnGraph()
     {
-        Graph.gameObject.SetActive(true);
-        chooseOp.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitGraph");
     }
 
     public void OnAudio()
     {
-        Audio.gameObject.SetActive(true);
-        chooseOp.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitAudio");
     }
 
-    public void OnResetSettings()
+    public void OnResetSettings(string SceneName)
     {
         PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneName);
     }
 
     public void OnBack()
     {
-        mainMenu.gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        animref.SetBool("QUIT_OP", true);
+        StartCoroutine("WaitEndAnim");
+
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        buttonBack.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         BaseOp.gameObject.SetActive(false);
+        mainMenu.gameObject.SetActive(true);
+        mainMenu.GetComponent<Animator>().SetBool("ENTER", true);
+    }
+
+    IEnumerator WaitGraph()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        Graph.gameObject.SetActive(true);
+        chooseOp.gameObject.SetActive(false);
+    }
+    IEnumerator WaitAudio()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        Audio.gameObject.SetActive(true);
+        chooseOp.gameObject.SetActive(false);
     }
 }

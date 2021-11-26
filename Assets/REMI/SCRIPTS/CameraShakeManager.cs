@@ -13,7 +13,7 @@ public class CameraShakeManager : MonoBehaviour
     private float _timerPerlin;
     float timerShake;
     float timerReplace;
-    bool IsShaking;
+    public bool IsShaking;
     [SerializeField] private float ReplaceTime = 0.5f;
     [SerializeField] private float _duration = 0.25f;
     

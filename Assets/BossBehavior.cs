@@ -139,6 +139,8 @@ public class BossBehavior : MonoBehaviour
     {
         LEFTRIGHT,
         UPDOWN,
+        IDLE,
+        FOLLOWCLOSESTPLAYER,
     }
    
     [System.Serializable]
