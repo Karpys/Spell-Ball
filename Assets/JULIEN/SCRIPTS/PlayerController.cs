@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private bool revive;
     private bool tryRevive;
-    private GameObject playerNeedHelp;
+    private GameObject playerNeedHelp = null;
 
 
     void Start()
@@ -254,6 +254,14 @@ public class PlayerController : MonoBehaviour
                     Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
                     BallsInRange.Remove(other.gameObject);
                 }
+            }
+        }
+
+        if (other.gameObject.layer == 7)
+        {
+            if(other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            {
+                playerNeedHelp = null;
             }
         }
     }
