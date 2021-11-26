@@ -14,17 +14,29 @@ public class Balle : MonoBehaviour
     [Header("infuse color")]
     public Material ballColor;
     private Material ballColorCopy;
+    public List<GameObject> subParticles;
     public Shader shader;
 
     public ColorEnum color ;
 
+    private ParticleSystem[] _particleSystem;
     private void Awake()
     {
-        color = ColorEnum.WHITE;
-        ballColorCopy = new Material(shader);
-        ballColorCopy.CopyPropertiesFromMaterial(ballColor);
+        // ballColorCopy = new Material(shader);
+        // ballColorCopy.CopyPropertiesFromMaterial(ballColor);
+        
+        _particleSystem = new ParticleSystem[subParticles.Count];
+        
+        for (int i = 0; i < subParticles.Count; i++)
+        {
+            _particleSystem[i] = subParticles[i].GetComponent<ParticleSystem>();
+        }
+        
+        ColorBallReset();
 
-        gameObject.GetComponent<MeshRenderer>().material = ballColorCopy;
+        // gameObject.GetComponent<MeshRenderer>().material = ballColorCopy;
+
+        
     }
 
     // Start is called before the first frame update
@@ -38,7 +50,7 @@ public class Balle : MonoBehaviour
     void Update()
     {
         //particule.GetComponent<ParticleSystem>().Play();
-        TrailCombo();
+        // TrailCombo();
     }
 
     public void TrailCombo()
@@ -85,7 +97,13 @@ public class Balle : MonoBehaviour
 
     public Color InfuseColorRed()
     {
-        ballColorCopy.color = Color.red;
+
+        foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.startColor = Color.red;
+        }
+        
+        // ballColorCopy.color = Color.red;
         color = ColorEnum.RED;
         
         return Color.red;
@@ -93,7 +111,12 @@ public class Balle : MonoBehaviour
 
     public Color InfuseColorBleu()
     {
-        ballColorCopy.color = Color.blue;
+        foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.startColor = Color.blue;
+        }
+        
+        // ballColorCopy.color = Color.blue;
         color = ColorEnum.BLEU;
         return Color.blue;
 
@@ -101,21 +124,36 @@ public class Balle : MonoBehaviour
 
     public Color InfuseColorGreen()
     {
-        ballColorCopy.color = Color.green;
+        foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.startColor = Color.green;
+        }
+        
+        // ballColorCopy.color = Color.green;
         color = ColorEnum.GREEN;
         return Color.green;
     }
 
     public Color InfuseColorOrange()
     {
-        ballColorCopy.color = ColorInfuse.instance.orange;
+        foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.startColor = ColorInfuse.instance.orange;
+        }
+        
+        // ballColorCopy.color = ColorInfuse.instance.orange;
         color = ColorEnum.ORANGE;
         return ColorInfuse.instance.orange;
     }
 
     public void ColorBallReset()
     {
-        ballColorCopy.color = Color.white;
+        foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.startColor = Color.white;
+        }
+        
+        // ballColorCopy.color = Color.white;
         color = ColorEnum.WHITE;
     }
 

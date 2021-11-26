@@ -16,9 +16,9 @@ public class DoorWithMultipleButton : MonoBehaviour
     private float closingTimer = 0;
     private int doorPhase = 0;
 
-    private List<PressurePlateMultiple> selectedPlate;
-    private List<ColorEnum> selectedColor;
-    private List<ColorEnum> pressedColor;
+    public List<PressurePlateMultiple> selectedPlate;
+    public List<ColorEnum> selectedColor;
+    public List<ColorEnum> pressedColor;
 
     // Start is called before the first frame update
     void Start()
