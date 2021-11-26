@@ -1353,7 +1353,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -6215,7 +6215,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -14598,7 +14598,7 @@ GameObject:
   - component: {fileID: 7455371660438644965}
   - component: {fileID: 5543921998810248985}
   m_Layer: 6
-  m_Name: NewBalle
+  m_Name: BalleEnnemy
   m_TagString: Balle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14644,8 +14644,8 @@ MonoBehaviour:
   - {fileID: 8557756713190270942}
   shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   color: 0
-  BadColor: {r: 0, g: 0, b: 0, a: 0}
-  EnnemyBalle: 0
+  BadColor: {r: 0.6792453, g: 0.13797383, b: 0, a: 1}
+  EnnemyBalle: 1
 --- !u!114 &4277969785746058043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14708,7 +14708,7 @@ MonoBehaviour:
   DestroyOnHitWall: 0
   hitShield: 0
   DelayDamageSelf: 0
-  Returnable: 1
+  Returnable: 0
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}
 --- !u!135 &-8080597015329026223
@@ -16277,7 +16277,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -30846,7 +30846,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -35650,7 +35650,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 3

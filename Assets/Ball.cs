@@ -85,6 +85,7 @@ public class Ball : MonoBehaviour
         {
             
             Reflect(hit.normal);
+            Destroy(gameObject);
             if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out Manager_Life test))
             {
                 Balle balle = GetComponent<Balle>();
@@ -92,8 +93,7 @@ public class Ball : MonoBehaviour
                 managerLife.Damage(balle);
                 managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
 
-                balle.combo = 0;
-                balle.ColorBallReset();
+                
             }
             ResetSpeedAndCombo();
 

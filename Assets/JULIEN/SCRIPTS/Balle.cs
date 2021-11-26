@@ -22,6 +22,9 @@ public class Balle : MonoBehaviour
     public ColorEnum color ;
 
     private ParticleSystem[] _particleSystem;
+
+    public Color BadColor;
+    public bool EnnemyBalle;
     private void Awake()
     {
         // ballColorCopy = new Material(shader);
@@ -35,8 +38,16 @@ public class Balle : MonoBehaviour
         {
             _particleSystem[i] = subParticles[i].GetComponent<ParticleSystem>();
         }
-        
-        ColorBallReset();
+
+        if (EnnemyBalle)
+        {
+            ColorBallResetEnnemy();
+        }
+        else
+        {
+            
+            ColorBallReset();
+        }
 
         // gameObject.GetComponent<MeshRenderer>().material = ballColorCopy;
 
@@ -167,6 +178,25 @@ public class Balle : MonoBehaviour
         
         ballLight.color = Color.white;
         
+        // ballColorCopy.color = Color.white;
+        color = ColorEnum.WHITE;
+    }
+
+    public void ColorBallResetEnnemy()
+    {
+        /*foreach (ParticleSystem particle in _particleSystem)
+        {
+            particle.main.startColor = BadColor;
+        }*/
+
+        for (int i = 0; i < _particleSystem.Length; i++)
+        {
+            ParticleSystem.MainModule main = _particleSystem[i].main;
+            main.startColor = BadColor;
+        }
+
+        ballLight.color = Color.white;
+
         // ballColorCopy.color = Color.white;
         color = ColorEnum.WHITE;
     }
