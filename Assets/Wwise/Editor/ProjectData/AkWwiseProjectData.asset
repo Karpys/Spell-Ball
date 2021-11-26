@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585638342409915717
+    m_lastTime: -8585637752391977160
     List:
     - name: Main_Soundbank
       guid: fab70b13a274fe4db35aeed6d90c297f
@@ -94,8 +94,145 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585638342413422239
+    m_lastTime: -8585637752407238835
     List:
+    - name: Laser_Constant
+      guid: b55b8a6ef67e4d4eaf8bf2ae41efb94c
+      id: 2756076025
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Laser_Constant
+        ObjectType: 3
+        guid: b55b8a6ef67e4d4eaf8bf2ae41efb94c
+      Path: Events\Default Work Unit\LaserEvent\Laser_Constant
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Laser_End
+      guid: 9fb0aa0f9dfcda489709bd557e5e0eaa
+      id: 2510116948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Laser_End
+        ObjectType: 3
+        guid: 9fb0aa0f9dfcda489709bd557e5e0eaa
+      Path: Events\Default Work Unit\LaserEvent\Laser_End
+      maxAttenuation: 0
+      maxDuration: 3.980729
+      minDuration: 3.980729
+    - name: Laser_Start_Charge
+      guid: ed9d9fdfd82ecb4bab1c275089cbec9e
+      id: 4154444698
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Laser_Start_Charge
+        ObjectType: 3
+        guid: ed9d9fdfd82ecb4bab1c275089cbec9e
+      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Charge
+      maxAttenuation: 0
+      maxDuration: 6.013688
+      minDuration: 6.013688
+    - name: Laser_Start_Release
+      guid: 991a8eea632c744f9e84a6aa68e70efb
+      id: 3217810413
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Laser_Start_Release
+        ObjectType: 3
+        guid: 991a8eea632c744f9e84a6aa68e70efb
+      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Release
+      maxAttenuation: 0
+      maxDuration: 3.828063
+      minDuration: 3.828063
+    - name: Laser_Start_Trigger
+      guid: 1bbd42976cb5f049b0584615294ca6b0
+      id: 3428356050
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Laser_Start_Trigger
+        ObjectType: 3
+        guid: 1bbd42976cb5f049b0584615294ca6b0
+      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Trigger
+      maxAttenuation: 0
+      maxDuration: 1.973521
+      minDuration: 1.973521
+    - name: LaserEvent
+      guid: fd426f095dd07b48846d125a02f8f606
+      id: 2183397858
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      Path: Events\Default Work Unit\LaserEvent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ConstantLaser
+      guid: 6a7e6dc5cafe1542873d027fac7eacaa
+      id: 2735923927
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: LaserEvent
+        ObjectType: 4
+        guid: fd426f095dd07b48846d125a02f8f606
+      - ElementName: Play_ConstantLaser
+        ObjectType: 3
+        guid: 6a7e6dc5cafe1542873d027fac7eacaa
+      Path: Events\Default Work Unit\LaserEvent\Play_ConstantLaser
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: PlayTest
       guid: 209c1756f1fee14ea12d09f863771a1b
       id: 96444927
@@ -111,8 +248,8 @@ MonoBehaviour:
         guid: 209c1756f1fee14ea12d09f863771a1b
       Path: Events\Default Work Unit\PlayTest
       maxAttenuation: 0
-      maxDuration: 2.691187
-      minDuration: 2.691187
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -170,7 +307,7 @@ MonoBehaviour:
     m_lastTime: -8585680951587514102
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000800000018000000
+  ExpandedWaapiItemIds: 0600000007000000080000000c0000000d00000018000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

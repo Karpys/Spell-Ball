@@ -10,6 +10,7 @@ public class UI_FocusMainMenu : MonoBehaviour
     [Header("BUTTONS")]
     public GameObject play;
 
+    Animator anim;
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -20,5 +21,17 @@ public class UI_FocusMainMenu : MonoBehaviour
         refMenu = FindObjectOfType<Manager_MainMenu>();
         refMenu.UIIndex = 0;
     }
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
+    public void StopENTER()
+    {
+        anim.SetBool("ENTER", false);
+    }
 
+    public void StopQUIT()
+    {
+        anim.SetBool("QUIT", false);
+    }
 }

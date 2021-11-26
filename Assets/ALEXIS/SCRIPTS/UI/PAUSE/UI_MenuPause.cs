@@ -1,21 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
 
 
 public class UI_MenuPause : MonoBehaviour
 {
+    public GameObject fond;
     public GameObject targetMenu;
     public Animator animator;
 
     public bool playerDoPause;
     public bool unPause = false;
-    public GameObject resumeFocus;
 
-    private float timer = 1.2f;
+
+    private float timer = 1f;
+
+    public GameObject mainM;
+    public GameObject optionsM;
+    public GameObject buttonOp;
+
+    [Header("OnFocus")]
+    public GameObject resumeFocus;
+    public GameObject OnGraphics;
+    public GameObject OnQuality;
+    public GameObject OnMaster;
+
+    [Header("SceneParam")]
+    public string sceneName;
+    public int UIIndex = 0;
 
     private void Awake()
     {
@@ -24,7 +40,7 @@ public class UI_MenuPause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        animator = gameObject.transform.GetChild(1).GetComponent<Animator>();
 
     }
 
@@ -39,7 +55,8 @@ public class UI_MenuPause : MonoBehaviour
             if(timer < 0)
             {
                 targetMenu.gameObject.SetActive(false);
-                timer = 1.2f;
+                fond.gameObject.SetActive(false);
+                timer = 1f;
                 unPause = false;
                 playerDoPause = false;
             }
@@ -51,28 +68,65 @@ public class UI_MenuPause : MonoBehaviour
 
         if (Time.timeScale == 0f && EventSystem.current.currentSelectedGameObject == null)
         {
-            EventSystem.current.SetSelectedGameObject(null);
 
-            EventSystem.current.SetSelectedGameObject(resumeFocus);
+            switch (UIIndex)
+            {
+                case 3:
+                    if (EventSystem.current.currentSelectedGameObject == null)
+                    {
 
+                        EventSystem.current.SetSelectedGameObject(null);
+
+                        EventSystem.current.SetSelectedGameObject(OnMaster);
+                    }
+                    break;
+                case 2:
+                    if (EventSystem.current.currentSelectedGameObject == null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(null);
+
+                        EventSystem.current.SetSelectedGameObject(OnQuality);
+
+                    }
+                    break;
+                case 1:
+                    if (EventSystem.current.currentSelectedGameObject == null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(null);
+
+                        EventSystem.current.SetSelectedGameObject(OnGraphics);
+
+                    }
+                    break;
+                case 0:
+                    if (EventSystem.current.currentSelectedGameObject == null)
+                    {
+                        EventSystem.current.SetSelectedGameObject(null);
+
+                        EventSystem.current.SetSelectedGameObject(resumeFocus);
+
+                    }
+                    break;
+            }
         }
 
     }
 
     public void Resume()
     {
-        animator.SetBool("Active", false);
+        animator.SetBool("Deactive", true);
         unPause = true;
         Time.timeScale = 1f;
         EventSystem.current.SetSelectedGameObject(null);
+
     }
     public void Pause()
     {
         playerDoPause = true;
+        Time.timeScale = 0f;
+        fond.gameObject.SetActive(true);
         targetMenu.gameObject.SetActive(true);
         animator.SetBool("Active", true);
-        Time.timeScale = 0f;
-
 
         EventSystem.current.SetSelectedGameObject(null);
 
@@ -80,13 +134,30 @@ public class UI_MenuPause : MonoBehaviour
     }
     public void Options()
     {
-        Debug.Log("OPTIONS");
+        animator.SetBool("Deactive", true);
+        buttonOp.gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        StartCoroutine("WaitOptions");
     }
     public void MainMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Scene_Alexis");
+        animator.SetBool("Deactive", true);
+        StartCoroutine("WaitMainMenu");
     }
 
+    IEnumerator WaitOptions()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        optionsM.gameObject.SetActive(true);
+        mainM.gameObject.SetActive(false);
+    }
+
+    IEnumerator WaitMainMenu()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        EventSystem.current.SetSelectedGameObject(null);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(sceneName);
+    }
 
 }
