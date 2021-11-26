@@ -55,7 +55,7 @@ public class CheatManager : MonoBehaviour
     {
         for(int i = 0; i < System.Convert.ToInt32(nBallSpawn.text); i++)
         {
-            GameObject ball = GameObject.Instantiate(ballPrefab,new Vector3(-4.5f, 2f, -2.3f),Quaternion.Euler(0,Random.Range(0f, 360f),0));
+            GameObject ball = GameObject.Instantiate(ballPrefab,new Vector3(-4.5f, 3f, -2.3f),Quaternion.Euler(0,Random.Range(0f, 360f),0));
             ball.GetComponent<Balle>().combo = System.Convert.ToInt32(nBallLevel.text);
             balls.Add(ball);
         }

@@ -188,6 +188,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             BallsInRange.Add(other.gameObject);
+            print(other.gameObject.name + " is in range");
         }
     }
 
