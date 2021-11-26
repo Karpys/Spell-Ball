@@ -12,6 +12,9 @@ public class UI_MenuPause : MonoBehaviour
     public GameObject fond;
     public GameObject targetMenu;
     public Animator animator;
+    public GameObject fadeRef;
+    Animation animFade;
+
 
     public bool playerDoPause;
     public bool unPause = false;
@@ -41,7 +44,7 @@ public class UI_MenuPause : MonoBehaviour
     void Start()
     {
         animator = gameObject.transform.GetChild(1).GetComponent<Animator>();
-
+        animFade = fadeRef.GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -141,6 +144,8 @@ public class UI_MenuPause : MonoBehaviour
     public void MainMenu()
     {
         animator.SetBool("Deactive", true);
+        animFade.Play("FadeOut_UI_V001");
+        Time.timeScale = 1f;
         StartCoroutine("WaitMainMenu");
     }
 
@@ -156,7 +161,6 @@ public class UI_MenuPause : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1);
         EventSystem.current.SetSelectedGameObject(null);
-        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 
