@@ -28,6 +28,7 @@ public class BossBehavior : MonoBehaviour
     public GameObject ActionHolder;
     public GameObject ShieldHolder;
     public Manager_Life Life;
+    public GameObject EditedObject;
     private static BossBehavior inst;
     public static BossBehavior Boss { get => inst; }
     void Awake()
