@@ -13,7 +13,7 @@ public class CameraShakeManager : MonoBehaviour
     private float _timerPerlin;
     float timerShake;
     float timerReplace;
-    bool IsShaking;
+    public bool IsShaking;
     [SerializeField] private float ReplaceTime = 0.5f;
     [SerializeField] private float _duration = 0.25f;
     
@@ -115,17 +115,20 @@ public class CameraShakeManager : MonoBehaviour
 
     void OnGUI()
     {
+        /*
         if (GUI.Button(new Rect(10, 10, 200, 50), "TestCameraShake"))
         {
             Shake(_duration,_shakeForce,_frequence);
             
         }
+        */
         /*durationslider = GUI.HorizontalSlider(new Rect(25, 150, 50, 30), durationslider, 0.0F, 10.0F);
         _duration = durationslider;
         shakeforceslider = GUI.HorizontalSlider(new Rect(25, 250, 50, 30), shakeforceslider, 0.0F, 10.0F);
         _shakeForce = shakeforceslider;
         frequenceslider = GUI.HorizontalSlider(new Rect(25, 360, 50, 30), frequenceslider, 0.0F, 25.0F);
         _frequence = frequenceslider;*/
+        
     }
 
 

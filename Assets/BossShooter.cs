@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossShooter : BossAction
 {
     // Start is called before the first frame update
-    public int HpBossState;
+    /*public int HpBossState;*/
     public BallThrowerInstantier Instantier;
     [HideInInspector]
     public int NbrShooter;
