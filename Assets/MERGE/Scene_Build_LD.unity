@@ -4361,7 +4361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &329150733
 Animator:
   serializedVersion: 3
@@ -4409,8 +4409,6 @@ MonoBehaviour:
     vertical: 1080
   - horizontal: 1280
     vertical: 720
-  - horizontal: 854
-    vertical: 480
   - horizontal: 2560
     vertical: 1440
   animatorRef: {fileID: 329150733}
@@ -11272,7 +11270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &791781530
 Animator:
   serializedVersion: 3
@@ -19726,7 +19724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09892884
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
       propertyPath: m_LocalPosition.z

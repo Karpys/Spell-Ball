@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float grabDelay;
     [SerializeField] private int balleLayer = 6;
     [SerializeField] private ColorEnum playerColor;
+    [SerializeField] private Animator _animator;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -150,6 +151,8 @@ public class PlayerController : MonoBehaviour
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
+       
+       _animator.Play("Hit");
 
        if (FreezeFrame.Freezer)
        {
@@ -176,6 +179,7 @@ public class PlayerController : MonoBehaviour
        }
        
         balle = null;
+        
    }
 
    public void SetBall()

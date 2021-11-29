@@ -4595,8 +4595,6 @@ MonoBehaviour:
     vertical: 1080
   - horizontal: 1280
     vertical: 720
-  - horizontal: 854
-    vertical: 480
   - horizontal: 2560
     vertical: 1440
   animatorRef: {fileID: 918814850}
