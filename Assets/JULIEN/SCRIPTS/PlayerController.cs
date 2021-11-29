@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask wallMask;
     [SerializeField] private float grabDelay;
     [SerializeField] private int balleLayer = 6;
+    [SerializeField] private ColorEnum playerColor;
+    [SerializeField] private Animator _animator;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -49,12 +51,22 @@ public class PlayerController : MonoBehaviour
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
         ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+
         if(!ManagePlayer.player1)
         {
-        ManagePlayer.player1 = gameObject;
-        }else
+            ManagePlayer.player1 = gameObject;
+        }
+        else if (!ManagePlayer.player2)
         {
-        ManagePlayer.player2 = gameObject;
+            ManagePlayer.player2 = gameObject;
+        }
+        else if (!ManagePlayer.player3)
+        {
+            ManagePlayer.player3 = gameObject;
+        }
+        else if (!ManagePlayer.player4)
+        {
+            ManagePlayer.player4 = gameObject;
         }
     }
 
@@ -85,12 +97,14 @@ public class PlayerController : MonoBehaviour
 
     void OnGUI()
     {
+        /*
         if (GUI.Button(new Rect(250, 0, 250, 50), "Reset grab delay"))
         {
             _timer = 0;
         }
 
         GUI.Label(new Rect(250, 50, 250, 50), "Grab delay = " + _timer + " seconds ");
+        */
     }
 
     void SetCanGrab(bool canGrab)
@@ -110,6 +124,7 @@ public class PlayerController : MonoBehaviour
        SetBall();
        if (balle && _timer <= 0)
        {
+           print("INFUSE");
            _timer = grabDelay;
            StartCoroutine(ColorParticule()); 
            ThrowBall();
@@ -136,6 +151,8 @@ public class PlayerController : MonoBehaviour
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
+       
+       _animator.Play("Hit");
 
        if (FreezeFrame.Freezer)
        {
@@ -162,6 +179,7 @@ public class PlayerController : MonoBehaviour
        }
        
         balle = null;
+        
    }
 
    public void SetBall()
@@ -176,7 +194,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            BallsInRange.Add(other.gameObject);
+            if (other.gameObject.GetComponent<Ball>().Returnable)
+            {
+                BallsInRange.Add(other.gameObject);
+            }
         }
     }
 
@@ -184,35 +205,38 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            if (EjectedBalls.Contains(other.gameObject))
+            if (other.gameObject.GetComponent<Ball>().Returnable)
             {
-                EjectedBalls.Remove(other.gameObject);
-            }
-            else
-            {
-                other.gameObject.GetComponent<Balle>().combo = 0;
-                other.gameObject.GetComponent<Ball>().ResetSpeed();
-                Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
-                BallsInRange.Remove(other.gameObject);
+                if (EjectedBalls.Contains(other.gameObject))
+                {
+                    EjectedBalls.Remove(other.gameObject);
+                }
+                else
+                {
+                    other.gameObject.GetComponent<Balle>().combo = 0;
+                    other.gameObject.GetComponent<Ball>().ResetSpeed();
+                    Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
+                    BallsInRange.Remove(other.gameObject);
+                }
             }
         }
     }
 
     public IEnumerator ColorParticule()
     {
-        if (gameObject.name == "Character(Clone)")
+        if (playerColor == ColorEnum.RED)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
         }
-        else if (gameObject.name == "Character 1(Clone)")
+        else if (playerColor == ColorEnum.ORANGE)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
         }
-        else if (gameObject.name == "Character 2(Clone)")
+        else if (playerColor == ColorEnum.BLEU)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
         }            
-        else if (gameObject.name == "Character 3(Clone)")
+        else if (playerColor == ColorEnum.GREEN)
         {
             particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
         }
@@ -222,6 +246,11 @@ public class PlayerController : MonoBehaviour
         particleSystem.startColor = Color.white;
         //particleSystem.GetComponent<Renderer>().material.color = Color.white;
 
+    }
+
+    public ColorEnum GetPlayerColor()
+    {
+        return playerColor;
     }
 
     /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)

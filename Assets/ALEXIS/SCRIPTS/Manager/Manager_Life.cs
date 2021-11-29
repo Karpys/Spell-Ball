@@ -30,8 +30,10 @@ public class Manager_Life : MonoBehaviour
     public UnityEvent OnHeal;
 
 
+    private bool isDead = false;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentLife = maxHealth;
     }
@@ -39,8 +41,9 @@ public class Manager_Life : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDead) return;
+        
         CheckDeath();
-
         if (autoRegen)
         {
             if (currentLife < maxHealth)
@@ -65,8 +68,21 @@ public class Manager_Life : MonoBehaviour
         if (currentLife <= 0)
         {
             currentLife = 0;
+            isDead = true;
             OnDeath.Invoke();
         }
+    }
+
+    public void DamageByColor(Balle ball)
+    {
+        if(ball.GetComponent<MeshRenderer>().material.color == gameObject.GetComponentInChildren<MeshRenderer>().material.color || gameObject.GetComponentInChildren<MeshRenderer>().material.color == Color.white)
+        {
+            DamageHealth(ball.combo);
+        }
+    }
+    public void Damage(Balle ball)
+    {
+        DamageHealth(ball.combo);
     }
 
     public void DamageHealth(int dmg)
@@ -83,11 +99,14 @@ public class Manager_Life : MonoBehaviour
 
     public void SummonHitParticle(Vector3 position, Quaternion rotation, Color? particleColor = null)
     {
-        GameObject Parti = Instantiate(ParticleEffectOnHit, position, rotation);
-        
-        if (particleColor.HasValue)
+        if (ParticleEffectOnHit)
         {
-            Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
+            GameObject Parti = Instantiate(ParticleEffectOnHit, position, rotation);
+            
+            if (particleColor.HasValue)
+            {
+                Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
+            }
         }
     }
 
@@ -105,5 +124,15 @@ public class Manager_Life : MonoBehaviour
         {
             Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
         }
+    }
+
+    public float GetCurentLife()
+    {
+        return currentLife;
+    }
+
+    public void SetCurentLife(float life)
+    {
+        currentLife = life;
     }
 }

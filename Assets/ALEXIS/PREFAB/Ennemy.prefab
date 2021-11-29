@@ -92,7 +92,6 @@ MonoBehaviour:
   lifeBEnemy: 2
   CanMove: 1
   DelayCheckout: 5
-  ParticleEffectOnHit: {fileID: 6764830057482778676, guid: cd0f189d52b4ca042b1b75fbbd6f6166, type: 3}
 --- !u!135 &2435018368009012398
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -125,13 +124,23 @@ MonoBehaviour:
   autoRegen: 0
   shakeOnDamage: 1
   Visual: {fileID: 7474282477076200796}
-  particleOnDamage: 0
   ParticleEffectOnHit: {fileID: 6764830057482778676, guid: cd0f189d52b4ca042b1b75fbbd6f6166, type: 3}
-  particleOnHeal: 0
   ParticleEffectOnHeal: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371949442412338523}
+        m_TargetAssemblyTypeName: IA_BasicEnemy, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
@@ -150,6 +159,7 @@ GameObject:
   - component: {fileID: 7895162368423294948}
   - component: {fileID: 3218853967113057154}
   - component: {fileID: 1933459972231170800}
+  - component: {fileID: 6738590789773480682}
   m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
@@ -165,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7474282477076200796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371949442412338524}
@@ -234,3 +244,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6738590789773480682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474282477076200796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f9e8f9f4f6df14ea6e81018c2ab612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 445b51213daa5bc42b39e313224d85da, type: 2}
+  shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  random: 0

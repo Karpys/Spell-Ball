@@ -9,6 +9,7 @@ public class GuiEnnemy : MonoBehaviour
 
     void OnGUI()
     {
+        /*
         if (GUI.Button(new Rect(10, 150, 200, 50), "Disable Ennemy Movement"))
         {
             if (Ennemy)
@@ -17,5 +18,6 @@ public class GuiEnnemy : MonoBehaviour
                 Ennemy.GetComponent<IA_BasicEnemy>().UpdateMovement();
             }
         }
+        */
     }
 }

@@ -9,13 +9,18 @@ public class Ball : MonoBehaviour
     public LayerMask CollisionMask;
     public LayerMask CollisionMaskEnnemy;
     public LayerMask CollisionPlayer;
+    public LayerMask CollisionShield;
     public Vector3 Direction;
     public float radius = 1.0f;
 
     public bool DestroyOnHitWall;
 
+    public bool hitShield = false;
+
     public float DelayDamageSelf;//Used for prevent self Damage //
     private float DelayDamageSelfPlayer; // Same but for the Player//
+
+    public bool Returnable;
 
     float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
@@ -31,6 +36,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hitShield = false;
 
         if (DelayDamageSelf >= 0)
         {
@@ -60,32 +66,49 @@ public class Ball : MonoBehaviour
             Instantiate(CollisionParticle, transform.position, transform.rotation);
         }
 
-        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy) && DelayDamageSelf<0)
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionShield))
+        {
+            Reflect(hit.normal);
+            ResetSpeedAndCombo();
+            hitShield = true;
+            if (hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
+            {
+                hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
+            }
+            else
+                Instantiate(CollisionParticle, transform.position, transform.rotation);
+
+        }
+
+        
+        if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionMaskEnnemy) && DelayDamageSelf<0 && !hitShield)
         {
             
             Reflect(hit.normal);
+            Destroy(gameObject);
             if (hit.transform.gameObject && hit.transform.gameObject.TryGetComponent(out Manager_Life test))
             {
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
-                managerLife.DamageHealth(balle.combo);
+                managerLife.Damage(balle);
                 managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
 
-                balle.combo = 0;
-                balle.ColorBallReset();
+                
             }
             ResetSpeedAndCombo();
 
         }
 
-        /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
-        {
+        
 
-            Reflect(hit.normal);
-            ResetSpeedAndCombo();
-            //DAMAGE PLAYER//
-        }*/
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+            /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+            {
+
+                Reflect(hit.normal);
+                ResetSpeedAndCombo();
+                //DAMAGE PLAYER//
+            }*/
+            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 

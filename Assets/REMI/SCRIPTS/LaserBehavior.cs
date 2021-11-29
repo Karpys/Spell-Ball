@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class LaserBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Wwise_Script.WwiseMultiplePlay LaserSounds;
     public BossAction.LaserStats Stats;
     public LineRenderer Line;
     public LayerMask Layer;
@@ -21,7 +22,10 @@ public class LaserBehavior : MonoBehaviour
     }
     void Start()
     {
-        transform.eulerAngles = new Vector3(0, Stats.StartEndAngle.x, 0);
+        //SOUNDS:START TRIGGER LASER//
+        LaserSounds.PlaySound(0);
+        LaserSounds.PlaySound(1);
+        transform.eulerAngles = BossBehavior.Boss.transform.eulerAngles +  new Vector3(0, Stats.StartEndAngle.x, 0);
         if (Stats.Infinity)
         {
             Stats.Lenght = 100f;
@@ -43,7 +47,9 @@ public class LaserBehavior : MonoBehaviour
             }
 
             float ratio = _timer / Stats.Duration;
-            transform.eulerAngles = new Vector3(0, Mathf.Lerp(Stats.StartEndAngle.x, Stats.StartEndAngle.y, ratio), 0);
+            transform.eulerAngles = BossBehavior.Boss.transform.eulerAngles + new Vector3(0, Mathf.Lerp(Stats.StartEndAngle.x, Stats.StartEndAngle.y, ratio), 0);
+            LaserSounds.PlaySound(2);
+            LaserSounds.PlaySound(3);
             if (ratio > 1)
             {
                 if (Stats.PingPong)
@@ -65,13 +71,16 @@ public class LaserBehavior : MonoBehaviour
             if (Laserstate == LASERSTATE.OPEN)
             {
                 _WaitTime += Time.deltaTime;
-            }else if (Laserstate == LASERSTATE.CLOSE)
+            }
+            else if (Laserstate == LASERSTATE.CLOSE)
             {
+                LaserSounds.PlaySound(4);
                 _WaitTime -= Time.deltaTime;
             }
             
             if (Stats.WaitTime == 0 && Laserstate == LASERSTATE.OPEN)
             {
+                
                 Line.endWidth = Stats.EndWidth;
                 Line.startWidth = Stats.EndWidth;
                 Laserstate = LASERSTATE.UP;
@@ -89,6 +98,7 @@ public class LaserBehavior : MonoBehaviour
                 }else if (waitRatio <= 0 && Laserstate == LASERSTATE.CLOSE)
                 {
                     //DESTRUCTION
+                    
                     Stats.Manager.EndRay();
                     Destroy(gameObject);
                 }
