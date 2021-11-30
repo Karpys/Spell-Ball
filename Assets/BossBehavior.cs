@@ -7,9 +7,7 @@ using Random = UnityEngine.Random;
 
 public class BossBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-   /* public List<BossAction> ListAction;*/
-    public List<Phase> Phases;
+    public List<Phase> Phases = new List<Phase>(4);
     [SerializeField] public int ActualPhase = 0;
     public bool BossStarted = false;
 
@@ -27,8 +25,8 @@ public class BossBehavior : MonoBehaviour
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
     public GameObject ShieldHolder;
+    //
     public Manager_Life Life;
-    public GameObject EditedObject;
     private static BossBehavior inst;
     public static BossBehavior Boss { get => inst; }
     void Awake()
