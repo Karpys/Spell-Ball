@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.3460025, z: -0, w: 0.9382337}
+  m_LocalRotation: {x: -0, y: -0.7615195, z: -0, w: 0.64814204}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -792,7 +792,7 @@ Animator:
   m_GameObject: {fileID: 4266598554979214383}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eecefda1267554f44a4a89753c81e9fe, type: 2}
+  m_Controller: {fileID: 22100000, guid: b79de66bd57065640b7cf00d78b8c623, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2018,6 +2018,7 @@ GameObject:
   - component: {fileID: 919132148916143360}
   - component: {fileID: 919132148916143361}
   - component: {fileID: 919132148916143362}
+  - component: {fileID: -665358926089597103}
   m_Layer: 7
   m_Name: Player Rouge
   m_TagString: Player
@@ -2122,6 +2123,7 @@ MonoBehaviour:
   grabDelay: 0.5
   balleLayer: 6
   playerColor: 0
+  _animator: {fileID: 4817139692052885286}
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 4266598554979214383}
@@ -2188,19 +2190,7 @@ MonoBehaviour:
     m_ActionId: cd604157-63d4-40af-b8bd-218962054f20
     m_ActionName: Gameplay/Sprint[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 919132148916143358}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnThrowBall
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c199d446-add7-4b90-b684-53bb0ad7dcca
     m_ActionName: Gameplay/Grab Balle[/Keyboard/e]
   - m_PersistentCalls:
@@ -2253,7 +2243,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Infuse[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -665358926089597103}
         m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
         m_MethodName: OnStart
         m_Mode: 0
@@ -2269,7 +2259,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/START
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: -665358926089597103}
         m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
         m_MethodName: OnFocus
         m_Mode: 0
@@ -2318,20 +2308,34 @@ MonoBehaviour:
   Stats:
     Speed: 10
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.019666
+    RollCd: 0
     RollCdSet: 0
-    RollDuration: -0.24739169
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 30
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}
   Anim: {fileID: 4817139692052885286}
   ShowInspector: 1
+--- !u!114 &-665358926089597103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9122807134000420660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdeb45537ca17c7409a62013a2084536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  debugRemi: 0.5
 --- !u!1001 &8240409814443939932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2357,7 +2361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25000003
+      value: 0.24999958
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2365,23 +2369,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5000001
+      value: 0.5000047
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2389,7 +2393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2442,14 +2446,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6121061463467310174, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &2785953460734911488 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
-  m_PrefabInstance: {fileID: 8240409814443939932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2785953460734911503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
+  m_PrefabInstance: {fileID: 8240409814443939932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2785953460734911488 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8240409815053842384

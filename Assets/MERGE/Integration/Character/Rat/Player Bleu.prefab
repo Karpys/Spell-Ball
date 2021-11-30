@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.3460025, z: -0, w: 0.9382337}
+  m_LocalRotation: {x: -0, y: 0.99753404, z: -0, w: 0.0701851}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -792,7 +792,7 @@ Animator:
   m_GameObject: {fileID: 4266598554979214383}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eecefda1267554f44a4a89753c81e9fe, type: 2}
+  m_Controller: {fileID: 22100000, guid: b79de66bd57065640b7cf00d78b8c623, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2121,7 +2121,8 @@ MonoBehaviour:
     m_Bits: 0
   grabDelay: 0.5
   balleLayer: 6
-  playerColor: 0
+  playerColor: 1
+  _animator: {fileID: 4817139692052885286}
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 4266598554979214383}
@@ -2142,7 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 003d1e0a6b9224243a5db45fe48a9ce4, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f2fa1048decbcf24cb1a2c29e388a721, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -2188,19 +2189,7 @@ MonoBehaviour:
     m_ActionId: cd604157-63d4-40af-b8bd-218962054f20
     m_ActionName: Gameplay/Sprint[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 919132148916143358}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnThrowBall
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c199d446-add7-4b90-b684-53bb0ad7dcca
     m_ActionName: Gameplay/Grab Balle[/Keyboard/e]
   - m_PersistentCalls:
@@ -2252,37 +2241,13 @@ MonoBehaviour:
     m_ActionId: a7bfb9e7-dfe5-4353-b198-129f6f4ee48c
     m_ActionName: Gameplay/Infuse[/DualShock4GamepadHID/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
-        m_MethodName: OnStart
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 868a9aba-6fd9-4fee-bfc8-171d293ac844
-    m_ActionName: Gameplay/START
+      m_Calls: []
+    m_ActionId: 151682d5-c39f-42cf-8a21-6a9432923b9a
+    m_ActionName: Gameplay/START[/DualShock4GamepadHID/start,/XInputControllerWindows/start]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_CallPause, Assembly-CSharp
-        m_MethodName: OnFocus
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 85c8ac0f-913f-4608-8884-e739c2c5efab
-    m_ActionName: Gameplay/FOCUS_UI[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/dpad/down]
+      m_Calls: []
+    m_ActionId: ed3707cb-d7e8-40d6-8502-fd7cf3f8acc9
+    m_ActionName: Gameplay/FOCUS_UI[/DualShock4GamepadHID/leftStick,/XInputControllerWindows/leftStick,/DualShock4GamepadHID/rightStick,/XInputControllerWindows/rightStick,/DualShock4GamepadHID/dpad,/XInputControllerWindows/dpad]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -2318,15 +2283,15 @@ MonoBehaviour:
   Stats:
     Speed: 10
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.0810039
+    RollCd: 0
     RollCdSet: 0
-    RollDuration: -0.2815686
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 30
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}
@@ -2369,19 +2334,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2389,7 +2354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

@@ -65,11 +65,21 @@ public class SheildManager : MonoBehaviour
     public IEnumerator DestroyShield()
     {
         int count = sheilds.Count - 1;
+        if (count < 0)
+        {
+            yield break;
+        }
         sheilds[count].GetComponent<Sheild>().ChangeShader();
         yield return new WaitForSeconds(2f);
+        count = sheilds.Count - 1;
+        if (count < 0)
+        {
+            yield break;
+        }
         Destroy(sheilds[count]);
         sheilds.RemoveAt(count);
         if(count>0)
             sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
+
     }
 }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float grabDelay;
     [SerializeField] private int balleLayer = 6;
     [SerializeField] private ColorEnum playerColor;
+    [SerializeField] private Animator _animator;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -96,12 +97,14 @@ public class PlayerController : MonoBehaviour
 
     void OnGUI()
     {
+        /*
         if (GUI.Button(new Rect(250, 0, 250, 50), "Reset grab delay"))
         {
             _timer = 0;
         }
 
         GUI.Label(new Rect(250, 50, 250, 50), "Grab delay = " + _timer + " seconds ");
+        */
     }
 
     void SetCanGrab(bool canGrab)
@@ -121,6 +124,7 @@ public class PlayerController : MonoBehaviour
        SetBall();
        if (balle && _timer <= 0)
        {
+           print("INFUSE");
            _timer = grabDelay;
            StartCoroutine(ColorParticule()); 
            ThrowBall();
@@ -147,6 +151,8 @@ public class PlayerController : MonoBehaviour
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
+       
+       _animator.Play("Hit");
 
        if (FreezeFrame.Freezer)
        {
@@ -173,6 +179,7 @@ public class PlayerController : MonoBehaviour
        }
        
         balle = null;
+        
    }
 
    public void SetBall()
@@ -187,8 +194,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            BallsInRange.Add(other.gameObject);
-            print(other.gameObject.name + " is in range");
+            if (other.gameObject.GetComponent<Ball>().Returnable)
+            {
+                BallsInRange.Add(other.gameObject);
+            }
         }
     }
 
@@ -196,16 +205,19 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == 6)
         {
-            if (EjectedBalls.Contains(other.gameObject))
+            if (other.gameObject.GetComponent<Ball>().Returnable)
             {
-                EjectedBalls.Remove(other.gameObject);
-            }
-            else
-            {
-                other.gameObject.GetComponent<Balle>().combo = 0;
-                other.gameObject.GetComponent<Ball>().ResetSpeed();
-                Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
-                BallsInRange.Remove(other.gameObject);
+                if (EjectedBalls.Contains(other.gameObject))
+                {
+                    EjectedBalls.Remove(other.gameObject);
+                }
+                else
+                {
+                    other.gameObject.GetComponent<Balle>().combo = 0;
+                    other.gameObject.GetComponent<Ball>().ResetSpeed();
+                    Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
+                    BallsInRange.Remove(other.gameObject);
+                }
             }
         }
     }
