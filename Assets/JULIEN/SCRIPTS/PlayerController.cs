@@ -125,6 +125,9 @@ public class PlayerController : MonoBehaviour
        if (balle && _timer <= 0)
        {
            print("INFUSE");
+           Balle balleData = balle.GetComponent<Balle>();
+           balleData.color = playerColor;
+           Infuse_Sound_Manager.Infuse.PlayInfuseSound(balleData.color,balleData.combo);
            _timer = grabDelay;
            StartCoroutine(ColorParticule()); 
            ThrowBall();
@@ -137,6 +140,10 @@ public class PlayerController : MonoBehaviour
        SetBall();
        if (balle && _timer<=0)
        {
+           if (Infuse_Sound_Manager.Infuse && Infuse_Sound_Manager.Infuse.Hit_Sound != null)
+           {
+               Infuse_Sound_Manager.Infuse.Hit_Sound.Post(gameObject);
+           }
            _timer = grabDelay;
            ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
            ThrowBall();
