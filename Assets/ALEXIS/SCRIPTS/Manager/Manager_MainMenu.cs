@@ -14,6 +14,8 @@ public class Manager_MainMenu : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    [SerializeField] private GameObject charSelectionMenu;
+
     public string SceneName;
 
     [Header("WHICH ONE IS ACTIVE ?")]
@@ -107,13 +109,22 @@ public class Manager_MainMenu : MonoBehaviour
         }
 
     }
-    public void PlayButton()
+    /*public void PlayButton()
     {
         EventSystem.current.SetSelectedGameObject(null);
         animRef.SetBool("QUIT", true);
         fadeRef.SetActive(true);
         animFade.Play("FadeOut_UI_V001");
         StartCoroutine("WaitPlay");
+    }*/
+    
+    public void PlayButton()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        animRef.SetBool("QUIT", true);
+        StartCoroutine("WaitEndAnimAndGoToCharSelect");
+        //launch.gameObject.SetActive(false);
+        //optionsMenu.gameObject.SetActive(true);
     }
 
     public void OptionsButton()
@@ -151,6 +162,14 @@ public class Manager_MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         launch.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(true);
+    }
+    
+    IEnumerator WaitEndAnimAndGoToCharSelect()
+    {
+        yield return new WaitForSeconds(tempsAnim);
+        EventSystem.current.SetSelectedGameObject(null);
+        launch.gameObject.SetActive(false);
+        charSelectionMenu.gameObject.SetActive(true);
     }
 
     IEnumerator WaitPlay()
