@@ -36,7 +36,7 @@ public class BossMovement : MonoBehaviour
 
     public void FollowClosest()
     {
-        GameObject target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<AddComponentTest>().ToList()));
+        GameObject target = GetClosestGameObject(transform.position, ListToListGameObjects(FindObjectsOfType<PlayerController>().ToList()));
         if (target)
         {
             transform.position = Vector3.MoveTowards(transform.position,

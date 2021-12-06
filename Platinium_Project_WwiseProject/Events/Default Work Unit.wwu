@@ -84,6 +84,157 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Infuse_Event" ID="{92F5E8B8-D977-4811-89BA-40268A1BD011}" ShortID="759086218">
+					<ChildrenList>
+						<Event Name="Play_Yellow_Power2" ID="{CE4FB4DD-4036-4444-A31B-5E8F85BA8376}">
+							<ChildrenList>
+								<Action Name="" ID="{5B3DDD60-E573-481F-9B05-2E0AF0F16DF1}" ShortID="40933305">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Yellow_Power2" ID="{009007F6-83A2-4C2D-B31D-BE4AF3DFF85A}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Green_Power3" ID="{921FD56B-7274-4F2C-A95A-E1A3A2C75B8A}">
+							<ChildrenList>
+								<Action Name="" ID="{A7F4DA84-BF66-4BA7-A709-76CC2ABA5857}" ShortID="90441637">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Green_Power3" ID="{6234790E-9064-4080-8CE5-4256492F0C4D}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Red_Power1" ID="{46044767-71C1-47FA-85B0-3460DB22EF1D}">
+							<ChildrenList>
+								<Action Name="" ID="{59B8F758-F9CD-4969-8E53-6AEA8F2700CD}" ShortID="591587880">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Red_Power1" ID="{0A82B2CC-CB1C-492D-82EE-156EBEAB7951}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Green_Power1" ID="{36B7A589-F8DA-4F74-BD00-CCAD813D7923}">
+							<ChildrenList>
+								<Action Name="" ID="{5B807CFD-3033-40C8-8A00-4BE29C6E1091}" ShortID="388490593">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Green_Power1" ID="{E78BDB20-1860-4A48-BF5F-3999555CBC01}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Green_Power2" ID="{F86A773A-20A3-4903-9D23-47EC28106A57}">
+							<ChildrenList>
+								<Action Name="" ID="{809A9CEE-F5A4-413E-B48B-B79A923F6307}" ShortID="304997552">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Green_Power2" ID="{C0D42EE2-5F06-4218-8B7C-A83D437489EA}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blue_Power3" ID="{5A957522-64FF-499C-900A-B71E7CAC7C9B}">
+							<ChildrenList>
+								<Action Name="" ID="{42725A55-C5EE-403F-AD4A-AF8DFC827DAC}" ShortID="269915320">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blue_Power3" ID="{5511C436-37ED-4AA5-8FCE-257C4AD2FBE8}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Red_Power2" ID="{15B4EDB7-72D7-4E0C-84D1-B3537299CB6B}">
+							<ChildrenList>
+								<Action Name="" ID="{FEB34783-EC73-4D9B-B12C-E9D2F4FA628B}" ShortID="957484513">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Red_Power2" ID="{1C049A70-F8ED-4717-B366-040E0AB5B4AB}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Red_Power3" ID="{CA1BD384-8D35-491C-BCC0-4D8B718DE22B}">
+							<ChildrenList>
+								<Action Name="" ID="{75D037FC-37D1-45E0-A85C-52D2A40BBEA7}" ShortID="948438148">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Red_Power3" ID="{081276CB-0E45-48AE-8F8D-F46E6F7EB9B0}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Yellow_Power1" ID="{18145B57-3E07-436C-8444-60D0FD1F006C}">
+							<ChildrenList>
+								<Action Name="" ID="{C37EA3E5-B3CF-4E67-B56B-4FC5005D4B63}" ShortID="289749358">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Yellow_Power1" ID="{266FB4F6-F770-4B09-BE9A-F7CEA69B3A23}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Yellow_Power3" ID="{FEC60C59-B01F-431C-8341-755AD7BB5B57}">
+							<ChildrenList>
+								<Action Name="" ID="{C7995C47-62E2-44D1-ABD9-626DFA240C4E}" ShortID="360032689">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Yellow_Power3" ID="{E13EA7F6-C1FF-450B-9DFE-B7E001735EB0}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blue_Power1" ID="{EAE73D51-EDE4-4D5C-92FF-AA11DDD4632C}">
+							<ChildrenList>
+								<Action Name="" ID="{04D835DA-0FB5-4BC2-84B1-ADD3B101E73C}" ShortID="330153284">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blue_Power1" ID="{CD077F34-0C9D-43B9-8E4B-3A03A455F707}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Blue_Power2" ID="{26207908-AC5F-4503-844F-5DCC596FD3A7}">
+							<ChildrenList>
+								<Action Name="" ID="{EBC6FF08-6718-472A-AA7E-18918BA21F3B}" ShortID="309312138">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blue_Power2" ID="{CDF92788-EE94-4932-A0F8-58C2722B1668}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ball_Event" ID="{46F9BBB0-9EEC-4CC5-9680-DFF4E19DF525}" ShortID="887132546">
+					<ChildrenList>
+						<Event Name="Hit_Event" ID="{B187545A-30C3-4806-8611-5060C6EDFFEC}">
+							<ChildrenList>
+								<Action Name="" ID="{538DFADB-CA09-43FD-8CCE-A848F55927BF}" ShortID="804706856">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Projectile_Hit_Random" ID="{0DF66FCE-55B9-4E77-A91D-C8CB239A1179}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

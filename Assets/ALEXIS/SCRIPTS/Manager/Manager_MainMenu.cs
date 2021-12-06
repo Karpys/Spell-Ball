@@ -9,6 +9,7 @@ public class Manager_MainMenu : MonoBehaviour
 {
     //public AnimationClip earlyMenu;
     public GameObject launch;
+
     public GameObject fadeRef;
 
     public GameObject optionsMenu;
@@ -27,13 +28,14 @@ public class Manager_MainMenu : MonoBehaviour
     [Header("Animator")]
     public Animator animRef;
     public float tempsAnim = 1f;
-
+    Animation animFade;
 
 
     private void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(play);
+
 
         if (!PlayerPrefs.HasKey("SaveExist"))
         {
@@ -52,6 +54,7 @@ public class Manager_MainMenu : MonoBehaviour
         StartCoroutine(Wait());
 
         animRef = launch.GetComponent<Animator>();
+        animFade = fadeRef.GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -108,6 +111,8 @@ public class Manager_MainMenu : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
         animRef.SetBool("QUIT", true);
+        fadeRef.SetActive(true);
+        animFade.Play("FadeOut_UI_V001");
         StartCoroutine("WaitPlay");
     }
 
@@ -152,6 +157,7 @@ public class Manager_MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneName);
+
     }
     #endregion
 }
