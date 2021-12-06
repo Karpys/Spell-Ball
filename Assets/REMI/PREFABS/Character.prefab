@@ -304,9 +304,21 @@ MonoBehaviour:
     m_ActionId: 85c8ac0f-913f-4608-8884-e739c2c5efab
     m_ActionName: Gameplay/FOCUS_UI[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/dpad/down]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ccbab66-1ec1-4205-858b-776021b6bc4c
-    m_ActionName: Gameplay/MouseLeftClick[/Mouse/leftButton]
+      m_Calls:
+      - m_Target: {fileID: 397368419370294684}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnRevive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1a137dfa-389f-4717-b0db-a29262d1d24e
+    m_ActionName: Gameplay/REVIVE[/XInputControllerWindows/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -347,6 +359,7 @@ MonoBehaviour:
     m_Bits: 0
   grabDelay: 0.5
   balleLayer: 6
+  playerColor: 0
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 8880468141465490594}
@@ -354,6 +367,7 @@ MonoBehaviour:
   EjectedBalls: []
   ManagePlayer: {fileID: 0}
   particleSystem: {fileID: 4642817261295282374}
+  TimeForRevive: 5
   SlowDownEffect: {fileID: 2423710728492747385, guid: cb0234fcf963e9641867b4693a3e13e7, type: 3}
 --- !u!135 &1671512321560986209
 SphereCollider:
@@ -621,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69283193
+      value: 0.8684202
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -629,7 +643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7210992
+      value: 0.49582916
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d818719ee6ce1aa44a80125cb5f196b7, type: 3}
       propertyPath: m_LocalRotation.z

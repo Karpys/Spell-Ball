@@ -40,9 +40,16 @@ public class PlayerController : MonoBehaviour
 
     private ParticleManager particule;
 
+    public float TimeForRevive = 5;
+    private float TimeRevive;
+
     [SerializeField] GameObject SlowDownEffect;
     private float _timer;
-    
+
+    private bool revive;
+    private bool tryRevive;
+    private GameObject playerNeedHelp = null;
+
 
     void Start()
     {
@@ -82,6 +89,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnInfuse(InputAction.CallbackContext ctx) => TryInfuse(ctx.ReadValueAsButton(), ctx);
 
+    public void OnRevive(InputAction.CallbackContext ctx) => TryRevive(ctx.ReadValueAsButton(), ctx);
+
 
     void Update()
     {
@@ -93,6 +102,22 @@ public class PlayerController : MonoBehaviour
             couldGrabBall = true;
             _timer = 0;
         }
+
+        if(tryRevive)
+        {
+            
+            if(TimeRevive<TimeForRevive)
+            {
+                TimeRevive += Time.deltaTime;
+            }
+            else
+            {
+                playerNeedHelp.GetComponent<Manager_Life>().SetCurentLife(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                tryRevive = false;
+                Debug.Log("it is alive");
+            }
+        }
+
     }
 
     void OnGUI()
@@ -117,8 +142,6 @@ public class PlayerController : MonoBehaviour
         return canGrabBall;
     }
 
-   
-
    public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
    {
        SetBall();
@@ -134,6 +157,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void TryRevive(bool buttonPressed, InputAction.CallbackContext ctx)
+    {
+        if (playerNeedHelp == null) return;
+        //Debug.Log("je suis en cours ");
+        tryRevive = buttonPressed;
+        //Debug.Log(tryRevive);
+
+        if(!tryRevive)
+        {
+            TimeRevive = 0;
+        }
+    }
 
    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
    { 
@@ -197,6 +232,7 @@ public class PlayerController : MonoBehaviour
            BallsInRange.Remove(BallsInRange[0]);
        }
    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 6)
@@ -205,6 +241,13 @@ public class PlayerController : MonoBehaviour
             {
                 BallsInRange.Add(other.gameObject);
             }
+        }
+
+        if(other.gameObject.layer ==7)
+        {
+            if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+                playerNeedHelp = other.gameObject;
+
         }
     }
 
@@ -225,6 +268,14 @@ public class PlayerController : MonoBehaviour
                     Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
                     BallsInRange.Remove(other.gameObject);
                 }
+            }
+        }
+
+        if (other.gameObject.layer == 7)
+        {
+            if(other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            {
+                playerNeedHelp = null;
             }
         }
     }
