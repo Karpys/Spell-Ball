@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int balleLayer = 6;
     [SerializeField] private ColorEnum playerColor;
     [SerializeField] private Animator _animator;
+    public Color ColorInfuse;
 
     private bool canGrabBall = false;
     private bool couldGrabBall = true;
@@ -127,7 +128,8 @@ public class PlayerController : MonoBehaviour
            print("INFUSE");
            Balle balleData = balle.GetComponent<Balle>();
            balleData.color = playerColor;
-           Infuse_Sound_Manager.Infuse.PlayInfuseSound(balleData.color,balleData.combo);
+           if(Infuse_Sound_Manager.Infuse)
+            Infuse_Sound_Manager.Infuse.PlayInfuseSound(balleData.color,balleData.combo);
            _timer = grabDelay;
            StartCoroutine(ColorParticule()); 
            ThrowBall();
@@ -233,19 +235,19 @@ public class PlayerController : MonoBehaviour
     {
         if (playerColor == ColorEnum.RED)
         {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorRed(ColorInfuse);
         }
         else if (playerColor == ColorEnum.ORANGE)
         {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorOrange(ColorInfuse);
         }
         else if (playerColor == ColorEnum.BLEU)
         {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorBleu(ColorInfuse);
         }            
         else if (playerColor == ColorEnum.GREEN)
         {
-            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen();
+            particleSystem.startColor = balle.GetComponent<Balle>().InfuseColorGreen(ColorInfuse);
         }
 
         particleSystem.Play();

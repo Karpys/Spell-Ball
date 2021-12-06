@@ -25,6 +25,8 @@ public class Balle : MonoBehaviour
 
     public Color BadColor;
     public bool EnnemyBalle;
+
+   
     private void Awake()
     {
         // ballColorCopy = new Material(shader);
@@ -96,7 +98,7 @@ public class Balle : MonoBehaviour
 
     }
 
-    void CheckColorInfuse()
+    /*void CheckColorInfuse()
     {
         timer += Time.deltaTime;
 
@@ -108,65 +110,64 @@ public class Balle : MonoBehaviour
         else if (timer < 6) ballColor.color = ColorInfuse.instance.VO;
         else if (timer < 7) timer = 0;
 
-    }
+    }*/
 
-    public Color InfuseColorRed()
+    public Color InfuseColorRed(Color Infuse)
     {
 
         foreach (ParticleSystem particle in _particleSystem)
         {
-            particle.startColor = Color.red;
+            particle.startColor = Infuse;
         }
 
-        ballLight.color = Color.red;
+        ballLight.color = Infuse;
         
         // ballColorCopy.color = Color.red;
         color = ColorEnum.RED;
         
-        return Color.red;
+        return Infuse;
     }
 
-    public Color InfuseColorBleu()
+    public Color InfuseColorBleu(Color Infuse)
     {
         foreach (ParticleSystem particle in _particleSystem)
         {
-            particle.startColor = Color.blue;
+            particle.startColor = Infuse;
         }
         
-        ballLight.color = Color.blue;
+        ballLight.color = Infuse;
         
         // ballColorCopy.color = Color.blue;
         color = ColorEnum.BLEU;
-        return Color.blue;
+        return Infuse;
 
     }
 
-    public Color InfuseColorGreen()
+    public Color InfuseColorGreen(Color Infuse)
     {
         foreach (ParticleSystem particle in _particleSystem)
         {
-            particle.startColor = Color.green;
+            particle.startColor = Infuse;
         }
         
-        ballLight.color = Color.green;
+        ballLight.color = Infuse;
         
         // ballColorCopy.color = Color.green;
         color = ColorEnum.GREEN;
-        return Color.green;
+        return Infuse;
     }
 
-    public Color InfuseColorOrange()
+    public Color InfuseColorOrange(Color Infuse)
     {
         foreach (ParticleSystem particle in _particleSystem)
         {
-            particle.startColor = Color.yellow;
+            particle.startColor = Infuse;
         }
         
-        ballLight.color = Color.yellow;
-        
+        ballLight.color = Infuse;
         // ballColorCopy.color = ColorInfuse.instance.orange;
         color = ColorEnum.ORANGE;
-        return ColorInfuse.instance.orange;
+        return Infuse;
     }
 
     public void ColorBallReset()
