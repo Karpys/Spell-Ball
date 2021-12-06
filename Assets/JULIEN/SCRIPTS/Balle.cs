@@ -17,6 +17,7 @@ public class Balle : MonoBehaviour
     public List<GameObject> subParticles;
     public Shader shader;
 
+
     private Light ballLight;
 
     public ColorEnum color ;
@@ -115,10 +116,19 @@ public class Balle : MonoBehaviour
     public Color InfuseColorRed(Color Infuse)
     {
 
-        foreach (ParticleSystem particle in _particleSystem)
+        /*foreach (ParticleSystem particle in _particleSystem)
         {
             particle.startColor = Infuse;
+        }*/
+
+        for (int i = 0; i < _particleSystem.Length; i++)
+        {
+            _particleSystem[i].startColor = Infuse;
         }
+
+        _particleSystem[0].startColor = Color.white;
+        _particleSystem[1].startColor = Color.white;
+
 
         ballLight.color = Infuse;
         

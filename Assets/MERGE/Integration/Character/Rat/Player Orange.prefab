@@ -2123,6 +2123,7 @@ MonoBehaviour:
   balleLayer: 6
   playerColor: 3
   _animator: {fileID: 4817139692052885286}
+  ColorInfuse: {r: 1, g: 0.8980392, b: 0, a: 1}
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 4266598554979214383}
