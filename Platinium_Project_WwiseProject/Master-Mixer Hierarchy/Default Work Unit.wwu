@@ -3,12 +3,138 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+				<Bus Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{3356D5DE-1994-4780-B86A-6BE37644C852}" ShortID="33718569">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GP_MASTER" ID="{FE608745-1417-44F6-B10A-AA8B66DBB32D}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{DC008188-EECB-4E7E-9B9F-351AC949FAC7}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>SCurve</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{ED1784E5-95DE-4479-99AA-E83DDDC886B9}" WorkUnitID="{FEE1C490-1132-4140-83F8-7208DA895BFB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{EAB04597-CFE8-4711-8747-B1DC2804DF32}" ShortID="1023902887">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="GP_SFX" ID="{B0B5F5E6-5BDA-4971-A1B7-C4C7BC47C84C}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{30A504BA-D02D-4326-AF3D-8ECA6DF417B4}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>SCurve</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="SFX_BOSS" ID="{BC3B9688-45C5-4A77-B2A2-EFE5DD32B39F}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="SFX_MINIONS" ID="{05D26310-26D8-4F2F-AD2A-142AD1F19954}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="SFX_CHARACTER" ID="{B3BF2561-B1C0-4E5D-9CC3-3A9DB84E5DC3}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="MUSIC" ID="{29C115E4-7D97-4B65-9909-32A265F7CB85}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{A4EE29AD-32B8-438D-BA09-18C0CA5CB8FE}" ShortID="400914623">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="GP_MUSIC" ID="{F2A781B3-6792-45BE-A478-875605E8D3E6}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{2F8621BE-4F1F-4B5A-B000-49559308280D}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>SCurve</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="M_MAIN" ID="{5DDD227A-1D90-4E08-9A4C-F1588360471A}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>
