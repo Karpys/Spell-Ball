@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.7615195, z: -0, w: 0.64814204}
+  m_LocalRotation: {x: -0, y: -0.8098746, z: -0, w: 0.58660305}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stats:
-    Speed: 10
+    Speed: 8
     rotationspeed: 1
     CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
@@ -2315,7 +2315,7 @@ MonoBehaviour:
     RollCdSet: 0
     RollDuration: 0.5
     RollDurationSet: 0.5
-    RollSpeed: 30
+    RollSpeed: 17
     HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
