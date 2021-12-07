@@ -1,5 +1,5 @@
 {
-    "name": "Controls",
+    "name": "Controls 2",
     "maps": [
         {
             "name": "Gameplay",
@@ -66,6 +66,14 @@
                     "type": "Value",
                     "id": "85c8ac0f-913f-4608-8884-e739c2c5efab",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "REVIVE",
+                    "type": "Button",
+                    "id": "fd88b138-3f0d-40f7-b616-b182be1cc564",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -189,6 +197,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "FOCUS_UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc6a83ae-822c-48ea-b57c-88cdec8ca10c",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "REVIVE",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

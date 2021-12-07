@@ -14,7 +14,11 @@ public class Manager_MainMenu : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    [SerializeField] private GameObject charSelectionMenu;
+
     public string SceneName;
+
+    public bool wFocus = true;
 
     [Header("WHICH ONE IS ACTIVE ?")]
     public int UIIndex;
@@ -52,7 +56,7 @@ public class Manager_MainMenu : MonoBehaviour
         //Screen.fullScreen = true;
         //launch.GetComponent<Animation>().clip = earlyMenu;
         StartCoroutine(Wait());
-
+        StartCoroutine(WaitFocus());
         animRef = launch.GetComponent<Animator>();
         animFade = fadeRef.GetComponent<Animation>();
     }
@@ -107,27 +111,58 @@ public class Manager_MainMenu : MonoBehaviour
         }
 
     }
+    
+    public void LaunchGame(InputAction.CallbackContext ctx)
+    {
+        if(wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            fadeRef.SetActive(true);
+            animFade.Play("FadeOut_UI_V001");
+            StartCoroutine("WaitPlay");
+        }
+
+    }
+    
     public void PlayButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        fadeRef.SetActive(true);
-        animFade.Play("FadeOut_UI_V001");
-        StartCoroutine("WaitPlay");
+        if (wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            StartCoroutine("WaitEndAnimAndGoToCharSelect");
+            //launch.gameObject.SetActive(false);
+            //optionsMenu.gameObject.SetActive(true);
+        }
+
+    }
+
+    public void debug()
+    {
+        print("je fais chier mon monde !");
     }
 
     public void OptionsButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        StartCoroutine("WaitEndAnim");
-        //launch.gameObject.SetActive(false);
-        //optionsMenu.gameObject.SetActive(true);
+        print(wFocus);
+        if (wFocus == false)
+        {
+
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            StartCoroutine("WaitEndAnim");
+            //launch.gameObject.SetActive(false);
+            //optionsMenu.gameObject.SetActive(true);
+        }
     }
 
     public void QuitButton()
     {
-        Application.Quit();
+        if (wFocus == false)
+        {
+            Application.Quit();
+        }
     }
 
     #region Coroutine
@@ -152,12 +187,26 @@ public class Manager_MainMenu : MonoBehaviour
         launch.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(true);
     }
+    
+    IEnumerator WaitEndAnimAndGoToCharSelect()
+    {
+        yield return new WaitForSeconds(tempsAnim);
+        EventSystem.current.SetSelectedGameObject(null);
+        launch.gameObject.SetActive(false);
+        charSelectionMenu.gameObject.SetActive(true);
+    }
 
     IEnumerator WaitPlay()
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneName);
 
+    }
+
+    IEnumerator WaitFocus()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        wFocus = false;
     }
     #endregion
 }

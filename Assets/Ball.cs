@@ -22,6 +22,8 @@ public class Ball : MonoBehaviour
 
     public bool Returnable;
 
+    [SerializeField] private AK.Wwise.Event playBounce;
+
     float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
 
@@ -60,6 +62,10 @@ public class Ball : MonoBehaviour
             if (DestroyOnHitWall)
             {
                 Destroy(gameObject);
+            }
+            else
+            {
+                playBounce.Post(gameObject);
             }
             AddEffect();
             Reflect(hit.normal);

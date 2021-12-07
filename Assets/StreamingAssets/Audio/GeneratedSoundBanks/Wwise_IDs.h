@@ -90,6 +90,8 @@ namespace AK
         static const AkUniqueID PLAY_GREEN_POWER1 = 723683482U;
         static const AkUniqueID PLAY_GREEN_POWER2 = 723683481U;
         static const AkUniqueID PLAY_GREEN_POWER3 = 723683480U;
+        static const AkUniqueID PLAY_R_BOUNCE = 4267311131U;
+        static const AkUniqueID PLAY_R_CAST_RED = 3571159426U;
         static const AkUniqueID PLAY_RED_POWER1 = 756609446U;
         static const AkUniqueID PLAY_RED_POWER2 = 756609445U;
         static const AkUniqueID PLAY_RED_POWER3 = 756609444U;

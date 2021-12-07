@@ -24,7 +24,11 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: cbba4e87874e1b42be2e0c37d6742d40
     GuidInternal: 
-    m_lastTime: -8585680951587069583
+<<<<<<< HEAD
+    m_lastTime: -8585628944622875646
+=======
+    m_lastTime: -8585685319327977049
+>>>>>>> main
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,11 +42,15 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 121cbf942d2c0a4aa70b4d5d177cbb96
     GuidInternal: 
-    m_lastTime: -8585680951595197799
+<<<<<<< HEAD
+    m_lastTime: -8585627992648482698
+=======
+    m_lastTime: -8585627972150881588
+>>>>>>> main
     List:
-    - name: Master Audio Bus
-      guid: d8a41415a61d2a41a17e75ca0c2149f3
-      id: 3803692087
+    - name: M_MAIN
+      guid: 7a22dd5d901d084e9a4cf1588360471a
+      id: 1683454542
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -50,10 +58,204 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 121cbf942d2c0a4aa70b4d5d177cbb96
-      - ElementName: Master Audio Bus
+      - ElementName: MASTER
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+      - ElementName: MUSIC
+        ObjectType: 2
+        guid: e415c129977d654b990932a265f7cb85
+      - ElementName: M_MAIN
+        ObjectType: 2
+        guid: 7a22dd5d901d084e9a4cf1588360471a
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\MUSIC\M_MAIN
+    - name: MASTER
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 4056684167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER
+    - name: MUSIC
+      guid: e415c129977d654b990932a265f7cb85
+      id: 3991942870
+<<<<<<< HEAD
+=======
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MUSIC
+        ObjectType: 2
+        guid: e415c129977d654b990932a265f7cb85
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\MUSIC
+    - name: SFX
+      guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX
+    - name: SFX_BALL
+      guid: f41e05269c2ff5428e828ce01d1d683d
+      id: 1639431926
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_BALL
+        ObjectType: 2
+        guid: f41e05269c2ff5428e828ce01d1d683d
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_BALL
+    - name: SFX_BOSS
+      guid: 88963bbcc545774ab2a2efe5dd32b39f
+      id: 1421616930
+>>>>>>> main
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+<<<<<<< HEAD
+      - ElementName: MUSIC
+        ObjectType: 2
+        guid: e415c129977d654b990932a265f7cb85
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\MUSIC
+    - name: SFX
+      guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX
+    - name: SFX_BALL
+      guid: f41e05269c2ff5428e828ce01d1d683d
+      id: 1639431926
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_BALL
+        ObjectType: 2
+        guid: f41e05269c2ff5428e828ce01d1d683d
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_BALL
+    - name: SFX_BOSS
+      guid: 88963bbcc545774ab2a2efe5dd32b39f
+      id: 1421616930
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+=======
+>>>>>>> main
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_BOSS
+        ObjectType: 2
+        guid: 88963bbcc545774ab2a2efe5dd32b39f
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_BOSS
+    - name: SFX_CHARACTER
+      guid: 6125bfb3c0b15d4e9cc33a9db84e5dc3
+      id: 1415773282
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_CHARACTER
+        ObjectType: 2
+        guid: 6125bfb3c0b15d4e9cc33a9db84e5dc3
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_CHARACTER
+    - name: SFX_MINIONS
+      guid: 1063d205d8262f4fad2a142ad1f19954
+      id: 4075503242
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_MINIONS
+        ObjectType: 2
+        guid: 1063d205d8262f4fad2a142ad1f19954
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_MINIONS
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,8 +268,54 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585636833032006762
+<<<<<<< HEAD
+    m_lastTime: -8585627992648482698
+=======
+    m_lastTime: -8585627993399449963
+>>>>>>> main
     List:
+    - name: BALL
+      guid: 5c501f5b299abd4b973517733bae8140
+      id: 1777984502
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: BALL
+        ObjectType: 4
+        guid: 5c501f5b299abd4b973517733bae8140
+      Path: SoundBanks\Default Work Unit\BALL
+    - name: BOSS
+      guid: 041e876735b19747b15a275c91adcec3
+      id: 1560169506
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 041e876735b19747b15a275c91adcec3
+      Path: SoundBanks\Default Work Unit\BOSS
+    - name: CHARACTER
+      guid: 722fc118d71fdd49a9cee24c1e1e9d66
+      id: 436743010
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 722fc118d71fdd49a9cee24c1e1e9d66
+      Path: SoundBanks\Default Work Unit\CHARACTER
     - name: Main_Soundbank
       guid: fab70b13a274fe4db35aeed6d90c297f
       id: 2228651116
@@ -82,6 +330,88 @@ MonoBehaviour:
         ObjectType: 7
         guid: fab70b13a274fe4db35aeed6d90c297f
       Path: SoundBanks\Default Work Unit\Main_Soundbank
+    - name: MINIONS
+      guid: aafd6d1b53fff24cbe0e6b77783a9c5b
+      id: 3693811082
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: MINIONS
+        ObjectType: 4
+        guid: aafd6d1b53fff24cbe0e6b77783a9c5b
+      Path: SoundBanks\Default Work Unit\MINIONS
+    - name: S_Ball
+      guid: 06182cfdf4365a439eab506ace100085
+      id: 1454594208
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: BALL
+        ObjectType: 4
+        guid: 5c501f5b299abd4b973517733bae8140
+      - ElementName: S_Ball
+        ObjectType: 7
+        guid: 06182cfdf4365a439eab506ace100085
+      Path: SoundBanks\Default Work Unit\BALL\S_Ball
+    - name: S_Boss
+      guid: 97da4a15da838a4d9fcbd885d64bc6d8
+      id: 1571743440
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 041e876735b19747b15a275c91adcec3
+      - ElementName: S_Boss
+        ObjectType: 7
+        guid: 97da4a15da838a4d9fcbd885d64bc6d8
+      Path: SoundBanks\Default Work Unit\BOSS\S_Boss
+    - name: S_Characters
+      guid: c1d5f108e42cc3468ecb1d3a0844e1df
+      id: 51703143
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 722fc118d71fdd49a9cee24c1e1e9d66
+      - ElementName: S_Characters
+        ObjectType: 7
+        guid: c1d5f108e42cc3468ecb1d3a0844e1df
+      Path: SoundBanks\Default Work Unit\CHARACTER\S_Characters
+    - name: S_Minions
+      guid: 0c6ba18bf930894a9cf9809270d98bee
+      id: 714890364
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: MINIONS
+        ObjectType: 4
+        guid: aafd6d1b53fff24cbe0e6b77783a9c5b
+      - ElementName: S_Minions
+        ObjectType: 7
+        guid: 0c6ba18bf930894a9cf9809270d98bee
+      Path: SoundBanks\Default Work Unit\MINIONS\S_Minions
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +424,146 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585631718643329283
+<<<<<<< HEAD
+    m_lastTime: -8585627988962515929
+=======
+    m_lastTime: -8585627371854339933
+>>>>>>> main
     List:
+    - name: BALL
+      guid: af28c015ba078a40acc15da43c5d0f5a
+      id: 1777984502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      Path: Events\Default Work Unit\BALL
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: BOSS
+      guid: 7122f24f35094a42b2fcab1641ec5a93
+      id: 1560169506
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      Path: Events\Default Work Unit\BOSS
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+<<<<<<< HEAD
+=======
+    - name: Bounce_Event
+      guid: 15b759b85a6aa643852cee49cf90267d
+      id: 2466133888
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Bounce_Event
+        ObjectType: 4
+        guid: 15b759b85a6aa643852cee49cf90267d
+      Path: Events\Default Work Unit\BALL\Bounce_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Cast_Event
+      guid: 1d8ef25900a489498469d87edb64adb9
+      id: 3680149789
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Cast_Event
+        ObjectType: 4
+        guid: 1d8ef25900a489498469d87edb64adb9
+      Path: Events\Default Work Unit\BALL\Cast_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> main
+    - name: CHARACTER
+      guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      id: 436743010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      Path: Events\Default Work Unit\CHARACTER
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hit_Event
+      guid: 5a5487b1c330064886115060c6edffec
+      id: 577874077
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Hit_Event
+        ObjectType: 3
+        guid: 5a5487b1c330064886115060c6edffec
+      Path: Events\Default Work Unit\BALL\Hit_Event
+      maxAttenuation: 0
+      maxDuration: 1.524542
+      minDuration: 0.882083
+    - name: Infuse_Event
+      guid: b8e8f59277d9114889ba40268a1bd011
+      id: 3158995874
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
+      Path: Events\Default Work Unit\BALL\Infuse_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Laser_Constant
       guid: b55b8a6ef67e4d4eaf8bf2ae41efb94c
       id: 2756076025
@@ -106,13 +574,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Laser_Constant
         ObjectType: 3
         guid: b55b8a6ef67e4d4eaf8bf2ae41efb94c
-      Path: Events\Default Work Unit\LaserEvent\Laser_Constant
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Laser_Constant
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -126,13 +597,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Laser_End
         ObjectType: 3
         guid: 9fb0aa0f9dfcda489709bd557e5e0eaa
-      Path: Events\Default Work Unit\LaserEvent\Laser_End
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Laser_End
       maxAttenuation: 0
       maxDuration: 3.980729
       minDuration: 3.980729
@@ -146,13 +620,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Laser_Start_Charge
         ObjectType: 3
         guid: ed9d9fdfd82ecb4bab1c275089cbec9e
-      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Charge
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Charge
       maxAttenuation: 0
       maxDuration: 6.013688
       minDuration: 6.013688
@@ -166,13 +643,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Laser_Start_Release
         ObjectType: 3
         guid: 991a8eea632c744f9e84a6aa68e70efb
-      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Release
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Release
       maxAttenuation: 0
       maxDuration: 3.828063
       minDuration: 3.828063
@@ -186,13 +666,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Laser_Start_Trigger
         ObjectType: 3
         guid: 1bbd42976cb5f049b0584615294ca6b0
-      Path: Events\Default Work Unit\LaserEvent\Laser_Start_Trigger
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Trigger
       maxAttenuation: 0
       maxDuration: 1.973521
       minDuration: 1.973521
@@ -206,10 +689,30 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
-      Path: Events\Default Work Unit\LaserEvent
+      Path: Events\Default Work Unit\BOSS\LaserEvent
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MINIONS
+      guid: ae0bf460a0347149a7d7e30be4e6edeb
+      id: 3693811082
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: MINIONS
+        ObjectType: 4
+        guid: ae0bf460a0347149a7d7e30be4e6edeb
+      Path: Events\Default Work Unit\MINIONS
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -223,10 +726,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Blue_Power1
         ObjectType: 3
         guid: 513de7eae4ed5c4d92ffaa11ddd4632c
-      Path: Events\Default Work Unit\Play_Blue_Power1
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power1
       maxAttenuation: 0
       maxDuration: 1.105465
       minDuration: 0.891995
@@ -240,10 +749,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Blue_Power2
         ObjectType: 3
         guid: 087920265fac0345844f5dcc596fd3a7
-      Path: Events\Default Work Unit\Play_Blue_Power2
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power2
       maxAttenuation: 0
       maxDuration: 2.161429
       minDuration: 1.982154
@@ -257,10 +772,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Blue_Power3
         ObjectType: 3
         guid: 2275955aff649c49900ab71e7cac7c9b
-      Path: Events\Default Work Unit\Play_Blue_Power3
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power3
       maxAttenuation: 0
       maxDuration: 4.180363
       minDuration: 3.865215
@@ -274,13 +795,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
       - ElementName: LaserEvent
         ObjectType: 4
         guid: fd426f095dd07b48846d125a02f8f606
       - ElementName: Play_ConstantLaser
         ObjectType: 3
         guid: 6a7e6dc5cafe1542873d027fac7eacaa
-      Path: Events\Default Work Unit\LaserEvent\Play_ConstantLaser
+      Path: Events\Default Work Unit\BOSS\LaserEvent\Play_ConstantLaser
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -294,10 +818,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Green_Power1
         ObjectType: 3
         guid: 89a5b736daf8744fbd00ccad813d7923
-      Path: Events\Default Work Unit\Play_Green_Power1
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power1
       maxAttenuation: 0
       maxDuration: 1.032472
       minDuration: 0.862993
@@ -311,10 +841,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Green_Power2
         ObjectType: 3
         guid: 3a776af8a32003499d2347ec28106a57
-      Path: Events\Default Work Unit\Play_Green_Power2
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power2
       maxAttenuation: 0
       maxDuration: 2.465306
       minDuration: 2.131156
@@ -328,13 +864,65 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Green_Power3
         ObjectType: 3
         guid: 6bd51f9274722c4fa95ae1a3a2c75b8a
-      Path: Events\Default Work Unit\Play_Green_Power3
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power3
       maxAttenuation: 0
       maxDuration: 4.457007
       minDuration: 4.22576
+    - name: Play_R_Bounce
+      guid: 792112d2e2f3f648b93b36b02b0e24a6
+      id: 4267311131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Bounce_Event
+        ObjectType: 4
+        guid: 15b759b85a6aa643852cee49cf90267d
+      - ElementName: Play_R_Bounce
+        ObjectType: 3
+        guid: 792112d2e2f3f648b93b36b02b0e24a6
+      Path: Events\Default Work Unit\BALL\Bounce_Event\Play_R_Bounce
+      maxAttenuation: 0
+      maxDuration: 0.915417
+      minDuration: 0.533583
+    - name: Play_R_Cast_Red
+      guid: 73e638592797974ba8df3068e94c4878
+      id: 3571159426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Cast_Event
+        ObjectType: 4
+        guid: 1d8ef25900a489498469d87edb64adb9
+      - ElementName: Play_R_Cast_Red
+        ObjectType: 3
+        guid: 73e638592797974ba8df3068e94c4878
+      Path: Events\Default Work Unit\BALL\Cast_Event\Play_R_Cast_Red
+      maxAttenuation: 0
+      maxDuration: 0.853609
+      minDuration: 0.494632
     - name: Play_Red_Power1
       guid: 67470446c171fa4785b03460db22ef1d
       id: 756609446
@@ -345,10 +933,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Red_Power1
         ObjectType: 3
         guid: 67470446c171fa4785b03460db22ef1d
-      Path: Events\Default Work Unit\Play_Red_Power1
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power1
       maxAttenuation: 0
       maxDuration: 1.195057
       minDuration: 1.054921
@@ -362,10 +956,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Red_Power2
         ObjectType: 3
         guid: b7edb415d7720c4e84d1b3537299cb6b
-      Path: Events\Default Work Unit\Play_Red_Power2
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power2
       maxAttenuation: 0
       maxDuration: 2.434422
       minDuration: 1.9
@@ -379,10 +979,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Red_Power3
         ObjectType: 3
         guid: 84d31bca358d1c49bcc04d8b718de22b
-      Path: Events\Default Work Unit\Play_Red_Power3
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power3
       maxAttenuation: 0
       maxDuration: 4.847642
       minDuration: 3.85746
@@ -396,10 +1002,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Yellow_Power1
         ObjectType: 3
         guid: 575b1418073e6c43844460d0fd1f006c
-      Path: Events\Default Work Unit\Play_Yellow_Power1
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power1
       maxAttenuation: 0
       maxDuration: 1.000726
       minDuration: 0.790408
@@ -413,10 +1025,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Yellow_Power2
         ObjectType: 3
         guid: ddb44fce36404444a31b5e8f85ba8376
-      Path: Events\Default Work Unit\Play_Yellow_Power2
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power2
       maxAttenuation: 0
       maxDuration: 2.37771
       minDuration: 2.108118
@@ -430,10 +1048,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Infuse_Event
+        ObjectType: 4
+        guid: b8e8f59277d9114889ba40268a1bd011
       - ElementName: Play_Yellow_Power3
         ObjectType: 3
         guid: 590cc6fe1fb01c438341755ad7bb5b57
-      Path: Events\Default Work Unit\Play_Yellow_Power3
+      Path: Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power3
       maxAttenuation: 0
       maxDuration: 4.555442
       minDuration: 4.198866
@@ -466,8 +1090,77 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f7aeb8776abeb1408e4daa3e0077b848
     GuidInternal: 
-    m_lastTime: -8585680951602872573
-    List: []
+<<<<<<< HEAD
+    m_lastTime: -8585627992649237930
+=======
+    m_lastTime: -8585627993403211566
+>>>>>>> main
+    List:
+    - name: BUS
+      guid: 6c30b17a57185845b350c713820563f9
+      id: 714721605
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: BUS
+        ObjectType: 4
+        guid: 6c30b17a57185845b350c713820563f9
+      Path: Game Parameters\Default Work Unit\BUS
+    - name: GP_MASTER
+      guid: 458760fe1714f644b10aaa8b66dbb32d
+      id: 2359434321
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: BUS
+        ObjectType: 4
+        guid: 6c30b17a57185845b350c713820563f9
+      - ElementName: GP_MASTER
+        ObjectType: 13
+        guid: 458760fe1714f644b10aaa8b66dbb32d
+      Path: Game Parameters\Default Work Unit\BUS\GP_MASTER
+    - name: GP_MUSIC
+      guid: b381a7f29267be45a478875605e8d3e6
+      id: 687458188
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: BUS
+        ObjectType: 4
+        guid: 6c30b17a57185845b350c713820563f9
+      - ElementName: GP_MUSIC
+        ObjectType: 13
+        guid: b381a7f29267be45a478875605e8d3e6
+      Path: Game Parameters\Default Work Unit\BUS\GP_MUSIC
+    - name: GP_SFX
+      guid: e6f5b5b0da5b7149a1b7c4c7bc47c84c
+      id: 2681064004
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: BUS
+        ObjectType: 4
+        guid: 6c30b17a57185845b350c713820563f9
+      - ElementName: GP_SFX
+        ObjectType: 13
+        guid: e6f5b5b0da5b7149a1b7c4c7bc47c84c
+      Path: Game Parameters\Default Work Unit\BUS\GP_SFX
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -480,7 +1173,11 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: bb08bd03bc83674dabd5a8598e3fa7b8
     GuidInternal: 
-    m_lastTime: -8585680951588800511
+<<<<<<< HEAD
+    m_lastTime: -8585628944622875646
+=======
+    m_lastTime: -8585685319327987055
+>>>>>>> main
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -494,7 +1191,11 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f3ec116dff1bdb44956d8882baafad5f
     GuidInternal: 
-    m_lastTime: -8585669591689541690
+<<<<<<< HEAD
+    m_lastTime: -8585628944622875646
+=======
+    m_lastTime: -8585685319327987055
+>>>>>>> main
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -508,10 +1209,17 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9886abdd41a1454e957f8138b444e87a
     GuidInternal: 
-    m_lastTime: -8585680951587514102
+<<<<<<< HEAD
+    m_lastTime: -8585628944622875646
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d000000
+  ExpandedWaapiItemIds: 050000000600000007000000130000001400000015000000
+=======
+    m_lastTime: -8585685319327987055
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 0b0000000c0000000d000000b4020000
+>>>>>>> main
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
