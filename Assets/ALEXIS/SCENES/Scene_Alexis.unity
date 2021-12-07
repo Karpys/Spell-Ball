@@ -4841,22 +4841,6 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
-      - m_Name: 
-        m_Id: a162acb2-2d82-4497-b9a8-0c54093d8225
-        m_Path: <Keyboard>/space
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      - m_Name: 
-        m_Id: ea5a6960-6121-4a61-9623-249949dd0ebc
-        m_Path: <Mouse>/leftButton
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 2464980761054802294, guid: 9f35a2fd7e4836f43b518639c82a3f95, type: 3}
   m_SplitScreen: 0
@@ -5402,7 +5386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3239104135840363675, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
@@ -9972,6 +9956,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 880261718}
   charSelectionMenu: {fileID: 1568171815}
   SceneName: Scene_Julien
+  wFocus: 1
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}
@@ -10048,6 +10033,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 85c8ac0f-913f-4608-8884-e739c2c5efab
     m_ActionName: Gameplay/FOCUS_UI[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a137dfa-389f-4717-b0db-a29262d1d24e
+    m_ActionName: Gameplay/REVIVE[/XInputControllerWindows/rightShoulder,/DualShock4GamepadHID/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -11516,6 +11505,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e7f9cb4d-d516-46f9-b461-fb6bbac035e3
     m_ActionName: CharSelection/Previous Char[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/leftStick/up,/DualShock4GamepadHID/rightStick/up,/DualShock4GamepadHID/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5758a49-f667-4c02-b2e6-1db2a0104d75
+    m_ActionName: CharSelection/Launch Game[/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: adcd8630-ceaf-471f-88f2-f74869b418e6
+    m_ActionName: CharSelection/Go Back[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharSelection

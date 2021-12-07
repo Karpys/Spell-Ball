@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2464980761054802293}
   - component: {fileID: 7431427200096468416}
   - component: {fileID: 1065360904}
+  - component: {fileID: 6595041058690576132}
   m_Layer: 5
   m_Name: CharSelectionPlayer
   m_TagString: Untagged
@@ -139,7 +140,19 @@ MonoBehaviour:
     m_ActionId: c5758a49-f667-4c02-b2e6-1db2a0104d75
     m_ActionName: CharSelection/Launch Game[/DualShock4GamepadHID/start,/DualShock4GamepadHID/start]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7431427200096468416}
+        m_TargetAssemblyTypeName: CharSelection, Assembly-CSharp
+        m_MethodName: CallBackAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: adcd8630-ceaf-471f-88f2-f74869b418e6
     m_ActionName: CharSelection/Go Back[/DualShock4GamepadHID/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
@@ -147,6 +160,25 @@ MonoBehaviour:
   m_DefaultActionMap: CharSelection
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &6595041058690576132
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464980761054802294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 587ef927c5a05154bb376f7697f3b8ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2464980761447842048
 GameObject:
   m_ObjectHideFlags: 0

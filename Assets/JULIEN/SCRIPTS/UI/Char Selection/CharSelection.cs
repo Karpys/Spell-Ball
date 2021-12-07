@@ -15,7 +15,9 @@ public class CharSelection : MonoBehaviour
     private int currentSelectedChar;
 
     private PlayerInput _playerInput;
-    
+
+    private Animator animatorRef;
+
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
@@ -24,11 +26,30 @@ public class CharSelection : MonoBehaviour
     private void Start()
     {
         currentSelectedChar = 0;
+        if (!_charInfo.playerControllerToId.ContainsKey(_playerInput.playerIndex))
+            _charInfo.playerControllerToId.Add(_playerInput.playerIndex, _playerInput.devices[0].deviceId);
+        else
+        {
+            _charInfo.playerControllerToId[_playerInput.playerIndex] = _playerInput.devices[0].deviceId;
+        }
+        if (!_charInfo.playerPrefabForId.ContainsKey(_playerInput.playerIndex))
+            _charInfo.playerPrefabForId.Add(_playerInput.playerIndex, null);
+        else
+        {
+            _charInfo.playerPrefabForId[_playerInput.playerIndex] = null;
+        }
 
-        _charInfo.playerControllerToId.Add(_playerInput.playerIndex, _playerInput.devices[0].deviceId);
-        _charInfo.playerPrefabForId.Add(_playerInput.playerIndex, null);
-        
         SetPlayerChar(CharSelectionManager.instance.possibleChar[currentSelectedChar]);
+
+        animatorRef = gameObject.GetComponent<Animator>();
+
+        animatorRef.SetBool("Active", true);
+    }
+
+    private void OnDestroy()
+    {
+        _charInfo.playerControllerToId.Remove(_playerInput.playerIndex);
+        _charInfo.playerPrefabForId.Remove(_playerInput.playerIndex);
     }
 
 
@@ -82,5 +103,26 @@ public class CharSelection : MonoBehaviour
 
         _image.sprite = sprite;
         _charInfo.playerPrefabForId[_playerInput.playerIndex] = selectedChar;
+    }
+
+    public void CallBackAnimation()
+    {
+        
+        CharSelectionManager.instance.GoBack();
+    }
+
+    public void QUIT()
+    {
+        animatorRef.SetBool("Deactive", false);
+    }
+
+    public void ENTER()
+    {
+        animatorRef.SetBool("Active", false);
+    }
+
+    public void RunExit()
+    {
+        animatorRef.SetBool("Deactive", true);
     }
 }

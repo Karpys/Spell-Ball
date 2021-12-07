@@ -56,7 +56,7 @@ public class Manager_MainMenu : MonoBehaviour
         //Screen.fullScreen = true;
         //launch.GetComponent<Animation>().clip = earlyMenu;
         StartCoroutine(Wait());
-
+        StartCoroutine(WaitFocus());
         animRef = launch.GetComponent<Animator>();
         animFade = fadeRef.GetComponent<Animation>();
     }
@@ -127,17 +127,28 @@ public class Manager_MainMenu : MonoBehaviour
     
     public void PlayButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        StartCoroutine("WaitEndAnimAndGoToCharSelect");
-        //launch.gameObject.SetActive(false);
-        //optionsMenu.gameObject.SetActive(true);
+        if (wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            StartCoroutine("WaitEndAnimAndGoToCharSelect");
+            //launch.gameObject.SetActive(false);
+            //optionsMenu.gameObject.SetActive(true);
+        }
+
+    }
+
+    public void debug()
+    {
+        print("je fais chier mon monde !");
     }
 
     public void OptionsButton()
     {
+        print(wFocus);
         if (wFocus == false)
         {
+
             EventSystem.current.SetSelectedGameObject(null);
             animRef.SetBool("QUIT", true);
             StartCoroutine("WaitEndAnim");
