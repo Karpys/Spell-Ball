@@ -202,14 +202,31 @@ public class PlayerController : MonoBehaviour
        {
            if (SetDirectionAtEndFreezeFrame)
            {
-               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f,0,0.2f),
-               balle.GetComponent<Ball>(),CharacterVisual);
-           }
+               if (balle.GetComponent<Balle>().combo > 4)
+               {
+                   if (CameraShakeManager.CameraShake)
+                   {
+                       StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 0.5f, 15, 0.1f));
+                   }
+                    FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f),
+                balle.GetComponent<Ball>(), CharacterVisual);
+                   
+                }
+               balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+            }
            else
            {
+               if (balle.GetComponent<Balle>().combo > 4)
+               {
+                   if (CameraShakeManager.CameraShake)
+                   {
+                       StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 0.5f, 15, 0.1f));
+                   }
+                    balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+                   FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f));
+               }
                balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
-               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f));
-           }
+            }
        }
        else
        {
@@ -217,11 +234,8 @@ public class PlayerController : MonoBehaviour
         }
 
 
-       if (CameraShakeManager.CameraShake)
-       {
-           StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 1, 15, 0.1f));
-       }
-       
+        
+
         balle = null;
         
    }
