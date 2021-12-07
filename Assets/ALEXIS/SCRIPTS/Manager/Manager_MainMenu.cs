@@ -14,6 +14,8 @@ public class Manager_MainMenu : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    [SerializeField] private GameObject charSelectionMenu;
+
     public string SceneName;
 
     public bool wFocus = true;
@@ -109,7 +111,8 @@ public class Manager_MainMenu : MonoBehaviour
         }
 
     }
-    public void PlayButton()
+    
+    public void LaunchGame(InputAction.CallbackContext ctx)
     {
         if(wFocus == false)
         {
@@ -120,6 +123,15 @@ public class Manager_MainMenu : MonoBehaviour
             StartCoroutine("WaitPlay");
         }
 
+    }
+    
+    public void PlayButton()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        animRef.SetBool("QUIT", true);
+        StartCoroutine("WaitEndAnimAndGoToCharSelect");
+        //launch.gameObject.SetActive(false);
+        //optionsMenu.gameObject.SetActive(true);
     }
 
     public void OptionsButton()
@@ -163,6 +175,14 @@ public class Manager_MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         launch.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(true);
+    }
+    
+    IEnumerator WaitEndAnimAndGoToCharSelect()
+    {
+        yield return new WaitForSeconds(tempsAnim);
+        EventSystem.current.SetSelectedGameObject(null);
+        launch.gameObject.SetActive(false);
+        charSelectionMenu.gameObject.SetActive(true);
     }
 
     IEnumerator WaitPlay()
