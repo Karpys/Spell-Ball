@@ -4760,6 +4760,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826629249}
   m_CullTransparentMesh: 1
+--- !u!1 &854178317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854178319}
+  - component: {fileID: 854178318}
+  m_Layer: 0
+  m_Name: Player Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &854178318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854178317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 2
+  m_MaxPlayerCount: 4
+  m_AllowJoining: 1
+  m_JoinBehavior: 1
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1568171817}
+        m_TargetAssemblyTypeName: CharSelectionManager, Assembly-CSharp
+        m_MethodName: AddPlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1568171817}
+        m_TargetAssemblyTypeName: CharSelectionManager, Assembly-CSharp
+        m_MethodName: RemovePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Join
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: bf751b34-98d2-4b56-aeaa-34c6802f2869
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 8f5a434c-4009-4030-a44e-24f72141b2a5
+        m_Path: <Gamepad>/buttonSouth
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: a162acb2-2d82-4497-b9a8-0c54093d8225
+        m_Path: <Keyboard>/space
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: ea5a6960-6121-4a61-9623-249949dd0ebc
+        m_Path: <Mouse>/leftButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 2464980761054802294, guid: 9f35a2fd7e4836f43b518639c82a3f95, type: 3}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!4 &854178319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854178317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 755.84894, y: 396.4558, z: 28.585506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856844552
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,7 +5184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &918072052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5196,7 +5318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3239104135840363672, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3239104135840363672, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5782,13 +5904,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065360902}
+  - component: {fileID: 4977855668443353779}
+  - component: {fileID: 2464980761054802299}
   m_Layer: 5
-  m_Name: Player1
+  m_Name: CharSelectionPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1065360902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5801,7 +5925,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1192406644}
-  - {fileID: 1405964517}
   m_Father: {fileID: 1568171816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6153,7 +6276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1109791797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7541,18 +7664,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405964516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 858663690}
   - {fileID: 1406137126}
-  m_Father: {fileID: 1065360902}
-  m_RootOrder: 1
+  m_Father: {fileID: 1568171816}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405964518
@@ -8675,13 +8798,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1568171816}
+  - component: {fileID: 1568171817}
   m_Layer: 5
   m_Name: CharSelectionMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1568171816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8698,14 +8822,49 @@ RectTransform:
   - {fileID: 1825185961}
   - {fileID: 918072052}
   - {fileID: 1109791797}
+  - {fileID: 1405964517}
   m_Father: {fileID: 1744198848}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568171817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568171815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6427c74e3b813940aa768ffb8b3a20b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInputManager: {fileID: 854178318}
+  mainMenu: {fileID: 1522142288}
+  _startGameText: {fileID: 1109791796}
+  _pressAXToJoinText: {fileID: 1405964516}
+  _managerMainMenu: {fileID: 1744198849}
+  _possibleChar:
+  - fireImage: {fileID: 21300000, guid: 5eadbe21557818e47a3b8d4dad0b3892, type: 3}
+    iceImage: {fileID: 21300000, guid: 4808741a61e103844aee21c0112c9b80, type: 3}
+    poisonImage: {fileID: 21300000, guid: eea5b7a2493da7846b9b9e15bb0937d7, type: 3}
+    elecImage: {fileID: 21300000, guid: 88cfce833af43704ea2347431da27a29, type: 3}
+    fireChar: {fileID: 9122807134000420660, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
+    iceChar: {fileID: 9122807134000420660, guid: 827225269adafc74b9b0fe1dfdc0aea7, type: 3}
+    poisonChar: {fileID: 9122807134000420660, guid: 31431c4822e2b57459ba9aac7a15f38f, type: 3}
+    elecChar: {fileID: 9122807134000420660, guid: b12e114fa7eb6a34f872d581da0b5f2b, type: 3}
+  - fireImage: {fileID: 21300000, guid: aabe095cd1a8c7b45969bac8b21695b2, type: 3}
+    iceImage: {fileID: 21300000, guid: 819eb0d5933cfb545a00b8a4a4c3a896, type: 3}
+    poisonImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    elecImage: {fileID: 21300000, guid: 40d06a72ddebf4e4f8fa2e8221a096aa, type: 3}
+    fireChar: {fileID: 9122807134000420660, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
+    iceChar: {fileID: 9122807134000420660, guid: 827225269adafc74b9b0fe1dfdc0aea7, type: 3}
+    poisonChar: {fileID: 9122807134000420660, guid: 31431c4822e2b57459ba9aac7a15f38f, type: 3}
+    elecChar: {fileID: 9122807134000420660, guid: b12e114fa7eb6a34f872d581da0b5f2b, type: 3}
 --- !u!1 &1576399939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9456,7 +9615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1704635358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9785,9 +9944,9 @@ RectTransform:
   - {fileID: 1536299159}
   - {fileID: 1243021412}
   - {fileID: 1522142289}
-  - {fileID: 139742006}
-  - {fileID: 880261719}
   - {fileID: 1568171816}
+  - {fileID: 880261719}
+  - {fileID: 139742006}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9812,7 +9971,7 @@ MonoBehaviour:
   fadeRef: {fileID: 139742005}
   optionsMenu: {fileID: 880261718}
   charSelectionMenu: {fileID: 1568171815}
-  SceneName: Scene_Build_LD
+  SceneName: Scene_Julien
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}
@@ -10138,7 +10297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1825185961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11300,3 +11459,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130432941}
   m_CullTransparentMesh: 1
+--- !u!114 &2464980761054802299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065360901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 10df57064e4d3a642a589c84d150d4b7, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4977855668443353779}
+        m_TargetAssemblyTypeName: CharSelection, Assembly-CSharp
+        m_MethodName: NextChar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 67eb062b-e269-480b-8903-211133e9b3c0
+    m_ActionName: CharSelection/Next Char[/DualShock4GamepadHID/dpad/down,/DualShock4GamepadHID/leftStick/down,/DualShock4GamepadHID/rightStick/down,/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4977855668443353779}
+        m_TargetAssemblyTypeName: CharSelection, Assembly-CSharp
+        m_MethodName: PreviousChar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e7f9cb4d-d516-46f9-b461-fb6bbac035e3
+    m_ActionName: CharSelection/Previous Char[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/leftStick/up,/DualShock4GamepadHID/rightStick/up,/DualShock4GamepadHID/buttonNorth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: CharSelection
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &4977855668443353779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065360901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8a54c5d950c2244ac5e60a827cc3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _charInfo: {fileID: 0}
+  _image: {fileID: 0}

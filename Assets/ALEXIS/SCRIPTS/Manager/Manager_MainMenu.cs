@@ -109,14 +109,15 @@ public class Manager_MainMenu : MonoBehaviour
         }
 
     }
-    /*public void PlayButton()
+    
+    public void LaunchGame(InputAction.CallbackContext ctx)
     {
         EventSystem.current.SetSelectedGameObject(null);
         animRef.SetBool("QUIT", true);
         fadeRef.SetActive(true);
         animFade.Play("FadeOut_UI_V001");
         StartCoroutine("WaitPlay");
-    }*/
+    }
     
     public void PlayButton()
     {
