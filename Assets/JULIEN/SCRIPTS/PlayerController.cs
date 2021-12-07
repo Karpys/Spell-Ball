@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private bool revive;
     private bool tryRevive;
     private GameObject playerNeedHelp = null;
+    private ParticuleHeal healParticule;
 
 
     void Start()
@@ -109,6 +110,9 @@ public class PlayerController : MonoBehaviour
             
             if(TimeRevive<TimeForRevive)
             {
+                Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
+                if(!playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying)
+                    playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Play();
                 TimeRevive += Time.deltaTime;
             }
             else
@@ -168,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
         if(!tryRevive)
         {
+            playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
             TimeRevive = 0;
         }
     }
@@ -245,10 +250,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(other.gameObject.layer ==7)
+        if(other.gameObject.layer == 7)
         {
             if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            {
                 playerNeedHelp = other.gameObject;
+                healParticule = playerNeedHelp.GetComponentInChildren<ParticuleHeal>();
+            }
+
 
         }
     }
@@ -277,6 +286,7 @@ public class PlayerController : MonoBehaviour
         {
             if(other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
             {
+                playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
                 playerNeedHelp = null;
             }
         }
