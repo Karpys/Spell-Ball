@@ -167,6 +167,36 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Cast_Event" ID="{59F28E1D-A400-4989-8469-D87EDB64ADB9}" ShortID="762936927">
+							<ChildrenList>
+								<Event Name="Play_R_Cast_Red" ID="{5938E673-9727-4B97-A8DF-3068E94C4878}">
+									<ChildrenList>
+										<Action Name="" ID="{5293FB02-1678-4935-A104-F98089E5AB2F}" ShortID="684484895">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Cast_Red" ID="{7553156D-190E-4694-BB45-82110B121CAF}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Bounce_Event" ID="{B859B715-6A5A-43A6-852C-EE49CF90267D}" ShortID="671850157">
+							<ChildrenList>
+								<Event Name="Play_R_Bounce" ID="{D2122179-F3E2-48F6-B93B-36B02B0E24A6}">
+									<ChildrenList>
+										<Action Name="" ID="{8C1F03FC-F6BB-4336-8D67-BBA8B9BAC982}" ShortID="901589751">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Bounce" ID="{B7CCFCC6-E988-4C3C-9367-09841C4CCE5B}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="BOSS" ID="{4FF22271-0935-424A-B2FC-AB1641EC5A93}" ShortID="609762835">

@@ -16,6 +16,8 @@ public class Manager_MainMenu : MonoBehaviour
 
     public string SceneName;
 
+    public bool wFocus = true;
+
     [Header("WHICH ONE IS ACTIVE ?")]
     public int UIIndex;
 
@@ -109,25 +111,35 @@ public class Manager_MainMenu : MonoBehaviour
     }
     public void PlayButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        fadeRef.SetActive(true);
-        animFade.Play("FadeOut_UI_V001");
-        StartCoroutine("WaitPlay");
+        if(wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            fadeRef.SetActive(true);
+            animFade.Play("FadeOut_UI_V001");
+            StartCoroutine("WaitPlay");
+        }
+
     }
 
     public void OptionsButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        StartCoroutine("WaitEndAnim");
-        //launch.gameObject.SetActive(false);
-        //optionsMenu.gameObject.SetActive(true);
+        if (wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            StartCoroutine("WaitEndAnim");
+            //launch.gameObject.SetActive(false);
+            //optionsMenu.gameObject.SetActive(true);
+        }
     }
 
     public void QuitButton()
     {
-        Application.Quit();
+        if (wFocus == false)
+        {
+            Application.Quit();
+        }
     }
 
     #region Coroutine
@@ -158,6 +170,12 @@ public class Manager_MainMenu : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneName);
 
+    }
+
+    IEnumerator WaitFocus()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        wFocus = false;
     }
     #endregion
 }
