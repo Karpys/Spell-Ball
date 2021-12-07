@@ -1421,6 +1421,346 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Projectile_Cast" ID="{E1533A68-1DBB-4CA8-AAA1-F6B173756BA0}" ShortID="1004948304">
+							<ChildrenList>
+								<RandomSequenceContainer Name="R_Cast_Red" ID="{7553156D-190E-4694-BB45-82110B121CAF}" ShortID="738233578">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Projectile_Red_Cast_01" ID="{07E9F479-EB4E-4CB7-8DC2-0A790F504240}" ShortID="498503628">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_01" ID="{C7E81973-B66F-4308-B56E-7FD91EF5B0B4}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="930856629"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_01" ID="{C7E81973-B66F-4308-B56E-7FD91EF5B0B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Red_Cast_02" ID="{A90383D7-A867-447B-AB0E-EE6C4CF37862}" ShortID="408612397">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_02" ID="{9436D63D-D3DF-4AFA-A291-2545B41230DC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="122514911"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_02" ID="{9436D63D-D3DF-4AFA-A291-2545B41230DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Red_Cast_03" ID="{752A6C4F-4B18-41BC-B8C1-A9D63E0EC3BF}" ShortID="701401227">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_03" ID="{8FE8DB15-BD69-4CBE-A45F-BFA2E1206619}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="199315763"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_03" ID="{8FE8DB15-BD69-4CBE-A45F-BFA2E1206619}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Red_Cast_04" ID="{B1058952-81EA-4A69-942A-AEE36913D516}" ShortID="983845534">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_04" ID="{101385D2-94DF-4F5B-BD6C-591818C2AB8A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="398909741"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_04" ID="{101385D2-94DF-4F5B-BD6C-591818C2AB8A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Red_Cast_05" ID="{6C2C7C4A-C9C0-4B61-9063-7205D26A58CE}" ShortID="611805450">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_05" ID="{4ACBE505-DCEE-40E7-B4C7-54FAEDA8946D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="96562229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_05" ID="{4ACBE505-DCEE-40E7-B4C7-54FAEDA8946D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Red_Cast_06" ID="{8DC3CBB6-E856-4379-9202-72C2BA01FECD}" ShortID="29883828">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Red_Cast_06" ID="{14229874-8521-4892-91CD-C74F1D9E6745}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Red_Cast_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="988110816"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Red_Cast_06" ID="{14229874-8521-4892-91CD-C74F1D9E6745}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Projectile_Bounce" ID="{424D0F58-43C8-40A0-A53C-DCF47571E168}" ShortID="822424193">
+							<ChildrenList>
+								<RandomSequenceContainer Name="R_Bounce" ID="{B7CCFCC6-E988-4C3C-9367-09841C4CCE5B}" ShortID="429126879">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_05" ID="{C93E0D82-56C3-47FA-911F-CDC0CC1B1D74}" ShortID="1019078264">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_05" ID="{A2562D8C-A3C2-4186-B348-3002F890591C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="759148666"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_05" ID="{A2562D8C-A3C2-4186-B348-3002F890591C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_02" ID="{36CE1CB2-3481-419D-8C54-B8D720A23E99}" ShortID="550581488">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_02" ID="{A50DDFB4-0CCD-41F7-8341-2399A74BAFE9}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="631138926"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_02" ID="{A50DDFB4-0CCD-41F7-8341-2399A74BAFE9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_07" ID="{DE22B6C8-F568-4F4A-96C9-134D8243536B}" ShortID="422948687">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_07" ID="{F4B9BB48-65A5-4131-B05B-6AE69A21955E}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1065957833"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_07" ID="{F4B9BB48-65A5-4131-B05B-6AE69A21955E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_04" ID="{3383F10A-018F-4AD8-9DCC-2F7D06EBE9F0}" ShortID="589111335">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_04" ID="{5BD4452F-A0A9-49C6-9FBB-54C93081E901}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="241827942"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_04" ID="{5BD4452F-A0A9-49C6-9FBB-54C93081E901}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_06" ID="{E62B4876-8FE6-46A1-8EE8-F39B960548FE}" ShortID="1057311849">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_06" ID="{D33DAA0E-3281-4CB3-9BD3-B62800430252}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1032665794"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_06" ID="{D33DAA0E-3281-4CB3-9BD3-B62800430252}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_01" ID="{68230673-6FFC-45AB-8B09-0763C1531360}" ShortID="167976447">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_01" ID="{408AF7C6-CB35-4F3A-89EA-5D31D91C2F8F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="60567482"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_01" ID="{408AF7C6-CB35-4F3A-89EA-5D31D91C2F8F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Projectile_Bounce_StoneWall_03" ID="{FFD33BA5-310C-4D42-B2BF-729BBCB40A92}" ShortID="41884767">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Projectile_Bounce_StoneWall_03" ID="{36CE1F65-9380-4AB7-8EA3-97AC38752AC4}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Projectile_Bounce_StoneWall_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="785004803"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Projectile_Bounce_StoneWall_03" ID="{36CE1F65-9380-4AB7-8EA3-97AC38752AC4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MINIONS" ID="{9AB7F5B0-6382-41D8-BEB3-82794B5AC5F5}" ShortID="221061721">

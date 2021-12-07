@@ -76,11 +76,13 @@ public class UI_Options_Audio : MonoBehaviour
             volM = PlayerPrefs.GetFloat("volumeMaster");
             masterS.value = volM;
             masterV.text = volM.ToString("0");
+            AkSoundEngine.SetRTPCValue("GP_MASTER", masterS.value);
         }
         else
         {
             masterS.value = 50;
             masterV.text = "50";
+            AkSoundEngine.SetRTPCValue("GP_MASTER", masterS.value);
         }
 
         if (PlayerPrefs.HasKey("volumeVfx"))
@@ -88,11 +90,13 @@ public class UI_Options_Audio : MonoBehaviour
             volV = PlayerPrefs.GetFloat("volumeVfx");
             vfxS.value = volV;
             vfxV.text = volV.ToString("0");
+            AkSoundEngine.SetRTPCValue("GP_SFX", vfxS.value);
         }
         else
         {
             vfxS.value = 50;
             vfxV.text = "50";
+            AkSoundEngine.SetRTPCValue("GP_SFX", vfxS.value);
         }
 
         if (PlayerPrefs.HasKey("volumeMusic"))
@@ -100,11 +104,13 @@ public class UI_Options_Audio : MonoBehaviour
             volMu = PlayerPrefs.GetFloat("volumeMusic");
             musicS.value = volMu;
             musicV.text = volMu.ToString("0");
+            AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         }
         else
         {
             musicS.value = 50;
             musicV.text = "50";
+            AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         }
 
     }
@@ -120,6 +126,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         masterV.text = volume.ToString("0"); 
         PlayerPrefs.SetFloat("volumeMaster", volume);
+        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", masterS.value);
         PlayerPrefs.Save();
     }
 
@@ -128,6 +135,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         vfxV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeVfx", volume);
+        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", vfxS.value);
         PlayerPrefs.Save();
     }
 
@@ -136,6 +144,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         musicV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeMusic", volume);
+        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", musicS.value);
         PlayerPrefs.Save();
     }
 
