@@ -1,18 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	96444927	PlayTest			\Default Work Unit\PlayTest	
-	2510116948	Laser_End			\Default Work Unit\LaserEvent\Laser_End	
-	2735923927	Play_ConstantLaser			\Default Work Unit\LaserEvent\Play_ConstantLaser	
-	2756076025	Laser_Constant			\Default Work Unit\LaserEvent\Laser_Constant	
-	3217810413	Laser_Start_Release			\Default Work Unit\LaserEvent\Laser_Start_Release	
-	3428356050	Laser_Start_Trigger			\Default Work Unit\LaserEvent\Laser_Start_Trigger	
-	4154444698	Laser_Start_Charge			\Default Work Unit\LaserEvent\Laser_Start_Charge	
+	2735923927	Play_ConstantLaser			\Default Work Unit\BOSS\LaserEvent\Play_ConstantLaser	
+	2756076025	Laser_Constant			\Default Work Unit\BOSS\LaserEvent\Laser_Constant	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	120772766	SFX_Boss1_LaserBeam_End	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_End_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\SFX_Boss1_LaserBeam_End		764364
-	216173574	SFX_Boss1_LaserBeam_Start_Charge	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\SFX_Boss1_LaserBeam_Start_Charge		1154692
-	379137550	SFX_Boss1_LaserBeam_Constant_01_LP	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_01_LP		516772
-	468871439	SFX_Boss1_LaserBeam_Constant_LP_03	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_LP_03_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_LP_03		516580
-	523821600	SFX_Boss1_LaserBeam_Start_Trigg	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\SFX_Boss1_LaserBeam_Start_Trigg		378980
-	535052771	SFX_Boss1_LaserBeam_Start_Relase	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\SFX_Boss1_LaserBeam_Start_Relase		735052
-	877675493	SFX_Boss1_LaserBeam_Constant_LP_02	D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_LP_02_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_LP_02		516580
+	379137550	SFX_Boss1_LaserBeam_Constant_01_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_01_LP		516772
+	468871439	SFX_Boss1_LaserBeam_Constant_LP_03	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_LP_03_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_LP_03		516580
+	877675493	SFX_Boss1_LaserBeam_Constant_LP_02	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Constant_LP_02_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\ConstantLaser\SFX_Boss1_LaserBeam_Constant_LP_02		516580
 
