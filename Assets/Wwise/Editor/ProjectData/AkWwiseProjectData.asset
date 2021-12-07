@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585637752391977160
+    m_lastTime: -8585636833032006762
     List:
     - name: Main_Soundbank
       guid: fab70b13a274fe4db35aeed6d90c297f
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585637752407238835
+    m_lastTime: -8585631718643329283
     List:
     - name: Laser_Constant
       guid: b55b8a6ef67e4d4eaf8bf2ae41efb94c
@@ -213,6 +213,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Blue_Power1
+      guid: 513de7eae4ed5c4d92ffaa11ddd4632c
+      id: 3041349285
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Blue_Power1
+        ObjectType: 3
+        guid: 513de7eae4ed5c4d92ffaa11ddd4632c
+      Path: Events\Default Work Unit\Play_Blue_Power1
+      maxAttenuation: 0
+      maxDuration: 1.105465
+      minDuration: 0.891995
+    - name: Play_Blue_Power2
+      guid: 087920265fac0345844f5dcc596fd3a7
+      id: 3041349286
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Blue_Power2
+        ObjectType: 3
+        guid: 087920265fac0345844f5dcc596fd3a7
+      Path: Events\Default Work Unit\Play_Blue_Power2
+      maxAttenuation: 0
+      maxDuration: 2.161429
+      minDuration: 1.982154
+    - name: Play_Blue_Power3
+      guid: 2275955aff649c49900ab71e7cac7c9b
+      id: 3041349287
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Blue_Power3
+        ObjectType: 3
+        guid: 2275955aff649c49900ab71e7cac7c9b
+      Path: Events\Default Work Unit\Play_Blue_Power3
+      maxAttenuation: 0
+      maxDuration: 4.180363
+      minDuration: 3.865215
     - name: Play_ConstantLaser
       guid: 6a7e6dc5cafe1542873d027fac7eacaa
       id: 2735923927
@@ -233,6 +284,159 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Green_Power1
+      guid: 89a5b736daf8744fbd00ccad813d7923
+      id: 723683482
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Green_Power1
+        ObjectType: 3
+        guid: 89a5b736daf8744fbd00ccad813d7923
+      Path: Events\Default Work Unit\Play_Green_Power1
+      maxAttenuation: 0
+      maxDuration: 1.032472
+      minDuration: 0.862993
+    - name: Play_Green_Power2
+      guid: 3a776af8a32003499d2347ec28106a57
+      id: 723683481
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Green_Power2
+        ObjectType: 3
+        guid: 3a776af8a32003499d2347ec28106a57
+      Path: Events\Default Work Unit\Play_Green_Power2
+      maxAttenuation: 0
+      maxDuration: 2.465306
+      minDuration: 2.131156
+    - name: Play_Green_Power3
+      guid: 6bd51f9274722c4fa95ae1a3a2c75b8a
+      id: 723683480
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Green_Power3
+        ObjectType: 3
+        guid: 6bd51f9274722c4fa95ae1a3a2c75b8a
+      Path: Events\Default Work Unit\Play_Green_Power3
+      maxAttenuation: 0
+      maxDuration: 4.457007
+      minDuration: 4.22576
+    - name: Play_Red_Power1
+      guid: 67470446c171fa4785b03460db22ef1d
+      id: 756609446
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Red_Power1
+        ObjectType: 3
+        guid: 67470446c171fa4785b03460db22ef1d
+      Path: Events\Default Work Unit\Play_Red_Power1
+      maxAttenuation: 0
+      maxDuration: 1.195057
+      minDuration: 1.054921
+    - name: Play_Red_Power2
+      guid: b7edb415d7720c4e84d1b3537299cb6b
+      id: 756609445
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Red_Power2
+        ObjectType: 3
+        guid: b7edb415d7720c4e84d1b3537299cb6b
+      Path: Events\Default Work Unit\Play_Red_Power2
+      maxAttenuation: 0
+      maxDuration: 2.434422
+      minDuration: 1.9
+    - name: Play_Red_Power3
+      guid: 84d31bca358d1c49bcc04d8b718de22b
+      id: 756609444
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Red_Power3
+        ObjectType: 3
+        guid: 84d31bca358d1c49bcc04d8b718de22b
+      Path: Events\Default Work Unit\Play_Red_Power3
+      maxAttenuation: 0
+      maxDuration: 4.847642
+      minDuration: 3.85746
+    - name: Play_Yellow_Power1
+      guid: 575b1418073e6c43844460d0fd1f006c
+      id: 200300501
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Yellow_Power1
+        ObjectType: 3
+        guid: 575b1418073e6c43844460d0fd1f006c
+      Path: Events\Default Work Unit\Play_Yellow_Power1
+      maxAttenuation: 0
+      maxDuration: 1.000726
+      minDuration: 0.790408
+    - name: Play_Yellow_Power2
+      guid: ddb44fce36404444a31b5e8f85ba8376
+      id: 200300502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Yellow_Power2
+        ObjectType: 3
+        guid: ddb44fce36404444a31b5e8f85ba8376
+      Path: Events\Default Work Unit\Play_Yellow_Power2
+      maxAttenuation: 0
+      maxDuration: 2.37771
+      minDuration: 2.108118
+    - name: Play_Yellow_Power3
+      guid: 590cc6fe1fb01c438341755ad7bb5b57
+      id: 200300503
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: Play_Yellow_Power3
+        ObjectType: 3
+        guid: 590cc6fe1fb01c438341755ad7bb5b57
+      Path: Events\Default Work Unit\Play_Yellow_Power3
+      maxAttenuation: 0
+      maxDuration: 4.555442
+      minDuration: 4.198866
     - name: PlayTest
       guid: 209c1756f1fee14ea12d09f863771a1b
       id: 96444927
@@ -307,7 +511,7 @@ MonoBehaviour:
     m_lastTime: -8585680951587514102
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000080000000c0000000d00000018000000
+  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
