@@ -31,7 +31,7 @@
 				<GameParameter Id="2681064004" Name="GP_SFX" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_SFX"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1454594208" Language="SFX" Hash="2859078629">
+		<SoundBank Id="1454594208" Language="SFX" Hash="3286121168">
 			<ObjectPath>\SoundBanks\Default Work Unit\BALL\S_Ball</ObjectPath>
 			<ShortName>S_Ball</ShortName>
 			<Path>S_Ball.bnk</Path>
@@ -157,6 +157,34 @@
 						<File Id="1019208584" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Green_01.wav</ShortName>
 							<Path>SFX\SFX_Player_Infuse_Level3_Green_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3571159426" Name="Play_R_Cast_Red" ObjectPath="\Events\Default Work Unit\BALL\Cast_Event\Play_R_Cast_Red" DurationType="OneShot" DurationMin="0.494632" DurationMax="0.853609">
+					<IncludedMemoryFiles>
+						<File Id="96562229" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_05.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_05_10C4C929.wem</Path>
+						</File>
+						<File Id="122514911" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_02.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_02_10C4C929.wem</Path>
+						</File>
+						<File Id="199315763" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_03.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_03_10C4C929.wem</Path>
+						</File>
+						<File Id="398909741" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_04.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_04_10C4C929.wem</Path>
+						</File>
+						<File Id="930856629" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_01.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_01_10C4C929.wem</Path>
+						</File>
+						<File Id="988110816" Language="SFX">
+							<ShortName>SFX_Projectile_Red_Cast_06.wav</ShortName>
+							<Path>SFX\SFX_Projectile_Red_Cast_06_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
