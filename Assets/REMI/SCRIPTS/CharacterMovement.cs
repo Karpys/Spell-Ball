@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 MovementInput;
     [HideInInspector] public Vector2 MovementDir;
     public Animator Anim;
+    private Manager_Life life;
 
     public bool ShowInspector;
 
@@ -23,14 +24,19 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
+        life = gameObject.GetComponent<Manager_Life>();
         _controller = GetComponent<CharacterController>();
     }
     // Update is called once per frame
     void Update()
     {
-        Move();
-        RollController();
-        MovementDir = MovementInput;
+        if(life.GetCurentLife() > 0)
+        {
+            Move();
+            RollController();
+            MovementDir = MovementInput;
+        }
+
 
     }
 

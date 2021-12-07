@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Games\AA_Unity Create\Platinium_Project\Platinium_Project_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+		<SoundBank Id="51703143" Language="SFX" Hash="1004791922">
+			<ObjectPath>\SoundBanks\Default Work Unit\CHARACTER\S_Characters</ObjectPath>
+			<ShortName>S_Characters</ShortName>
+			<Path>S_Characters.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="714890364" Language="SFX" Hash="3745746352">
+			<ObjectPath>\SoundBanks\Default Work Unit\MINIONS\S_Minions</ObjectPath>
+			<ShortName>S_Minions</ShortName>
+			<Path>S_Minions.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3014359197">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="687458188" Name="GP_MUSIC" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MUSIC"/>
+				<GameParameter Id="2359434321" Name="GP_MASTER" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MASTER"/>
+				<GameParameter Id="2681064004" Name="GP_SFX" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_SFX"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1072940925">
-			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
-			<ShortName>Main_Soundbank</ShortName>
-			<Path>Main_Soundbank.bnk</Path>
+		<SoundBank Id="1454594208" Language="SFX" Hash="2859078629">
+			<ObjectPath>\SoundBanks\Default Work Unit\BALL\S_Ball</ObjectPath>
+			<ShortName>S_Ball</ShortName>
+			<Path>S_Ball.bnk</Path>
 			<IncludedEvents>
-				<Event Id="577874077" Name="Hit_Event" ObjectPath="\Events\Default Work Unit\Ball_Event\Hit_Event" DurationType="OneShot" DurationMin="0.882083" DurationMax="1.524542">
+				<Event Id="577874077" Name="Hit_Event" ObjectPath="\Events\Default Work Unit\BALL\Hit_Event" DurationType="OneShot" DurationMin="0.882083" DurationMax="1.524542">
 					<IncludedMemoryFiles>
 						<File Id="214378428" Language="SFX">
 							<ShortName>SFX_Projectile_Basic_Cast_05.wav</ShortName>
@@ -49,47 +64,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2756076025" Name="Laser_Constant" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Constant" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="379137550" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2510116948" Name="Laser_End" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_End" DurationType="OneShot" DurationMin="3.980729" DurationMax="3.980729">
-					<IncludedMemoryFiles>
-						<File Id="120772766" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_End.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_End_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="4154444698" Name="Laser_Start_Charge" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Charge" DurationType="OneShot" DurationMin="6.013688" DurationMax="6.013688">
-					<IncludedMemoryFiles>
-						<File Id="216173574" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Start_Charge.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Start_Charge_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3217810413" Name="Laser_Start_Release" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Release" DurationType="OneShot" DurationMin="3.828063" DurationMax="3.828063">
-					<IncludedMemoryFiles>
-						<File Id="535052771" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Start_Relase.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3428356050" Name="Laser_Start_Trigger" ObjectPath="\Events\Default Work Unit\LaserEvent\Laser_Start_Trigger" DurationType="OneShot" DurationMin="1.973521" DurationMax="1.973521">
-					<IncludedMemoryFiles>
-						<File Id="523821600" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Start_Trigg.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3041349285" Name="Play_Blue_Power1" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Blue_Power1" DurationType="OneShot" DurationMin="0.891995" DurationMax="1.105465">
+				<Event Id="3041349285" Name="Play_Blue_Power1" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power1" DurationType="OneShot" DurationMin="0.891995" DurationMax="1.105465">
 					<IncludedMemoryFiles>
 						<File Id="67397931" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level1_Blue_03.wav</ShortName>
@@ -105,7 +80,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3041349286" Name="Play_Blue_Power2" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Blue_Power2" DurationType="OneShot" DurationMin="1.982154" DurationMax="2.161429">
+				<Event Id="3041349286" Name="Play_Blue_Power2" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power2" DurationType="OneShot" DurationMin="1.982154" DurationMax="2.161429">
 					<IncludedMemoryFiles>
 						<File Id="195673107" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level2_Blue_03.wav</ShortName>
@@ -121,7 +96,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3041349287" Name="Play_Blue_Power3" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Blue_Power3" DurationType="OneShot" DurationMin="3.865215" DurationMax="4.180363">
+				<Event Id="3041349287" Name="Play_Blue_Power3" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Blue_Power3" DurationType="OneShot" DurationMin="3.865215" DurationMax="4.180363">
 					<IncludedMemoryFiles>
 						<File Id="8276890" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Blue_03.wav</ShortName>
@@ -137,23 +112,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2735923927" Name="Play_ConstantLaser" ObjectPath="\Events\Default Work Unit\LaserEvent\Play_ConstantLaser" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="379137550" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
-						</File>
-						<File Id="468871439" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_03.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_03_D79FB2B7.wem</Path>
-						</File>
-						<File Id="877675493" Language="SFX">
-							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_02.wav</ShortName>
-							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_02_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="723683482" Name="Play_Green_Power1" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Green_Power1" DurationType="OneShot" DurationMin="0.862993" DurationMax="1.032472">
+				<Event Id="723683482" Name="Play_Green_Power1" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power1" DurationType="OneShot" DurationMin="0.862993" DurationMax="1.032472">
 					<IncludedMemoryFiles>
 						<File Id="126689188" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level1_Green_03.wav</ShortName>
@@ -169,7 +128,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="723683481" Name="Play_Green_Power2" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Green_Power2" DurationType="OneShot" DurationMin="2.131156" DurationMax="2.465306">
+				<Event Id="723683481" Name="Play_Green_Power2" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power2" DurationType="OneShot" DurationMin="2.131156" DurationMax="2.465306">
 					<IncludedMemoryFiles>
 						<File Id="42949040" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level2_Green_03.wav</ShortName>
@@ -185,7 +144,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="723683480" Name="Play_Green_Power3" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Green_Power3" DurationType="OneShot" DurationMin="4.225760" DurationMax="4.457007">
+				<Event Id="723683480" Name="Play_Green_Power3" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Green_Power3" DurationType="OneShot" DurationMin="4.225760" DurationMax="4.457007">
 					<IncludedMemoryFiles>
 						<File Id="151195994" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Green_03.wav</ShortName>
@@ -201,7 +160,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="756609446" Name="Play_Red_Power1" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Red_Power1" DurationType="OneShot" DurationMin="1.054921" DurationMax="1.195057">
+				<Event Id="756609446" Name="Play_Red_Power1" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power1" DurationType="OneShot" DurationMin="1.054921" DurationMax="1.195057">
 					<IncludedMemoryFiles>
 						<File Id="388083529" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level1_Red_02.wav</ShortName>
@@ -217,7 +176,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="756609445" Name="Play_Red_Power2" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Red_Power2" DurationType="OneShot" DurationMin="1.900000" DurationMax="2.434422">
+				<Event Id="756609445" Name="Play_Red_Power2" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power2" DurationType="OneShot" DurationMin="1.900000" DurationMax="2.434422">
 					<IncludedMemoryFiles>
 						<File Id="72328466" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level2_Red_02.wav</ShortName>
@@ -233,7 +192,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="756609444" Name="Play_Red_Power3" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Red_Power3" DurationType="OneShot" DurationMin="3.857460" DurationMax="4.847642">
+				<Event Id="756609444" Name="Play_Red_Power3" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Red_Power3" DurationType="OneShot" DurationMin="3.857460" DurationMax="4.847642">
 					<IncludedMemoryFiles>
 						<File Id="100047870" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Red_02.wav</ShortName>
@@ -249,7 +208,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="200300501" Name="Play_Yellow_Power1" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Yellow_Power1" DurationType="OneShot" DurationMin="0.790408" DurationMax="1.000726">
+				<Event Id="200300501" Name="Play_Yellow_Power1" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power1" DurationType="OneShot" DurationMin="0.790408" DurationMax="1.000726">
 					<IncludedMemoryFiles>
 						<File Id="136931270" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level1_Orange_03.wav</ShortName>
@@ -265,7 +224,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="200300502" Name="Play_Yellow_Power2" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Yellow_Power2" DurationType="OneShot" DurationMin="2.108118" DurationMax="2.377710">
+				<Event Id="200300502" Name="Play_Yellow_Power2" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power2" DurationType="OneShot" DurationMin="2.108118" DurationMax="2.377710">
 					<IncludedMemoryFiles>
 						<File Id="119949162" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level2_Orange_03.wav</ShortName>
@@ -281,7 +240,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="200300503" Name="Play_Yellow_Power3" ObjectPath="\Events\Default Work Unit\Infuse_Event\Play_Yellow_Power3" DurationType="OneShot" DurationMin="4.198866" DurationMax="4.555442">
+				<Event Id="200300503" Name="Play_Yellow_Power3" ObjectPath="\Events\Default Work Unit\BALL\Infuse_Event\Play_Yellow_Power3" DurationType="OneShot" DurationMin="4.198866" DurationMax="4.555442">
 					<IncludedMemoryFiles>
 						<File Id="629430903" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Orange_03.wav</ShortName>
@@ -294,6 +253,76 @@
 						<File Id="824024751" Language="SFX">
 							<ShortName>SFX_Player_Infuse_Level3_Orange_01.wav</ShortName>
 							<Path>SFX\SFX_Player_Infuse_Level3_Orange_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1571743440" Language="SFX" Hash="389091922">
+			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
+			<ShortName>S_Boss</ShortName>
+			<Path>S_Boss.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2510116948" Name="Laser_End" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Laser_End" DurationType="OneShot" DurationMin="3.980729" DurationMax="3.980729">
+					<IncludedMemoryFiles>
+						<File Id="120772766" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_End.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_End_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4154444698" Name="Laser_Start_Charge" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Charge" DurationType="OneShot" DurationMin="6.013688" DurationMax="6.013688">
+					<IncludedMemoryFiles>
+						<File Id="216173574" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Charge.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Charge_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3217810413" Name="Laser_Start_Release" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Release" DurationType="OneShot" DurationMin="3.828063" DurationMax="3.828063">
+					<IncludedMemoryFiles>
+						<File Id="535052771" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Relase.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3428356050" Name="Laser_Start_Trigger" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Laser_Start_Trigger" DurationType="OneShot" DurationMin="1.973521" DurationMax="1.973521">
+					<IncludedMemoryFiles>
+						<File Id="523821600" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Start_Trigg.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="2228651116" Language="SFX" Hash="1709629592">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
+			<ShortName>Main_Soundbank</ShortName>
+			<Path>Main_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2756076025" Name="Laser_Constant" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Laser_Constant" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2735923927" Name="Play_ConstantLaser" ObjectPath="\Events\Default Work Unit\BOSS\LaserEvent\Play_ConstantLaser" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="379137550" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_01_LP.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_01_LP_D79FB2B7.wem</Path>
+						</File>
+						<File Id="468871439" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_03.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="877675493" Language="SFX">
+							<ShortName>SFX_Boss1_LaserBeam_Constant_LP_02.wav</ShortName>
+							<Path>SFX\SFX_Boss1_LaserBeam_Constant_LP_02_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

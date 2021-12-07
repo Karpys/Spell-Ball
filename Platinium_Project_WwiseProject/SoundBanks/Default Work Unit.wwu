@@ -5,14 +5,76 @@
 			<ChildrenList>
 				<SoundBank Name="Main_Soundbank" ID="{130BB7FA-74A2-4DFE-B35A-EED6D90C297F}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Infuse_Event" ID="{92F5E8B8-D977-4811-89BA-40268A1BD011}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="LaserEvent" ID="{096F42FD-D05D-487B-846D-125A02F8F606}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Ball_Event" ID="{46F9BBB0-9EEC-4CC5-9680-DFF4E19DF525}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ConstantLaser" ID="{C56D7E6A-FECA-4215-873D-027FAC7EACAA}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Laser_Constant" ID="{6E8A5BB5-7EF6-4E4D-AF8B-F2AE41EFB94C}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlayTest" ID="{56179C20-FEF1-4EE1-A12D-09F863771A1B}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<Folder Name="BOSS" ID="{67871E04-B135-4797-B15A-275C91ADCEC3}" ShortID="716839189">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_Boss" ID="{154ADA97-83DA-4D8A-9FCB-D885D64BC6D8}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Laser_End" ID="{0FAAB09F-FC9D-48DA-9709-BD557E5E0EAA}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Laser_Start_Trigger" ID="{9742BD1B-B56C-49F0-B058-4615294CA6B0}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Laser_Start_Charge" ID="{DF9F9DED-2ED8-4BCB-AB1C-275089CBEC9E}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Laser_Start_Release" ID="{EA8E1A99-2C63-4F74-9E84-A6AA68E70EFB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="CHARACTER" ID="{18C12F72-1FD7-49DD-A9CE-E24C1E1E9D66}" ShortID="238097492">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_Characters" ID="{08F1D5C1-2CE4-46C3-8ECB-1D3A0844E1DF}">
+							<ObjectInclusionList>
+								<ObjectRef Name="CHARACTER" ID="{D648C343-219D-4FB0-8A3B-11DD2B1B35D2}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MINIONS" ID="{1B6DFDAA-FF53-4CF2-BE0E-6B77783A9C5B}" ShortID="765141112">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_Minions" ID="{8BA16B0C-30F9-4A89-9CF9-809270D98BEE}">
+							<ObjectInclusionList>
+								<ObjectRef Name="MINIONS" ID="{60F40BAE-34A0-4971-A7D7-E30BE4E6EDEB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BALL" ID="{5B1F505C-9A29-4BBD-9735-17733BAE8140}" ShortID="418354901">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="22"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_Ball" ID="{FD2C1806-36F4-435A-9EAB-506ACE100085}">
+							<ObjectInclusionList>
+								<ObjectRef Name="BALL" ID="{15C028AF-07BA-408A-ACC1-5DA43C5D0F5A}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
