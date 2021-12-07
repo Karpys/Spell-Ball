@@ -352,7 +352,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585627993403211566
+    m_lastTime: -8585627371854339933
     List:
     - name: BALL
       guid: af28c015ba078a40acc15da43c5d0f5a
@@ -385,6 +385,46 @@ MonoBehaviour:
         ObjectType: 4
         guid: 7122f24f35094a42b2fcab1641ec5a93
       Path: Events\Default Work Unit\BOSS
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bounce_Event
+      guid: 15b759b85a6aa643852cee49cf90267d
+      id: 2466133888
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Bounce_Event
+        ObjectType: 4
+        guid: 15b759b85a6aa643852cee49cf90267d
+      Path: Events\Default Work Unit\BALL\Bounce_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Cast_Event
+      guid: 1d8ef25900a489498469d87edb64adb9
+      id: 3680149789
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Cast_Event
+        ObjectType: 4
+        guid: 1d8ef25900a489498469d87edb64adb9
+      Path: Events\Default Work Unit\BALL\Cast_Event
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -758,6 +798,52 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 4.457007
       minDuration: 4.22576
+    - name: Play_R_Bounce
+      guid: 792112d2e2f3f648b93b36b02b0e24a6
+      id: 4267311131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Bounce_Event
+        ObjectType: 4
+        guid: 15b759b85a6aa643852cee49cf90267d
+      - ElementName: Play_R_Bounce
+        ObjectType: 3
+        guid: 792112d2e2f3f648b93b36b02b0e24a6
+      Path: Events\Default Work Unit\BALL\Bounce_Event\Play_R_Bounce
+      maxAttenuation: 0
+      maxDuration: 0.915417
+      minDuration: 0.533583
+    - name: Play_R_Cast_Red
+      guid: 73e638592797974ba8df3068e94c4878
+      id: 3571159426
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BALL
+        ObjectType: 4
+        guid: af28c015ba078a40acc15da43c5d0f5a
+      - ElementName: Cast_Event
+        ObjectType: 4
+        guid: 1d8ef25900a489498469d87edb64adb9
+      - ElementName: Play_R_Cast_Red
+        ObjectType: 3
+        guid: 73e638592797974ba8df3068e94c4878
+      Path: Events\Default Work Unit\BALL\Cast_Event\Play_R_Cast_Red
+      maxAttenuation: 0
+      maxDuration: 0.853609
+      minDuration: 0.494632
     - name: Play_Red_Power1
       guid: 67470446c171fa4785b03460db22ef1d
       id: 756609446
@@ -1035,7 +1121,7 @@ MonoBehaviour:
     m_lastTime: -8585685319327987055
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0b0000000c0000000d000000b4020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
