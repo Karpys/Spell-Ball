@@ -22,6 +22,7 @@ public class CharSelection : MonoBehaviour
     {
         _playerInput = GetComponent<PlayerInput>();
     }
+    
 
     private void Start()
     {

@@ -27,6 +27,7 @@ public class BossBehavior : MonoBehaviour
     public GameObject ShieldHolder;
     //
     public Manager_Life Life;
+    //public BossHeadRotation HeadRotation;
     private static BossBehavior inst;
     public static BossBehavior Boss { get => inst; }
     void Awake()
@@ -36,6 +37,7 @@ public class BossBehavior : MonoBehaviour
 
         inst = this;
         Life = GetComponent<Manager_Life>();
+        //HeadRotation = GetComponent<BossHeadRotation>();
     }
 
     public void Start()
@@ -149,6 +151,7 @@ public class BossBehavior : MonoBehaviour
         public BOSSMOVEMENT MovementBoss = BOSSMOVEMENT.UPDOWN;
         public int HpToSet;
         public bool RandomAction;
+        public int HeadToActivate;
     }
 }
 

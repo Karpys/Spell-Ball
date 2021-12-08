@@ -195,5 +195,5 @@ MonoBehaviour:
   Line: {fileID: 7016873727855902364}
   Layer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3063
   Laserstate: 0
