@@ -29,6 +29,8 @@ public class BossBehavior : MonoBehaviour
     public Manager_Life Life;
     //public BossHeadRotation HeadRotation;
     private static BossBehavior inst;
+
+    private Boss_Music_Manager MusicManager;
     public static BossBehavior Boss { get => inst; }
     void Awake()
     {
@@ -37,6 +39,7 @@ public class BossBehavior : MonoBehaviour
 
         inst = this;
         Life = GetComponent<Manager_Life>();
+        MusicManager = GetComponent<Boss_Music_Manager>();
         //HeadRotation = GetComponent<BossHeadRotation>();
     }
 
@@ -93,6 +96,9 @@ public class BossBehavior : MonoBehaviour
                 ListActualAction[ActualAction].Deactivate();
             }
 
+
+
+
             //LAST PHASE
 
             if (ActualPhase >= Phases.Count - 1)
@@ -107,6 +113,10 @@ public class BossBehavior : MonoBehaviour
 
             ActualAction = 0;
             ActualPhase += 1;
+
+            //
+
+            MusicManager.LaunchLayer(ActualPhase);
 
             //TRANSITION VERS PROCHAINE PHASE PAS CALL LAUNCH PHASE TT DE SUITE//
             LaunchPhase(ActualPhase);

@@ -97,7 +97,7 @@ public class Ball : MonoBehaviour
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
                 managerLife.Damage(balle);
-                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
+                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);
 
                 
             }
