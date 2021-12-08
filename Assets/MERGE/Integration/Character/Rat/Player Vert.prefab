@@ -7377,7 +7377,7 @@ MonoBehaviour:
     RollCdSet: 0
     RollDuration: -0.20827098
     RollDurationSet: 0.5
-    RollSpeed: 17
+    RollSpeed: 13
     HasReset: 1
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
