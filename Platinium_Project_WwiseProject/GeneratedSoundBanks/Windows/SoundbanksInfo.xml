@@ -16,7 +16,7 @@
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1200485816" Language="SFX" Hash="112287921">
+		<SoundBank Id="1200485816" Language="SFX" Hash="2353219606">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
 			<ShortName>S_MUSIC</ShortName>
 			<Path>S_MUSIC.bnk</Path>
