@@ -44,7 +44,7 @@ public class Balle : MonoBehaviour
 
         if (EnnemyBalle)
         {
-            ColorBallResetEnnemy();
+            /*ColorBallResetEnnemy();*/
         }
         else
         {

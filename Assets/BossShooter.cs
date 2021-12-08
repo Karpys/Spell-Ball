@@ -15,6 +15,7 @@ public class BossShooter : BossAction
     {
         DeadShooter= 0;
         NbrShooter = Instantier.BallThrower.Count;
+        //BossBehavior.Boss.HeadRotation.SetTargetRotation(0);
         base.Activate();
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
         Instantier.InstAllBallThrower(this);

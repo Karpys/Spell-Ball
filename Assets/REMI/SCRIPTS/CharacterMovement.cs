@@ -13,6 +13,7 @@ public class CharacterMovement : MonoBehaviour
     [HideInInspector] public Vector2 MovementDir;
     public Animator Anim;
     private Manager_Life life;
+    [SerializeField]private SphereCollider playerCollider;
 
     public bool ShowInspector;
 
@@ -24,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
+        playerCollider = GetComponent<SphereCollider>();
         life = gameObject.GetComponent<Manager_Life>();
         _controller = GetComponent<CharacterController>();
     }
@@ -86,7 +88,7 @@ public class CharacterMovement : MonoBehaviour
             Roll_Manager.RollDuration -= Time.deltaTime;
         }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
         {
-            
+            playerCollider.enabled = true;
             Roll_Manager.HasReset = true;
             Stats.CanMove = true;
         }
@@ -96,6 +98,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if(Roll && Roll_Manager.CanRoll)
         {
+            playerCollider.enabled = false;
             Anim.Play("Roll");
             RotatePlayerMovement(MovementDir);
             Roll_Manager.RollCd = Roll_Manager.RollCdSet;
