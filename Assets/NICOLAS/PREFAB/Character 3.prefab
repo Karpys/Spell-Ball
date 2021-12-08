@@ -274,6 +274,8 @@ MonoBehaviour:
   grabDelay: 0.5
   balleLayer: 6
   playerColor: 2
+  _animator: {fileID: 0}
+  ColorInfuse: {r: 0, g: 0, b: 0, a: 0}
   SetDirectionAtEndFreezeFrame: 1
   balle: {fileID: 0}
   CharacterVisual: {fileID: 3647601897157221643}
@@ -281,6 +283,7 @@ MonoBehaviour:
   EjectedBalls: []
   ManagePlayer: {fileID: 0}
   particleSystem: {fileID: 8940393636688401797}
+  TimeForRevive: 5
   SlowDownEffect: {fileID: 2423710728492747385, guid: cb0234fcf963e9641867b4693a3e13e7, type: 3}
 --- !u!135 &6814306572784978888
 SphereCollider:
@@ -307,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9935108813fbc7a4c939684ff185499a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 4
   currentLife: 0
   autoRegenAmount: 0
   autoRegenTimer: 5
