@@ -45,21 +45,6 @@
 						</SoundBank>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="MINIONS" ID="{1B6DFDAA-FF53-4CF2-BE0E-6B77783A9C5B}" ShortID="765141112">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="24"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<SoundBank Name="S_Minions" ID="{8BA16B0C-30F9-4A89-9CF9-809270D98BEE}">
-							<ObjectInclusionList>
-								<ObjectRef Name="MINIONS" ID="{60F40BAE-34A0-4971-A7D7-E30BE4E6EDEB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
-							</ObjectInclusionList>
-							<ObjectExclusionList/>
-							<GameSyncExclusionList/>
-						</SoundBank>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="BALL" ID="{5B1F505C-9A29-4BBD-9735-17733BAE8140}" ShortID="418354901">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="22"/>
@@ -69,6 +54,23 @@
 						<SoundBank Name="S_Ball" ID="{FD2C1806-36F4-435A-9EAB-506ACE100085}">
 							<ObjectInclusionList>
 								<ObjectRef Name="BALL" ID="{15C028AF-07BA-408A-ACC1-5DA43C5D0F5A}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MUSICS" ID="{23DD273B-C2CB-4062-84A1-3B2AB5277AD6}" ShortID="149126572">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_MUSIC" ID="{374745E2-1D1A-408D-92F0-02672A794AA5}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Play_M_BOSS_Layer" ID="{35C65BEC-1B17-45AE-B7C9-A2495A3C93A8}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_M_Menu_Theme" ID="{DAFEF9AA-D2BF-488D-952D-A5D71A93A749}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="MUSIC" ID="{29C115E4-7D97-4B65-9909-32A265F7CB85}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>
 							<GameSyncExclusionList/>
