@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: -0.8098746, z: -0, w: 0.58660305}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -780,7 +780,7 @@ Transform:
   - {fileID: 8489681586899406907}
   - {fileID: 2785953460734911503}
   m_Father: {fileID: 8489681587427790222}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4817139692052885286
 Animator:
@@ -1460,7 +1460,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 8489681587427790222}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5965854731530491476
 ParticleSystem:
@@ -6264,7 +6264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8489681587427790222}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &7569347202250341343
 Light:
@@ -6635,6 +6635,51 @@ Transform:
   m_Father: {fileID: 1746928244187711021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7216360530622857807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5341220796027603195}
+  - component: {fileID: 7218780054527777930}
+  m_Layer: 10
+  m_Name: Player_Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5341220796027603195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216360530622857807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8489681587427790222}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7218780054527777930
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216360530622857807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 6.014177
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.507088, z: 0}
 --- !u!1 &7410732243680901714
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,6 +7102,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
+  - {fileID: 5341220796027603195}
   - {fileID: 6306327656404248958}
   - {fileID: 5651070487172818272}
   - {fileID: 8310292742107806065}
@@ -7072,7 +7118,7 @@ SphereCollider:
   m_GameObject: {fileID: 9122807134000420660}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
@@ -7120,10 +7166,23 @@ MonoBehaviour:
       m_Calls: []
   OnDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148916143358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ShakePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
+  Timerinvis: 0
 --- !u!114 &919132148916143358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7348,19 +7407,20 @@ MonoBehaviour:
   Stats:
     Speed: 8
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.2688853
+    RollCd: 0
     RollCdSet: 0
-    RollDuration: -0.16666669
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 17
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}
   Anim: {fileID: 4817139692052885286}
+  playerCollider: {fileID: 919132148916143357}
   ShowInspector: 1
 --- !u!114 &-665358926089597103
 MonoBehaviour:
@@ -7486,14 +7546,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6121061463467310174, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2785953460734911503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
-  m_PrefabInstance: {fileID: 8240409814443939932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &2785953460734911488 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
+  m_PrefabInstance: {fileID: 8240409814443939932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2785953460734911503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8240409815053842384

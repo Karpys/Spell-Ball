@@ -105,16 +105,23 @@ public class Ball : MonoBehaviour
 
         }
 
-        
 
-            /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+
+        if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        {
+            /*Reflect(hit.normal);*/
+            /*ResetSpeedAndCombo();*/
+            
+            Manager_Life Life = hit.collider.gameObject.GetComponentInParent<Manager_Life>();
+            if (Life.Timerinvis <= 0)
             {
-
-                Reflect(hit.normal);
-                ResetSpeedAndCombo();
                 //DAMAGE PLAYER//
-            }*/
-            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+                Balle balle = GetComponent<Balle>();
+                Life.DamageHealth(1);
+                Destroy(gameObject);
+            }
+        }
+        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 

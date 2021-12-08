@@ -335,6 +335,13 @@ public class PlayerController : MonoBehaviour
         return playerColor;
     }
 
+
+    public void ShakePlayer()
+    {
+        ShakerEntity entity = CharacterVisual.AddComponent<ShakerEntity>();
+        entity.SetShakeParameters(0.25f,0.5f,15f,new Vector3(1,0,1));
+    }
+
     /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
     {
         if (!buttonPressed) return;
