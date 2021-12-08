@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     private bool tryRevive;
     private GameObject playerNeedHelp = null;
 
+    private int gampad;
+    private float timeHaptique = 2;
+
 
     void Start()
     {
@@ -104,14 +107,25 @@ public class PlayerController : MonoBehaviour
             _timer = 0;
         }
 
+
         if(tryRevive)
         {
-            
-            if(TimeRevive<TimeForRevive)
+            Debug.Log(playerNeedHelp.GetComponent<PlayerController>().playerColor);
+            if (TimeRevive<TimeForRevive)
             {
+                if (timeHaptique > 1)
+                {
+                    ControllerHaptics.instance.ShakeController(gampad, .3f, .4f, .5f);
+                    timeHaptique = 0;
+                }
+                else
+                    timeHaptique += Time.deltaTime;
+                    
+
                 Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
                 if(!playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying)
                     playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Play();
+
                 TimeRevive += Time.deltaTime;
             }
             else
@@ -121,7 +135,8 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("it is alive");
             }
         }
-
+        
+        
     }
 
     void OnGUI()
@@ -167,9 +182,9 @@ public class PlayerController : MonoBehaviour
         if (playerNeedHelp == null) return;
         //Debug.Log("je suis en cours ");
         tryRevive = buttonPressed;
-        //Debug.Log(tryRevive);
+        gampad = ctx.control.device.deviceId;
 
-        if(!tryRevive)
+        if (!tryRevive)
         {
             playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
             TimeRevive = 0;
@@ -265,7 +280,7 @@ public class PlayerController : MonoBehaviour
 
         if(other.gameObject.layer == 7)
         {
-            if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0)
             {
                 playerNeedHelp = other.gameObject;
             }
@@ -296,7 +311,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.layer == 7)
         {
-            if(other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            if(other.gameObject == playerNeedHelp )
             {
                 playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
                 playerNeedHelp = null;
