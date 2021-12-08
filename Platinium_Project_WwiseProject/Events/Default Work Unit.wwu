@@ -311,6 +311,34 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_M_BOSS_Layer" ID="{751C1D5A-EA13-4A2B-9811-3B16184A9DDB}">
+							<ChildrenList>
+								<Action Name="" ID="{F85C4C6E-9560-424F-BAD2-DFE3D38053DD}" ShortID="563200014">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="M_BOSS_Layer" ID="{F5CF4963-8336-483E-ABC9-B5549A13A2B8}" WorkUnitID="{7582916E-B043-4BB4-A58B-40F526E3B549}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_M_Menu_Theme" ID="{BCE4DF0A-5695-4DE4-BF67-255302871BDB}">
+							<ChildrenList>
+								<Action Name="" ID="{3B3BC0DB-33CB-4B14-9EA0-D00D22DE4990}" ShortID="484578436">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="M_Menu_Theme" ID="{EFC4DF18-46C3-4AAC-A046-497431CA00EE}" WorkUnitID="{7582916E-B043-4BB4-A58B-40F526E3B549}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

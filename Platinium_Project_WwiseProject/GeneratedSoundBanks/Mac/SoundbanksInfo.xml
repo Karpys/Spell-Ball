@@ -16,7 +16,7 @@
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1200485816" Language="SFX" Hash="2283989297">
+		<SoundBank Id="1200485816" Language="SFX" Hash="112287921">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
 			<ShortName>S_MUSIC</ShortName>
 			<Path>S_MUSIC.bnk</Path>
@@ -45,6 +45,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="881957325" Name="Stop_M_BOSS_Layer" ObjectPath="\Events\Default Work Unit\MUSIC\Stop_M_BOSS_Layer" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1462762607" Name="Stop_M_Menu_Theme" ObjectPath="\Events\Default Work Unit\MUSIC\Stop_M_Menu_Theme" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="527303732" Name="GP_M_Layer2" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_Layer2"/>

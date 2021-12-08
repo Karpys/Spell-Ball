@@ -37,6 +37,8 @@ namespace AK
         static const AkUniqueID PLAY_YELLOW_POWER2 = 200300502U;
         static const AkUniqueID PLAY_YELLOW_POWER3 = 200300503U;
         static const AkUniqueID PLAYTEST = 96444927U;
+        static const AkUniqueID STOP_M_BOSS_LAYER = 881957325U;
+        static const AkUniqueID STOP_M_MENU_THEME = 1462762607U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

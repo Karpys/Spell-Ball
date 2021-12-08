@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	135329723	Play_M_BOSS_Layer			\Default Work Unit\MUSIC\Play_M_BOSS_Layer	
+	881957325	Stop_M_BOSS_Layer			\Default Work Unit\MUSIC\Stop_M_BOSS_Layer	
 	1195915301	Play_M_Menu_Theme			\Default Work Unit\MUSIC\Play_M_Menu_Theme	
+	1462762607	Stop_M_Menu_Theme			\Default Work Unit\MUSIC\Stop_M_Menu_Theme	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	527303732	GP_M_Layer2			\Default Work Unit\MUSIC\GP_M_Layer2	

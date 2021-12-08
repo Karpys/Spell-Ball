@@ -126,7 +126,8 @@ public class UI_Options_Audio : MonoBehaviour
 
         masterV.text = volume.ToString("0"); 
         PlayerPrefs.SetFloat("volumeMaster", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", masterS.value);
+        AkSoundEngine.SetRTPCValue("GP_MASTER", masterS.value);
+        print("sdfdsdfdfsdfs");
         PlayerPrefs.Save();
     }
 
@@ -135,7 +136,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         vfxV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeVfx", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", vfxS.value);
+        AkSoundEngine.SetRTPCValue("GP_SFX", vfxS.value);
         PlayerPrefs.Save();
     }
 
@@ -144,7 +145,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         musicV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeMusic", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", musicS.value);
+        AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         PlayerPrefs.Save();
     }
 
