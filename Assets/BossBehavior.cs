@@ -39,6 +39,7 @@ public class BossBehavior : MonoBehaviour
 
         inst = this;
         Life = GetComponent<Manager_Life>();
+        MusicManager = GetComponent<Boss_Music_Manager>();
         //HeadRotation = GetComponent<BossHeadRotation>();
     }
 
