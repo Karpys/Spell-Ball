@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
     private bool revive;
     private bool tryRevive;
     private GameObject playerNeedHelp = null;
-    private ParticuleHeal healParticule;
 
 
     void Start()
@@ -269,7 +268,6 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
             {
                 playerNeedHelp = other.gameObject;
-                healParticule = playerNeedHelp.GetComponentInChildren<ParticuleHeal>();
             }
 
 
