@@ -1763,12 +1763,6 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="MINIONS" ID="{9AB7F5B0-6382-41D8-BEB3-82794B5AC5F5}" ShortID="221061721">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="24"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

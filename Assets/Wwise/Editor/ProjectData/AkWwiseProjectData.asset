@@ -38,8 +38,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 121cbf942d2c0a4aa70b4d5d177cbb96
     GuidInternal: 
-    m_lastTime: -8585627972150881588
+    m_lastTime: -8585626527214923409
     List:
+    - name: M_BOSS
+      guid: e23f2f8bb296fa4ba477c377ae9f2fbd
+      id: 3417986046
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: MUSIC
+        ObjectType: 2
+        guid: e415c129977d654b990932a265f7cb85
+      - ElementName: M_BOSS
+        ObjectType: 2
+        guid: e23f2f8bb296fa4ba477c377ae9f2fbd
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\MUSIC\M_BOSS
     - name: M_MAIN
       guid: 7a22dd5d901d084e9a4cf1588360471a
       id: 1683454542
@@ -260,7 +280,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585627993399449963
+    m_lastTime: -8585626411269487420
     List:
     - name: BALL
       guid: 5c501f5b299abd4b973517733bae8140
@@ -318,9 +338,9 @@ MonoBehaviour:
         ObjectType: 7
         guid: fab70b13a274fe4db35aeed6d90c297f
       Path: SoundBanks\Default Work Unit\Main_Soundbank
-    - name: MINIONS
-      guid: aafd6d1b53fff24cbe0e6b77783a9c5b
-      id: 3693811082
+    - name: MUSICS
+      guid: 3b27dd23cbc2624084a13b2ab5277ad6
+      id: 1730564753
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -328,10 +348,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f45212cf99781741b24557c335e8c9c2
-      - ElementName: MINIONS
+      - ElementName: MUSICS
         ObjectType: 4
-        guid: aafd6d1b53fff24cbe0e6b77783a9c5b
-      Path: SoundBanks\Default Work Unit\MINIONS
+        guid: 3b27dd23cbc2624084a13b2ab5277ad6
+      Path: SoundBanks\Default Work Unit\MUSICS
     - name: S_Ball
       guid: 06182cfdf4365a439eab506ace100085
       id: 1454594208
@@ -383,9 +403,9 @@ MonoBehaviour:
         ObjectType: 7
         guid: c1d5f108e42cc3468ecb1d3a0844e1df
       Path: SoundBanks\Default Work Unit\CHARACTER\S_Characters
-    - name: S_Minions
-      guid: 0c6ba18bf930894a9cf9809270d98bee
-      id: 714890364
+    - name: S_MUSIC
+      guid: e24547371a1d8d4092f002672a794aa5
+      id: 1200485816
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -393,13 +413,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: f45212cf99781741b24557c335e8c9c2
-      - ElementName: MINIONS
+      - ElementName: MUSICS
         ObjectType: 4
-        guid: aafd6d1b53fff24cbe0e6b77783a9c5b
-      - ElementName: S_Minions
+        guid: 3b27dd23cbc2624084a13b2ab5277ad6
+      - ElementName: S_MUSIC
         ObjectType: 7
-        guid: 0c6ba18bf930894a9cf9809270d98bee
-      Path: SoundBanks\Default Work Unit\MINIONS\S_Minions
+        guid: e24547371a1d8d4092f002672a794aa5
+      Path: SoundBanks\Default Work Unit\MUSICS\S_MUSIC
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -412,7 +432,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585627371854339933
+    m_lastTime: -8585626411269387404
     List:
     - name: BALL
       guid: af28c015ba078a40acc15da43c5d0f5a
@@ -683,9 +703,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: MINIONS
-      guid: ae0bf460a0347149a7d7e30be4e6edeb
-      id: 3693811082
+    - name: MUSIC
+      guid: dfbb93b8616952439e0c0182d95310cf
+      id: 3991942870
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -693,10 +713,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: cc8b61664020c047a74ba2d9200f9d45
-      - ElementName: MINIONS
+      - ElementName: MUSIC
         ObjectType: 4
-        guid: ae0bf460a0347149a7d7e30be4e6edeb
-      Path: Events\Default Work Unit\MINIONS
+        guid: dfbb93b8616952439e0c0182d95310cf
+      Path: Events\Default Work Unit\MUSIC
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -861,6 +881,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 4.457007
       minDuration: 4.22576
+    - name: Play_M_BOSS_Layer
+      guid: ec5bc635171bae45b7c9a2495a3c93a8
+      id: 135329723
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: dfbb93b8616952439e0c0182d95310cf
+      - ElementName: Play_M_BOSS_Layer
+        ObjectType: 3
+        guid: ec5bc635171bae45b7c9a2495a3c93a8
+      Path: Events\Default Work Unit\MUSIC\Play_M_BOSS_Layer
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_M_Menu_Theme
+      guid: aaf9fedabfd28d48952da5d71a93a749
+      id: 1195915301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: dfbb93b8616952439e0c0182d95310cf
+      - ElementName: Play_M_Menu_Theme
+        ObjectType: 3
+        guid: aaf9fedabfd28d48952da5d71a93a749
+      Path: Events\Default Work Unit\MUSIC\Play_M_Menu_Theme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_R_Bounce
       guid: 792112d2e2f3f648b93b36b02b0e24a6
       id: 4267311131
@@ -1062,6 +1122,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_M_BOSS_Layer
+      guid: 5a1d1c7513ea2b4a98113b16184a9ddb
+      id: 881957325
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: dfbb93b8616952439e0c0182d95310cf
+      - ElementName: Stop_M_BOSS_Layer
+        ObjectType: 3
+        guid: 5a1d1c7513ea2b4a98113b16184a9ddb
+      Path: Events\Default Work Unit\MUSIC\Stop_M_BOSS_Layer
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_M_Menu_Theme
+      guid: 0adfe4bc9556e44dbf67255302871bdb
+      id: 1462762607
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: dfbb93b8616952439e0c0182d95310cf
+      - ElementName: Stop_M_Menu_Theme
+        ObjectType: 3
+        guid: 0adfe4bc9556e44dbf67255302871bdb
+      Path: Events\Default Work Unit\MUSIC\Stop_M_Menu_Theme
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1074,7 +1174,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f7aeb8776abeb1408e4daa3e0077b848
     GuidInternal: 
-    m_lastTime: -8585627993403211566
+    m_lastTime: -8585626467532144706
     List:
     - name: BUS
       guid: 6c30b17a57185845b350c713820563f9
@@ -1090,6 +1190,91 @@ MonoBehaviour:
         ObjectType: 4
         guid: 6c30b17a57185845b350c713820563f9
       Path: Game Parameters\Default Work Unit\BUS
+    - name: GP_Lowpass_Pause
+      guid: af5849545f02c247ae26cf863ece88d3
+      id: 2705865419
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: PAUSE
+        ObjectType: 4
+        guid: 92df71cbed7b3846846d6c4afef393aa
+      - ElementName: GP_Lowpass_Pause
+        ObjectType: 13
+        guid: af5849545f02c247ae26cf863ece88d3
+      Path: Game Parameters\Default Work Unit\PAUSE\GP_Lowpass_Pause
+    - name: GP_M_BOSS_IsWeak
+      guid: 773a16fbfdf77645a1f814d8ed6f1cc9
+      id: 3755703199
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 6fff0cb28ae76e418fede772a8c8190e
+      - ElementName: GP_M_BOSS_IsWeak
+        ObjectType: 13
+        guid: 773a16fbfdf77645a1f814d8ed6f1cc9
+      Path: Game Parameters\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak
+    - name: GP_M_Layer1
+      guid: 64531eff53f8e84f80dc143b1a6a663b
+      id: 527303735
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 6fff0cb28ae76e418fede772a8c8190e
+      - ElementName: GP_M_Layer1
+        ObjectType: 13
+        guid: 64531eff53f8e84f80dc143b1a6a663b
+      Path: Game Parameters\Default Work Unit\MUSIC\GP_M_Layer1
+    - name: GP_M_Layer2
+      guid: 858951c84aeaa2498cbb24b429c5de94
+      id: 527303732
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 6fff0cb28ae76e418fede772a8c8190e
+      - ElementName: GP_M_Layer2
+        ObjectType: 13
+        guid: 858951c84aeaa2498cbb24b429c5de94
+      Path: Game Parameters\Default Work Unit\MUSIC\GP_M_Layer2
+    - name: GP_M_Layer3
+      guid: 0fdcf5ff0442a1479dcbfe32c6f8bde4
+      id: 527303733
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 6fff0cb28ae76e418fede772a8c8190e
+      - ElementName: GP_M_Layer3
+        ObjectType: 13
+        guid: 0fdcf5ff0442a1479dcbfe32c6f8bde4
+      Path: Game Parameters\Default Work Unit\MUSIC\GP_M_Layer3
     - name: GP_MASTER
       guid: 458760fe1714f644b10aaa8b66dbb32d
       id: 2359434321
@@ -1141,6 +1326,34 @@ MonoBehaviour:
         ObjectType: 13
         guid: e6f5b5b0da5b7149a1b7c4c7bc47c84c
       Path: Game Parameters\Default Work Unit\BUS\GP_SFX
+    - name: MUSIC
+      guid: 6fff0cb28ae76e418fede772a8c8190e
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: MUSIC
+        ObjectType: 4
+        guid: 6fff0cb28ae76e418fede772a8c8190e
+      Path: Game Parameters\Default Work Unit\MUSIC
+    - name: PAUSE
+      guid: 92df71cbed7b3846846d6c4afef393aa
+      id: 3092587493
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f7aeb8776abeb1408e4daa3e0077b848
+      - ElementName: PAUSE
+        ObjectType: 4
+        guid: 92df71cbed7b3846846d6c4afef393aa
+      Path: Game Parameters\Default Work Unit\PAUSE
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -1153,7 +1366,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: bb08bd03bc83674dabd5a8598e3fa7b8
     GuidInternal: 
-    m_lastTime: -8585685319327987055
+    m_lastTime: -8585626479386416411
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1184,7 +1397,7 @@ MonoBehaviour:
     m_lastTime: -8585685319327987055
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0b0000000c0000000d000000b4020000
+  ExpandedWaapiItemIds: 010000000500000006000000070000000a0000000b0000000e0000000f000000100000001400000015000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

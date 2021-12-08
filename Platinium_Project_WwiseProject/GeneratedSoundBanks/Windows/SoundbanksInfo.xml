@@ -16,12 +16,49 @@
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="714890364" Language="SFX" Hash="3745746352">
-			<ObjectPath>\SoundBanks\Default Work Unit\MINIONS\S_Minions</ObjectPath>
-			<ShortName>S_Minions</ShortName>
-			<Path>S_Minions.bnk</Path>
+		<SoundBank Id="1200485816" Language="SFX" Hash="112287921">
+			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
+			<ShortName>S_MUSIC</ShortName>
+			<Path>S_MUSIC.bnk</Path>
+			<IncludedEvents>
+				<Event Id="135329723" Name="Play_M_BOSS_Layer" ObjectPath="\Events\Default Work Unit\MUSIC\Play_M_BOSS_Layer" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="113387619" Language="SFX">
+							<ShortName>MUS_Boss1_Layer2_LP.wav</ShortName>
+							<Path>SFX\MUS_Boss1_Layer2_LP_D79FB2B7.wem</Path>
+						</File>
+						<File Id="674721470" Language="SFX">
+							<ShortName>MUS_Boss1_Layer1_LP.wav</ShortName>
+							<Path>SFX\MUS_Boss1_Layer1_LP_D79FB2B7.wem</Path>
+						</File>
+						<File Id="751908878" Language="SFX">
+							<ShortName>MUS_Boss1_Layer3_LP.wav</ShortName>
+							<Path>SFX\MUS_Boss1_Layer3_LP_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1195915301" Name="Play_M_Menu_Theme" ObjectPath="\Events\Default Work Unit\MUSIC\Play_M_Menu_Theme" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="104887704" Language="SFX">
+							<ShortName>MUS_Boss1_Layer2_LP - Copie.wav</ShortName>
+							<Path>SFX\MUS_Boss1_Layer2_LP - Copie_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="881957325" Name="Stop_M_BOSS_Layer" ObjectPath="\Events\Default Work Unit\MUSIC\Stop_M_BOSS_Layer" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1462762607" Name="Stop_M_Menu_Theme" ObjectPath="\Events\Default Work Unit\MUSIC\Stop_M_Menu_Theme" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="527303732" Name="GP_M_Layer2" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_Layer2"/>
+				<GameParameter Id="527303733" Name="GP_M_Layer3" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_Layer3"/>
+				<GameParameter Id="527303735" Name="GP_M_Layer1" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_Layer1"/>
+				<GameParameter Id="687458188" Name="GP_MUSIC" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MUSIC"/>
+				<GameParameter Id="2359434321" Name="GP_MASTER" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MASTER"/>
+				<GameParameter Id="2705865419" Name="GP_Lowpass_Pause" ObjectPath="\Game Parameters\Default Work Unit\PAUSE\GP_Lowpass_Pause"/>
+				<GameParameter Id="3755703199" Name="GP_M_BOSS_IsWeak" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3636041971">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4112522705">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -31,7 +68,7 @@
 				<GameParameter Id="2681064004" Name="GP_SFX" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_SFX"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1454594208" Language="SFX" Hash="685042662">
+		<SoundBank Id="1454594208" Language="SFX" Hash="1082352760">
 			<ObjectPath>\SoundBanks\Default Work Unit\BALL\S_Ball</ObjectPath>
 			<ShortName>S_Ball</ShortName>
 			<Path>S_Ball.bnk</Path>

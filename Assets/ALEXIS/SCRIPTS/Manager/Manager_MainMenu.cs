@@ -20,6 +20,11 @@ public class Manager_MainMenu : MonoBehaviour
 
     public bool wFocus = true;
 
+    [Header("AK Audio")]
+    [SerializeField] private GameObject bank;
+    [SerializeField] private AK.Wwise.Event musicMenu;
+    [SerializeField] private AK.Wwise.Event stopMusicMenu;
+
     [Header("WHICH ONE IS ACTIVE ?")]
     public int UIIndex;
 
@@ -59,6 +64,8 @@ public class Manager_MainMenu : MonoBehaviour
         StartCoroutine(WaitFocus());
         animRef = launch.GetComponent<Animator>();
         animFade = fadeRef.GetComponent<Animation>();
+
+        musicMenu.Post(bank);
     }
 
     // Update is called once per frame
@@ -199,6 +206,7 @@ public class Manager_MainMenu : MonoBehaviour
     IEnumerator WaitPlay()
     {
         yield return new WaitForSeconds(1);
+        stopMusicMenu.Post(bank);
         SceneManager.LoadScene(SceneName);
 
     }

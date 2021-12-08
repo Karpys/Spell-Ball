@@ -24,7 +24,6 @@
 												<XPos>0</XPos>
 												<YPos>-200</YPos>
 												<Flags>5</Flags>
-												<SegmentShape>SCurve</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>100</XPos>
@@ -64,7 +63,6 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
-														<SegmentShape>SCurve</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -114,7 +112,6 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
-														<SegmentShape>SCurve</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -129,6 +126,9 @@
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="M_MAIN" ID="{5DDD227A-1D90-4E08-9A4C-F1588360471A}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="M_BOSS" ID="{8B2F3FE2-96B2-4BFA-A477-C377AE9F2FBD}">
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>
