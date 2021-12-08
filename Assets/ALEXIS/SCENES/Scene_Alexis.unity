@@ -5039,7 +5039,7 @@ MonoBehaviour:
   stopMusicMenu:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2759149c447f91e44acac456e1040ab0, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
   bank: {fileID: 1244623715}
 --- !u!1 &883245285
 GameObject:
@@ -5391,7 +5391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3239104135840363675, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
@@ -10015,7 +10015,7 @@ MonoBehaviour:
   fadeRef: {fileID: 139742005}
   optionsMenu: {fileID: 880261718}
   charSelectionMenu: {fileID: 1568171815}
-  SceneName: Scene_Julien
+  SceneName: Scene_Build_LD
   wFocus: 1
   bank: {fileID: 1244623715}
   musicMenu:
@@ -10025,7 +10025,7 @@ MonoBehaviour:
   stopMusicMenu:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2759149c447f91e44acac456e1040ab0, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}
