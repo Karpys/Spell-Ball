@@ -1478,7 +1478,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -7414,7 +7414,7 @@ MonoBehaviour:
     RollCdSet: 0
     RollDuration: 0.5
     RollDurationSet: 0.5
-    RollSpeed: 17
+    RollSpeed: 13
     HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}

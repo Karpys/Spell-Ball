@@ -32,6 +32,14 @@ public class LaserBehavior : MonoBehaviour
         }
     }
 
+    public void OnDestroy()
+    {
+        foreach (Wwise_Script.WwiseSounds sound in LaserSounds.Sounds)
+        {
+            sound.Sound.Stop(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

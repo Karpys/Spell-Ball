@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/ALEXIS/SCENES/Scene_Alexis.unity
     guid: c32c6718ff620244da7527f14a423249
   - enabled: 1
-    path: Assets/MERGE/Main_Scene_V2.unity
-    guid: d342f0ad8e1d8bf4bbec9a6aeb414218
-  - enabled: 1
-    path: Assets/MERGE/Merge_S2.unity
-    guid: 02dc2bba3bbcab94d96ead8e81d664bb
-  - enabled: 1
-    path: Assets/JULIEN/SCENES/Scene_Julien.unity
-    guid: 01f7d496eca056746af25ce536a0743b
+    path: Assets/MERGE/Scene_Build_LD.unity
+    guid: dd1c98b8960eed34bb4af21e7edef9d1
   m_configObjects: {}
