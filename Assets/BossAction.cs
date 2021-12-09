@@ -125,6 +125,7 @@ public class BossAction : MonoBehaviour
         [Header("Projectile GameObject Name and Prefab")]
         public string Name = "Throwr";
         public GameObject Projectile;
+        public bool ThrowHead = false;
         [Space(10)]
         [Header("Projectile Thrower Stats")]
         public Vector2 Power = new Vector2(10,10);
