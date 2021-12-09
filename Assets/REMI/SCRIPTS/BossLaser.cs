@@ -13,7 +13,7 @@ public class BossLaser : BossAction
     {
         DeadRay = 0;
         NbrRay = Instantier.Stats.Count;
-        //BossBehavior.Boss.HeadRotation.SetTargetRotation(1);
+        BossBehavior.Boss.HeadRotation.SetTargetRotation(1);
         Instantier.InstLaser(this);
         base.Activate();
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
