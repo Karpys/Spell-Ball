@@ -31,6 +31,8 @@ public class BossBehavior : MonoBehaviour
     private static BossBehavior inst;
 
     private Boss_Music_Manager MusicManager;
+
+    public Boss_Head_Manager Head;
     public static BossBehavior Boss { get => inst; }
     void Awake()
     {
@@ -40,6 +42,7 @@ public class BossBehavior : MonoBehaviour
         inst = this;
         Life = GetComponent<Manager_Life>();
         MusicManager = GetComponent<Boss_Music_Manager>();
+        //Head = GetComponent<Boss_Head_Manager>();
         //HeadRotation = GetComponent<BossHeadRotation>();
     }
 
@@ -88,6 +91,7 @@ public class BossBehavior : MonoBehaviour
 
     public void NextPhase()
     {
+        CameraShakeManager.CameraShake.Shake(3f, 1.5f, 15f);
         if (BossStarted)
         {
             //PREMIERE Phase
