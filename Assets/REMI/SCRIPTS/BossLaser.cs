@@ -15,11 +15,19 @@ public class BossLaser : BossAction
         NbrRay = Instantier.Stats.Count;
         BossBehavior.Boss.HeadRotation.SetTargetRotation(1);
         Instantier.InstLaser(this);
+        if (Instantier.Stats[0].ThrowHead)
+        {
+            BossBehavior.Boss.Head.LaunchHead(1);
+        }
         base.Activate();
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
     }
     public override void Deactivate()
     {
+        if (Instantier.Stats[0].ThrowHead)
+        {
+            BossBehavior.Boss.Head.RetractHead(1);
+        }
         Instantier.DestroyLaser();
         base.Deactivate();
     }

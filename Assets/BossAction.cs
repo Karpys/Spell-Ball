@@ -96,6 +96,7 @@ public class BossAction : MonoBehaviour
         [Header("Nom Du Groupe de Laser (Si multiple Premier Name pris en compte)")]
         [Space(10)]
         public string Name = "Laser";
+        public bool ThrowHead = false;
         [Header("Durée du Laser et Temps de départ")]
         public float Duration = 2.0f;
         public float WaitTime = 1.0f;
