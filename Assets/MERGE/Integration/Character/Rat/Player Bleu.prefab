@@ -5617,7 +5617,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266598554979214383}
-  m_LocalRotation: {x: -0, y: 0.99753404, z: -0, w: 0.0701851}
+  m_LocalRotation: {x: -0, y: 0.33971184, z: -0, w: 0.9405296}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7117,7 +7117,7 @@ SphereCollider:
   m_GameObject: {fileID: 9122807134000420660}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
@@ -7169,7 +7169,7 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
-  Timerinvis: 0
+  Timerinvis: -0.21963648
 --- !u!114 &919132148916143358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7370,15 +7370,15 @@ MonoBehaviour:
   Stats:
     Speed: 8
     rotationspeed: 1
-    CanMove: 1
+    CanMove: 0
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
-    RollCd: -0.33333334
+    RollCd: 0
     RollCdSet: 0
-    RollDuration: -0.21963648
+    RollDuration: 0.5
     RollDurationSet: 0.5
     RollSpeed: 17
-    HasReset: 1
+    HasReset: 0
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
   MovementDir: {x: 0, y: 0}
