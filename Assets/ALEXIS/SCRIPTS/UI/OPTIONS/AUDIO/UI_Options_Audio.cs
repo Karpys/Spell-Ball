@@ -50,10 +50,11 @@ public class UI_Options_Audio : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(master);
 
 
-        PlayerPrefs.SetInt("SaveExist", 1);
-        PlayerPrefs.Save();
+
 
         animatorRef.SetBool("ENTER_AU", true);
+
+        ParamSaved();
 
         //Check Which scene is currently active
         Scene currentScene = SceneManager.GetActiveScene();
@@ -69,6 +70,22 @@ public class UI_Options_Audio : MonoBehaviour
             refMenuPause = FindObjectOfType<UI_MenuPause>();
             refMenuPause.UIIndex = 3;
         }
+
+
+
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        animatorRef = gameObject.GetComponent<Animator>();
+        ParamSaved();
+
+    }
+    private void ParamSaved()
+    {
+        PlayerPrefs.SetInt("SaveExist", 1);
+        PlayerPrefs.Save();
 
         //SAUVEGARDE
         if (PlayerPrefs.HasKey("volumeMaster"))
@@ -112,15 +129,7 @@ public class UI_Options_Audio : MonoBehaviour
             musicV.text = "50";
             AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         }
-
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        animatorRef = gameObject.GetComponent<Animator>();
-    }
-
     public void OnSliderMaster(float volume)
     {
 

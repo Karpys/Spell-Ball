@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-Event	ID	Name			Wwise Object Path	Notes
-	2510116948	Laser_End			\Default Work Unit\LaserEvent\Laser_End	
-	3217810413	Laser_Start_Release			\Default Work Unit\LaserEvent\Laser_Start_Release	
-	3428356050	Laser_Start_Trigger			\Default Work Unit\LaserEvent\Laser_Start_Trigger	
-	4154444698	Laser_Start_Charge			\Default Work Unit\LaserEvent\Laser_Start_Charge	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	120772766	SFX_Boss1_LaserBeam_End	G:\IIM\Game Jam\Platinum\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_End_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_End		764364
-	216173574	SFX_Boss1_LaserBeam_Start_Charge	G:\IIM\Game Jam\Platinum\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Charge_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_Start_Charge		1154692
-	523821600	SFX_Boss1_LaserBeam_Start_Trigg	G:\IIM\Game Jam\Platinum\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_Start_Trigg		378980
-	535052771	SFX_Boss1_LaserBeam_Start_Relase	G:\IIM\Game Jam\Platinum\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_Start_Relase		735052
-
-=======
 Event	ID	Name			Wwise Object Path	Notes
 	2510116948	Laser_End			\Default Work Unit\BOSS\LaserEvent\Laser_End	
 	3217810413	Laser_Start_Release			\Default Work Unit\BOSS\LaserEvent\Laser_Start_Release	
@@ -24,4 +10,3 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	523821600	SFX_Boss1_LaserBeam_Start_Trigg	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_Start_Trigg		378980
 	535052771	SFX_Boss1_LaserBeam_Start_Relase	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Boss1_LaserBeam_Start_Relase_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Laser\SFX_Boss1_LaserBeam_Start_Relase		735052
 
->>>>>>> main

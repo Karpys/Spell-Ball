@@ -17,35 +17,6 @@
 							<ChildrenList>
 								<MusicPlaylistContainer Name="M_BOSS_Layer" ID="{F5CF4963-8336-483E-ABC9-B5549A13A2B8}" ShortID="625000844">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<RTPCList>
-												<RTPC Name="" ID="{B909E200-B9B0-4751-8792-225D9F5236E8}" ShortID="1057238131">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{33F90A68-B9F4-4EBA-A06B-814D592342D3}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="65537"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>0</YPos>
-																<Flags>5</Flags>
-																<SegmentShape>Log1</SegmentShape>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>100</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
 										<Property Name="PlaybackSpeed" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{5BF91DAD-5628-4FB1-A7FB-86583F834888}" ShortID="819280088">
@@ -402,6 +373,18 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicPlaylistContainer Name="M_Menu_Theme" ID="{EFC4DF18-46C3-4AAC-A046-497431CA00EE}" ShortID="720305261">
+									<PropertyList>
+										<Property Name="PlaybackSpeed" Type="Real64">
+											<ValueList>
+												<Value>0.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>

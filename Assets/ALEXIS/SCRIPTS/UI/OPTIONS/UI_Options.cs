@@ -24,6 +24,7 @@ public class UI_Options : MonoBehaviour
 
     UI_Options_Audio audioMenu;
     UI_Options_Graphics graphMenu;
+    bool wFocus = true;
 
     public Animator animref;
 

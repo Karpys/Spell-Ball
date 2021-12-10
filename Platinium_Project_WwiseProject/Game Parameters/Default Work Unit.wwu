@@ -21,9 +21,21 @@
 					</PropertyList>
 					<ChildrenList>
 						<GameParameter Name="GP_M_Layer1" ID="{FF1E5364-F853-4FE8-80DC-143B1A6A663B}"/>
-						<GameParameter Name="GP_M_Layer2" ID="{C8518985-EA4A-49A2-8CBB-24B429C5DE94}"/>
-						<GameParameter Name="GP_M_Layer3" ID="{FFF5DC0F-4204-47A1-9DCB-FE32C6F8BDE4}"/>
-						<GameParameter Name="GP_M_BOSS_IsWeak" ID="{FB163A77-F7FD-4576-A1F8-14D8ED6F1CC9}"/>
+						<GameParameter Name="GP_M_Layer2" ID="{C8518985-EA4A-49A2-8CBB-24B429C5DE94}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GP_M_Layer3" ID="{FFF5DC0F-4204-47A1-9DCB-FE32C6F8BDE4}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GP_M_BOSS_IsWeak" ID="{FB163A77-F7FD-4576-A1F8-14D8ED6F1CC9}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="PAUSE" ID="{CB71DF92-7BED-4638-846D-6C4AFEF393AA}" ShortID="866960889">
@@ -32,7 +44,11 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<GameParameter Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}"/>
+						<GameParameter Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -12,6 +12,13 @@
 						<Folder Name="Laser" ID="{60632F83-19F5-46CD-B2F2-0615FAC5163C}" ShortID="545426589">
 							<ChildrenList>
 								<Sound Name="SFX_Boss1_LaserBeam_End" ID="{34277673-8DCE-4109-B9DC-92BC75BC0A77}" ShortID="767162243">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
@@ -35,6 +42,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Boss1_LaserBeam_Start_Charge" ID="{4C93521A-1E80-449C-95E2-84D5D0237E70}" ShortID="828059827">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
@@ -58,6 +72,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Boss1_LaserBeam_Start_Relase" ID="{581B33C4-58F2-4654-A2AA-DF5E010AF43B}" ShortID="1009344268">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
@@ -81,6 +102,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Boss1_LaserBeam_Start_Trigg" ID="{1BE72032-103D-48DD-8CAD-283750A91000}" ShortID="677953666">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
@@ -107,6 +135,11 @@
 									<PropertyList>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -217,6 +250,13 @@
 						<Folder Name="Projectile_Hit" ID="{B12AE8E3-F50F-439F-8298-1DF3637DF898}" ShortID="7935992">
 							<ChildrenList>
 								<RandomSequenceContainer Name="Projectile_Hit_Random" ID="{0DF66FCE-55B9-4E77-A91D-C8CB239A1179}" ShortID="275043330">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
@@ -1586,6 +1626,13 @@
 						<Folder Name="Projectile_Bounce" ID="{424D0F58-43C8-40A0-A53C-DCF47571E168}" ShortID="822424193">
 							<ChildrenList>
 								<RandomSequenceContainer Name="R_Bounce" ID="{B7CCFCC6-E988-4C3C-9367-09841C4CCE5B}" ShortID="429126879">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
