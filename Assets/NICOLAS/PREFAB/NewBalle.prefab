@@ -14631,7 +14631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c50a9b57a41ee46aa664ef2aafce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trail: {fileID: 0}
   combo: 0
   comboSpeed: 3
   ballColor: {fileID: 2100000, guid: 077f9510d152eff4abdf2e6588614cfe, type: 2}
@@ -14643,6 +14642,7 @@ MonoBehaviour:
   - {fileID: 5504412155837551037}
   - {fileID: 8557756713190270942}
   shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  timeInfuse: 2
   color: 0
   BadColor: {r: 0, g: 0, b: 0, a: 0}
   EnnemyBalle: 0
@@ -14709,6 +14709,10 @@ MonoBehaviour:
   hitShield: 0
   DelayDamageSelf: 0
   Returnable: 1
+  playBounce:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}
 --- !u!135 &-8080597015329026223

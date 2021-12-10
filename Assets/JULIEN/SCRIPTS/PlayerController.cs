@@ -173,7 +173,8 @@ public class PlayerController : MonoBehaviour
            if(Infuse_Sound_Manager.Infuse)
             Infuse_Sound_Manager.Infuse.PlayInfuseSound(balleData.color,balleData.combo);
            _timer = grabDelay;
-           StartCoroutine(ColorParticule()); 
+           StartCoroutine(ColorParticule());
+           balle.GetComponent<Balle>().InfuseSysteme();
            ThrowBall();
         }
     }
