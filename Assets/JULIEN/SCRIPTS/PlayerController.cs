@@ -196,7 +196,9 @@ public class PlayerController : MonoBehaviour
 
    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
    {
-        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0) return;
+       
+        
         SetBall();
        if (balle && _timer<=0)
        {
