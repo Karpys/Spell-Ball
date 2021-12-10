@@ -73,7 +73,7 @@ public class Manager_Life : MonoBehaviour
         if (currentLife <= 0)
         {
             currentLife = 0;
-            isDead = true;
+            /*isDead = true;*/
             OnDeath.Invoke();
         }
     }
