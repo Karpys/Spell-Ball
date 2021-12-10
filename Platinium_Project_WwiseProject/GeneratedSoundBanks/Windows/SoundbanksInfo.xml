@@ -16,7 +16,7 @@
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1200485816" Language="SFX" Hash="2353219606">
+		<SoundBank Id="1200485816" Language="SFX" Hash="757013540">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
 			<ShortName>S_MUSIC</ShortName>
 			<Path>S_MUSIC.bnk</Path>
@@ -58,7 +58,7 @@
 				<GameParameter Id="3755703199" Name="GP_M_BOSS_IsWeak" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4112522705">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3308230620">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -66,9 +66,10 @@
 				<GameParameter Id="687458188" Name="GP_MUSIC" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MUSIC"/>
 				<GameParameter Id="2359434321" Name="GP_MASTER" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_MASTER"/>
 				<GameParameter Id="2681064004" Name="GP_SFX" ObjectPath="\Game Parameters\Default Work Unit\BUS\GP_SFX"/>
+				<GameParameter Id="2705865419" Name="GP_Lowpass_Pause" ObjectPath="\Game Parameters\Default Work Unit\PAUSE\GP_Lowpass_Pause"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1454594208" Language="SFX" Hash="1082352760">
+		<SoundBank Id="1454594208" Language="SFX" Hash="1912632342">
 			<ObjectPath>\SoundBanks\Default Work Unit\BALL\S_Ball</ObjectPath>
 			<ShortName>S_Ball</ShortName>
 			<Path>S_Ball.bnk</Path>
@@ -355,7 +356,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1571743440" Language="SFX" Hash="389091922">
+		<SoundBank Id="1571743440" Language="SFX" Hash="3051227610">
 			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
 			<ShortName>S_Boss</ShortName>
 			<Path>S_Boss.bnk</Path>
@@ -394,7 +395,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1709629592">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2119432901">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>

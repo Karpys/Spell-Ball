@@ -8,7 +8,7 @@ public class Boss_Music_Manager : MonoBehaviour
     public AK.Wwise.Event PlayMusicBoss;
     public string RTPCToSet = "";
     public float TransitionDuration;
-    private float timer;
+    public float timer;
     void Start()
     {
         PlayMusicBoss.Post(gameObject);
@@ -17,11 +17,11 @@ public class Boss_Music_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer >= TransitionDuration)
+        /*if (timer >= TransitionDuration)
         {
             timer += Time.deltaTime;
-        }
-
+        }*/
+        timer += Time.deltaTime;
         if (RTPCToSet !="")
         {
             AkSoundEngine.SetRTPCValue(RTPCToSet, Mathf.Lerp(0, 50, timer / TransitionDuration));

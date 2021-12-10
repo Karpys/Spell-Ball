@@ -91,7 +91,7 @@ public class BossBehavior : MonoBehaviour
 
     public void NextPhase()
     {
-        CameraShakeManager.CameraShake.Shake(3f, 1.5f, 15f);
+        CameraShakeManager.CameraShake.Shake(1.5f, 1.5f, 15f);
         if (BossStarted)
         {
             //PREMIERE Phase
@@ -120,7 +120,7 @@ public class BossBehavior : MonoBehaviour
 
             //
 
-            MusicManager.LaunchLayer(ActualPhase);
+            MusicManager.LaunchLayer(ActualPhase+1);
 
             //TRANSITION VERS PROCHAINE PHASE PAS CALL LAUNCH PHASE TT DE SUITE//
             LaunchPhase(ActualPhase);

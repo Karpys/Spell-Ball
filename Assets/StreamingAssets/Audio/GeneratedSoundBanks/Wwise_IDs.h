@@ -73,7 +73,6 @@ namespace AK
         static const AkUniqueID SFX_BALL = 1639431926U;
         static const AkUniqueID SFX_BOSS = 1421616930U;
         static const AkUniqueID SFX_CHARACTER = 1415773282U;
-        static const AkUniqueID SFX_MINIONS = 4075503242U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
