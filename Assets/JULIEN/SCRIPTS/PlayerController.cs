@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                playerNeedHelp.GetComponent<Manager_Life>().SetCurentLife(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                playerNeedHelp.GetComponent<Manager_Life>().HealHealth(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
                 tryRevive = false;
                 Debug.Log("it is alive");
             }
