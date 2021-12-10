@@ -118,6 +118,7 @@ public class Manager_Life : MonoBehaviour
     public void HealHealth(int heal)
     {
         currentLife += heal;
+        if (currentLife > maxHealth) currentLife = maxHealth;
         OnHeal.Invoke();
     }
     
