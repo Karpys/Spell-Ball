@@ -69,6 +69,9 @@ public class Balle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (combo > 10)
+            combo = 10;
+
         //particule.GetComponent<ParticleSystem>().Play();
         // TrailCombo();
     }
