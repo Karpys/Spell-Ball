@@ -76,6 +76,7 @@ public class Ball : MonoBehaviour
         {
             Reflect(hit.normal);
             ResetSpeedAndCombo();
+            gameObject.GetComponent<Balle>().ColorBallReset();
             hitShield = true;
             if (hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
             {
@@ -97,8 +98,7 @@ public class Ball : MonoBehaviour
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
                 managerLife.Damage(balle);
-                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);
-
+                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);//balle.trail.startColor);
                 
             }
             ResetSpeedAndCombo();
