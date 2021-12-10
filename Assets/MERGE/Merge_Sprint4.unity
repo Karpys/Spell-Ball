@@ -10905,7 +10905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &620493928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19072,6 +19072,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 1f1f013a508bfb049b04e3946e51af0a, type: 2}
   RTPCToSet: 
   TransitionDuration: 3
+  timer: 0
 --- !u!1001 &1095170307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19289,6 +19290,7 @@ MonoBehaviour:
   targetMenu: {fileID: 1139168649}
   animator: {fileID: 1139168651}
   fadeRef: {fileID: 1621225677}
+  timeTransi: 1
   playerDoPause: 0
   unPause: 0
   mainM: {fileID: 1139168649}
