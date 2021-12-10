@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,19 +6,23 @@ using UnityEngine;
 public class SpawnPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool Test;
-    public GameObject Player;
+    [SerializeField] private bool _spawnPlayer;
+    [SerializeField] private List<GameObject> _players;
+    
+    [SerializeField] private List<GameObject> playersLifeDisplay;
     void Start()
     {
-        if (Test)
+        if (_spawnPlayer)
         {
-            Instantiate(Player, transform.position, transform.rotation);
+            for (int i = 0; i < _players.Count; i++)
+            {
+                GameObject player = Instantiate(_players[i], transform.position, transform.rotation);
+                
+                PlayerHealthDisplay playerHealthDisplay = playersLifeDisplay[i].GetComponent<PlayerHealthDisplay>();
+                playerHealthDisplay.SetPlayer(player);
+            }
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

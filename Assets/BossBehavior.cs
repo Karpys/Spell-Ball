@@ -27,7 +27,7 @@ public class BossBehavior : MonoBehaviour
     public GameObject ShieldHolder;
     //
     public Manager_Life Life;
-    //public BossHeadRotation HeadRotation;
+    public BossHeadRotation HeadRotation;
     private static BossBehavior inst;
 
     private Boss_Music_Manager MusicManager;
@@ -42,8 +42,8 @@ public class BossBehavior : MonoBehaviour
         inst = this;
         Life = GetComponent<Manager_Life>();
         MusicManager = GetComponent<Boss_Music_Manager>();
-        //Head = GetComponent<Boss_Head_Manager>();
-        //HeadRotation = GetComponent<BossHeadRotation>();
+        Head = GetComponent<Boss_Head_Manager>();
+        HeadRotation = GetComponent<BossHeadRotation>();
     }
 
     public void Start()

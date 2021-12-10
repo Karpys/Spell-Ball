@@ -36,6 +36,9 @@ public class PlayerHealthDisplay : MonoBehaviour
             DrawHealth();
             
             _playerLife.OnDamage.AddListener(DrawHealth);
+            _playerLife.OnHeal.AddListener(DrawHealth);
+
+            gameObject.SetActive(true);
         }
     }
 
@@ -45,7 +48,8 @@ public class PlayerHealthDisplay : MonoBehaviour
         {
             Transform bar = _healthBarParent.transform.GetChild(i);
             Image image = bar.GetComponent<Image>();
-            if (_playerLife.GetCurentLife() >= i)
+            print("Le joueur " + gameObject.name + " à " + _playerLife.GetCurentLife() + " points de vie");
+            if (_playerLife.GetCurentLife() > i)
             {
                 image.color = Color.red;
             }

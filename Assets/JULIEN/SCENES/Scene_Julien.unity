@@ -13653,7 +13653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.023387909
+      value: -4.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6cfb914a1d067684f83e6e757ecd2bb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17093,7 +17093,7 @@ MonoBehaviour:
   m_NotificationBehavior: 2
   m_MaxPlayerCount: 4
   m_AllowJoining: 1
-  m_JoinBehavior: 2
+  m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -19941,6 +19941,7 @@ MonoBehaviour:
     Manager: {fileID: 0}
     Name: 
     Projectile: {fileID: 0}
+    ThrowHead: 0
     Power: {x: 0, y: 0}
     Cadence: {x: 0, y: 0}
     DelayBeforeFirstShoot: 0
@@ -23264,8 +23265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72dc2a9a62138a2428b64e50f5613630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openningDirection: 2
-  movingDistance: 4
+  openningDirection: 0
+  movingDistance: 4.4
   doorState: 2
 --- !u!65 &1931683390
 BoxCollider:
