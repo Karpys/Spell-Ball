@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class BossBehavior : MonoBehaviour
 {
-    public List<Phase> Phases = new List<Phase>(4);
+    public List<Phase> Phases = new List<Phase>(){new Phase(),new Phase(),new Phase(),new Phase()};
     [SerializeField] public int ActualPhase = 0;
     public bool BossStarted = false;
 
