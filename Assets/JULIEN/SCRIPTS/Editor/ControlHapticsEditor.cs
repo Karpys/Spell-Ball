@@ -32,6 +32,7 @@ public class ControlHapticsEditor : Editor
             int index = 0;
             foreach (InputDevice device in InputSystem.devices)
             {
+                if (!(device is IDualMotorRumble)) continue;
                 if (index >= shownController.Count)
                     shownController.Add(false);
                 if (shownController[index] == null)
