@@ -33,20 +33,20 @@ public class BossBehaviorEditor : Editor
             SerializedProperty BaseGameObject = serializedObject.FindProperty("BaseGameObject");
             EditorGUILayout.PropertyField(BaseGameObject);
 
-            SerializedProperty BaseShooter= serializedObject.FindProperty("BaseShooter");
+            /*SerializedProperty BaseShooter= serializedObject.FindProperty("BaseShooter");
             EditorGUILayout.PropertyField(BaseShooter);
 
             SerializedProperty BaseShield = serializedObject.FindProperty("BaseShield");
             EditorGUILayout.PropertyField(BaseShield);
 
             SerializedProperty BaseLaser = serializedObject.FindProperty("BaseLaser");
-            EditorGUILayout.PropertyField(BaseLaser);
+            EditorGUILayout.PropertyField(BaseLaser);*/
 
             SerializedProperty listActionProperty = serializedObject.FindProperty("Phases");
             EditorGUILayout.PropertyField(listActionProperty);
 
-            SerializedProperty Base = serializedObject.FindProperty("BossBallThrower");
-            EditorGUILayout.PropertyField(Base);
+            /*SerializedProperty Base = serializedObject.FindProperty("BossBallThrower");
+            EditorGUILayout.PropertyField(Base);*/
 
 
         }
@@ -257,7 +257,15 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateBossShooter()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
+        GameObject Obj = new GameObject();
+        if (boss.ActionHolder != null)
+        {
+            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+        }
+        else
+        {
+            Obj = Instantiate(new GameObject(), boss.transform);
+        }
         Obj.AddComponent<BossShooter>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShooter>());
         return Obj;
@@ -266,7 +274,15 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateShield()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
+        GameObject Obj = new GameObject();
+        if (boss.ActionHolder != null)
+        {
+            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+        }
+        else
+        {
+            Obj = Instantiate(new GameObject(), boss.transform);
+        }
         Obj.AddComponent<BossShield>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShield>());
         return Obj;
@@ -275,7 +291,15 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateLaser()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = Instantiate(boss.BaseGameObject, boss.ActionHolder.transform);
+        GameObject Obj = new GameObject();
+        if (boss.ActionHolder != null)
+        {
+            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+        }
+        else
+        {
+            Obj = Instantiate(new GameObject(), boss.transform);
+        }
         Obj.AddComponent<BossLaser>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossLaser>());
         return Obj;
