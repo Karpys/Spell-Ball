@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(Manager_Life))]
+[RequireComponent(typeof(BossMovement))]
 public class BossBehavior : MonoBehaviour
 {
     public List<Phase> Phases = new List<Phase>(){new Phase(),new Phase(),new Phase(),new Phase()};
@@ -16,30 +18,30 @@ public class BossBehavior : MonoBehaviour
 
 
     //EDITOR UTILS//
-    public BossAction.BallThrowerInstantier BossBallThrower;
+    /*public BossAction.BallThrowerInstantier BossBallThrower;
     public BossAction.LaserInstantier LaserInstantier;
-    public BossAction.ShieldInstantier ShieldStats;
-    public GameObject BaseLaser;
+    public BossAction.ShieldInstantier ShieldStats;*/
+    /*public GameObject BaseLaser;
     public GameObject BaseShooter;
-    public GameObject BaseShield;
+    public GameObject BaseShield;*/
     public GameObject BaseGameObject;
     public GameObject ActionHolder;
     public GameObject ShieldHolder;
     //
     public Manager_Life Life;
     public BossHeadRotation HeadRotation;
-    private static BossBehavior inst;
 
     private Boss_Music_Manager MusicManager;
-
     public Boss_Head_Manager Head;
-    public static BossBehavior Boss { get => inst; }
+
+    /*private static BossBehavior inst;*/
+    /*public static BossBehavior Boss { get => inst; }*/
     void Awake()
     {
-        if (Boss != null && Boss != this)
+        /*if (Boss != null && Boss != this)
             Destroy(gameObject);
 
-        inst = this;
+        inst = this;*/
         Life = GetComponent<Manager_Life>();
         MusicManager = GetComponent<Boss_Music_Manager>();
         Head = GetComponent<Boss_Head_Manager>();
@@ -70,7 +72,7 @@ public class BossBehavior : MonoBehaviour
         {
             ListActualAction[ActualAction].Deactivate();
             ActualAction = Random.Range(0, ListActualAction.Count);
-            ListActualAction[ActualAction].Activate();
+            ListActualAction[ActualAction].Activate(this);
         }
         else
         {
@@ -80,7 +82,7 @@ public class BossBehavior : MonoBehaviour
             {
                 ActualAction = 0;
             }
-            ListActualAction[ActualAction].Activate();
+            ListActualAction[ActualAction].Activate(this);
         }
     }
 
@@ -120,10 +122,10 @@ public class BossBehavior : MonoBehaviour
 
             //
 
-            MusicManager.LaunchLayer(ActualPhase+1);
 
             //TRANSITION VERS PROCHAINE PHASE PAS CALL LAUNCH PHASE TT DE SUITE//
             LaunchPhase(ActualPhase);
+            MusicManager.LaunchLayer(ActualPhase+1);
         }
     }
 
@@ -132,12 +134,12 @@ public class BossBehavior : MonoBehaviour
         if (Phases[ActualPhase].RandomAction)
         {
             ActualAction = Random.Range(0, ListActualAction.Count);
-            ListActualAction[ActualAction].Activate();
+            ListActualAction[ActualAction].Activate(this);
         }
         else
         {
             ActualAction = 0;
-            ListActualAction[ActualAction].Activate();
+            ListActualAction[ActualAction].Activate(this);
         }
     }
 

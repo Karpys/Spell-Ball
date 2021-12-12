@@ -11,25 +11,36 @@ public class BossShooter : BossAction
     public int NbrShooter;
     [HideInInspector]
     public int DeadShooter;
-    public override void Activate()
+
+    private BossBehavior Boss;
+    public override void Activate(BossBehavior boss)
     {
+        Boss = boss;
+        base.Activate(Boss);
         DeadShooter= 0;
         NbrShooter = Instantier.BallThrower.Count;
-        BossBehavior.Boss.HeadRotation.SetTargetRotation(0);
-        base.Activate();
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
+        Instantier.InstAllBallThrower(this);
         if (Instantier.BallThrower[0].ThrowHead)
         {
-            BossBehavior.Boss.Head.LaunchHead(0);
+            if (boss.Head != null)
+            {
+                Boss.Head.LaunchHead(0);
+            }
         }
-        Instantier.InstAllBallThrower(this);
+
+        if (boss.HeadRotation != null)
+        {
+            Boss.HeadRotation.SetTargetRotation(0);
+        }
 
     }
     public override void Deactivate()
     {
         if (Instantier.BallThrower[0].ThrowHead)
         {
-            BossBehavior.Boss.Head.RetractHead(0);
+            if(Boss.Head!=null)
+                Boss.Head.RetractHead(0);
         }
         Instantier.DeastroyShooter();
         base.Deactivate();
@@ -40,7 +51,7 @@ public class BossShooter : BossAction
         DeadShooter++;
         if (NbrShooter == DeadShooter)
         {
-            BossBehavior.Boss.NextAction();
+            Boss.NextAction();
         }
     }
 }
