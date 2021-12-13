@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
 
    public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
    {
-        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0) return;
        SetBall();
        if (balle && _timer <= 0)
        {
@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
 
     public void TryRevive(bool buttonPressed, InputAction.CallbackContext ctx)
     {
-        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0) return;
         if (playerNeedHelp == null) return;
         //Debug.Log("je suis en cours ");
         tryRevive = buttonPressed;
