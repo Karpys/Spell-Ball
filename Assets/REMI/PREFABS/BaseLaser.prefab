@@ -183,6 +183,7 @@ MonoBehaviour:
   Stats:
     Manager: {fileID: 0}
     Name: 
+    ThrowHead: 0
     Duration: 0
     WaitTime: 0
     Lenght: 0
@@ -195,5 +196,5 @@ MonoBehaviour:
   Line: {fileID: 7016873727855902364}
   Layer:
     serializedVersion: 2
-    m_Bits: 3063
+    m_Bits: 3062
   Laserstate: 0

@@ -14715,6 +14715,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 221771ab91c188c41a31d16b64148df0, type: 2}
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}
+  OnHitParticle: {fileID: 6083415166425406385, guid: ff3a3ff9511eccf4cb85ce05a186420d, type: 3}
 --- !u!135 &-8080597015329026223
 SphereCollider:
   m_ObjectHideFlags: 0

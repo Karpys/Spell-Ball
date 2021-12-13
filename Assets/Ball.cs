@@ -29,6 +29,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private GameObject SpeedEffect;
 
+    [SerializeField] private GameObject OnHitParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +100,7 @@ public class Ball : MonoBehaviour
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
                 managerLife.Damage(balle);
+                Instantiate(OnHitParticle, transform.position, transform.rotation);
                 managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);//balle.trail.startColor);
                 
             }

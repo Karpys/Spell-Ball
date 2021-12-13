@@ -7,6 +7,7 @@ MonoImporter:
   - BaseShield: {fileID: 1866515123114465808, guid: 17bbfde189f9df248822893300c3e090, type: 3}
   - BaseShooter: {fileID: 6009121967276087187, guid: 24f1aeda22e3d0140b08e5ee6aaa0841, type: 3}
   - BaseLaser: {fileID: 9054846381830404985, guid: 9b9d6bd29e3bb82438eed4043489dda9, type: 3}
+  - BaseGameObject: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

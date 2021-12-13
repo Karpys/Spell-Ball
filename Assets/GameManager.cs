@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject BaseShield;
     public GameObject BaseShooter;
     public GameObject BaseLaser;
+    public GameObject BaseGameObject;
 
     void Awake()
     {
