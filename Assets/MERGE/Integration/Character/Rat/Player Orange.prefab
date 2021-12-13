@@ -7165,7 +7165,19 @@ MonoBehaviour:
       m_Calls: []
   OnDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148916143358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ShakePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
@@ -7377,7 +7389,7 @@ MonoBehaviour:
     RollCdSet: 0
     RollDuration: -0.02417174
     RollDurationSet: 0.5
-    RollSpeed: 17
+    RollSpeed: 13
     HasReset: 1
   _controller: {fileID: 919132148916143359}
   CharacterVisual: {fileID: 4266598554979214383}
@@ -7572,9 +7584,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e2b08a0db24aca241ab9197cd26caa64, type: 3}
       propertyPath: m_Name

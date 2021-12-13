@@ -39,7 +39,7 @@ public class Sheild : MonoBehaviour
         if (lastSield && !alphaSet)
         {
             //Debug.Log("a marche");
-            copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
+            copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.6f);
             tempShield = copieMaterialSheild.color;
             //Debug.Log(tempShield);
             /*disolve.GetPropertyDefaultVectorValue(disolve.FindPropertyIndex("Color")).Set(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);

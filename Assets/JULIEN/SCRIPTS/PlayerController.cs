@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                playerNeedHelp.GetComponent<Manager_Life>().SetCurentLife(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                playerNeedHelp.GetComponent<Manager_Life>().HealHealth(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
                 tryRevive = false;
                 Debug.Log("it is alive");
             }
@@ -196,7 +196,9 @@ public class PlayerController : MonoBehaviour
 
    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
    {
-        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0) return;
+       
+        
         SetBall();
        if (balle && _timer<=0)
        {
@@ -307,7 +309,7 @@ public class PlayerController : MonoBehaviour
                 {
                     other.gameObject.GetComponent<Balle>().combo = 0;
                     other.gameObject.GetComponent<Ball>().ResetSpeed();
-                    Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
+                    //Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
                     BallsInRange.Remove(other.gameObject);
                 }
             }

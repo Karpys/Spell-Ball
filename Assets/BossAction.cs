@@ -5,11 +5,11 @@ using Random = UnityEngine.Random;
 
 public class BossAction : MonoBehaviour
 {
-    [HideInInspector]
-    public BossBehavior Boss;
-    public virtual void Activate()
+    /*[HideInInspector]
+    public BossBehavior Boss;*/
+    public virtual void Activate(BossBehavior boss)
     {
-        Boss = FindObjectOfType<BossBehavior>();
+        //Boss = boss;
         Debug.Log(this.name + " Activate");
     }
 
@@ -30,7 +30,7 @@ public class BossAction : MonoBehaviour
             foreach (BallThrowerStats Stats in BallThrower)
             {
                 GameObject Parent = Stats.StartPositions[Random.Range(0, Stats.StartPositions.Count - 1)];
-                GameObject Throw = Instantiate(BossBehavior.Boss.BaseShooter, Parent.transform);
+                GameObject Throw = Instantiate(GameManager.gameManager.BaseShooter, Parent.transform);
                 /*Throw.AddComponent<BallThrower>().SetUpThrower(Stats);*/
                 Throw.GetComponent<BallThrower>().SetUpThrower(Stats);
                 Throw.GetComponent<BallThrower>().ThrowerStats.Manager = Manager;
@@ -66,7 +66,7 @@ public class BossAction : MonoBehaviour
             foreach (LaserStats stat in Stats)
             {
                 GameObject Parent = stat.StartPosition;
-                GameObject Laser = Instantiate(BossBehavior.Boss.BaseLaser, Parent.transform);
+                GameObject Laser = Instantiate(GameManager.gameManager.BaseLaser, Parent.transform);
                 Laser.GetComponent<LaserBehavior>().Stats = stat;
                 Laser.GetComponent<LaserBehavior>().Stats.Manager = Manager;
                 LaserInst.Add(Laser);
@@ -96,6 +96,7 @@ public class BossAction : MonoBehaviour
         [Header("Nom Du Groupe de Laser (Si multiple Premier Name pris en compte)")]
         [Space(10)]
         public string Name = "Laser";
+        public bool ThrowHead = false;
         [Header("Durée du Laser et Temps de départ")]
         public float Duration = 2.0f;
         public float WaitTime = 1.0f;
@@ -125,6 +126,7 @@ public class BossAction : MonoBehaviour
         [Header("Projectile GameObject Name and Prefab")]
         public string Name = "Throwr";
         public GameObject Projectile;
+        public bool ThrowHead = false;
         [Space(10)]
         [Header("Projectile Thrower Stats")]
         public Vector2 Power = new Vector2(10,10);
@@ -174,10 +176,11 @@ public class BossAction : MonoBehaviour
     public class ShieldInstantier
     {
         public ShieldStats Stats;
-        public void CreateShield()
+        public void CreateShield(BossBehavior boss)
         {
-            GameObject Shield = Instantiate(BossBehavior.Boss.BaseShield, Stats.Parent.transform);
+            GameObject Shield = Instantiate(GameManager.gameManager.BaseShield, Stats.Parent.transform);
             Shield.GetComponent<SheildManager>().Stats = Stats;
+            Shield.GetComponent<SheildManager>().Boss = boss;
         }
     }
 }

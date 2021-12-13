@@ -15,6 +15,7 @@ public class UI_MenuPause : MonoBehaviour
     public GameObject fadeRef;
     Animation animFade;
 
+    public float timeTransi = 1f;
 
     public bool playerDoPause;
     public bool unPause = false;
@@ -121,7 +122,7 @@ public class UI_MenuPause : MonoBehaviour
         unPause = true;
         Time.timeScale = 1f;
         EventSystem.current.SetSelectedGameObject(null);
-
+        AkSoundEngine.SetRTPCValue("GP_Lowpass_Pause", Mathf.Lerp(50, 0, 4 / timeTransi));
     }
     public void Pause()
     {
@@ -134,6 +135,8 @@ public class UI_MenuPause : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(resumeFocus);
+
+        AkSoundEngine.SetRTPCValue("GP_Lowpass_Pause", Mathf.Lerp(0, 50, 4 / timeTransi));
     }
     public void Options()
     {

@@ -9,17 +9,35 @@ public class BossLaser : BossAction
     public int NbrRay;
     [HideInInspector]
     public int DeadRay;
-    public override void Activate()
+
+    private BossBehavior Boss;
+    public override void Activate(BossBehavior boss)
     {
+        base.Activate(boss);
+        Boss = boss;
         DeadRay = 0;
         NbrRay = Instantier.Stats.Count;
-        //BossBehavior.Boss.HeadRotation.SetTargetRotation(1);
         Instantier.InstLaser(this);
-        base.Activate();
+
+        if(Boss.HeadRotation!=null)
+            Boss.HeadRotation.SetTargetRotation(1);
+
+        if (Instantier.Stats[0].ThrowHead)
+        {
+            if (Boss.Head != null)
+            {
+                Boss.Head.LaunchHead(1);
+            }
+        }
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
     }
     public override void Deactivate()
     {
+        if (Instantier.Stats[0].ThrowHead)
+        {
+            if(Boss.Head!=null)
+                Boss.Head.RetractHead(1);
+        }
         Instantier.DestroyLaser();
         base.Deactivate();
     }
@@ -29,7 +47,7 @@ public class BossLaser : BossAction
         DeadRay++;
         if (NbrRay == DeadRay)
         {
-            BossBehavior.Boss.NextAction();
+            Boss.NextAction();
         }
     }
 }

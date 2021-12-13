@@ -24,8 +24,13 @@ public class UI_Options : MonoBehaviour
 
     UI_Options_Audio audioMenu;
     UI_Options_Graphics graphMenu;
+    bool wFocus = true;
 
     public Animator animref;
+
+    [Header("Music")]
+    [SerializeField] private AK.Wwise.Event stopMusicMenu;
+    [SerializeField] private GameObject bank;
 
     private void OnEnable()
     {
@@ -65,6 +70,7 @@ public class UI_Options : MonoBehaviour
     public void OnResetSettings(string SceneName)
     {
         PlayerPrefs.DeleteAll();
+        stopMusicMenu.Post(bank);
         SceneManager.LoadScene(SceneName);
     }
 

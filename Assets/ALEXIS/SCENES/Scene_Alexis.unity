@@ -2267,7 +2267,7 @@ MonoBehaviour:
   vfxS: {fileID: 1906536751}
   musicS: {fileID: 1064097342}
   scene1: Scene_Alexis
-  scene2: Scene_Build_LD
+  scene2: Merge_Sprint4
   volM: 50
   volV: 50
   volMu: 50
@@ -5036,6 +5036,11 @@ MonoBehaviour:
   buttonAud: {fileID: 823633185}
   buttonBack: {fileID: 421495993}
   animref: {fileID: 962234515}
+  stopMusicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
+  bank: {fileID: 1244623715}
 --- !u!1 &883245285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5262,7 @@ MonoBehaviour:
   resolutionD: {fileID: 942990320}
   fullscreenT: {fileID: 1665277451}
   scene1: Scene_Alexis
-  scene2: Scene_Build_LD
+  scene2: Merge_Sprint4
   resolutionDetails:
   - horizontal: 1920
     vertical: 1080
@@ -5386,7 +5391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3239104135840363675, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493e3a99c1ddf5145b3bb329e455bcc1, type: 3}
@@ -5674,7 +5679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonGraph: {fileID: 1891100264}
   scene1: Scene_Alexis
-  scene2: Scene_Build_LD
+  scene2: Merge_Sprint4
   animref: {fileID: 962234515}
 --- !u!95 &962234515
 Animator:
@@ -6870,6 +6875,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243021411}
   m_CullTransparentMesh: 1
+--- !u!1 &1244623715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244623717}
+  - component: {fileID: 1244623716}
+  m_Layer: 0
+  m_Name: BankLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1244623716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244623715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7cf5de07e10fd47b11e4a05bc7de44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b8283e8f7c0d2ab40a833d7c916581f5, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!4 &1244623717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244623715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 378.13388, y: 188.43492, z: -1.5953217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1277091950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8841,14 +8901,6 @@ MonoBehaviour:
     iceChar: {fileID: 9122807134000420660, guid: 827225269adafc74b9b0fe1dfdc0aea7, type: 3}
     poisonChar: {fileID: 9122807134000420660, guid: 31431c4822e2b57459ba9aac7a15f38f, type: 3}
     elecChar: {fileID: 9122807134000420660, guid: b12e114fa7eb6a34f872d581da0b5f2b, type: 3}
-  - fireImage: {fileID: 21300000, guid: aabe095cd1a8c7b45969bac8b21695b2, type: 3}
-    iceImage: {fileID: 21300000, guid: 819eb0d5933cfb545a00b8a4a4c3a896, type: 3}
-    poisonImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-    elecImage: {fileID: 21300000, guid: 40d06a72ddebf4e4f8fa2e8221a096aa, type: 3}
-    fireChar: {fileID: 9122807134000420660, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
-    iceChar: {fileID: 9122807134000420660, guid: 827225269adafc74b9b0fe1dfdc0aea7, type: 3}
-    poisonChar: {fileID: 9122807134000420660, guid: 31431c4822e2b57459ba9aac7a15f38f, type: 3}
-    elecChar: {fileID: 9122807134000420660, guid: b12e114fa7eb6a34f872d581da0b5f2b, type: 3}
 --- !u!1 &1576399939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9955,8 +10007,17 @@ MonoBehaviour:
   fadeRef: {fileID: 139742005}
   optionsMenu: {fileID: 880261718}
   charSelectionMenu: {fileID: 1568171815}
-  SceneName: Scene_Julien
+  SceneName: Merge_Sprint4
   wFocus: 1
+  bank: {fileID: 1244623715}
+  musicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0e9f2ce15166780409cc90b3600df719, type: 2}
+  stopMusicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}

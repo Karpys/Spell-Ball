@@ -6,18 +6,21 @@ public class BossShield : BossAction
 {
     /*public int HpBossState;*/
     public ShieldInstantier Instantier;
-    public override void Activate()
+
+    private BossBehavior Boss;
+    public override void Activate(BossBehavior boss)
     {
-        base.Activate();
+        Boss = boss;
+        base.Activate(boss);
         //BossBehavior.Boss.HeadRotation.SetTargetRotation(2);
-        if (BossBehavior.Boss.GetComponentInChildren<SheildManager>())
+        if (Boss.GetComponentInChildren<SheildManager>())
         {
             //IGNORE SHIELD DEJA EN PLACE//
-            BossBehavior.Boss.NextAction();
+            Boss.NextAction();
         }
         else
         {
-            Instantier.CreateShield();
+            Instantier.CreateShield(boss);
         }
         
         //CREER SHIELD AVEC SHIELD STATS//

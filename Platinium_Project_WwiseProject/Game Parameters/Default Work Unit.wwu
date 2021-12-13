@@ -4,10 +4,51 @@
 		<WorkUnit Name="Default Work Unit" ID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="BUS" ID="{7AB1306C-1857-4558-B350-C713820563F9}" ShortID="685719516">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<GameParameter Name="GP_MASTER" ID="{FE608745-1417-44F6-B10A-AA8B66DBB32D}"/>
 						<GameParameter Name="GP_MUSIC" ID="{F2A781B3-6792-45BE-A478-875605E8D3E6}"/>
 						<GameParameter Name="GP_SFX" ID="{B0B5F5E6-5BDA-4971-A1B7-C4C7BC47C84C}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MUSIC" ID="{B20CFF6F-E78A-416E-8FED-E772A8C8190E}" ShortID="789010199">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<GameParameter Name="GP_M_Layer1" ID="{FF1E5364-F853-4FE8-80DC-143B1A6A663B}"/>
+						<GameParameter Name="GP_M_Layer2" ID="{C8518985-EA4A-49A2-8CBB-24B429C5DE94}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GP_M_Layer3" ID="{FFF5DC0F-4204-47A1-9DCB-FE32C6F8BDE4}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GP_M_BOSS_IsWeak" ID="{FB163A77-F7FD-4576-A1F8-14D8ED6F1CC9}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PAUSE" ID="{CB71DF92-7BED-4638-846D-6C4AFEF393AA}" ShortID="866960889">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<GameParameter Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

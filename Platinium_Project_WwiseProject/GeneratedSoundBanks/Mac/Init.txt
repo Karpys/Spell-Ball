@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	687458188	GP_MUSIC			\Default Work Unit\BUS\GP_MUSIC	
 	2359434321	GP_MASTER			\Default Work Unit\BUS\GP_MASTER	
 	2681064004	GP_SFX			\Default Work Unit\BUS\GP_SFX	
+	2705865419	GP_Lowpass_Pause			\Default Work Unit\PAUSE\GP_Lowpass_Pause	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\MASTER\SFX	
@@ -10,32 +10,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1421616930	SFX_BOSS			\Default Work Unit\MASTER\SFX\SFX_BOSS	
 	1639431926	SFX_BALL			\Default Work Unit\MASTER\SFX\SFX_BALL	
 	1683454542	M_MAIN			\Default Work Unit\MASTER\MUSIC\M_MAIN	
+	3417986046	M_BOSS			\Default Work Unit\MASTER\MUSIC\M_BOSS	
 	3991942870	MUSIC			\Default Work Unit\MASTER\MUSIC	
 	4056684167	MASTER			\Default Work Unit\MASTER	
-	4075503242	SFX_MINIONS			\Default Work Unit\MASTER\SFX\SFX_MINIONS	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
 	3859886410	System	System			
 
-=======
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	687458188	GP_MUSIC			\Default Work Unit\BUS\GP_MUSIC	
-	2359434321	GP_MASTER			\Default Work Unit\BUS\GP_MASTER	
-	2681064004	GP_SFX			\Default Work Unit\BUS\GP_SFX	
-
-Audio Bus	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\MASTER\SFX	
-	1415773282	SFX_CHARACTER			\Default Work Unit\MASTER\SFX\SFX_CHARACTER	
-	1421616930	SFX_BOSS			\Default Work Unit\MASTER\SFX\SFX_BOSS	
-	1639431926	SFX_BALL			\Default Work Unit\MASTER\SFX\SFX_BALL	
-	1683454542	M_MAIN			\Default Work Unit\MASTER\MUSIC\M_MAIN	
-	3991942870	MUSIC			\Default Work Unit\MASTER\MUSIC	
-	4056684167	MASTER			\Default Work Unit\MASTER	
-	4075503242	SFX_MINIONS			\Default Work Unit\MASTER\SFX\SFX_MINIONS	
-
-Audio Devices	ID	Name	Type				Notes
-	2317455096	No_Output	No Output			
-	3859886410	System	System			
-
->>>>>>> main
