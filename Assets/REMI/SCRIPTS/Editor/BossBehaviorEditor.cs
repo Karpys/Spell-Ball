@@ -257,14 +257,14 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateBossShooter()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = new GameObject();
+        GameObject Obj = null;
         if (boss.ActionHolder != null)
         {
-            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.ActionHolder.transform);
         }
         else
         {
-            Obj = Instantiate(new GameObject(), boss.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.transform);
         }
         Obj.AddComponent<BossShooter>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShooter>());
@@ -274,14 +274,14 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateShield()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = new GameObject();
+        GameObject Obj = null;
         if (boss.ActionHolder != null)
         {
-            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.ActionHolder.transform);
         }
         else
         {
-            Obj = Instantiate(new GameObject(), boss.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.transform);
         }
         Obj.AddComponent<BossShield>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossShield>());
@@ -291,14 +291,14 @@ public class BossBehaviorEditor : Editor
     public GameObject CreateLaser()
     {
         BossBehavior boss = target as BossBehavior;
-        GameObject Obj = new GameObject();
+        GameObject Obj = null;
         if (boss.ActionHolder != null)
         {
-            Obj = Instantiate(new GameObject(), boss.ActionHolder.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.ActionHolder.transform);
         }
         else
         {
-            Obj = Instantiate(new GameObject(), boss.transform);
+            Obj = Instantiate(GameManager.gameManager.BaseGameObject, boss.transform);
         }
         Obj.AddComponent<BossLaser>();
         boss.Phases[ActualPhase].ListAction.Add(Obj.GetComponent<BossLaser>());
