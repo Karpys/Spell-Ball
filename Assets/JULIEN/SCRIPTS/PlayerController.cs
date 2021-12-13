@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private float TimeRevive;
 
     [SerializeField] GameObject SlowDownEffect;
+    public GameObject Bag;
     private float _timer;
 
     private bool revive;
@@ -360,7 +361,9 @@ public class PlayerController : MonoBehaviour
     public void ShakePlayer()
     {
         ShakerEntity entity = CharacterVisual.AddComponent<ShakerEntity>();
-        entity.SetShakeParameters(0.25f,0.5f,15f,new Vector3(1,0,1));
+        entity.SetShakeParameters(0.25f,1f,15f,new Vector3(1,0,1));
+        Vector3 Offsett = new Vector3(0, 2, 0);
+        OnHitPlayerManager.HitPlayer.OnHit(GetPlayerColor(),Bag.transform.position + Offsett);
     }
 
     /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
