@@ -5,10 +5,10 @@ using UnityEngine;
 public class BossMultipleShoot : BossAction
 {
     public int HpBossState;
-    public override void Activate()
+    public override void Activate(BossBehavior boss)
     {
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
-        base.Activate();
+        base.Activate(boss);
     }
 
     public override void Deactivate()

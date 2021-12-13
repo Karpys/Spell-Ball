@@ -29,6 +29,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private GameObject SpeedEffect;
 
+    [SerializeField] private GameObject OnHitParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +86,7 @@ public class Ball : MonoBehaviour
             else
                 Instantiate(CollisionParticle, transform.position, transform.rotation);
 
+            gameObject.GetComponent<Balle>().ColorBallReset();
         }
 
         
@@ -97,8 +100,8 @@ public class Ball : MonoBehaviour
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
                 managerLife.Damage(balle);
-                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);
-
+                Instantiate(OnHitParticle, transform.position, transform.rotation);
+                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);//balle.trail.startColor);
                 
             }
             ResetSpeedAndCombo();
@@ -117,8 +120,15 @@ public class Ball : MonoBehaviour
             {
                 //DAMAGE PLAYER//
                 Balle balle = GetComponent<Balle>();
+                if (Life.Timerinvis >= 0)
+                {
+
+                }
+                else
+                {
                 Life.DamageHealth(1);
                 Destroy(gameObject);
+                }
             }
         }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);

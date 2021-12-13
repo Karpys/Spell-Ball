@@ -88,6 +88,6 @@ public class BossMovement : MonoBehaviour
         public GameObject TransformRight;
         public GameObject TransformLeft;
         public float Speed;
-        public bool Right;
+        [HideInInspector]public bool Right;
     }
 }

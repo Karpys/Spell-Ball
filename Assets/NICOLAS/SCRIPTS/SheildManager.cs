@@ -7,6 +7,7 @@ public class SheildManager : MonoBehaviour
     public GameObject prefabShield;
     public List<GameObject> sheilds;
     public BossAction.ShieldStats Stats;
+    public BossBehavior Boss;
     float time;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class SheildManager : MonoBehaviour
             if (i + 1 == Stats.Number)
                 shield.GetComponent<Sheild>().lastSield = true;
         }
-        BossBehavior.Boss.NextAction();
+        Boss.NextAction();
     }
 
     // Update is called once per frame
