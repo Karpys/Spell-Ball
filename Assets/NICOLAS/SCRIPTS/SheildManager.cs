@@ -21,8 +21,13 @@ public class SheildManager : MonoBehaviour
             shield.transform.localScale = new Vector3(shield.transform.localScale.x + 0.25f * i, shield.transform.localScale.y + 0.25f * i, shield.transform.localScale.z + 0.25f * i); 
             shield.transform.SetParent(gameObject.transform);
             sheilds.Add(shield);
+            shield.SetActive(false);
             if (i + 1 == Stats.Number)
+            {
                 shield.GetComponent<Sheild>().lastSield = true;
+                shield.SetActive(true);
+            }
+
         }
         Boss.NextAction();
     }
@@ -41,7 +46,8 @@ public class SheildManager : MonoBehaviour
 
     public void ChangeLastSheild()
     {
-        StartCoroutine("DestroyShield");
+        Debug.Log("last");
+        StartCoroutine(DestroyShield());
     }
 
     ColorEnum RandomColor()
@@ -65,6 +71,7 @@ public class SheildManager : MonoBehaviour
 
     public IEnumerator DestroyShield()
     {
+        Debug.Log("disolve");
         int count = sheilds.Count - 1;
         if (count-1 < 0)
         {
@@ -81,7 +88,11 @@ public class SheildManager : MonoBehaviour
         Destroy(sheilds[count]);
         sheilds.RemoveAt(count);
         if(count>0)
+        {
             sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
+            sheilds[count - 1].SetActive(true);
+        }
+
 
     }
 }

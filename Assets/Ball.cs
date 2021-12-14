@@ -79,8 +79,10 @@ public class Ball : MonoBehaviour
             Reflect(hit.normal);
             ResetSpeedAndCombo();
             hitShield = true;
+            Debug.Log(hit.transform.gameObject.GetComponent<Sheild>().color + "   " + gameObject.GetComponent<Balle>().color);
             if (hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
             {
+                Debug.Log("change");
                 hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
             }
             else
