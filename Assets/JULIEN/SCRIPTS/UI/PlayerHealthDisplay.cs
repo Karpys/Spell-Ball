@@ -64,7 +64,7 @@ public class PlayerHealthDisplay : MonoBehaviour
 
     public void ShakePlayerVisual()
     {
-        StartCoroutine(ShakeVisual(.1f, 20f));
+        StartCoroutine(ShakeVisual(.2f, 20f));
     }
 
     
