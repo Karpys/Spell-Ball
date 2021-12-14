@@ -56,14 +56,14 @@ public class UI_Options_Graphics : MonoBehaviour
 
         //Check Which scene is currently active
         Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
+        int sceneName = currentScene.buildIndex;
 
-        if (sceneName == scene1)
+        if (sceneName == 0)
         {
             refMenuMain = FindObjectOfType<Manager_MainMenu>();
             refMenuMain.UIIndex = 2;
         }
-        else if (sceneName == scene2)
+        else if (sceneName == 1)
         {
             refMenuPause = FindObjectOfType<UI_MenuPause>();
             refMenuPause.UIIndex = 2;

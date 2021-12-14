@@ -16,7 +16,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     [SerializeField] private GameObject charSelectionMenu;
 
-    public string SceneName;
+    //public string SceneName;
 
     public bool wFocus = true;
 
@@ -207,7 +207,7 @@ public class Manager_MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         stopMusicMenu.Post(bank);
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(1);
 
     }
 

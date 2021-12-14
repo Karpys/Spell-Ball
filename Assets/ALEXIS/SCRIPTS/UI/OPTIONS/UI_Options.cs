@@ -71,7 +71,7 @@ public class UI_Options : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         stopMusicMenu.Post(bank);
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(0);
     }
 
     public void OnBack()
