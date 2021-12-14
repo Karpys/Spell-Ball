@@ -50,7 +50,7 @@ public class BossBehavior : MonoBehaviour
 
     public void Start()
     {
-        LaunchPhase(0);
+        //LaunchPhase(0);
     }
 
 
