@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="51703143" Language="SFX" Hash="748289049">
+		<SoundBank Id="51703143" Language="SFX" Hash="3064169034">
 			<ObjectPath>\SoundBanks\Default Work Unit\CHARACTER\S_Characters</ObjectPath>
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
@@ -80,7 +80,7 @@
 				<GameParameter Id="3755703199" Name="GP_M_BOSS_IsWeak" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2301567079">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2646684616">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -378,7 +378,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1571743440" Language="SFX" Hash="1459921863">
+		<SoundBank Id="1571743440" Language="SFX" Hash="918554213">
 			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
 			<ShortName>S_Boss</ShortName>
 			<Path>S_Boss.bnk</Path>
@@ -545,7 +545,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="2119432901">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2679738135">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
