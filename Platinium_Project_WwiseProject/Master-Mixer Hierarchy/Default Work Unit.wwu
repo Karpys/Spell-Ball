@@ -109,9 +109,23 @@
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="SFX_CHARACTER" ID="{B3BF2561-B1C0-4E5D-9CC3-3A9DB84E5DC3}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>
