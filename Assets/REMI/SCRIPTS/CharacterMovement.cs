@@ -39,6 +39,8 @@ public class CharacterMovement : MonoBehaviour
             MovementDir = MovementInput;
         }
 
+        if (gameObject.transform.position.y > 1)
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1, gameObject.transform.position.z);
 
     }
 
