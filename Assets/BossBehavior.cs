@@ -102,9 +102,6 @@ public class BossBehavior : MonoBehaviour
                 ListActualAction[ActualAction].Deactivate();
             }
 
-
-
-
             //LAST PHASE
 
             if (ActualPhase >= Phases.Count - 1)
@@ -121,13 +118,17 @@ public class BossBehavior : MonoBehaviour
             ActualPhase += 1;
 
             //
-
-
+            /*if (BossVoiceManager.Voice)
+            {
+                BossVoiceManager.Voice.Play(BossVoiceManager.Voice.ChangePhase);
+            }*/
             //TRANSITION VERS PROCHAINE PHASE PAS CALL LAUNCH PHASE TT DE SUITE//
             LaunchPhase(ActualPhase);
             MusicManager.LaunchLayer(ActualPhase+1);
         }
     }
+
+    
 
     public void LaunchAction()
     {
@@ -148,6 +149,14 @@ public class BossBehavior : MonoBehaviour
         foreach (BossAction Action in Phases[id].ListAction)
         {
             Action.Deactivate();
+        }
+    }
+
+    public void GetDamage()
+    {
+        if (BossVoiceManager.Voice)
+        {
+            BossVoiceManager.Voice.PlayHit();
         }
     }
 

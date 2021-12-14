@@ -3004,7 +3004,7 @@
     },
     "m_Name": "ColorOutline",
     "m_DefaultReferenceName": "Color_f4a9c221fd5542209eb0a675a89a1f84",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_ColorOutline",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

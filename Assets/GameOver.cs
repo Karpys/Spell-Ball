@@ -7,8 +7,8 @@ public class GameOver : MonoBehaviour
 {
     GameObject [] player = new GameObject [4];
     public GameObject Fade;
-    public GameObject Boss;
-    public GameObject pauseMenu;
+    //public GameObject Boss;
+    //public GameObject pauseMenu;
     //public Animation FadeOut;
 
     public static GameOver instance = null;

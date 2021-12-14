@@ -1,24 +1,29 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PressurePlate : MonoBehaviour
 {
-
     [SerializeField] private List<GameObject> _doorsGameObjects;
+    [SerializeField] private bool _activateRandomlyOneDoorOnly;
     [SerializeField] private int _numberOfPlayersToActivate;
+
+    [SerializeField] private float _timeToStayBeforeOpenning;
     [SerializeField] private float _timeBeforeClosing;
-    [SerializeField] private int _numberOfColorCorrectMinimumToActivate;
-    [SerializeField] private List<ColorEnum> _colorNeededToActivate;
+    // [SerializeField] private int _numberOfColorCorrectMinimumToActivate;
+    // [SerializeField] private List<ColorEnum> _colorNeededToActivate;
 
     private List<IDoor> _doors;
     private float timer;
     private List<PlayerController> _playersController;
 
+    private List<IDoor> _opennedDoor;
+    private float openningTimer;
+
     private void Awake()
     {
         _doors = new List<IDoor>();
+        _opennedDoor = new List<IDoor>();
         _playersController = new List<PlayerController>();
         foreach (GameObject _doorGO in _doorsGameObjects)
         {
@@ -33,36 +38,48 @@ public class PressurePlate : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0f)
             {
-                foreach (IDoor door in _doors)
+                foreach (IDoor door in _opennedDoor)
                 {
                     if (door.getDoorState() == DoorState.OPEN)
                         door.CloseDoor();
                 }
+
+                _opennedDoor.Clear();
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<CharacterController>() != null)
+        if (other.GetComponent<PlayerController>() != null)
         {
             PlayerController _player = other.GetComponent<PlayerController>();
             if (!_playersController.Contains(_player)) _playersController.Add(_player);
-            if (_playersController.Count >= _numberOfPlayersToActivate)
+            
+            if (_opennedDoor.Count <= 0)
             {
-                if (hasAllColorNeeded())
+                if (!_activateRandomlyOneDoorOnly)
                 {
                     foreach (IDoor door in _doors)
                     {
-                        if (door.getDoorState() == DoorState.CLOSE)
-                            door.OpenDoor();
+                        _opennedDoor.Add(door);
                     }
                 }
+                else
+                {
+                    IDoor door = _doors[Random.Range(0, _doors.Count)];
+                    _opennedDoor.Add(door);
+                }
+            }
+
+            if (_playersController.Count >= _numberOfPlayersToActivate /*&& hasAllColorNeeded()*/)
+            {
+                openningTimer = _timeToStayBeforeOpenning;
             }
         }
     }
 
-    private bool hasAllColorNeeded()
+    /*private bool hasAllColorNeeded()
     {
         List<ColorEnum> currentOnPlate = new List<ColorEnum>();
         for (int i = 0; i < _playersController.Count; i++)
@@ -83,15 +100,28 @@ public class PressurePlate : MonoBehaviour
         
 
         return isValid || numbOfCorrectColor >= _numberOfColorCorrectMinimumToActivate;
-    }
-    
+    }*/
+
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<CharacterController>() != null)
         {
-            if (_playersController.Count >= _numberOfPlayersToActivate && hasAllColorNeeded())
+            if (_playersController.Count >= _numberOfPlayersToActivate /*&& hasAllColorNeeded()*/)
             {
-                timer = _timeBeforeClosing;
+
+                openningTimer -= Time.deltaTime;
+                if (openningTimer <= 0f)
+                {
+                    foreach (IDoor door in _opennedDoor)
+                    {
+                        if (door.getDoorState() == DoorState.CLOSE)
+                        {
+                            door.OpenDoor();
+                        }
+                    }
+                    
+                    timer = _timeBeforeClosing;
+                }
             }
         }
     }

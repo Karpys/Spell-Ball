@@ -43,10 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091aa8fccaa4ce64e996065770af29e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabShield: {fileID: 1439565992329249231, guid: ac3319b32a13ffb4fbe07dcc5b9c6c85, type: 3}
+  prefabShield: {fileID: 3774439084353235265, guid: 7bda3e82753dae54cbf39d05f4ad4067, type: 3}
   sheilds: []
   Stats:
     Name: 
     Number: 0
     Parent: {fileID: 0}
     BaseShield: {fileID: 0}
+  Boss: {fileID: 0}

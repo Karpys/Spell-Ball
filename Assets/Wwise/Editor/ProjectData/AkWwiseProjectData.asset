@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: cbba4e87874e1b42be2e0c37d6742d40
     GuidInternal: 
-    m_lastTime: -8585668044075157545
+    m_lastTime: -8585628944622875646
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 121cbf942d2c0a4aa70b4d5d177cbb96
     GuidInternal: 
-    m_lastTime: -8585621272586903157
+    m_lastTime: -8585621114335180229
     List:
     - name: M_BOSS
       guid: e23f2f8bb296fa4ba477c377ae9f2fbd
@@ -128,6 +128,52 @@ MonoBehaviour:
         ObjectType: 2
         guid: 15a03f1b37e0ab4ead0055af3eaf547c
       Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX
+    - name: SFX_B_Laser
+      guid: 830cdc376e9db5489ee1267249d5d91a
+      id: 745180601
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_BOSS
+        ObjectType: 2
+        guid: 88963bbcc545774ab2a2efe5dd32b39f
+      - ElementName: SFX_B_Laser
+        ObjectType: 2
+        guid: 830cdc376e9db5489ee1267249d5d91a
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_BOSS\SFX_B_Laser
+    - name: SFX_B_Voices
+      guid: 76bd35a44d5c384f81ad64cf67f4fd05
+      id: 2972369377
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 121cbf942d2c0a4aa70b4d5d177cbb96
+      - ElementName: MASTER
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 15a03f1b37e0ab4ead0055af3eaf547c
+      - ElementName: SFX_BOSS
+        ObjectType: 2
+        guid: 88963bbcc545774ab2a2efe5dd32b39f
+      - ElementName: SFX_B_Voices
+        ObjectType: 2
+        guid: 76bd35a44d5c384f81ad64cf67f4fd05
+      Path: Master-Mixer Hierarchy\Default Work Unit\MASTER\SFX\SFX_BOSS\SFX_B_Voices
     - name: SFX_BALL
       guid: f41e05269c2ff5428e828ce01d1d683d
       id: 1639431926
@@ -200,7 +246,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585621272586172994
+    m_lastTime: -8585621114334877977
     List:
     - name: BALL
       guid: 5c501f5b299abd4b973517733bae8140
@@ -352,7 +398,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585621272587803354
+    m_lastTime: -8585621114335524711
     List:
     - name: BALL
       guid: af28c015ba078a40acc15da43c5d0f5a
@@ -1312,7 +1358,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f7aeb8776abeb1408e4daa3e0077b848
     GuidInternal: 
-    m_lastTime: -8585624699753459783
+    m_lastTime: -8585622238805422983
     List:
     - name: BUS
       guid: 6c30b17a57185845b350c713820563f9
@@ -1504,7 +1550,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: bb08bd03bc83674dabd5a8598e3fa7b8
     GuidInternal: 
-    m_lastTime: -8585668044075177551
+    m_lastTime: -8585628944622875646
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1518,7 +1564,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f3ec116dff1bdb44956d8882baafad5f
     GuidInternal: 
-    m_lastTime: -8585668044075167548
+    m_lastTime: -8585628944622875646
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1532,7 +1578,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9886abdd41a1454e957f8138b444e87a
     GuidInternal: 
-    m_lastTime: -8585668044075167548
+    m_lastTime: -8585628944622875646
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
