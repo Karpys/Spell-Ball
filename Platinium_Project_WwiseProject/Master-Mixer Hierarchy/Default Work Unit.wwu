@@ -106,13 +106,35 @@
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="SFX_BOSS" ID="{BC3B9688-45C5-4A77-B2A2-EFE5DD32B39F}">
+									<ChildrenList>
+										<Bus Name="SFX_B_Laser" ID="{37DC0C83-9D6E-48B5-9EE1-267249D5D91A}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="SFX_B_Voices" ID="{A435BD76-5C4D-4F38-81AD-64CF67F4FD05}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
 									<ObjectLists/>
 								</Bus>
 								<Bus Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}">
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
