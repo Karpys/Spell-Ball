@@ -894,8 +894,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -909.0000610351563,
-            "y": 1491.0,
+            "x": -924.0,
+            "y": 1381.0,
             "width": 137.0,
             "height": 34.0
         }
@@ -3004,7 +3004,7 @@
     },
     "m_Name": "ColorOutline",
     "m_DefaultReferenceName": "Color_f4a9c221fd5542209eb0a675a89a1f84",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_ColorOutline",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
