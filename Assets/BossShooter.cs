@@ -34,6 +34,14 @@ public class BossShooter : BossAction
             Boss.HeadRotation.SetTargetRotation(0);
         }
 
+        if (Instantier.BallThrower[0].ActAsSplash)
+        {
+            if (BossVoiceManager.Voice)
+            {
+                BossVoiceManager.Voice.Play(BossVoiceManager.Voice.SplashVoice);
+            }
+        }
+
     }
     public override void Deactivate()
     {
