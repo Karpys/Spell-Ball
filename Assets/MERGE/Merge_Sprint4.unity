@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009659797, g: 0.018999636, b: 0.04358679, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4301,7 +4301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
@@ -4567,7 +4566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4d58c97d933b46b4d9c8092ceea88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
     - Manager: {fileID: 0}
@@ -4628,7 +4626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4d58c97d933b46b4d9c8092ceea88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
     - Manager: {fileID: 0}
@@ -6119,7 +6116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
@@ -7158,7 +7154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4d58c97d933b46b4d9c8092ceea88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
     - Manager: {fileID: 0}
@@ -7219,7 +7214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
@@ -8094,7 +8088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
@@ -11066,7 +11059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &620493928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11523,7 +11516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca1396f027db84bb6f1f84eca7535e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
       Name: Shield2
@@ -12920,6 +12912,70 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7102221, y: 1.665541, z: 4.998666}
   m_Center: {x: -0.0000017881393, y: 0.17610756, z: 2.4993343}
+--- !u!1 &723066639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 723066642}
+  - component: {fileID: 723066641}
+  - component: {fileID: 723066640}
+  m_Layer: 0
+  m_Name: Managaer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &723066640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723066639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa5cc5fb9daa6140bed1576312a02dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlueHit: {fileID: 6083415166425406385, guid: b2a7b95a702776b4fb68381c0d812fcc, type: 3}
+  GreenHit: {fileID: 6083415166425406385, guid: 8ec2383406f8b76488a89d63c7c080ff, type: 3}
+  YellowHit: {fileID: 6083415166425406385, guid: 7e1bd87dd4e8b1f4884d588ca00ef386, type: 3}
+  RedHit: {fileID: 6083415166425406385, guid: 8f5c31d89bd142f4aa0d4316e92badd0, type: 3}
+--- !u!114 &723066641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723066639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b14d56cb892cc4fa945456e458524f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseShield: {fileID: 1866515123114465808, guid: 17bbfde189f9df248822893300c3e090, type: 3}
+  BaseShooter: {fileID: 6009121967276087187, guid: 24f1aeda22e3d0140b08e5ee6aaa0841, type: 3}
+  BaseLaser: {fileID: 9054846381830404985, guid: 9b9d6bd29e3bb82438eed4043489dda9, type: 3}
+  BaseGameObject: {fileID: 3179565729117572371, guid: 9a1031ed21640ab4b88bfb3bc611db0d, type: 3}
+--- !u!4 &723066642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723066639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.1383686, y: 4.9275227, z: -4.258387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &726232175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13794,7 +13850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca1396f027db84bb6f1f84eca7535e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
       Name: Shield
@@ -14350,7 +14405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
@@ -25251,7 +25305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4d58c97d933b46b4d9c8092ceea88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
     - Manager: {fileID: 0}
@@ -30155,7 +30208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4d58c97d933b46b4d9c8092ceea88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     Stats:
     - Manager: {fileID: 0}
@@ -36974,7 +37026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd5eed97a423554fb4994cae9b98f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
   Instantier:
     BallThrower:
     - Manager: {fileID: 0}
