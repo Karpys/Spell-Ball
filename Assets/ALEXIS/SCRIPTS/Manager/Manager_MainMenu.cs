@@ -123,11 +123,13 @@ public class Manager_MainMenu : MonoBehaviour
     {
         if(wFocus == false)
         {
+            Time.timeScale = 1f;
             EventSystem.current.SetSelectedGameObject(null);
             animRef.SetBool("QUIT", true);
             fadeRef.SetActive(true);
             animFade.Play("FadeOut_UI_V001");
             StartCoroutine("WaitPlay");
+            
         }
 
     }
@@ -189,7 +191,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(tempsAnim);
+        yield return new WaitForSecondsRealtime(tempsAnim);
         EventSystem.current.SetSelectedGameObject(null);
         launch.gameObject.SetActive(false);
         optionsMenu.gameObject.SetActive(true);
@@ -197,7 +199,7 @@ public class Manager_MainMenu : MonoBehaviour
     
     IEnumerator WaitEndAnimAndGoToCharSelect()
     {
-        yield return new WaitForSeconds(tempsAnim);
+        yield return new WaitForSecondsRealtime(tempsAnim);
         EventSystem.current.SetSelectedGameObject(null);
         launch.gameObject.SetActive(false);
         charSelectionMenu.gameObject.SetActive(true);
@@ -205,7 +207,7 @@ public class Manager_MainMenu : MonoBehaviour
 
     IEnumerator WaitPlay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1f);
         stopMusicMenu.Post(bank);
         SceneManager.LoadScene(1);
 
