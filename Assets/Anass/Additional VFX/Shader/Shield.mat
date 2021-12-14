@@ -21,8 +21,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shield
-  m_Shader: {fileID: -6465566751694194690, guid: 0069430eb5658f14bbd2d533176629a0, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_Shader: {fileID: -6465566751694194690, guid: 12b4bb4d78ed5de429396476853e84ec, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT
+    _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,9 +36,14 @@ Material:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
+  - RayTracingPrepass
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_12fd31d2eda34d2e85550b689fae69a5_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 555af178beb8f3949aaa3afacde7b59b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -53,8 +59,11 @@ Material:
     m_Floats:
     - Vector1_195c6b7bea334894ac9dc0898c014329: 5
     - Vector1_38aeb12f2aa8464cb4a3f87d2c72dc22: 60
+    - Vector1_53fef142b6bc48239150afcc325395d2: 3
+    - Vector1_58f7b41c55544c8d941a5b61f32fdf47: 2.4
     - Vector1_8061341e300b4d6a9da031d63817222b: 0
     - Vector1_9d438ab1fb984c52b761af38fc904f4a: 5
+    - Vector1_ee710a3a92814373bc49e0544ae4b854: 5
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 1
     - _AlphaDstBlend: 1
@@ -71,7 +80,12 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
+    - _RefractionModel: 0
     - _RenderQueueType: 4
+    - _RequireSplitLighting: 0
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
@@ -83,6 +97,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
+    - _SupportDecals: 1
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
@@ -96,11 +111,16 @@ Material:
     - _ZTestGBuffer: 3
     - _ZTestTransparent: 4
     - _ZWrite: 0
+    - _switch: 0
+    - _time: 0.77
     m_Colors:
     - Color_3e8dc45e71c8497a857a89583b68f4b1: {r: 1, g: 0.8349056, b: 0.8349056, a: 1}
     - Color_f4a9c221fd5542209eb0a675a89a1f84: {r: 1, g: 1, b: 1, a: 1}
     - Vector2_08e984a6c14e4b82a0c6f33551a60f56: {r: -0.3, g: 0.3, b: 0, a: 0}
     - Vector2_1: {r: 2, g: 2, b: 0, a: 0}
+    - Vector2_1341da2648e845228b7a448ff4168cd5: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.196}
+    - _ColorOutline: {r: 0.3962264, g: 0.2369882, b: 0.3917741, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

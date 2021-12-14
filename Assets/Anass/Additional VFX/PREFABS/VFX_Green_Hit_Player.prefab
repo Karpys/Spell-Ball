@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2
+      scalar: 1.5
+      minScalar: 0.7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24411,6 +24411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6083415166841164055}
+  - component: {fileID: 8863269893049124666}
   m_Layer: 0
   m_Name: VFX_Green_Hit_Player
   m_TagString: Untagged
@@ -24433,6 +24434,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8863269893049124666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083415166425406385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2e2ec391a80b641aa92e74306c352f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 1
 --- !u!1 &6083415167011510943
 GameObject:
   m_ObjectHideFlags: 0

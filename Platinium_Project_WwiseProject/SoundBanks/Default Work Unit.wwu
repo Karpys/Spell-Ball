@@ -20,9 +20,16 @@
 					<ChildrenList>
 						<SoundBank Name="S_Boss" ID="{154ADA97-83DA-4D8A-9FCB-D885D64BC6D8}">
 							<ObjectInclusionList>
+								<ObjectRef Name="Play_R_Boss_Settle" ID="{3FD0916A-0E68-4013-9961-A485D57991FE}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_Hurt_Cat" ID="{47EDCA6A-CD9D-40CC-94DE-979F4A25D92D}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_Run" ID="{582B312F-BEB7-43B3-B170-BCD48C7D631E}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_CanNotDodge" ID="{8A044E34-C83B-4781-A59F-4E8107C2ECC4}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_Hurt_Normal" ID="{3269B90B-6866-4838-B403-37C7263673BC}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_End" ID="{0FAAB09F-FC9D-48DA-9709-BD557E5E0EAA}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_ShieldBreak" ID="{6B1D36CD-636E-499E-B02A-508E04B33199}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Trigger" ID="{9742BD1B-B56C-49F0-B058-4615294CA6B0}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Charge" ID="{DF9F9DED-2ED8-4BCB-AB1C-275089CBEC9E}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_R_Boss_Dodge" ID="{0B85BD37-3060-4F28-A5E4-8A61A3DE55E3}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Release" ID="{EA8E1A99-2C63-4F74-9E84-A6AA68E70EFB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>
@@ -38,6 +45,7 @@
 					<ChildrenList>
 						<SoundBank Name="S_Characters" ID="{08F1D5C1-2CE4-46C3-8ECB-1D3A0844E1DF}">
 							<ObjectInclusionList>
+								<ObjectRef Name="Play_R_Chara_Roll" ID="{B5539CA6-EE9F-4985-B4E4-0DD58BAFB239}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="CHARACTER" ID="{D648C343-219D-4FB0-8A3B-11DD2B1B35D2}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>

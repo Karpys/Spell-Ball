@@ -28,8 +28,16 @@ namespace AK
         static const AkUniqueID PLAY_GREEN_POWER3 = 723683480U;
         static const AkUniqueID PLAY_M_BOSS_LAYER = 135329723U;
         static const AkUniqueID PLAY_M_MENU_THEME = 1195915301U;
+        static const AkUniqueID PLAY_R_BOSS_CANNOTDODGE = 1832843239U;
+        static const AkUniqueID PLAY_R_BOSS_DODGE = 1779048192U;
+        static const AkUniqueID PLAY_R_BOSS_HURT_CAT = 3788219053U;
+        static const AkUniqueID PLAY_R_BOSS_HURT_NORMAL = 2614099830U;
+        static const AkUniqueID PLAY_R_BOSS_RUN = 2434935390U;
+        static const AkUniqueID PLAY_R_BOSS_SETTLE = 1538231534U;
+        static const AkUniqueID PLAY_R_BOSS_SHIELDBREAK = 166862117U;
         static const AkUniqueID PLAY_R_BOUNCE = 4267311131U;
         static const AkUniqueID PLAY_R_CAST_RED = 3571159426U;
+        static const AkUniqueID PLAY_R_CHARA_ROLL = 3117905890U;
         static const AkUniqueID PLAY_RED_POWER1 = 756609446U;
         static const AkUniqueID PLAY_RED_POWER2 = 756609445U;
         static const AkUniqueID PLAY_RED_POWER3 = 756609444U;
@@ -70,6 +78,8 @@ namespace AK
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SFX_B_LASER = 745180601U;
+        static const AkUniqueID SFX_B_VOICES = 2972369377U;
         static const AkUniqueID SFX_BALL = 1639431926U;
         static const AkUniqueID SFX_BOSS = 1421616930U;
         static const AkUniqueID SFX_CHARACTER = 1415773282U;

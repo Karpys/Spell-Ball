@@ -5,13 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    private static GameManager inst;
-    public static GameManager gameManager { get => inst; }
 
     public GameObject BaseShield;
     public GameObject BaseShooter;
     public GameObject BaseLaser;
     public GameObject BaseGameObject;
+    private static GameManager inst;
+    public static GameManager gameManager { get => inst; }
 
     void Awake()
     {

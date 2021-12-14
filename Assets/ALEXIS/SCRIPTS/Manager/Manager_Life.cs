@@ -33,6 +33,8 @@ public class Manager_Life : MonoBehaviour
 
     private bool isDead = false;
 
+    private int lastDamageAmount = 0;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -103,6 +105,8 @@ public class Manager_Life : MonoBehaviour
         {
             GameOver.instance.CheckGameOver();
         }
+
+        lastDamageAmount = dmg;
         OnDamage.Invoke();
     }
 
@@ -117,6 +121,11 @@ public class Manager_Life : MonoBehaviour
                 Parti.GetComponent<ParticleManager>().ApplyColor(particleColor.Value);
             }
         }
+    }
+
+    public int GetLastDamageAmount()
+    {
+        return lastDamageAmount;
     }
 
     public void HealHealth(int heal)

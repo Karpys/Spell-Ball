@@ -71,6 +71,8 @@ public class Balle : MonoBehaviour
     {
         if (combo > 10)
             combo = 10;
+        if (combo < 0)
+            combo = 0;
 
         //particule.GetComponent<ParticleSystem>().Play();
         // TrailCombo();

@@ -36,14 +36,13 @@ public class Sheild : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (lastSield && !alphaSet)
         {
-            //Debug.Log("a marche");
-            copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.6f);
+
+            copieMaterialSheild.color = new Color(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 1f);
             tempShield = copieMaterialSheild.color;
-            //Debug.Log(tempShield);
-            /*disolve.GetPropertyDefaultVectorValue(disolve.FindPropertyIndex("Color")).Set(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
-            Debug.Log(disolve.GetPropertyDefaultVectorValue(disolve.FindPropertyIndex("Color"))+ " a marche pas ");*/
+
             alphaSet = true;
         }
         else if (!alphaSet)
@@ -88,8 +87,9 @@ public class Sheild : MonoBehaviour
         //disolve.GetPropertyDefaultVectorValue((disolve.FindPropertyIndex("Color") * -1) - 1).Equals(copieMaterialSheild.color);// .Set(copieMaterialSheild.color.r, copieMaterialSheild.color.g, copieMaterialSheild.color.b, 0.196f);
         
         Color temp = copieMaterialSheild.color;
-        copieMaterialSheild.shader = disolve;
+        //copieMaterialSheild.shader = disolve;
         copieMaterialSheild.SetColor("_Color", tempShield);
+        copieMaterialSheild.SetFloat("_switch", 1);
         Debug.Log(copieMaterialSheild.GetColor("_Color"));
         startTime = true;
         time = 1;
