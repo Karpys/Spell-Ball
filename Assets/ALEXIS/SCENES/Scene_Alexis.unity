@@ -4841,22 +4841,6 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
-      - m_Name: 
-        m_Id: a162acb2-2d82-4497-b9a8-0c54093d8225
-        m_Path: <Keyboard>/space
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
-      - m_Name: 
-        m_Id: ea5a6960-6121-4a61-9623-249949dd0ebc
-        m_Path: <Mouse>/leftButton
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Join
-        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 2464980761054802294, guid: 9f35a2fd7e4836f43b518639c82a3f95, type: 3}
   m_SplitScreen: 0
@@ -5052,6 +5036,11 @@ MonoBehaviour:
   buttonAud: {fileID: 823633185}
   buttonBack: {fileID: 421495993}
   animref: {fileID: 962234515}
+  stopMusicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
+  bank: {fileID: 1244623715}
 --- !u!1 &883245285
 GameObject:
   m_ObjectHideFlags: 0
@@ -6886,6 +6875,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243021411}
   m_CullTransparentMesh: 1
+--- !u!1 &1244623715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244623717}
+  - component: {fileID: 1244623716}
+  m_Layer: 0
+  m_Name: BankLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1244623716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244623715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7cf5de07e10fd47b11e4a05bc7de44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b8283e8f7c0d2ab40a833d7c916581f5, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!4 &1244623717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244623715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 378.13388, y: 188.43492, z: -1.5953217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1277091950
 GameObject:
   m_ObjectHideFlags: 0
@@ -9971,7 +10015,17 @@ MonoBehaviour:
   fadeRef: {fileID: 139742005}
   optionsMenu: {fileID: 880261718}
   charSelectionMenu: {fileID: 1568171815}
-  SceneName: Scene_Julien
+  SceneName: Scene_Build_LD
+  wFocus: 1
+  bank: {fileID: 1244623715}
+  musicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0e9f2ce15166780409cc90b3600df719, type: 2}
+  stopMusicMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}
@@ -10048,6 +10102,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 85c8ac0f-913f-4608-8884-e739c2c5efab
     m_ActionName: Gameplay/FOCUS_UI[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a137dfa-389f-4717-b0db-a29262d1d24e
+    m_ActionName: Gameplay/REVIVE[/XInputControllerWindows/rightShoulder,/DualShock4GamepadHID/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -11516,6 +11574,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e7f9cb4d-d516-46f9-b461-fb6bbac035e3
     m_ActionName: CharSelection/Previous Char[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/leftStick/up,/DualShock4GamepadHID/rightStick/up,/DualShock4GamepadHID/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5758a49-f667-4c02-b2e6-1db2a0104d75
+    m_ActionName: CharSelection/Launch Game[/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: adcd8630-ceaf-471f-88f2-f74869b418e6
+    m_ActionName: CharSelection/Go Back[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharSelection

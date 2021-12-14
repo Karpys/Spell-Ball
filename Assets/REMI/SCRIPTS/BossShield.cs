@@ -9,6 +9,7 @@ public class BossShield : BossAction
     public override void Activate()
     {
         base.Activate();
+        //BossBehavior.Boss.HeadRotation.SetTargetRotation(2);
         if (BossBehavior.Boss.GetComponentInChildren<SheildManager>())
         {
             //IGNORE SHIELD DEJA EN PLACE//

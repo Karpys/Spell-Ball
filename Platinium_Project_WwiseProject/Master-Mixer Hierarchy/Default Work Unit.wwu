@@ -24,7 +24,6 @@
 												<XPos>0</XPos>
 												<YPos>-200</YPos>
 												<Flags>5</Flags>
-												<SegmentShape>SCurve</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>100</XPos>
@@ -46,6 +45,35 @@
 						<Bus Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="Lowpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{F2CC79A9-0058-43E9-A13C-DCF91325B1CE}" ShortID="11535480">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{9D5D8525-02FD-4B2C-A73A-CD8C161C37C5}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>100</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
@@ -64,7 +92,6 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
-														<SegmentShape>SCurve</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -84,9 +111,6 @@
 								<Bus Name="SFX_BALL" ID="{26051EF4-2F9C-42F5-8E82-8CE01D1D683D}">
 									<ObjectLists/>
 								</Bus>
-								<Bus Name="SFX_MINIONS" ID="{05D26310-26D8-4F2F-AD2A-142AD1F19954}">
-									<ObjectLists/>
-								</Bus>
 								<Bus Name="SFX_CHARACTER" ID="{B3BF2561-B1C0-4E5D-9CC3-3A9DB84E5DC3}">
 									<ObjectLists/>
 								</Bus>
@@ -96,6 +120,35 @@
 						<Bus Name="MUSIC" ID="{29C115E4-7D97-4B65-9909-32A265F7CB85}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="Lowpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{7630DCA1-86E2-455B-934E-BE5741BBAA9C}" ShortID="861046286">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="GP_Lowpass_Pause" ID="{544958AF-025F-47C2-AE26-CF863ECE88D3}" WorkUnitID="{77B8AEF7-BE6A-40B1-8E4D-AA3E0077B848}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{3D18185B-2851-4011-BE28-3ACACC6943B9}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>100</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
@@ -114,7 +167,6 @@
 														<XPos>0</XPos>
 														<YPos>-200</YPos>
 														<Flags>5</Flags>
-														<SegmentShape>SCurve</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>100</XPos>
@@ -129,6 +181,9 @@
 							</PropertyList>
 							<ChildrenList>
 								<Bus Name="M_MAIN" ID="{5DDD227A-1D90-4E08-9A4C-F1588360471A}">
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="M_BOSS" ID="{8B2F3FE2-96B2-4BFA-A477-C377AE9F2FBD}">
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>

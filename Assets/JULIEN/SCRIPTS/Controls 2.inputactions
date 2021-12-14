@@ -1,5 +1,5 @@
 {
-    "name": "Controls",
+    "name": "Controls 2",
     "maps": [
         {
             "name": "Gameplay",
@@ -68,6 +68,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "REVIVE",
+                    "type": "Button",
+                    "id": "fd88b138-3f0d-40f7-b616-b182be1cc564",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -85,7 +93,7 @@
                 {
                     "name": "",
                     "id": "dd2fbaf1-2cc6-49b9-95c8-31bcb54af519",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -189,6 +197,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "FOCUS_UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc6a83ae-822c-48ea-b57c-88cdec8ca10c",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "REVIVE",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

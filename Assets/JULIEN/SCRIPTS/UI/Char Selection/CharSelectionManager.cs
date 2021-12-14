@@ -13,7 +13,7 @@ public class CharSelectionManager : MonoBehaviour
     
     [SerializeField] private PlayerInputManager _playerInputManager;
 
-    [SerializeField] private GameObject mainMenu;
+    public GameObject mainMenu;
 
     [SerializeField] private GameObject _startGameText;
     [SerializeField] private GameObject _pressAXToJoinText;
@@ -50,7 +50,7 @@ public class CharSelectionManager : MonoBehaviour
         if (playerInput.currentActionMap != null)
         {
             playerInput.currentActionMap["Launch Game"].performed += LaunchGame;
-            playerInput.currentActionMap["Go Back"].performed += GoBack;
+            
             
             _playersInputs[playerInput.playerIndex] = playerInput;
         }
@@ -62,10 +62,28 @@ public class CharSelectionManager : MonoBehaviour
         }
     }
 
-    private void GoBack(InputAction.CallbackContext ctx)
+    public void GoBack()
     {
         EventSystem.current.SetSelectedGameObject(null);
         // Rajouter les anims
+        foreach(PlayerInput input in _playersInputs)
+        {
+            if(input != null)
+                input.gameObject.GetComponent<CharSelection>().RunExit();
+        }
+
+        StartCoroutine(WaitEndAnim());
+    }
+    public void GoBack(InputAction.CallbackContext ctx)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        // Rajouter les anims
+        StartCoroutine(WaitEndAnim());
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSecondsRealtime(1);
         foreach (PlayerInput input in _playersInputs)
         {
             if (input != null)
@@ -75,12 +93,6 @@ public class CharSelectionManager : MonoBehaviour
                 Destroy(obj);
             }
         }
-        StartCoroutine(WaitEndAnim());
-    }
-
-    IEnumerator WaitEndAnim()
-    {
-        yield return new WaitForSecondsRealtime(0);
         EventSystem.current.SetSelectedGameObject(null);
         gameObject.SetActive(false);
         mainMenu.gameObject.SetActive(true);

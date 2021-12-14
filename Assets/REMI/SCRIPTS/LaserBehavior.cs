@@ -25,10 +25,18 @@ public class LaserBehavior : MonoBehaviour
         //SOUNDS:START TRIGGER LASER//
         LaserSounds.PlaySound(0);
         LaserSounds.PlaySound(1);
-        transform.eulerAngles = BossBehavior.Boss.transform.eulerAngles +  new Vector3(0, Stats.StartEndAngle.x, 0);
+        transform.eulerAngles = Stats.StartPosition.transform.eulerAngles +  new Vector3(0, Stats.StartEndAngle.x, 0);
         if (Stats.Infinity)
         {
             Stats.Lenght = 100f;
+        }
+    }
+
+    public void OnDestroy()
+    {
+        foreach (Wwise_Script.WwiseSounds sound in LaserSounds.Sounds)
+        {
+            sound.Sound.Stop(gameObject);
         }
     }
 
@@ -47,7 +55,7 @@ public class LaserBehavior : MonoBehaviour
             }
 
             float ratio = _timer / Stats.Duration;
-            transform.eulerAngles = BossBehavior.Boss.transform.eulerAngles + new Vector3(0, Mathf.Lerp(Stats.StartEndAngle.x, Stats.StartEndAngle.y, ratio), 0);
+            transform.eulerAngles = Stats.StartPosition.transform.eulerAngles + new Vector3(0, Mathf.Lerp(Stats.StartEndAngle.x, Stats.StartEndAngle.y, ratio), 0);
             LaserSounds.PlaySound(2);
             LaserSounds.PlaySound(3);
             if (ratio > 1)
@@ -113,6 +121,15 @@ public class LaserBehavior : MonoBehaviour
         {
             hit = Physics.RaycastAll(ray, Lenght, Layer);
             //DAMAGE FIRST Player  hit[0]//
+            if (hit[0].collider.gameObject.TryGetComponent(out PlayerController player))
+            {
+                Manager_Life Life = hit[0].collider.gameObject.GetComponent<Manager_Life>();
+                if (Life.Timerinvis <= 0)
+                {
+                    Life.Timerinvis = 1;
+                    Life.DamageHealth(1);
+                }
+            }
             FirstHitPosition = hit[0].point;
         }
 

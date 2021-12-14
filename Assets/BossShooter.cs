@@ -15,13 +15,22 @@ public class BossShooter : BossAction
     {
         DeadShooter= 0;
         NbrShooter = Instantier.BallThrower.Count;
+        BossBehavior.Boss.HeadRotation.SetTargetRotation(0);
         base.Activate();
         /*Boss.HpManager.SetHpBoss(HpBossState);*/
+        if (Instantier.BallThrower[0].ThrowHead)
+        {
+            BossBehavior.Boss.Head.LaunchHead(0);
+        }
         Instantier.InstAllBallThrower(this);
 
     }
     public override void Deactivate()
     {
+        if (Instantier.BallThrower[0].ThrowHead)
+        {
+            BossBehavior.Boss.Head.RetractHead(0);
+        }
         Instantier.DeastroyShooter();
         base.Deactivate();
     }

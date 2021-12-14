@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	135329723	Play_M_BOSS_Layer			\Default Work Unit\MUSIC\Play_M_BOSS_Layer	
+	881957325	Stop_M_BOSS_Layer			\Default Work Unit\MUSIC\Stop_M_BOSS_Layer	
+	1195915301	Play_M_Menu_Theme			\Default Work Unit\MUSIC\Play_M_Menu_Theme	
+	1462762607	Stop_M_Menu_Theme			\Default Work Unit\MUSIC\Stop_M_Menu_Theme	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	527303732	GP_M_Layer2			\Default Work Unit\MUSIC\GP_M_Layer2	
+	527303733	GP_M_Layer3			\Default Work Unit\MUSIC\GP_M_Layer3	
+	527303735	GP_M_Layer1			\Default Work Unit\MUSIC\GP_M_Layer1	
+	687458188	GP_MUSIC			\Default Work Unit\BUS\GP_MUSIC	
+	2359434321	GP_MASTER			\Default Work Unit\BUS\GP_MASTER	
+	2705865419	GP_Lowpass_Pause			\Default Work Unit\PAUSE\GP_Lowpass_Pause	
+	3755703199	GP_M_BOSS_IsWeak			\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	1683454542	M_MAIN			\Default Work Unit\MASTER\MUSIC\M_MAIN	
+	3417986046	M_BOSS			\Default Work Unit\MASTER\MUSIC\M_BOSS	
+	3991942870	MUSIC			\Default Work Unit\MASTER\MUSIC	
+	4056684167	MASTER			\Default Work Unit\MASTER	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	104887704	M_PH_Menu	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer2_LP - Copie_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MENU\M_Menu_Theme\M_PlaceHolder_Menu\M_PH_Menu		10242772
+	113387619	MUS_Boss1_Layer2_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer2_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer2_LP		10242772
+	674721470	MUS_Boss1_Layer1_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer1_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer1_LP		10242772
+	751908878	MUS_Boss1_Layer3_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer3_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer3_LP		10242772
+

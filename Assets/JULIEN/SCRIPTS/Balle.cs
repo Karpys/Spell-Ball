@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balle : MonoBehaviour
 {
-    public TrailRenderer trail;
+    //public TrailRenderer trail;
     public int combo;
     public int comboSpeed;
 
@@ -16,6 +16,8 @@ public class Balle : MonoBehaviour
     private Material ballColorCopy;
     public List<GameObject> subParticles;
     public Shader shader;
+
+    public float timeInfuse;
 
 
     private Light ballLight;
@@ -44,7 +46,7 @@ public class Balle : MonoBehaviour
 
         if (EnnemyBalle)
         {
-            ColorBallResetEnnemy();
+            /*ColorBallResetEnnemy();*/
         }
         else
         {
@@ -67,11 +69,14 @@ public class Balle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (combo > 10)
+            combo = 10;
+
         //particule.GetComponent<ParticleSystem>().Play();
         // TrailCombo();
     }
 
-    public void TrailCombo()
+    /*public void TrailCombo()
     {
         switch(combo)
         {
@@ -97,7 +102,7 @@ public class Balle : MonoBehaviour
                 break;
         }
 
-    }
+    }*/
 
     /*void CheckColorInfuse()
     {
@@ -212,4 +217,17 @@ public class Balle : MonoBehaviour
         color = ColorEnum.WHITE;
     }
 
+    public void InfuseSysteme()
+    {
+        StartCoroutine(TimeInfuse());
+    }
+     public IEnumerator TimeInfuse()
+    {
+        
+        combo = combo + 2;
+        yield return new WaitForSeconds(timeInfuse);
+        combo -= 2;
+        ColorBallReset();
+        
+    }
 }

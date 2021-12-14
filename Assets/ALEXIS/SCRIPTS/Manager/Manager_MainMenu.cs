@@ -20,6 +20,11 @@ public class Manager_MainMenu : MonoBehaviour
 
     public bool wFocus = true;
 
+    [Header("AK Audio")]
+    [SerializeField] private GameObject bank;
+    [SerializeField] private AK.Wwise.Event musicMenu;
+    [SerializeField] private AK.Wwise.Event stopMusicMenu;
+
     [Header("WHICH ONE IS ACTIVE ?")]
     public int UIIndex;
 
@@ -56,9 +61,11 @@ public class Manager_MainMenu : MonoBehaviour
         //Screen.fullScreen = true;
         //launch.GetComponent<Animation>().clip = earlyMenu;
         StartCoroutine(Wait());
-
+        StartCoroutine(WaitFocus());
         animRef = launch.GetComponent<Animator>();
         animFade = fadeRef.GetComponent<Animation>();
+
+        musicMenu.Post(bank);
     }
 
     // Update is called once per frame
@@ -127,17 +134,28 @@ public class Manager_MainMenu : MonoBehaviour
     
     public void PlayButton()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        animRef.SetBool("QUIT", true);
-        StartCoroutine("WaitEndAnimAndGoToCharSelect");
-        //launch.gameObject.SetActive(false);
-        //optionsMenu.gameObject.SetActive(true);
+        if (wFocus == false)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            animRef.SetBool("QUIT", true);
+            StartCoroutine("WaitEndAnimAndGoToCharSelect");
+            //launch.gameObject.SetActive(false);
+            //optionsMenu.gameObject.SetActive(true);
+        }
+
+    }
+
+    public void debug()
+    {
+        print("je fais chier mon monde !");
     }
 
     public void OptionsButton()
     {
+        print(wFocus);
         if (wFocus == false)
         {
+
             EventSystem.current.SetSelectedGameObject(null);
             animRef.SetBool("QUIT", true);
             StartCoroutine("WaitEndAnim");
@@ -188,6 +206,7 @@ public class Manager_MainMenu : MonoBehaviour
     IEnumerator WaitPlay()
     {
         yield return new WaitForSeconds(1);
+        stopMusicMenu.Post(bank);
         SceneManager.LoadScene(SceneName);
 
     }

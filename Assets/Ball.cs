@@ -76,6 +76,7 @@ public class Ball : MonoBehaviour
         {
             Reflect(hit.normal);
             ResetSpeedAndCombo();
+            gameObject.GetComponent<Balle>().ColorBallReset();
             hitShield = true;
             if (hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
             {
@@ -97,24 +98,30 @@ public class Ball : MonoBehaviour
                 Balle balle = GetComponent<Balle>();
                 Manager_Life managerLife = hit.transform.gameObject.GetComponent<Manager_Life>();
                 managerLife.Damage(balle);
-                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, balle.trail.startColor);
-
+                managerLife.SummonHitParticle(transform.position, hit.transform.rotation, Color.red);//balle.trail.startColor);
                 
             }
             ResetSpeedAndCombo();
 
         }
 
-        
 
-            /*if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+
+        if (Physics.SphereCast(ray, radius, out hit, Speed * Time.deltaTime + radius, CollisionPlayer) && DelayDamageSelfPlayer < 0)
+        {
+            /*Reflect(hit.normal);*/
+            /*ResetSpeedAndCombo();*/
+            
+            Manager_Life Life = hit.collider.gameObject.GetComponentInParent<Manager_Life>();
+            if (Life.Timerinvis <= 0)
             {
-
-                Reflect(hit.normal);
-                ResetSpeedAndCombo();
                 //DAMAGE PLAYER//
-            }*/
-            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+                Balle balle = GetComponent<Balle>();
+                Life.DamageHealth(1);
+                Destroy(gameObject);
+            }
+        }
+        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }
 

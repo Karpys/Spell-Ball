@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
     private bool tryRevive;
     private GameObject playerNeedHelp = null;
 
+    private int gampad;
+    private float timeHaptique = 2;
+
 
     void Start()
     {
@@ -104,21 +107,36 @@ public class PlayerController : MonoBehaviour
             _timer = 0;
         }
 
+
         if(tryRevive)
         {
-            
-            if(TimeRevive<TimeForRevive)
+            Debug.Log(playerNeedHelp.GetComponent<PlayerController>().playerColor);
+            if (TimeRevive<TimeForRevive)
             {
+                if (timeHaptique > 1)
+                {
+                    ControllerHaptics.instance.ShakeController(gampad, .3f, .4f, .5f);
+                    timeHaptique = 0;
+                }
+                else
+                    timeHaptique += Time.deltaTime;
+                    
+
+                Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
+                if(!playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying)
+                    playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Play();
+
                 TimeRevive += Time.deltaTime;
             }
             else
             {
-                playerNeedHelp.GetComponent<Manager_Life>().SetCurentLife(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                playerNeedHelp.GetComponent<Manager_Life>().HealHealth(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
                 tryRevive = false;
                 Debug.Log("it is alive");
             }
         }
-
+        
+        
     }
 
     void OnGUI()
@@ -145,6 +163,7 @@ public class PlayerController : MonoBehaviour
 
    public void TryInfuse(bool buttonPressed, InputAction.CallbackContext ctx)
    {
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
        SetBall();
        if (balle && _timer <= 0)
        {
@@ -154,27 +173,31 @@ public class PlayerController : MonoBehaviour
            if(Infuse_Sound_Manager.Infuse)
             Infuse_Sound_Manager.Infuse.PlayInfuseSound(balleData.color,balleData.combo);
            _timer = grabDelay;
-           StartCoroutine(ColorParticule()); 
+           StartCoroutine(ColorParticule());
+           balle.GetComponent<Balle>().InfuseSysteme();
            ThrowBall();
         }
     }
 
     public void TryRevive(bool buttonPressed, InputAction.CallbackContext ctx)
     {
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
         if (playerNeedHelp == null) return;
         //Debug.Log("je suis en cours ");
         tryRevive = buttonPressed;
-        //Debug.Log(tryRevive);
+        gampad = ctx.control.device.deviceId;
 
-        if(!tryRevive)
+        if (!tryRevive)
         {
+            playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
             TimeRevive = 0;
         }
     }
 
    public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)
-   { 
-       SetBall();
+   {
+        if (gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0) return;
+        SetBall();
        if (balle && _timer<=0)
        {
            if (Infuse_Sound_Manager.Infuse && Infuse_Sound_Manager.Infuse.Hit_Sound != null)
@@ -202,14 +225,31 @@ public class PlayerController : MonoBehaviour
        {
            if (SetDirectionAtEndFreezeFrame)
            {
-               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f,0,0.2f),
-               balle.GetComponent<Ball>(),CharacterVisual);
-           }
+               if (balle.GetComponent<Balle>().combo > 4)
+               {
+                   if (CameraShakeManager.CameraShake)
+                   {
+                       StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 0.5f, 15, 0.1f));
+                   }
+                    FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f),
+                balle.GetComponent<Ball>(), CharacterVisual);
+                   
+                }
+               balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+            }
            else
            {
+               if (balle.GetComponent<Balle>().combo > 4)
+               {
+                   if (CameraShakeManager.CameraShake)
+                   {
+                       StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 0.5f, 15, 0.1f));
+                   }
+                    balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
+                   FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f));
+               }
                balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
-               FreezeFrame.Freezer.TryFreeze(Mathf.Clamp(balle.GetComponent<Balle>().combo * 0.05f, 0, 0.2f));
-           }
+            }
        }
        else
        {
@@ -217,11 +257,8 @@ public class PlayerController : MonoBehaviour
         }
 
 
-       if (CameraShakeManager.CameraShake)
-       {
-           StartCoroutine(CameraShakeManager.CameraShake.Shake(0.25f, 1, 15, 0.1f));
-       }
-       
+        
+
         balle = null;
         
    }
@@ -245,10 +282,13 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(other.gameObject.layer ==7)
+        if(other.gameObject.layer == 7)
         {
-            if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            if (other.gameObject.GetComponent<Manager_Life>().GetCurentLife() <= 0)
+            {
                 playerNeedHelp = other.gameObject;
+            }
+
 
         }
     }
@@ -267,7 +307,7 @@ public class PlayerController : MonoBehaviour
                 {
                     other.gameObject.GetComponent<Balle>().combo = 0;
                     other.gameObject.GetComponent<Ball>().ResetSpeed();
-                    Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
+                    //Instantiate(SlowDownEffect, other.gameObject.transform.position,SlowDownEffect.transform.rotation,other.transform);
                     BallsInRange.Remove(other.gameObject);
                 }
             }
@@ -275,8 +315,9 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.layer == 7)
         {
-            if(other.gameObject.GetComponent<Manager_Life>().GetCurentLife() == 0)
+            if(other.gameObject == playerNeedHelp )
             {
+                playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
                 playerNeedHelp = null;
             }
         }
@@ -311,6 +352,13 @@ public class PlayerController : MonoBehaviour
     public ColorEnum GetPlayerColor()
     {
         return playerColor;
+    }
+
+
+    public void ShakePlayer()
+    {
+        ShakerEntity entity = CharacterVisual.AddComponent<ShakerEntity>();
+        entity.SetShakeParameters(0.25f,0.5f,15f,new Vector3(1,0,1));
     }
 
     /* public void TryThrowBall(bool buttonPressed, InputAction.CallbackContext ctx)

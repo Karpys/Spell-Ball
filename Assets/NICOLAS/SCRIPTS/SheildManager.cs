@@ -65,8 +65,9 @@ public class SheildManager : MonoBehaviour
     public IEnumerator DestroyShield()
     {
         int count = sheilds.Count - 1;
-        if (count < 0)
+        if (count-1 < 0)
         {
+            Destroy(gameObject);
             yield break;
         }
         sheilds[count].GetComponent<Sheild>().ChangeShader();

@@ -50,10 +50,11 @@ public class UI_Options_Audio : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(master);
 
 
-        PlayerPrefs.SetInt("SaveExist", 1);
-        PlayerPrefs.Save();
+
 
         animatorRef.SetBool("ENTER_AU", true);
+
+        ParamSaved();
 
         //Check Which scene is currently active
         Scene currentScene = SceneManager.GetActiveScene();
@@ -69,6 +70,22 @@ public class UI_Options_Audio : MonoBehaviour
             refMenuPause = FindObjectOfType<UI_MenuPause>();
             refMenuPause.UIIndex = 3;
         }
+
+
+
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        animatorRef = gameObject.GetComponent<Animator>();
+        ParamSaved();
+
+    }
+    private void ParamSaved()
+    {
+        PlayerPrefs.SetInt("SaveExist", 1);
+        PlayerPrefs.Save();
 
         //SAUVEGARDE
         if (PlayerPrefs.HasKey("volumeMaster"))
@@ -112,21 +129,14 @@ public class UI_Options_Audio : MonoBehaviour
             musicV.text = "50";
             AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         }
-
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        animatorRef = gameObject.GetComponent<Animator>();
-    }
-
     public void OnSliderMaster(float volume)
     {
 
         masterV.text = volume.ToString("0"); 
         PlayerPrefs.SetFloat("volumeMaster", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", masterS.value);
+        AkSoundEngine.SetRTPCValue("GP_MASTER", masterS.value);
+        print("sdfdsdfdfsdfs");
         PlayerPrefs.Save();
     }
 
@@ -135,7 +145,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         vfxV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeVfx", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", vfxS.value);
+        AkSoundEngine.SetRTPCValue("GP_SFX", vfxS.value);
         PlayerPrefs.Save();
     }
 
@@ -144,7 +154,7 @@ public class UI_Options_Audio : MonoBehaviour
 
         musicV.text = volume.ToString("0");
         PlayerPrefs.SetFloat("volumeMusic", volume);
-        AkSoundEngine.SetRTPCValue("GP_MASTER_Test", musicS.value);
+        AkSoundEngine.SetRTPCValue("GP_MUSIC", musicS.value);
         PlayerPrefs.Save();
     }
 
