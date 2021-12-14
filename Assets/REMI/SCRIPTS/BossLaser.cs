@@ -22,6 +22,11 @@ public class BossLaser : BossAction
         if(Boss.HeadRotation!=null)
             Boss.HeadRotation.SetTargetRotation(1);
 
+        if (BossVoiceManager.Voice)
+        {
+            BossVoiceManager.Voice.PlayLaser();
+        }
+
         if (Instantier.Stats[0].ThrowHead)
         {
             if (Boss.Head != null)
