@@ -39,8 +39,8 @@ public class CharacterMovement : MonoBehaviour
             MovementDir = MovementInput;
         }
 
-        if (gameObject.transform.position.y > 1)
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1, gameObject.transform.position.z);
+        if (gameObject.transform.position.y > 1.5f)
+           gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.4f, gameObject.transform.position.z);
 
     }
 
@@ -50,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
         float Axey = MovementInput.y;
 
         Vector3 Axes = transform.right * Axex + transform.forward * Axey;
+        //Axes = new Vector3(Axes.x, 1, Axes.z);
         Vector3 Move = Axes ;
         
         if(MovementDir == Vector2.zero)
