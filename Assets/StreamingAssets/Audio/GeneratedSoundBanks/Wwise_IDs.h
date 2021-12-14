@@ -78,6 +78,8 @@ namespace AK
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SFX_B_LASER = 745180601U;
+        static const AkUniqueID SFX_B_VOICES = 2972369377U;
         static const AkUniqueID SFX_BALL = 1639431926U;
         static const AkUniqueID SFX_BOSS = 1421616930U;
         static const AkUniqueID SFX_CHARACTER = 1415773282U;
