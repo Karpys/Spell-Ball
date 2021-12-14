@@ -64,19 +64,23 @@ public class Sheild : MonoBehaviour
         switch (color)
         {
             case ColorEnum.BLEU:
-                copieMaterialSheild.color = new Color(0, 0, 1, 0);
+                copieMaterialSheild.color = new Color(0.0627f, 0.1951f, 1);
+                copieMaterialSheild.SetFloat("_Outline Brightness",300f);
                 break;
 
             case ColorEnum.RED:
-                copieMaterialSheild.color = new Color(1, 0, 0, 0);
+                copieMaterialSheild.color = new Color(1, 0, 0);
+                copieMaterialSheild.SetFloat("_Outline Brightness",150);
                 break;
 
             case ColorEnum.GREEN:
-                copieMaterialSheild.color = new Color(0, 1, 0, 0);
+                copieMaterialSheild.color = new Color(0.0627f, 1, 0.0678f);
+                copieMaterialSheild.SetFloat("_Outline Brightness",80);
                 break;
 
             case ColorEnum.ORANGE:
-                copieMaterialSheild.color = new Color(1, 0.6f, 0, 0);
+                copieMaterialSheild.color = new Color(1, 1, 0);
+                copieMaterialSheild.SetFloat("_Outline Brightness",100);
                 break;
         }
     }
