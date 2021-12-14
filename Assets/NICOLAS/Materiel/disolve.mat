@@ -44,25 +44,26 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_53fef142b6bc48239150afcc325395d2: 3
+    - Vector1_53fef142b6bc48239150afcc325395d2: 7
     - Vector1_58f7b41c55544c8d941a5b61f32fdf47: 2.4
     - Vector1_ee710a3a92814373bc49e0544ae4b854: 5
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 1
-    - _AlphaDstBlend: 10
+    - _AlphaDstBlend: 1
     - _AlphaSrcBlend: 1
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _BlendMode: 0
+    - _BlendMode: 1
     - _CullMode: 2
     - _CullModeForward: 2
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
-    - _DstBlend: 10
+    - _DstBlend: 1
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
+    - _Outline_Brightness: 5
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0

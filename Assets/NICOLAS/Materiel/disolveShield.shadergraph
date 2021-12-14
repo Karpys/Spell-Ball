@@ -4540,7 +4540,7 @@
     },
     "m_Name": "Outline Brightness",
     "m_DefaultReferenceName": "Vector1_ee710a3a92814373bc49e0544ae4b854",
-    "m_OverrideReferenceName": "_Outline_Brightness",
+    "m_OverrideReferenceName": "_OutlineBrightness",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
