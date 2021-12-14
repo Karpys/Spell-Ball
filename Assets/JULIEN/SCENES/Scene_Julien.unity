@@ -5905,10 +5905,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _doorsGameObjects:
   - {fileID: 1931683388}
+  _activateRandomlyOneDoorOnly: 0
   _numberOfPlayersToActivate: 1
-  _timeBeforeClosing: 0.5
-  _numberOfColorCorrectMinimumToActivate: 0
-  _colorNeededToActivate: 
+  _timeToStayBeforeOpenning: 3
+  _timeBeforeClosing: 5
 --- !u!64 &482070612
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17985,6 +17985,7 @@ MonoBehaviour:
   targetMenu: {fileID: 1979675019}
   animator: {fileID: 1979675021}
   fadeRef: {fileID: 0}
+  timeTransi: 1
   playerDoPause: 0
   unPause: 0
   mainM: {fileID: 0}
