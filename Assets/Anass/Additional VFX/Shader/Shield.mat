@@ -115,8 +115,8 @@ Material:
     - _time: 0.77
     m_Colors:
     - Color_3e8dc45e71c8497a857a89583b68f4b1: {r: 1, g: 0.8349056, b: 0.8349056, a: 1}
-    - Color_f4a9c221fd5542209eb0a675a89a1f84: {r: 1, g: 1, b: 1, a: 1}
-    - Vector2_08e984a6c14e4b82a0c6f33551a60f56: {r: -0.3, g: 0.3, b: 0, a: 0}
+    - Color_f4a9c221fd5542209eb0a675a89a1f84: {r: 0, g: 0.12981081, b: 1, a: 1}
+    - Vector2_08e984a6c14e4b82a0c6f33551a60f56: {r: 0.1, g: 0.1, b: 0, a: 0}
     - Vector2_1: {r: 2, g: 2, b: 0, a: 0}
     - Vector2_1341da2648e845228b7a448ff4168cd5: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 0.196}

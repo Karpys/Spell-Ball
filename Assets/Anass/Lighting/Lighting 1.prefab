@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &891707530514953551
 Transform:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.23166601, g: 0.8346087, b: 0.8962264, a: 1}
+  m_Color: {r: 0.15566039, g: 0.92053276, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -492,7 +492,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 0.5
 --- !u!114 &6154820757622403100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 2
   parameters:
-    albedo: {r: 0.4528302, g: 0.11278034, b: 0.1282908, a: 1}
+    albedo: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
     meanFreePath: 5
     anisotropy: 0
     volumeMask: {fileID: 0}
