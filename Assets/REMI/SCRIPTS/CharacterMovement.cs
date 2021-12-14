@@ -100,7 +100,7 @@ public class CharacterMovement : MonoBehaviour
         {
             playerCollider.enabled = false;
             Manager_Life Life = GetComponent<Manager_Life>();
-            Life.Timerinvis = Roll_Manager.RollDuration;
+            Life.Timerinvis = 1;
             Anim.Play("Roll");
             RotatePlayerMovement(MovementDir);
             Roll_Manager.RollCd = Roll_Manager.RollCdSet;

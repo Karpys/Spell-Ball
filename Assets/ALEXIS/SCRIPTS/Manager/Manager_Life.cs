@@ -99,6 +99,10 @@ public class Manager_Life : MonoBehaviour
             Shake.SetShakeParameters(0.25f, 0.2f, 10f, new Vector3(1, 0, 1));
         }
         currentLife -= dmg;
+        if (GameOver.instance)
+        {
+            GameOver.instance.CheckGameOver();
+        }
         OnDamage.Invoke();
     }
 

@@ -14715,6 +14715,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 221771ab91c188c41a31d16b64148df0, type: 2}
   CollisionParticle: {fileID: 145150, guid: 7901432e6a9177042981759d1747d5f9, type: 3}
   SpeedEffect: {fileID: 7531680658172072040, guid: c195867c191ae4441bb51cda1cca0ad4, type: 3}
+  OnHitParticle: {fileID: 6083415166425406385, guid: ff3a3ff9511eccf4cb85ce05a186420d, type: 3}
 --- !u!135 &-8080597015329026223
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34384,13 +34385,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8557756713190270942}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4023342456169943675}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!198 &2324614315333349185
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -34410,7 +34411,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -35277,7 +35278,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.9
       minScalar: 0
       maxCurve:
         serializedVersion: 2
