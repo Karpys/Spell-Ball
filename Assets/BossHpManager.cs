@@ -64,6 +64,12 @@ public class BossHpManager : MonoBehaviour
         int lastDmgAmount = _managerLife.GetLastDamageAmount();
         currentHealth -= lastDmgAmount;
         print(currentHealth);
+        if (currentHealth < 0) currentHealth = 0;
         _healthDisplay.SetCurrentHealth(currentHealth);
+    }
+    
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
     }
 }

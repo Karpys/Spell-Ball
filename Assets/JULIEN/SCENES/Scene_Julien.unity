@@ -2495,7 +2495,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b8283e8f7c0d2ab40a833d7c916581f5, type: 2}
+    WwiseObjectReference: {fileID: 0}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -5184,7 +5184,7 @@ MonoBehaviour:
   Hit_Sound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 221771ab91c188c41a31d16b64148df0, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &318225115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,7 +5202,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a948d82c775e8f74081e73369d76aa10, type: 2}
+    WwiseObjectReference: {fileID: 0}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -5240,7 +5240,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 49f3490670a15364b94cac5ce01287e9, type: 2}
+    WwiseObjectReference: {fileID: 0}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -15489,7 +15489,7 @@ MonoBehaviour:
   PlayMusicBoss:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1f1f013a508bfb049b04e3946e51af0a, type: 2}
+    WwiseObjectReference: {fileID: 0}
   RTPCToSet: 
   TransitionDuration: 3
   timer: 0

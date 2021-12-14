@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        
+        balle.GetComponent<Balle>().SetLastLauncher(this);
 
         balle = null;
         

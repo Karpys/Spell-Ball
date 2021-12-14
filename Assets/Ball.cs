@@ -133,6 +133,21 @@ public class Ball : MonoBehaviour
                 }
             }
         }
+
+        if (Physics.Raycast(ray, out hit, Speed * Time.deltaTime * 5, CollisionMaskEnnemy))
+        {
+            BossBehavior bossBehavior = hit.collider.gameObject.GetComponent<BossBehavior>();
+            if (bossBehavior.ActualPhase == bossBehavior.Phases.Count - 1)
+            {
+                int nextHP = (int) bossBehavior.Life.GetCurentLife() - gameObject.GetComponent<Balle>().combo;
+                if (nextHP <= 0)
+                {
+                    Time.timeScale = .01f;
+                    Camera.main.fieldOfView = 20;
+                    Camera.main.transform.LookAt(((transform.position + hit.collider.transform.position) / 2));
+                }
+            }
+        }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
     }

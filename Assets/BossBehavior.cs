@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
@@ -51,6 +52,12 @@ public class BossBehavior : MonoBehaviour
     public void Start()
     {
         LaunchPhase(0);
+
+        var skipPhase = new InputAction(binding: "<Keyboard>/#(a)");
+
+        skipPhase.performed += context => NextPhase();
+
+        skipPhase.Enable();
     }
 
 
@@ -104,13 +111,15 @@ public class BossBehavior : MonoBehaviour
 
             //LAST PHASE
 
-            if (ActualPhase >= Phases.Count - 1)
+            if (ActualPhase >= Phases.Count - 2)
             {
                 ListActualAction[ActualAction].Deactivate();
                 //CLAIM END BOSS
                 Debug.Log("Le boss est MOOORT");
                 BossStarted = false;
                 Life.SetCurentLife(15000);
+                gameObject.SetActive(false);
+                // Call vers le screen de victoire
                 return;
             }
 
