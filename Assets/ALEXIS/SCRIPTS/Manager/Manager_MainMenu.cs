@@ -177,7 +177,7 @@ public class Manager_MainMenu : MonoBehaviour
     #region Coroutine
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSecondsRealtime(0.2f);
 
         //launch.GetComponent<Animation>().Play();
         launch.SetActive(true);
