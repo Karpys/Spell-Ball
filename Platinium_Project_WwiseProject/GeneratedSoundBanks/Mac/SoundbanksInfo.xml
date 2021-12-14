@@ -11,10 +11,32 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="51703143" Language="SFX" Hash="1004791922">
+		<SoundBank Id="51703143" Language="SFX" Hash="3064169034">
 			<ObjectPath>\SoundBanks\Default Work Unit\CHARACTER\S_Characters</ObjectPath>
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3117905890" Name="Play_R_Chara_Roll" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_R_Chara_Roll" DurationType="OneShot" DurationMin="1.166667" DurationMax="1.166667">
+					<IncludedMemoryFiles>
+						<File Id="144639447" Language="SFX">
+							<ShortName>SFX_Player_Movement_Roll_03.wav</ShortName>
+							<Path>SFX\SFX_Player_Movement_Roll_03_10C4C929.wem</Path>
+						</File>
+						<File Id="428474447" Language="SFX">
+							<ShortName>SFX_Player_Movement_Roll_05.wav</ShortName>
+							<Path>SFX\SFX_Player_Movement_Roll_05_10C4C929.wem</Path>
+						</File>
+						<File Id="569924327" Language="SFX">
+							<ShortName>SFX_Player_Movement_Roll_01.wav</ShortName>
+							<Path>SFX\SFX_Player_Movement_Roll_01_10C4C929.wem</Path>
+						</File>
+						<File Id="796660583" Language="SFX">
+							<ShortName>SFX_Player_Movement_Roll_06.wav</ShortName>
+							<Path>SFX\SFX_Player_Movement_Roll_06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1200485816" Language="SFX" Hash="757013540">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
@@ -58,7 +80,7 @@
 				<GameParameter Id="3755703199" Name="GP_M_BOSS_IsWeak" ObjectPath="\Game Parameters\Default Work Unit\MUSIC\GP_M_BOSS_IsWeak"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1695376126">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2646684616">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -356,7 +378,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1571743440" Language="SFX" Hash="3051227610">
+		<SoundBank Id="1571743440" Language="SFX" Hash="918554213">
 			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
 			<ShortName>S_Boss</ShortName>
 			<Path>S_Boss.bnk</Path>
@@ -393,9 +415,137 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1832843239" Name="Play_R_Boss_CanNotDodge" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_CanNotDodge" DurationType="OneShot" DurationMin="2.043583" DurationMax="2.754979">
+					<IncludedMemoryFiles>
+						<File Id="701226910" Language="SFX">
+							<ShortName>VOX_Boss1_YoureNotGonnaDodgeThisOne_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_YoureNotGonnaDodgeThisOne_01_10C4C929.wem</Path>
+						</File>
+						<File Id="840706033" Language="SFX">
+							<ShortName>VOX_Boss1_YoureNotGonnaDodgeThisOne_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_YoureNotGonnaDodgeThisOne_03_10C4C929.wem</Path>
+						</File>
+						<File Id="1008383066" Language="SFX">
+							<ShortName>VOX_Boss1_YoureNotGonnaDodgeThisOne_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_YoureNotGonnaDodgeThisOne_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1779048192" Name="Play_R_Boss_Dodge" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Dodge" DurationType="OneShot" DurationMin="1.350792" DurationMax="1.655479">
+					<IncludedMemoryFiles>
+						<File Id="229407900" Language="SFX">
+							<ShortName>VOX_Boss1_DodgeThis_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_DodgeThis_03_10C4C929.wem</Path>
+						</File>
+						<File Id="367974028" Language="SFX">
+							<ShortName>VOX_Boss1_DodgeThis_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_DodgeThis_02_10C4C929.wem</Path>
+						</File>
+						<File Id="536544834" Language="SFX">
+							<ShortName>VOX_Boss1_DodgeThis_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_DodgeThis_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3788219053" Name="Play_R_Boss_Hurt_Cat" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Hurt_Cat" DurationType="OneShot" DurationMin="1.114333" DurationMax="1.206646">
+					<IncludedMemoryFiles>
+						<File Id="143212804" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_CatIntonation_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_CatIntonation_01_10C4C929.wem</Path>
+						</File>
+						<File Id="356233659" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_CatIntonation_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_CatIntonation_02_10C4C929.wem</Path>
+						</File>
+						<File Id="928797627" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_CatIntonation_04.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_CatIntonation_04_10C4C929.wem</Path>
+						</File>
+						<File Id="995176860" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_CatIntonation_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_CatIntonation_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2614099830" Name="Play_R_Boss_Hurt_Normal" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Hurt_Normal" DurationType="OneShot" DurationMin="0.772125" DurationMax="1.066667">
+					<IncludedMemoryFiles>
+						<File Id="463110121" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_NormalIntonation_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_NormalIntonation_03_10C4C929.wem</Path>
+						</File>
+						<File Id="603513086" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_NormalIntonation_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_NormalIntonation_02_10C4C929.wem</Path>
+						</File>
+						<File Id="676484981" Language="SFX">
+							<ShortName>VOX_Boss1_Hurt_NormalIntonation_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_Hurt_NormalIntonation_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2434935390" Name="Play_R_Boss_Run" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Run" DurationType="OneShot" DurationMin="2.216021" DurationMax="2.462083">
+					<IncludedMemoryFiles>
+						<File Id="32274007" Language="SFX">
+							<ShortName>VOX_Boss1_StopRunningYouLIttleRats_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_StopRunningYouLIttleRats_01_10C4C929.wem</Path>
+						</File>
+						<File Id="306717011" Language="SFX">
+							<ShortName>VOX_Boss1_StopRunningYouLIttleRats_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_StopRunningYouLIttleRats_02_10C4C929.wem</Path>
+						</File>
+						<File Id="865896433" Language="SFX">
+							<ShortName>VOX_Boss1_StopRunningYouLIttleRats_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_StopRunningYouLIttleRats_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1538231534" Name="Play_R_Boss_Settle" ObjectPath="\Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Settle" DurationType="OneShot" DurationMin="1.263208" DurationMax="1.605917">
+					<IncludedMemoryFiles>
+						<File Id="180412728" Language="SFX">
+							<ShortName>VOX_Boss1_LetSettleThis_03.wav</ShortName>
+							<Path>SFX\VOX_Boss1_LetSettleThis_03_10C4C929.wem</Path>
+						</File>
+						<File Id="294373696" Language="SFX">
+							<ShortName>VOX_Boss1_LetSettleThis_02.wav</ShortName>
+							<Path>SFX\VOX_Boss1_LetSettleThis_02_10C4C929.wem</Path>
+						</File>
+						<File Id="504349958" Language="SFX">
+							<ShortName>VOX_Boss1_LetSettleThis_01.wav</ShortName>
+							<Path>SFX\VOX_Boss1_LetSettleThis_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="166862117" Name="Play_R_Boss_ShieldBreak" ObjectPath="\Events\Default Work Unit\BOSS\ShieldBreak\Play_R_Boss_ShieldBreak" DurationType="OneShot" DurationMin="0.724208" DurationMax="0.899063">
+					<IncludedMemoryFiles>
+						<File Id="32842896" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_02.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_02_10C4C929.wem</Path>
+						</File>
+						<File Id="55517256" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_03.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_03_10C4C929.wem</Path>
+						</File>
+						<File Id="203527148" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_04.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_04_10C4C929.wem</Path>
+						</File>
+						<File Id="214386548" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_01.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_01_10C4C929.wem</Path>
+						</File>
+						<File Id="404079179" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_05.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_05_10C4C929.wem</Path>
+						</File>
+						<File Id="428329359" Language="SFX">
+							<ShortName>SFX_Boss1_Shield_Break_06.wav</ShortName>
+							<Path>SFX\SFX_Boss1_Shield_Break_06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="2119432901">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2679738135">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>

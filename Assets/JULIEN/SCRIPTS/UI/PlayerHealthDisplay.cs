@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PlayerHealthDisplay : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class PlayerHealthDisplay : MonoBehaviour
             DrawHealth();
             
             _playerLife.OnDamage.AddListener(DrawHealth);
+            _playerLife.OnDamage.AddListener(ShakePlayerVisual);
             _playerLife.OnHeal.AddListener(DrawHealth);
 
             gameObject.SetActive(true);
@@ -60,5 +62,27 @@ public class PlayerHealthDisplay : MonoBehaviour
         }
     }
 
+    public void ShakePlayerVisual()
+    {
+        StartCoroutine(ShakeVisual(.2f, 20f));
+    }
+
+    
+    private IEnumerator ShakeVisual(float _shakeTime, float shakeRange)
+    {
+        float elapsed = 0.0f;
+        Quaternion originalRotation = transform.rotation;
+ 
+        while (elapsed < _shakeTime)
+        {
+ 
+            elapsed += Time.deltaTime;
+            float z = Random.value * shakeRange - (shakeRange /2);
+            transform.eulerAngles = new Vector3(originalRotation.x, originalRotation.y, originalRotation.z + z); 
+            yield return null;
+        }
+ 
+        transform.rotation = originalRotation;
+    }
     
 }
