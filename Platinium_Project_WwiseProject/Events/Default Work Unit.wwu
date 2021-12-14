@@ -275,6 +275,91 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Voices" ID="{2FAD49CF-1C26-449E-B35B-6B32187B4013}" ShortID="952409472">
+							<ChildrenList>
+								<Event Name="Play_R_Boss_Settle" ID="{3FD0916A-0E68-4013-9961-A485D57991FE}">
+									<ChildrenList>
+										<Action Name="" ID="{8E820EE1-D24D-4B84-AD7D-CFB4778C8294}" ShortID="921024161">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_Settle" ID="{10859CEC-D8E9-4528-82EA-4ED96E487AC0}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_R_Boss_Run" ID="{582B312F-BEB7-43B3-B170-BCD48C7D631E}">
+									<ChildrenList>
+										<Action Name="" ID="{AF3DB6F4-E85D-4019-AB03-C5BBCD75EB63}" ShortID="959617484">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_Run" ID="{DA890F66-93FE-40A4-8D8A-CD5DFA3A4422}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_R_Boss_Hurt_Cat" ID="{47EDCA6A-CD9D-40CC-94DE-979F4A25D92D}">
+									<ChildrenList>
+										<Action Name="" ID="{B92A0A9A-29A8-410D-81F6-7F51EB679BF3}" ShortID="509960183">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_Hurt_Cat" ID="{5B559772-028E-48C9-B3EF-7D0B1DFFC16D}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_R_Boss_Hurt_Normal" ID="{3269B90B-6866-4838-B403-37C7263673BC}">
+									<ChildrenList>
+										<Action Name="" ID="{21BA571B-CFD5-4561-BCED-E18AFD9FC73A}" ShortID="413771704">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_Hurt_Normal" ID="{538DED21-DF94-405E-9EA1-B5E2DB3012C8}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_R_Boss_CanNotDodge" ID="{8A044E34-C83B-4781-A59F-4E8107C2ECC4}">
+									<ChildrenList>
+										<Action Name="" ID="{3E3F9CBB-2E66-42B6-954F-55D48E38665C}" ShortID="698978827">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_CanNotDodge" ID="{4F5D988D-826B-4C98-B7F9-DCF46726590F}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_R_Boss_Dodge" ID="{0B85BD37-3060-4F28-A5E4-8A61A3DE55E3}">
+									<ChildrenList>
+										<Action Name="" ID="{F45A1580-874A-4A20-8CB4-81B0D72AA065}" ShortID="244215026">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_Dodge" ID="{5C7E330E-744C-4A54-9C72-76DDF272E9C3}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="ShieldBreak" ID="{37BAB9DE-201A-4C72-870F-596067EB5D5D}" ShortID="1057959476">
+							<ChildrenList>
+								<Event Name="Play_R_Boss_ShieldBreak" ID="{6B1D36CD-636E-499E-B02A-508E04B33199}">
+									<ChildrenList>
+										<Action Name="" ID="{CE09CA5E-26FB-407A-BB89-4698B44F90B4}" ShortID="812811518">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="R_Boss_ShieldBreak" ID="{1C572802-8F4F-4AA7-AA45-E3AEDA33AE37}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="CHARACTER" ID="{D648C343-219D-4FB0-8A3B-11DD2B1B35D2}" ShortID="29894076">
@@ -282,6 +367,19 @@
 						<Property Name="Color" Type="int16" Value="19"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
+					<ChildrenList>
+						<Event Name="Play_R_Chara_Roll" ID="{B5539CA6-EE9F-4985-B4E4-0DD58BAFB239}">
+							<ChildrenList>
+								<Action Name="" ID="{0B558E73-56B0-4F71-B587-26B0DDFE4489}" ShortID="696906363">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="R_Chara_Roll" ID="{E291F57E-656F-4326-B7BC-EEBB9262830D}" WorkUnitID="{AAE07372-743B-4E71-AF6D-A43B83C8486B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
 				</Folder>
 				<Folder Name="MUSIC" ID="{B893BBDF-6961-4352-9E0C-0182D95310CF}" ShortID="1366165">
 					<PropertyList>
