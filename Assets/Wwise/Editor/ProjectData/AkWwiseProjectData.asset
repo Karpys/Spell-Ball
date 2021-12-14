@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: cbba4e87874e1b42be2e0c37d6742d40
     GuidInternal: 
-    m_lastTime: -8585628944622875646
+    m_lastTime: -8585685319327977049
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 121cbf942d2c0a4aa70b4d5d177cbb96
     GuidInternal: 
-    m_lastTime: -8585622238798110881
+    m_lastTime: -8585621302373054637
     List:
     - name: M_BOSS
       guid: e23f2f8bb296fa4ba477c377ae9f2fbd
@@ -200,7 +200,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585622238795302417
+    m_lastTime: -8585621302371463063
     List:
     - name: BALL
       guid: 5c501f5b299abd4b973517733bae8140
@@ -352,7 +352,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585622238805422983
+    m_lastTime: -8585621302374714851
     List:
     - name: BALL
       guid: af28c015ba078a40acc15da43c5d0f5a
@@ -838,6 +838,167 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_R_Boss_CanNotDodge
+      guid: 344e048a3bc88147a59f4e8107c2ecc4
+      id: 1832843239
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_CanNotDodge
+        ObjectType: 3
+        guid: 344e048a3bc88147a59f4e8107c2ecc4
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_CanNotDodge
+      maxAttenuation: 0
+      maxDuration: 2.754979
+      minDuration: 2.043583
+    - name: Play_R_Boss_Dodge
+      guid: 37bd850b6030284fa5e48a61a3de55e3
+      id: 1779048192
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_Dodge
+        ObjectType: 3
+        guid: 37bd850b6030284fa5e48a61a3de55e3
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Dodge
+      maxAttenuation: 0
+      maxDuration: 1.655479
+      minDuration: 1.350792
+    - name: Play_R_Boss_Hurt_Cat
+      guid: 6acaed479dcdcc4094de979f4a25d92d
+      id: 3788219053
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_Hurt_Cat
+        ObjectType: 3
+        guid: 6acaed479dcdcc4094de979f4a25d92d
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Hurt_Cat
+      maxAttenuation: 0
+      maxDuration: 1.206646
+      minDuration: 1.114333
+    - name: Play_R_Boss_Hurt_Normal
+      guid: 0bb9693266683848b40337c7263673bc
+      id: 2614099830
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_Hurt_Normal
+        ObjectType: 3
+        guid: 0bb9693266683848b40337c7263673bc
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Hurt_Normal
+      maxAttenuation: 0
+      maxDuration: 1.066667
+      minDuration: 0.772125
+    - name: Play_R_Boss_Run
+      guid: 2f312b58b7beb343b170bcd48c7d631e
+      id: 2434935390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_Run
+        ObjectType: 3
+        guid: 2f312b58b7beb343b170bcd48c7d631e
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Run
+      maxAttenuation: 0
+      maxDuration: 2.462083
+      minDuration: 2.216021
+    - name: Play_R_Boss_Settle
+      guid: 6a91d03f680e13409961a485d57991fe
+      id: 1538231534
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      - ElementName: Play_R_Boss_Settle
+        ObjectType: 3
+        guid: 6a91d03f680e13409961a485d57991fe
+      Path: Events\Default Work Unit\BOSS\Voices\Play_R_Boss_Settle
+      maxAttenuation: 0
+      maxDuration: 1.605917
+      minDuration: 1.263208
+    - name: Play_R_Boss_ShieldBreak
+      guid: cd361d6b6e639e49b02a508e04b33199
+      id: 166862117
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: ShieldBreak
+        ObjectType: 4
+        guid: deb9ba371a20724c870f596067eb5d5d
+      - ElementName: Play_R_Boss_ShieldBreak
+        ObjectType: 3
+        guid: cd361d6b6e639e49b02a508e04b33199
+      Path: Events\Default Work Unit\BOSS\ShieldBreak\Play_R_Boss_ShieldBreak
+      maxAttenuation: 0
+      maxDuration: 0.899063
+      minDuration: 0.724208
     - name: Play_R_Bounce
       guid: 792112d2e2f3f648b93b36b02b0e24a6
       id: 4267311131
@@ -884,6 +1045,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.853609
       minDuration: 0.494632
+    - name: Play_R_Chara_Roll
+      guid: a69c53b59fee8549b4e40dd58bafb239
+      id: 3117905890
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      - ElementName: Play_R_Chara_Roll
+        ObjectType: 3
+        guid: a69c53b59fee8549b4e40dd58bafb239
+      Path: Events\Default Work Unit\CHARACTER\Play_R_Chara_Roll
+      maxAttenuation: 0
+      maxDuration: 1.166667
+      minDuration: 1.166667
     - name: Play_Red_Power1
       guid: 67470446c171fa4785b03460db22ef1d
       id: 756609446
@@ -1039,6 +1220,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: ShieldBreak
+      guid: deb9ba371a20724c870f596067eb5d5d
+      id: 3724168951
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: ShieldBreak
+        ObjectType: 4
+        guid: deb9ba371a20724c870f596067eb5d5d
+      Path: Events\Default Work Unit\BOSS\ShieldBreak
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_M_BOSS_Layer
       guid: 5a1d1c7513ea2b4a98113b16184a9ddb
       id: 881957325
@@ -1079,6 +1280,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Voices
+      guid: cf49ad2f261c9e44b35b6b32187b4013
+      id: 3313685232
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Voices
+        ObjectType: 4
+        guid: cf49ad2f261c9e44b35b6b32187b4013
+      Path: Events\Default Work Unit\BOSS\Voices
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1091,7 +1312,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f7aeb8776abeb1408e4daa3e0077b848
     GuidInternal: 
-    m_lastTime: -8585622238805422983
+    m_lastTime: -8585624731127995975
     List:
     - name: BUS
       guid: 6c30b17a57185845b350c713820563f9
@@ -1283,7 +1504,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: bb08bd03bc83674dabd5a8598e3fa7b8
     GuidInternal: 
-    m_lastTime: -8585628944622875646
+    m_lastTime: -8585626479386416411
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1297,7 +1518,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: f3ec116dff1bdb44956d8882baafad5f
     GuidInternal: 
-    m_lastTime: -8585628944622875646
+    m_lastTime: -8585685319327987055
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -1311,7 +1532,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 9886abdd41a1454e957f8138b444e87a
     GuidInternal: 
-    m_lastTime: -8585628944622875646
+    m_lastTime: -8585685319327987055
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
