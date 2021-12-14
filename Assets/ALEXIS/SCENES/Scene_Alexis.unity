@@ -2267,7 +2267,7 @@ MonoBehaviour:
   vfxS: {fileID: 1906536751}
   musicS: {fileID: 1064097342}
   scene1: Scene_Alexis
-  scene2: Merge_Sprint4
+  scene2: Scene_Final
   volM: 50
   volV: 50
   volMu: 50
@@ -5679,7 +5679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonGraph: {fileID: 1891100264}
   scene1: Scene_Alexis
-  scene2: Merge_Sprint4
+  scene2: Scene_Final
   animref: {fileID: 962234515}
 --- !u!95 &962234515
 Animator:
@@ -10012,11 +10012,11 @@ MonoBehaviour:
   musicMenu:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0e9f2ce15166780409cc90b3600df719, type: 2}
+    WwiseObjectReference: {fileID: 0}
   stopMusicMenu:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: add3a22daf8b391438c4615856ecfbdd, type: 2}
+    WwiseObjectReference: {fileID: 0}
   UIIndex: 0
   play: {fileID: 779899763}
   OnGraphics: {fileID: 1891100264}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6897af06812f2a40bdec9d82e87070a, type: 3}
+  m_Name: 3FD0916A-0E68-4013-9961-A485D57991FE
+  m_EditorClassIdentifier: 
+  objectName: Play_R_Boss_Settle
+  id: 1538231534
+  guid: 3FD0916A-0E68-4013-9961-A485D57991FE
