@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    GameObject [] player = new GameObject [4];
+    public GameObject [] player = new GameObject [4];
     public GameObject Fade;
+    public GameInfo Info;
     //public GameObject Boss;
     //public GameObject pauseMenu;
     //public Animation FadeOut;
@@ -57,9 +58,10 @@ public class GameOver : MonoBehaviour
         Debug.Log("GAME OVER");
         gameOver = true;
         Fade.SetActive(true);
+        Info.victory = false;
         Fade.GetComponent<Animation>().Play("FadeOut_UI_V001");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
 
     }
 }

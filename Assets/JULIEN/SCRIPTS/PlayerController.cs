@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private ParticleManager particule;
 
-    public float TimeForRevive = 5;
+    public float TimeForRevive = 3;
     private float TimeRevive;
 
     [SerializeField] GameObject SlowDownEffect;
@@ -54,10 +54,11 @@ public class PlayerController : MonoBehaviour
 
     private int gampad;
     private float timeHaptique = 2;
-
+    public GameObject heal ;
 
     void Start()
     {
+
         particule = particleSystem.GetComponent<ParticleManager>();
         particule.destoy = false;
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
@@ -112,6 +113,7 @@ public class PlayerController : MonoBehaviour
         if(tryRevive)
         {
             Debug.Log(playerNeedHelp.GetComponent<PlayerController>().playerColor);
+            PlayerController dead = playerNeedHelp.GetComponent<PlayerController>();
             if (TimeRevive<TimeForRevive)
             {
                 if (timeHaptique > 1)
@@ -121,23 +123,37 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                     timeHaptique += Time.deltaTime;
-                    
 
-                Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
-                if(!playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying)
-                    playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Play();
+
+                //Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
+                if (!dead.heal.GetComponent<HealParticuleManager>().onPlay)
+                    dead.heal.GetComponent<HealParticuleManager>().StartHeal();
 
                 TimeRevive += Time.deltaTime;
             }
             else
             {
                 playerNeedHelp.GetComponent<Manager_Life>().HealHealth(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                dead._animator.SetBool("isDead", false);
                 tryRevive = false;
+                dead.heal.GetComponent<HealParticuleManager>().onPlay = false;
                 Debug.Log("it is alive");
             }
         }
         
         
+    }
+
+    public void PlayerDead()
+    {
+        SetConditionAnimator("isDead");
+        heal.GetComponent<HealParticuleManager>().PlayerDead();
+    }
+
+    public void SetConditionAnimator (string name)
+    {
+        _animator.SetBool(name, true);
+        _animator.Play("FallNSit");
     }
 
     void OnGUI()
@@ -190,7 +206,8 @@ public class PlayerController : MonoBehaviour
 
         if (!tryRevive)
         {
-            playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
+            playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<ParticleSystem>().Stop();
+            playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<HealParticuleManager>().onPlay = false;
             TimeRevive = 0;
         }
     }
@@ -260,7 +277,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        
+        balle.GetComponent<Balle>().SetLastLauncher(this);
 
         balle = null;
         
@@ -320,7 +337,8 @@ public class PlayerController : MonoBehaviour
         {
             if(other.gameObject == playerNeedHelp )
             {
-                playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().Stop();
+                playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<ParticleSystem>().Stop();
+                playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<HealParticuleManager>().onPlay = false;
                 playerNeedHelp = null;
             }
         }

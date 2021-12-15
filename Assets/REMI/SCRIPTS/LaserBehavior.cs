@@ -121,15 +121,22 @@ public class LaserBehavior : MonoBehaviour
         {
             hit = Physics.RaycastAll(ray, Lenght, Layer);
             //DAMAGE FIRST Player  hit[0]//
-            if (hit[0].collider.gameObject.TryGetComponent(out PlayerController player))
+            foreach (RaycastHit raycastHit in hit)
             {
-                Manager_Life Life = hit[0].collider.gameObject.GetComponent<Manager_Life>();
-                if (Life.Timerinvis <= 0)
+                if (raycastHit.collider.gameObject.TryGetComponent(out PlayerCollision player))
                 {
-                    Life.Timerinvis = 1;
-                    Life.DamageHealth(1);
+                    Manager_Life Life = raycastHit.collider.gameObject.GetComponentInParent<Manager_Life>();
+                    if (Life.Timerinvis <= 0)
+                    {
+                        Life.Timerinvis = 1;
+                        Life.DamageHealth(1);
+                    }
                 }
             }
+            /*if (hit[0].collider.gameObject.TryGetComponent(out PlayerCollision player))
+            {
+                
+            }*/
             FirstHitPosition = hit[0].point;
         }
 
