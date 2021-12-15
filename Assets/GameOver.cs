@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    GameObject [] player = new GameObject [4];
+    public GameObject [] player = new GameObject [4];
     public GameObject Fade;
     public GameInfo Info;
     //public GameObject Boss;
