@@ -19,6 +19,7 @@ public class VictoryLoseScript : MonoBehaviour
     [SerializeField] private int NumberOfAnims;
     void Start()
     {
+        Time.timeScale = 1f;
         if (_gameInfo.victory)
         {
             _animatorRedRat.SetInteger("Dance", Random.Range(0, NumberOfAnims));
