@@ -29,6 +29,8 @@ public class Balle : MonoBehaviour
     public Color BadColor;
     public bool EnnemyBalle;
 
+    private PlayerController lastPlayerLaunchingIt;
+
    
     private void Awake()
     {
@@ -232,4 +234,9 @@ public class Balle : MonoBehaviour
         ColorBallReset();
         
     }
+
+     public void SetLastLauncher(PlayerController playerController)
+     {
+         lastPlayerLaunchingIt = playerController;
+     }
 }
