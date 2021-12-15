@@ -132,12 +132,19 @@ public class PlayerController : MonoBehaviour
             else
             {
                 playerNeedHelp.GetComponent<Manager_Life>().HealHealth(playerNeedHelp.GetComponent<Manager_Life>().maxHealth);
+                playerNeedHelp.GetComponent<PlayerController>()._animator.SetBool("isDead", false);
                 tryRevive = false;
                 Debug.Log("it is alive");
             }
         }
         
         
+    }
+
+    public void SetConditionAnimator (string name)
+    {
+        _animator.SetBool(name, true);
+        _animator.Play("FallNSit");
     }
 
     void OnGUI()

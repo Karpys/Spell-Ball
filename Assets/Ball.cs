@@ -77,7 +77,7 @@ public class Ball : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Time.deltaTime * Speed, CollisionShield))
         {
             Reflect(hit.normal);
-            ResetSpeedAndCombo();
+            //ResetSpeedAndCombo();
             hitShield = true;
             Debug.Log(hit.transform.gameObject.GetComponent<Sheild>().color + "   " + gameObject.GetComponent<Balle>().color);
             if (hit.transform.gameObject.GetComponent<Sheild>().color == gameObject.GetComponent<Balle>().color)
@@ -131,6 +131,9 @@ public class Ball : MonoBehaviour
                 Life.DamageHealth(1);
                 Destroy(gameObject);
                 }
+
+                if (Life.GetCurentLife() <= 0)
+                    hit.collider.gameObject.GetComponentInParent<PlayerController>().SetConditionAnimator("isDead");
             }
         }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);

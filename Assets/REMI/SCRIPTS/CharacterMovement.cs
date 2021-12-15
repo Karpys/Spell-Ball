@@ -86,30 +86,35 @@ public class CharacterMovement : MonoBehaviour
             Roll_Manager.RollCd -= Time.deltaTime;
         }
 
-        if(Roll_Manager.RollDuration >= 0)
-        {
-            Roll_Manager.RollDuration -= Time.deltaTime;
-        }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
-        {
-            playerCollider.enabled = true;
-            Roll_Manager.HasReset = true;
-            Stats.CanMove = true;
-        }
+
+            if(Roll_Manager.RollDuration >= 0)
+            {
+                Roll_Manager.RollDuration -= Time.deltaTime;
+            }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
+            {
+                playerCollider.enabled = true;
+                Roll_Manager.HasReset = true;
+                Stats.CanMove = true;
+            }
+
     }
 
     public void TryRoll(bool Roll)
     {
-        if(Roll && Roll_Manager.CanRoll)
+        if (!Anim.GetBool("isDead"))
         {
-            playerCollider.enabled = false;
-            Manager_Life Life = GetComponent<Manager_Life>();
-            Life.Timerinvis = 1;
-            Anim.Play("Roll");
-            RotatePlayerMovement(MovementDir);
-            Roll_Manager.RollCd = Roll_Manager.RollCdSet;
-            Roll_Manager.RollDuration = Roll_Manager.RollDurationSet;
-            Stats.CanMove = false;
-            Roll_Manager.HasReset = false;
+            if (Roll && Roll_Manager.CanRoll)
+            {
+                playerCollider.enabled = false;
+                Manager_Life Life = GetComponent<Manager_Life>();
+                Life.Timerinvis = 1;
+                Anim.Play("Roll");
+                RotatePlayerMovement(MovementDir);
+                Roll_Manager.RollCd = Roll_Manager.RollCdSet;
+                Roll_Manager.RollDuration = Roll_Manager.RollDurationSet;
+                Stats.CanMove = false;
+                Roll_Manager.HasReset = false;
+            }
         }
     }
 
