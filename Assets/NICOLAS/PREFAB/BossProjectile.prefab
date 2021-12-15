@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Bits: 1024
   CollisionShield:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   Direction: {x: 0, y: 0, z: 0}
   radius: 0.25
   DestroyOnHitWall: 0

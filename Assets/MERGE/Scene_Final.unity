@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0016099811, g: 0.00316656, b: 0.0072645247, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -736,7 +736,7 @@ MonoBehaviour:
       StartPosition: {fileID: 1732666821}
     - Manager: {fileID: 0}
       Name: Laser
-      ThrowHead: 1
+      ThrowHead: 0
       Duration: 4
       WaitTime: 4.5
       Lenght: 20
@@ -748,7 +748,7 @@ MonoBehaviour:
       StartPosition: {fileID: 1732666821}
     - Manager: {fileID: 0}
       Name: Laser
-      ThrowHead: 1
+      ThrowHead: 0
       Duration: 4
       WaitTime: 4.5
       Lenght: 20
@@ -760,7 +760,7 @@ MonoBehaviour:
       StartPosition: {fileID: 1732666821}
     - Manager: {fileID: 0}
       Name: Laser
-      ThrowHead: 1
+      ThrowHead: 0
       Duration: 4
       WaitTime: 4.5
       Lenght: 20
@@ -29404,9 +29404,13 @@ PrefabInstance:
       value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 2359701271073003028, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: FollowSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359701271073003028, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BoardTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1745715732}
     - target: {fileID: 2621462436132179606, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Instantier.Stats.Number
       value: 1
@@ -29432,9 +29436,13 @@ PrefabInstance:
       value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 3443657220571147613, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: FollowSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443657220571147613, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BoardTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1745715732}
     - target: {fileID: 4140820415854544033, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Heads.Array.size
       value: 3
@@ -29464,9 +29472,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5568566309506917538, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: FollowSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568566309506917538, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BoardTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1745715732}
     - target: {fileID: 5639378098180131042, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: BoardTransform
       value: 
@@ -29545,11 +29557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[0].HpToSet
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[1].HpToSet
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].HpToSet
@@ -29670,11 +29682,11 @@ PrefabInstance:
     - target: {fileID: 7725134926590305246, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LeftRight.TransformLeft
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1127973950}
     - target: {fileID: 7725134926590305246, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: LeftRight.TransformRight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 537601914}
     - target: {fileID: 7725134926741503108, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -30705,7 +30717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745715732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.94, y: 2.2, z: -5.2}
+  m_LocalPosition: {x: -6.89, y: 2.2, z: -2.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
