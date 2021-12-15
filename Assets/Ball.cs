@@ -31,6 +31,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private GameObject OnHitParticle;
 
+    private Vector3 centerOfAction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -135,8 +137,63 @@ public class Ball : MonoBehaviour
 
             }
         }
+
+        if (Physics.Raycast(ray, out hit, Speed * Time.deltaTime * 5, CollisionMaskEnnemy))
+        {
+            BossBehavior bossBehavior = hit.collider.gameObject.GetComponent<BossBehavior>();
+            if (bossBehavior.ActualPhase == bossBehavior.Phases.Count - 2)
+            {
+                int nextHP = (int) bossBehavior.Life.GetCurentLife() - gameObject.GetComponent<Balle>().combo;
+                if (nextHP <= 0)
+                {
+                    Time.timeScale = .025f;
+                    Camera.main.fieldOfView = 90;
+
+                    BossHpManager bossHpManager = hit.collider.GetComponent<BossHpManager>();
+
+                    Plane rightLeftPlane = new Plane(bossHpManager.transform.position, bossHpManager.inFrontOfBoss.position,
+                        bossHpManager.bottomOfBoss.position);
+                    Plane backFrontPlane = new Plane(bossHpManager.transform.position,
+                        bossHpManager.bottomOfBoss.position, bossHpManager.leftOfBoss.position);
+
+                    if (rightLeftPlane.GetSide(transform.position))
+                    {
+                        // ON EST A GAUCHE DU BOSS
+                        if (backFrontPlane.GetSide(transform.position))
+                        {
+                            // ON EST DEVANT LE BOSS
+                            Camera.main.transform.parent.position = bossHpManager.leftFrontCameraSpot.position;
+                        }
+                        else
+                        {
+                            Camera.main.transform.parent.position = bossHpManager.leftBackCameraSpot.position;
+                        }
+                    }
+                    else
+                    {
+                        if (backFrontPlane.GetSide(transform.position))
+                        {
+                            Camera.main.transform.parent.position = bossHpManager.rightFrontCameraSpot.position;
+                        }
+                        else
+                        {
+                            Camera.main.transform.parent.position = bossHpManager.rightBackCameraSpot.position;
+                        }
+                    }
+
+                    centerOfAction = ((transform.position + hit.collider.transform.position) / 2);
+                    
+                    InvokeRepeating("LookAtAction", 0, 0.001f);
+                }
+            }
+        }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
 
+    }
+
+    public void LookAtAction()
+    {
+        Camera.main.transform.parent.LookAt(centerOfAction);
     }
 
     public void Reflect(Vector3 Normal)

@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Manager_Life))]
@@ -33,6 +35,7 @@ public class BossBehavior : MonoBehaviour
 
     private Boss_Music_Manager MusicManager;
     public Boss_Head_Manager Head;
+    public GameInfo gameInfo;
 
     /*private static BossBehavior inst;*/
     /*public static BossBehavior Boss { get => inst; }*/
@@ -50,7 +53,11 @@ public class BossBehavior : MonoBehaviour
 
     public void Start()
     {
-        //LaunchPhase(0);
+        var skipPhase = new InputAction(binding: "<Keyboard>/#(a)");
+
+        skipPhase.performed += context => Life.DamageHealth((int)Life.GetCurentLife());
+
+        skipPhase.Enable();
     }
 
 
@@ -93,7 +100,7 @@ public class BossBehavior : MonoBehaviour
 
     public void NextPhase()
     {
-        CameraShakeManager.CameraShake.Shake(1.5f, 1.5f, 15f);
+        CameraShakeManager.CameraShake.Shake(1.5f, 1f, 10f);
         if (BossStarted)
         {
             //PREMIERE Phase
@@ -104,13 +111,15 @@ public class BossBehavior : MonoBehaviour
 
             //LAST PHASE
 
-            if (ActualPhase >= Phases.Count - 1)
+            if (ActualPhase >= Phases.Count - 2)
             {
                 ListActualAction[ActualAction].Deactivate();
                 //CLAIM END BOSS
                 Debug.Log("Le boss est MOOORT");
                 BossStarted = false;
                 Life.SetCurentLife(15000);
+                Victory();
+                // Call vers le screen de victoire
                 return;
             }
 
@@ -128,8 +137,12 @@ public class BossBehavior : MonoBehaviour
         }
     }
 
+    public void Victory()
+    {
+        gameInfo.victory = true;
+        SceneManager.LoadScene(2);
+    }
     
-
     public void LaunchAction()
     {
         if (Phases[ActualPhase].RandomAction)
