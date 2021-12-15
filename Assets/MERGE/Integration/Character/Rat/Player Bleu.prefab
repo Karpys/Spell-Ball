@@ -7680,7 +7680,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 71a4130b7a82afe43a40141dd25cd664, type: 2}
+      objectReference: {fileID: 2100000, guid: 2afcce6b97b7ce5468e7ea885324202b, type: 2}
     - target: {fileID: 919132149155446097, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
       propertyPath: m_Name
       value: LowpolyStaff
