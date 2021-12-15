@@ -44,7 +44,9 @@ public class BossBehaviorEditor : Editor
 
             SerializedProperty listActionProperty = serializedObject.FindProperty("Phases");
             EditorGUILayout.PropertyField(listActionProperty);
-
+            
+            SerializedProperty GameInfo = serializedObject.FindProperty("gameInfo");
+            EditorGUILayout.PropertyField(GameInfo);
             /*SerializedProperty Base = serializedObject.FindProperty("BossBallThrower");
             EditorGUILayout.PropertyField(Base);*/
 

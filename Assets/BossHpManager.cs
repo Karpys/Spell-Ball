@@ -6,7 +6,16 @@ using UnityEngine;
 public class BossHpManager : MonoBehaviour
 {
     [SerializeField] private GameObject HPDisplay;
-    
+
+    public Transform inFrontOfBoss;
+    public Transform bottomOfBoss;
+    public Transform leftOfBoss;
+
+    public Transform leftBackCameraSpot;
+    public Transform rightBackCameraSpot;
+    public Transform leftFrontCameraSpot;
+    public Transform rightFrontCameraSpot;
+
     // Start is called before the first frame update
     /*public int HpBeforeNextState;
 
