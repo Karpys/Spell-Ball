@@ -95,9 +95,9 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0}
       key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -112,16 +112,16 @@ LineRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
+      atime1: 16384
+      atime2: 49151
+      atime3: 65535
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 4
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -148,35 +148,35 @@ MonoBehaviour:
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 8a791cbdd1317e5439ed1de7a2bd835f, type: 2}
+        WwiseObjectReference: {fileID: 0}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 0244c06ecbc8d6943bf10bdb227978a8, type: 2}
+        WwiseObjectReference: {fileID: 0}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 7c25f4ee83d679d47b6bc366d638b35d, type: 2}
+        WwiseObjectReference: {fileID: 0}
       KillPrevious: 1
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: d85ce47d45971374397450d2265d33ad, type: 2}
+        WwiseObjectReference: {fileID: 0}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 2e83f6d0fdb0a4e40b6a9e1a94f6116f, type: 2}
+        WwiseObjectReference: {fileID: 0}
       KillPrevious: 1
       IsReplable: 0
       HasPlayed: 0

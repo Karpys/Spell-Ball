@@ -132,8 +132,7 @@ public class Ball : MonoBehaviour
                 Destroy(gameObject);
                 }
 
-                if (Life.GetCurentLife() <= 0)
-                    hit.collider.gameObject.GetComponentInParent<PlayerController>().SetConditionAnimator("isDead");
+
             }
         }
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
