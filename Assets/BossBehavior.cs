@@ -158,6 +158,9 @@ public class BossBehavior : MonoBehaviour
         {
             BossVoiceManager.Voice.PlayHit();
         }
+
+        GameObject_ScaleChange Scale = GetComponentInChildren<GameObject_ScaleChange>();
+        Scale.GrowUp();
     }
 
 

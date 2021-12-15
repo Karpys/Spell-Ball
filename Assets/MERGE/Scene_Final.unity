@@ -21504,6 +21504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rouge
       objectReference: {fileID: 0}
+    - target: {fileID: 9122807134000420660, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
 --- !u!1 &1252365335
@@ -29351,6 +29355,34 @@ PrefabInstance:
       propertyPath: shakeOnDamage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 861972324}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BossBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478937737, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: OnDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 549941110090762202, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_Name
       value: SpawnScary
@@ -29487,6 +29519,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnHungry
       objectReference: {fileID: 0}
+    - target: {fileID: 6229062655178912485, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: scaleIt.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229062655178912485, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: scaleIt.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229062655178912485, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: scaleIt.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6928411032199569207, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: m_Name
       value: SpawnNormal
@@ -29557,11 +29601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[0].HpToSet
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[1].HpToSet
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].HpToSet
@@ -29622,11 +29666,11 @@ PrefabInstance:
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[1].ListAction.Array.data[0]
       value: 
-      objectReference: {fileID: 697519635}
+      objectReference: {fileID: 1253113435}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[1].ListAction.Array.data[1]
       value: 
-      objectReference: {fileID: 1253113435}
+      objectReference: {fileID: 697519635}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[1].ListAction.Array.data[2]
       value: 
@@ -29652,6 +29696,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1403874149}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
+      propertyPath: Phases.Array.data[1].ListAction.Array.data[8]
+      value: 
+      objectReference: {fileID: 1403874149}
+    - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].ListAction.Array.data[0]
       value: 
       objectReference: {fileID: 2144431720}
@@ -29662,11 +29710,11 @@ PrefabInstance:
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].ListAction.Array.data[2]
       value: 
-      objectReference: {fileID: 947722628}
+      objectReference: {fileID: 680978352}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].ListAction.Array.data[3]
       value: 
-      objectReference: {fileID: 680978352}
+      objectReference: {fileID: 947722628}
     - target: {fileID: 7725134926590305242, guid: 5c1be7f37c6b433439f3823010c3b553, type: 3}
       propertyPath: Phases.Array.data[2].ListAction.Array.data[4]
       value: 

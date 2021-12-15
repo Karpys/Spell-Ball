@@ -25,7 +25,7 @@ public class GameObject_ScaleChange : MonoBehaviour
         plusScale = this.transform.localScale + scaleIt;
         moinsScale = this.transform.localScale;
 
-        GrowUp();
+        /*GrowUp();*/
 
     }
 
