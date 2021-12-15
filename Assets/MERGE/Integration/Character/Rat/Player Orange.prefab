@@ -2373,7 +2373,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132148916143358, guid: 481095c71899b614f8ddee68fdfcf409, type: 3}
+      - m_Target: {fileID: 919132148916143358}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: PlayerDead
         m_Mode: 1

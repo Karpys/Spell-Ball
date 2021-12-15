@@ -17,8 +17,14 @@ public class VictoryLoseScript : MonoBehaviour
     [SerializeField] private GameObject bossHeads;
 
     [SerializeField] private int NumberOfAnims;
+
+    [SerializeField] private AK.Wwise.Event StopMusic;
+
+    
     void Start()
     {
+        StopMusic.Post(gameObject);
+        ControllerHaptics.instance.StopAllControllers(0);
         Time.timeScale = 1f;
         if (_gameInfo.victory)
         {
