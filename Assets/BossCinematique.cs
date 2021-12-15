@@ -8,14 +8,21 @@ public class BossCinematique : MonoBehaviour
     public FloorManager Floor;
     public BossBehavior Boss;
 
+    public GameObject Smoke;
+    public GameObject LittleSmoke;
+    public GameObject LittleSmokeTransform;
+    public GameObject SmokeTransform;
+
     public void LittleShake()
     {
         CameraShakeManager.CameraShake.Shake(0.1f, 0.5f, 15);
+        Instantiate(LittleSmoke, LittleSmokeTransform.transform.position, LittleSmokeTransform.transform.rotation);
     }
 
     public void LongShake()
     {
         CameraShakeManager.CameraShake.Shake(1.5f, 1f, 15);
+        Instantiate(Smoke, SmokeTransform.transform.position, SmokeTransform.transform.rotation);
         Floor.start = true;
     }
 
