@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3217810413	Laser_Start_Release			\Default Work Unit\BOSS\LaserEvent\Laser_Start_Release	
 	3428356050	Laser_Start_Trigger			\Default Work Unit\BOSS\LaserEvent\Laser_Start_Trigger	
 	3788219053	Play_R_Boss_Hurt_Cat			\Default Work Unit\BOSS\Voices\Play_R_Boss_Hurt_Cat	
+	4013727804	Play_B_Spawn			\Default Work Unit\BOSS\Spawn\Play_B_Spawn	
 	4154444698	Laser_Start_Charge			\Default Work Unit\BOSS\LaserEvent\Laser_Start_Charge	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -41,4 +42,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	928797627	VOX_Boss1_Hurt_CatIntonation_04	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Mac\SFX\VOX_Boss1_Hurt_CatIntonation_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Voices\Hurt\Cat\R_Boss_Hurt_Cat\VOX_Boss1_Hurt_CatIntonation_04		115902
 	995176860	VOX_Boss1_Hurt_CatIntonation_03	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Mac\SFX\VOX_Boss1_Hurt_CatIntonation_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Voices\Hurt\Cat\R_Boss_Hurt_Cat\VOX_Boss1_Hurt_CatIntonation_03		111226
 	1008383066	VOX_Boss1_YoureNotGonnaDodgeThisOne_02	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Mac\SFX\VOX_Boss1_YoureNotGonnaDodgeThisOne_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Voices\CanNotDodge\R_Boss_CanNotDodge\VOX_Boss1_YoureNotGonnaDodgeThisOne_02		196248
+	1051428823	SFX_Boss1_Spawn 	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Mac\SFX\SFX_Boss1_Spawn _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BOSS\Spawn\B_Spawn\SFX_Boss1_Spawn 		1548864
 

@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour
     public bool Returnable;
 
     [SerializeField] private AK.Wwise.Event playBounce;
+    [SerializeField] private AK.Wwise.Event shieldBreaker;
 
     float _timerDamageSelf;
     [SerializeField] private GameObject CollisionParticle;
@@ -88,6 +89,7 @@ public class Ball : MonoBehaviour
             {
                 Debug.Log("change");
                 hit.transform.gameObject.GetComponentInParent<SheildManager>().ChangeLastSheild();
+                shieldBreaker.Post(gameObject);
             }
             else
                 Instantiate(CollisionParticle, transform.position, transform.rotation);

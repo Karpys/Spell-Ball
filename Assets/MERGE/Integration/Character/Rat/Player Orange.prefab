@@ -2620,6 +2620,10 @@ MonoBehaviour:
   MovementDir: {x: 0, y: 0}
   Anim: {fileID: 4817139692052885286}
   playerCollider: {fileID: 919132148916143357}
+  RollSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2361b3902d58ecc48a3663bd8205886f, type: 2}
   ShowInspector: 1
 --- !u!1001 &7157269077372754868
 PrefabInstance:

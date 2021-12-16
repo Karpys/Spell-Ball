@@ -1,9 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1030314342	Play_B_R_Start			\Default Work Unit\CHARACTER\Play_B_R_Start	
+	1182610633	Play_B_R_Release			\Default Work Unit\CHARACTER\Play_B_R_Release	
+	2079967614	Play_B_R_OneShot			\Default Work Unit\CHARACTER\Play_B_R_OneShot	
 	3117905890	Play_R_Chara_Roll			\Default Work Unit\CHARACTER\Play_R_Chara_Roll	
+	3973545534	Play_B_R_Constant			\Default Work Unit\CHARACTER\Play_B_R_Constant	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	57817155	SFX_Player_Revive_Constant_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Revive_Constant_LP_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Revive\B_R_Constant\SFX_Player_Revive_Constant_LP		514240
 	144639447	SFX_Player_Movement_Roll_03	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Movement_Roll_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Movement\Roll\R_Chara_Roll\SFX_Player_Movement_Roll_03		224064
+	213865428	SFX_Player_Revive_OneShot	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Revive_OneShot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Revive\B_R_OneShot\SFX_Player_Revive_OneShot		899264
+	256923138	SFX_Player_Revive_Release	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Revive_Release_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Revive\B_R_Release\SFX_Player_Revive_Release		294470
 	428474447	SFX_Player_Movement_Roll_05	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Movement_Roll_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Movement\Roll\R_Chara_Roll\SFX_Player_Movement_Roll_05		224064
 	569924327	SFX_Player_Movement_Roll_01	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Movement_Roll_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Movement\Roll\R_Chara_Roll\SFX_Player_Movement_Roll_01		224064
+	596516150	SFX_Player_Revive_Start	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Revive_Start_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Revive\B_R_Start\SFX_Player_Revive_Start		733554
 	796660583	SFX_Player_Movement_Roll_06	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\SFX_Player_Movement_Roll_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CHARACTER\Movement\Roll\R_Chara_Roll\SFX_Player_Movement_Roll_06		224064
 

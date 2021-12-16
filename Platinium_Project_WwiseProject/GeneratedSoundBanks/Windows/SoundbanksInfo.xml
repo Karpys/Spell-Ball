@@ -11,11 +11,43 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="51703143" Language="SFX" Hash="3064169034">
+		<SoundBank Id="51703143" Language="SFX" Hash="230728560">
 			<ObjectPath>\SoundBanks\Default Work Unit\CHARACTER\S_Characters</ObjectPath>
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3973545534" Name="Play_B_R_Constant" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_B_R_Constant" DurationType="OneShot" DurationMin="5.356000" DurationMax="5.356000">
+					<IncludedMemoryFiles>
+						<File Id="57817155" Language="SFX">
+							<ShortName>SFX_Player_Revive_Constant_LP.wav</ShortName>
+							<Path>SFX\SFX_Player_Revive_Constant_LP_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2079967614" Name="Play_B_R_OneShot" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_B_R_OneShot" DurationType="OneShot" DurationMin="9.366667" DurationMax="9.366667">
+					<IncludedMemoryFiles>
+						<File Id="213865428" Language="SFX">
+							<ShortName>SFX_Player_Revive_OneShot.wav</ShortName>
+							<Path>SFX\SFX_Player_Revive_OneShot_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1182610633" Name="Play_B_R_Release" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_B_R_Release" DurationType="OneShot" DurationMin="3.066729" DurationMax="3.066729">
+					<IncludedMemoryFiles>
+						<File Id="256923138" Language="SFX">
+							<ShortName>SFX_Player_Revive_Release.wav</ShortName>
+							<Path>SFX\SFX_Player_Revive_Release_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1030314342" Name="Play_B_R_Start" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_B_R_Start" DurationType="OneShot" DurationMin="7.640521" DurationMax="7.640521">
+					<IncludedMemoryFiles>
+						<File Id="596516150" Language="SFX">
+							<ShortName>SFX_Player_Revive_Start.wav</ShortName>
+							<Path>SFX\SFX_Player_Revive_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3117905890" Name="Play_R_Chara_Roll" ObjectPath="\Events\Default Work Unit\CHARACTER\Play_R_Chara_Roll" DurationType="OneShot" DurationMin="1.166667" DurationMax="1.166667">
 					<IncludedMemoryFiles>
 						<File Id="144639447" Language="SFX">
@@ -38,7 +70,46 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1200485816" Language="SFX" Hash="757013540">
+		<SoundBank Id="349267893" Language="SFX" Hash="2649490990">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI\S_UI</ObjectPath>
+			<ShortName>S_UI</ShortName>
+			<Path>S_UI.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4253604464" Name="Play_B_UI_Click" ObjectPath="\Events\Default Work Unit\UI\Play_B_UI_Click" DurationType="OneShot" DurationMin="0.577417" DurationMax="0.577417">
+					<IncludedMemoryFiles>
+						<File Id="900296288" Language="SFX">
+							<ShortName>UI_Click.wav</ShortName>
+							<Path>SFX\UI_Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2992176301" Name="Play_B_UI_Hover_Big" ObjectPath="\Events\Default Work Unit\UI\Play_B_UI_Hover_Big" DurationType="OneShot" DurationMin="0.322500" DurationMax="0.322500">
+					<IncludedMemoryFiles>
+						<File Id="897244190" Language="SFX">
+							<ShortName>UI_Hover_Big.wav</ShortName>
+							<Path>SFX\UI_Hover_Big_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1858133818" Name="Play_B_UI_Hover_Small" ObjectPath="\Events\Default Work Unit\UI\Play_B_UI_Hover_Small" DurationType="OneShot" DurationMin="0.403250" DurationMax="0.403250">
+					<IncludedMemoryFiles>
+						<File Id="332311513" Language="SFX">
+							<ShortName>UI_Hover_Small.wav</ShortName>
+							<Path>SFX\UI_Hover_Small_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2263619650" Name="Play_B_UI_SideSrompt" ObjectPath="\Events\Default Work Unit\UI\Play_B_UI_SideSrompt" DurationType="OneShot" DurationMin="0.797958" DurationMax="0.797958">
+					<IncludedMemoryFiles>
+						<File Id="1020133576" Language="SFX">
+							<ShortName>UI_Menu_SidePrompt.wav</ShortName>
+							<Path>SFX\UI_Menu_SidePrompt_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1200485816" Language="SFX" Hash="618178498">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
 			<ShortName>S_MUSIC</ShortName>
 			<Path>S_MUSIC.bnk</Path>
@@ -61,9 +132,9 @@
 				</Event>
 				<Event Id="1195915301" Name="Play_M_Menu_Theme" ObjectPath="\Events\Default Work Unit\MUSIC\Play_M_Menu_Theme" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="104887704" Language="SFX">
-							<ShortName>MUS_Boss1_Layer2_LP - Copie.wav</ShortName>
-							<Path>SFX\MUS_Boss1_Layer2_LP - Copie_D79FB2B7.wem</Path>
+						<File Id="650980639" Language="SFX">
+							<ShortName>menu_4.wav</ShortName>
+							<Path>SFX\menu_4_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -91,7 +162,7 @@
 				<GameParameter Id="2705865419" Name="GP_Lowpass_Pause" ObjectPath="\Game Parameters\Default Work Unit\PAUSE\GP_Lowpass_Pause"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1454594208" Language="SFX" Hash="1912632342">
+		<SoundBank Id="1454594208" Language="SFX" Hash="785959830">
 			<ObjectPath>\SoundBanks\Default Work Unit\BALL\S_Ball</ObjectPath>
 			<ShortName>S_Ball</ShortName>
 			<Path>S_Ball.bnk</Path>
@@ -378,7 +449,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1571743440" Language="SFX" Hash="918554213">
+		<SoundBank Id="1571743440" Language="SFX" Hash="339077911">
 			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
 			<ShortName>S_Boss</ShortName>
 			<Path>S_Boss.bnk</Path>
@@ -412,6 +483,14 @@
 						<File Id="523821600" Language="SFX">
 							<ShortName>SFX_Boss1_LaserBeam_Start_Trigg.wav</ShortName>
 							<Path>SFX\SFX_Boss1_LaserBeam_Start_Trigg_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4013727804" Name="Play_B_Spawn" ObjectPath="\Events\Default Work Unit\BOSS\Spawn\Play_B_Spawn" DurationType="OneShot" DurationMin="8.066667" DurationMax="8.066667">
+					<IncludedMemoryFiles>
+						<File Id="1051428823" Language="SFX">
+							<ShortName>SFX_Boss1_Spawn .wav</ShortName>
+							<Path>SFX\SFX_Boss1_Spawn _10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

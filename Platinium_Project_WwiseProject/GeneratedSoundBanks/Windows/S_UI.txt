@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1858133818	Play_B_UI_Hover_Small			\Default Work Unit\UI\Play_B_UI_Hover_Small	
+	2263619650	Play_B_UI_SideSrompt			\Default Work Unit\UI\Play_B_UI_SideSrompt	
+	2992176301	Play_B_UI_Hover_Big			\Default Work Unit\UI\Play_B_UI_Hover_Big	
+	4253604464	Play_B_UI_Click			\Default Work Unit\UI\Play_B_UI_Click	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	332311513	UI_Hover_Small	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\UI_Hover_Small_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\B_UI_Hover_Small\UI_Hover_Small		38776
+	897244190	UI_Hover_Big	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\UI_Hover_Big_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\B_UI_Hover_Big\UI_Hover_Big		31024
+	900296288	UI_Click	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\UI_Click_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\B_UI_Click\UI_Click		55496
+	1020133576	UI_Menu_SidePrompt	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\UI_Menu_SidePrompt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\B_UI_SideSrompt\UI_Menu_SidePrompt		76668
+

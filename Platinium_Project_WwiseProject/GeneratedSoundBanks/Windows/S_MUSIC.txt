@@ -20,8 +20,8 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	4056684167	MASTER			\Default Work Unit\MASTER	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	104887704	M_PH_Menu	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer2_LP - Copie_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MENU\M_Menu_Theme\M_PlaceHolder_Menu\M_PH_Menu		10242772
 	113387619	MUS_Boss1_Layer2_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer2_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer2_LP		10242772
+	650980639	M_PH_Menu	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\menu_4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MENU\M_Menu_Theme\M_PlaceHolder_Menu\M_PH_Menu		9416700
 	674721470	MUS_Boss1_Layer1_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer1_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer1_LP		10242772
 	751908878	MUS_Boss1_Layer3_LP	D:\Projet_Platinium\PlatiniumProject\Platinium_Project_WwiseProject\.cache\Windows\SFX\MUS_Boss1_Layer3_LP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\BOSS\M_BOSS_Layer\M_BOSS_LAYER\MUS_Boss1_Layer3_LP		10242772
 
