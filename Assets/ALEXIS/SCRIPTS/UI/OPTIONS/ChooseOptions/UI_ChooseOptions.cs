@@ -32,6 +32,8 @@ public class UI_ChooseOptions : MonoBehaviour
 
         animref.SetBool("ENTER_OP", true);
 
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
+
         //Check Which scene is currently active
         Scene currentScene = SceneManager.GetActiveScene();
         int sceneName = currentScene.buildIndex;

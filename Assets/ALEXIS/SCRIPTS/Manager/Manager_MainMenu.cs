@@ -14,6 +14,9 @@ public class Manager_MainMenu : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    public GameObject Audio;
+    public GameObject Graph;
+
     [SerializeField] private GameObject charSelectionMenu;
 
     //public string SceneName;
@@ -66,6 +69,8 @@ public class Manager_MainMenu : MonoBehaviour
         animFade = fadeRef.GetComponent<Animation>();
 
         musicMenu.Post(bank);
+        Audio.gameObject.GetComponent<UI_Options_Audio>().ParamSaved();
+        Graph.gameObject.GetComponent<UI_Options_Graphics>().ParamGraphChanged();
     }
 
     // Update is called once per frame
@@ -138,6 +143,7 @@ public class Manager_MainMenu : MonoBehaviour
     {
         if (wFocus == false)
         {
+            AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
             EventSystem.current.SetSelectedGameObject(null);
             animRef.SetBool("QUIT", true);
             StartCoroutine("WaitEndAnimAndGoToCharSelect");
@@ -157,7 +163,7 @@ public class Manager_MainMenu : MonoBehaviour
         print(wFocus);
         if (wFocus == false)
         {
-
+            AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
             EventSystem.current.SetSelectedGameObject(null);
             animRef.SetBool("QUIT", true);
             StartCoroutine("WaitEndAnim");
@@ -170,6 +176,7 @@ public class Manager_MainMenu : MonoBehaviour
     {
         if (wFocus == false)
         {
+            AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
             Application.Quit();
         }
     }
@@ -187,6 +194,10 @@ public class Manager_MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(play);
+
+
+        wFocus = false;
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
     }
 
     IEnumerator WaitEndAnim()
@@ -216,7 +227,10 @@ public class Manager_MainMenu : MonoBehaviour
     IEnumerator WaitFocus()
     {
         yield return new WaitForSecondsRealtime(1f);
-        wFocus = false;
+
+
+
+
     }
     #endregion
 }

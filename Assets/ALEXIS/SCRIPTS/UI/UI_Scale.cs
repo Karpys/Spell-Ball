@@ -22,8 +22,7 @@ public class UI_Scale : MonoBehaviour
     public void EnterPointer()
     {
         this.transform.localScale += scale;
-
-
+        AkSoundEngine.PostEvent("Play_B_UI_Hover_Small", this.gameObject);
     }
 
     public void ExitEnter()
