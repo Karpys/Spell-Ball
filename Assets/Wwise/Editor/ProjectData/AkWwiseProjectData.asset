@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 121cbf942d2c0a4aa70b4d5d177cbb96
     GuidInternal: 
-    m_lastTime: -8585620994474503050
+    m_lastTime: -8585620417945310857
     List:
     - name: M_BOSS
       guid: e23f2f8bb296fa4ba477c377ae9f2fbd
@@ -246,7 +246,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f45212cf99781741b24557c335e8c9c2
     GuidInternal: 
-    m_lastTime: -8585621173384695723
+    m_lastTime: -8585619618061246287
     List:
     - name: BALL
       guid: 5c501f5b299abd4b973517733bae8140
@@ -386,6 +386,37 @@ MonoBehaviour:
         ObjectType: 7
         guid: e24547371a1d8d4092f002672a794aa5
       Path: SoundBanks\Default Work Unit\MUSICS\S_MUSIC
+    - name: S_UI
+      guid: 522a55c29e1f204e9b03a958f9caffe7
+      id: 349267893
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: UI
+        ObjectType: 4
+        guid: 322bd68cade48f4f9a03b276b8505466
+      - ElementName: S_UI
+        ObjectType: 7
+        guid: 522a55c29e1f204e9b03a958f9caffe7
+      Path: SoundBanks\Default Work Unit\UI\S_UI
+    - name: UI
+      guid: 322bd68cade48f4f9a03b276b8505466
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f45212cf99781741b24557c335e8c9c2
+      - ElementName: UI
+        ObjectType: 4
+        guid: 322bd68cade48f4f9a03b276b8505466
+      Path: SoundBanks\Default Work Unit\UI
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -398,7 +429,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: cc8b61664020c047a74ba2d9200f9d45
     GuidInternal: 
-    m_lastTime: -8585621173390316033
+    m_lastTime: -8585619618101967413
     List:
     - name: BALL
       guid: af28c015ba078a40acc15da43c5d0f5a
@@ -683,6 +714,189 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_B_R_Constant
+      guid: fd3cc330ab108b4997af8def7de96a7a
+      id: 3973545534
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      - ElementName: Play_B_R_Constant
+        ObjectType: 3
+        guid: fd3cc330ab108b4997af8def7de96a7a
+      Path: Events\Default Work Unit\CHARACTER\Play_B_R_Constant
+      maxAttenuation: 0
+      maxDuration: 5.356
+      minDuration: 5.356
+    - name: Play_B_R_OneShot
+      guid: 991652f5352dd44aaea7fe3c4fa1ec26
+      id: 2079967614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      - ElementName: Play_B_R_OneShot
+        ObjectType: 3
+        guid: 991652f5352dd44aaea7fe3c4fa1ec26
+      Path: Events\Default Work Unit\CHARACTER\Play_B_R_OneShot
+      maxAttenuation: 0
+      maxDuration: 9.366667
+      minDuration: 9.366667
+    - name: Play_B_R_Release
+      guid: 0656f1ce43ce9141b6f67742c6b7f438
+      id: 1182610633
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      - ElementName: Play_B_R_Release
+        ObjectType: 3
+        guid: 0656f1ce43ce9141b6f67742c6b7f438
+      Path: Events\Default Work Unit\CHARACTER\Play_B_R_Release
+      maxAttenuation: 0
+      maxDuration: 3.066729
+      minDuration: 3.066729
+    - name: Play_B_R_Start
+      guid: cb86ecaa33dfc14d8ebe1a87f04ced9a
+      id: 1030314342
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: CHARACTER
+        ObjectType: 4
+        guid: 43c348d69d21b04f8a3b11dd2b1b35d2
+      - ElementName: Play_B_R_Start
+        ObjectType: 3
+        guid: cb86ecaa33dfc14d8ebe1a87f04ced9a
+      Path: Events\Default Work Unit\CHARACTER\Play_B_R_Start
+      maxAttenuation: 0
+      maxDuration: 7.640521
+      minDuration: 7.640521
+    - name: Play_B_Spawn
+      guid: fc0364cad001f74aa44e6300addfc5c6
+      id: 4013727804
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Spawn
+        ObjectType: 4
+        guid: 8ba91c5c3b35024d9e6fcb53836846de
+      - ElementName: Play_B_Spawn
+        ObjectType: 3
+        guid: fc0364cad001f74aa44e6300addfc5c6
+      Path: Events\Default Work Unit\BOSS\Spawn\Play_B_Spawn
+      maxAttenuation: 0
+      maxDuration: 8.066667
+      minDuration: 8.066667
+    - name: Play_B_UI_Click
+      guid: 7b8afc6fc9bb2b44aa8b1ca4b8d81a83
+      id: 4253604464
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: UI
+        ObjectType: 4
+        guid: fa41895cd9f9d240800632ba5686f418
+      - ElementName: Play_B_UI_Click
+        ObjectType: 3
+        guid: 7b8afc6fc9bb2b44aa8b1ca4b8d81a83
+      Path: Events\Default Work Unit\UI\Play_B_UI_Click
+      maxAttenuation: 0
+      maxDuration: 0.577417
+      minDuration: 0.577417
+    - name: Play_B_UI_Hover_Big
+      guid: fb1c33ca0fdeb24d81f2a25328332211
+      id: 2992176301
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: UI
+        ObjectType: 4
+        guid: fa41895cd9f9d240800632ba5686f418
+      - ElementName: Play_B_UI_Hover_Big
+        ObjectType: 3
+        guid: fb1c33ca0fdeb24d81f2a25328332211
+      Path: Events\Default Work Unit\UI\Play_B_UI_Hover_Big
+      maxAttenuation: 0
+      maxDuration: 0.3225
+      minDuration: 0.3225
+    - name: Play_B_UI_Hover_Small
+      guid: cdaf968a8bed2b4ba5f0ab8955b097bf
+      id: 1858133818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: UI
+        ObjectType: 4
+        guid: fa41895cd9f9d240800632ba5686f418
+      - ElementName: Play_B_UI_Hover_Small
+        ObjectType: 3
+        guid: cdaf968a8bed2b4ba5f0ab8955b097bf
+      Path: Events\Default Work Unit\UI\Play_B_UI_Hover_Small
+      maxAttenuation: 0
+      maxDuration: 0.40325
+      minDuration: 0.40325
+    - name: Play_B_UI_SideSrompt
+      guid: b06ce74786f25e40a50b4e0130fdce2c
+      id: 2263619650
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: UI
+        ObjectType: 4
+        guid: fa41895cd9f9d240800632ba5686f418
+      - ElementName: Play_B_UI_SideSrompt
+        ObjectType: 3
+        guid: b06ce74786f25e40a50b4e0130fdce2c
+      Path: Events\Default Work Unit\UI\Play_B_UI_SideSrompt
+      maxAttenuation: 0
+      maxDuration: 0.797958
+      minDuration: 0.797958
     - name: Play_Blue_Power1
       guid: 513de7eae4ed5c4d92ffaa11ddd4632c
       id: 3041349285
@@ -1286,6 +1500,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Spawn
+      guid: 8ba91c5c3b35024d9e6fcb53836846de
+      id: 71202558
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: BOSS
+        ObjectType: 4
+        guid: 7122f24f35094a42b2fcab1641ec5a93
+      - ElementName: Spawn
+        ObjectType: 4
+        guid: 8ba91c5c3b35024d9e6fcb53836846de
+      Path: Events\Default Work Unit\BOSS\Spawn
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_M_BOSS_Layer
       guid: 5a1d1c7513ea2b4a98113b16184a9ddb
       id: 881957325
@@ -1326,6 +1560,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: UI
+      guid: fa41895cd9f9d240800632ba5686f418
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cc8b61664020c047a74ba2d9200f9d45
+      - ElementName: UI
+        ObjectType: 4
+        guid: fa41895cd9f9d240800632ba5686f418
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Voices
       guid: cf49ad2f261c9e44b35b6b32187b4013
       id: 3313685232
@@ -1358,7 +1609,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f7aeb8776abeb1408e4daa3e0077b848
     GuidInternal: 
-    m_lastTime: -8585624518317607320
+    m_lastTime: -8585621331741825282
     List:
     - name: BUS
       guid: 6c30b17a57185845b350c713820563f9
@@ -1581,7 +1832,7 @@ MonoBehaviour:
     m_lastTime: -8585657574982279880
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 01000000020000000300000005000000060000000700000008000000090000000a0000000c0000000d0000000f0000001000000017000000190000001b0000001c0000002100000023000000260000002a000000330000003a0000003c0000003e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
