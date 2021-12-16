@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
     private float timeHaptique = 2;
     public GameObject heal ;
 
+    public AK.Wwise.Event Regen;
+
     void Start()
     {
 
@@ -127,7 +129,10 @@ public class PlayerController : MonoBehaviour
 
                 //Debug.Log(playerNeedHelp.transform.Find("ParticleHeal").GetComponent<ParticleSystem>().isPlaying);
                 if (!dead.heal.GetComponent<HealParticuleManager>().onPlay)
+                {
                     dead.heal.GetComponent<HealParticuleManager>().StartHeal();
+                    Regen.Post(gameObject);
+                }
 
                 TimeRevive += Time.deltaTime;
             }
@@ -257,7 +262,7 @@ public class PlayerController : MonoBehaviour
                    
                 }
                balle.GetComponent<Ball>().SetDirection(new Vector3(0, CharacterVisual.transform.eulerAngles.y, 0));
-            }
+           }
            else
            {
                if (balle.GetComponent<Balle>().combo > 4)
