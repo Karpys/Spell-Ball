@@ -100,13 +100,22 @@ public class Manager_Life : MonoBehaviour
             ShakerEntity Shake = Visual.AddComponent<ShakerEntity>();
             Shake.SetShakeParameters(0.25f, 0.2f, 10f, new Vector3(1, 0, 1));
         }
+
+        if (dmg >= currentLife)
+        {
+            lastDamageAmount = (int) currentLife;
+        }
+        else
+        {
+            lastDamageAmount = dmg;
+        }
+        
         currentLife -= dmg;
         if (GameOver.instance)
         {
             GameOver.instance.CheckGameOver();
         }
-
-        lastDamageAmount = dmg;
+        
         OnDamage.Invoke();
     }
 

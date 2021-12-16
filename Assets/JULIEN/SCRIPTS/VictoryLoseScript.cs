@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryLoseScript : MonoBehaviour
 {
@@ -46,5 +47,11 @@ public class VictoryLoseScript : MonoBehaviour
         {
             _text.text = "\nGAME OVER";
         }
+        Invoke("GoBackToMenu", 10f);
+    }
+
+    public void GoBackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

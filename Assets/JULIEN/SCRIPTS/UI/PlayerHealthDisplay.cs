@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 public class PlayerHealthDisplay : MonoBehaviour
 {
     [SerializeField] private GameObject _healthBarParent;
+    [SerializeField] private Sprite _healthPoint;
+    [SerializeField] private Sprite _emptyHealthPoint;
     
     public GameObject _player;
 
@@ -15,6 +17,7 @@ public class PlayerHealthDisplay : MonoBehaviour
     
     private void Start()
     {
+        originalRotation = transform.rotation;
         InitPlayerHealth();
     }
 
@@ -53,11 +56,11 @@ public class PlayerHealthDisplay : MonoBehaviour
             print("Le joueur " + gameObject.name + " à " + _playerLife.GetCurentLife() + " points de vie");
             if (_playerLife.GetCurentLife() > i)
             {
-                image.color = Color.red;
+                image.sprite = _healthPoint;
             }
             else
             {
-                image.color = Color.gray;
+                image.sprite = _emptyHealthPoint;
             }
         }
     }
@@ -65,17 +68,22 @@ public class PlayerHealthDisplay : MonoBehaviour
     public void ShakePlayerVisual()
     {
         StartCoroutine(ShakeVisual(.2f, 20f));
+        Invoke("ReplaceUI", .2f);
     }
 
+    public void ReplaceUI()
+    {
+        transform.rotation = originalRotation;
+    }
+
+    private Quaternion originalRotation;
     
     private IEnumerator ShakeVisual(float _shakeTime, float shakeRange)
     {
         float elapsed = 0.0f;
-        Quaternion originalRotation = transform.rotation;
- 
+        
         while (elapsed < _shakeTime)
         {
- 
             elapsed += Time.deltaTime;
             float z = Random.value * shakeRange - (shakeRange /2);
             transform.eulerAngles = new Vector3(originalRotation.x, originalRotation.y, originalRotation.z + z); 

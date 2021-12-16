@@ -151,6 +151,8 @@ public class Ball : MonoBehaviour
                         Camera.main.fieldOfView = 90;
 
                         BossHpManager bossHpManager = hit.collider.GetComponent<BossHpManager>();
+                        
+                        bossHpManager.HideUI(true);
 
                         Plane rightLeftPlane = new Plane(bossHpManager.transform.position,
                             bossHpManager.inFrontOfBoss.position,

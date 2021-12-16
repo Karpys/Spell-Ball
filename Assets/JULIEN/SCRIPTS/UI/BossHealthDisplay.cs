@@ -21,7 +21,7 @@ public class BossHealthDisplay : MonoBehaviour
     {
         if (previousHP != currentHP)
         {
-            _rectTransformBar.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, ((525f * currentHP) / maxHP));
+            _rectTransformBar.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, ((400 * currentHP) / maxHP));
             previousHP = currentHP;
         }
     }

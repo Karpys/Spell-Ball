@@ -140,6 +140,11 @@ public class BossBehavior : MonoBehaviour
     public void Victory()
     {
         gameInfo.victory = true;
+        Invoke("GoToVictory", .2f);
+    }
+
+    public void GoToVictory()
+    {
         SceneManager.LoadScene(2);
     }
     
