@@ -4,8 +4,8 @@ using UnityEditor;
 using UnityEngine;
 
 
-[CanEditMultipleObjects]
-[CustomEditor(typeof(CharacterMovement))]
+/*[CanEditMultipleObjects]
+[CustomEditor(typeof(CharacterMovement))]*/
 public class CharacterMovementEditor : Editor
 {
     public override void OnInspectorGUI()

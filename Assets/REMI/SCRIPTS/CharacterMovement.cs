@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
     private Manager_Life life;
     [SerializeField]private SphereCollider playerCollider;
 
+    [SerializeField] public AK.Wwise.Event RollSound;
+
     public bool ShowInspector;
 
     public void OnMove(InputAction.CallbackContext ctx) => MovementInput = ctx.ReadValue<Vector2>();
@@ -87,15 +89,15 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-            if(Roll_Manager.RollDuration >= 0)
-            {
-                Roll_Manager.RollDuration -= Time.deltaTime;
-            }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
-            {
-                playerCollider.enabled = true;
-                Roll_Manager.HasReset = true;
-                Stats.CanMove = true;
-            }
+        if(Roll_Manager.RollDuration >= 0)
+        {
+            Roll_Manager.RollDuration -= Time.deltaTime;
+        }else if (!Roll_Manager.HasReset)//FIN DE LA ROULADE
+        {
+            playerCollider.enabled = true;
+            Roll_Manager.HasReset = true;
+            Stats.CanMove = true;
+        }
 
     }
 
@@ -107,6 +109,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 playerCollider.enabled = false;
                 Manager_Life Life = GetComponent<Manager_Life>();
+                RollSound.Post(gameObject);
                 Life.Timerinvis = 1;
                 Anim.Play("Roll");
                 RotatePlayerMovement(MovementDir);
