@@ -28,6 +28,7 @@
 								<ObjectRef Name="Laser_End" ID="{0FAAB09F-FC9D-48DA-9709-BD557E5E0EAA}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_R_Boss_ShieldBreak" ID="{6B1D36CD-636E-499E-B02A-508E04B33199}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Trigger" ID="{9742BD1B-B56C-49F0-B058-4615294CA6B0}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_Spawn" ID="{CA6403FC-01D0-4AF7-A44E-6300ADDFC5C6}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Charge" ID="{DF9F9DED-2ED8-4BCB-AB1C-275089CBEC9E}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_R_Boss_Dodge" ID="{0B85BD37-3060-4F28-A5E4-8A61A3DE55E3}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Laser_Start_Release" ID="{EA8E1A99-2C63-4F74-9E84-A6AA68E70EFB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
@@ -45,7 +46,11 @@
 					<ChildrenList>
 						<SoundBank Name="S_Characters" ID="{08F1D5C1-2CE4-46C3-8ECB-1D3A0844E1DF}">
 							<ObjectInclusionList>
+								<ObjectRef Name="Play_B_R_Release" ID="{CEF15606-CE43-4191-B6F6-7742C6B7F438}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_R_Chara_Roll" ID="{B5539CA6-EE9F-4985-B4E4-0DD58BAFB239}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_R_Constant" ID="{30C33CFD-10AB-498B-97AF-8DEF7DE96A7A}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_R_OneShot" ID="{F5521699-2D35-4AD4-AEA7-FE3C4FA1EC26}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_R_Start" ID="{AAEC86CB-DF33-4DC1-8EBE-1A87F04CED9A}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="CHARACTER" ID="{D648C343-219D-4FB0-8A3B-11DD2B1B35D2}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>
@@ -81,6 +86,28 @@
 								<ObjectRef Name="Stop_M_BOSS_Layer" ID="{751C1D5A-EA13-4A2B-9811-3B16184A9DDB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="MUSIC" ID="{29C115E4-7D97-4B65-9909-32A265F7CB85}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Stop_M_Menu_Theme" ID="{BCE4DF0A-5695-4DE4-BF67-255302871BDB}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{8CD62B32-E4AD-4F8F-9A03-B276B8505466}" ShortID="114584231">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<SoundBank Name="S_UI" ID="{C2552A52-1F9E-4E20-9B03-A958F9CAFFE7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectInclusionList>
+								<ObjectRef Name="Play_B_UI_SideSrompt" ID="{47E76CB0-F286-405E-A50B-4E0130FDCE2C}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_UI_Click" ID="{6FFC8A7B-BBC9-442B-AA8B-1CA4B8D81A83}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_UI_Hover_Small" ID="{8A96AFCD-ED8B-4B2B-A5F0-AB8955B097BF}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="Play_B_UI_Hover_Big" ID="{CA331CFB-DE0F-4DB2-81F2-A25328332211}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>
 							<GameSyncExclusionList/>

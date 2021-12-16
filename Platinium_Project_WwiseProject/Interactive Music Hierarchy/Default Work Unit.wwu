@@ -374,14 +374,9 @@
 							<ChildrenList>
 								<MusicPlaylistContainer Name="M_Menu_Theme" ID="{EFC4DF18-46C3-4AAC-A046-497431CA00EE}" ShortID="720305261">
 									<PropertyList>
-										<Property Name="PlaybackSpeed" Type="Real64">
-											<ValueList>
-												<Value>0.5</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -407,23 +402,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="M_PH_Menu" ID="{E7F4AB42-7AA4-4776-84E7-EB7CDAB53002}" ShortID="139833465">
+												<MusicTrack Name="M_PH_Menu" ID="{A8125E13-D0D5-4E0E-9493-0660248E9A61}" ShortID="255534090">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="MUS_Boss1_Layer2_LP - Copie" ID="{FE87C63A-D1E7-4E47-9577-83AA75488093}">
+														<AudioFileSource Name="menu_4" ID="{D4B1FAA3-2706-41A5-A33D-C4D6F65DD6FC}">
 															<Language>SFX</Language>
-															<AudioFile>MUS_Boss1_Layer2_LP - Copie.wav</AudioFile>
+															<AudioFile>menu_4.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="104887704"/>
+																<MediaID ID="650980639"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{A98BFC7A-E12D-4555-81A7-218C706BAD3C}">
+														<MusicTransition Name="Root" ID="{AE4C2A9E-6561-4047-A912-BAA2170BCB93}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -434,18 +429,18 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{30B3A7B3-519D-42C7-9A86-B6BB722CBE1F}">
+																	<MusicTrackSequence Name="" ID="{BE845D89-3B38-4632-A65F-2E57CD8FCF90}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="MUS_Boss1_Layer2_LP - Copie" ID="{3D7F9172-AF7D-4164-A43D-F4DD77BE11C6}">
+																						<MusicClip Name="menu_4" ID="{35688F97-9913-4EE3-AEA4-4DD5AD327BFC}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="58064.5124716553"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="53382.2902494331"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="MUS_Boss1_Layer2_LP - Copie" ID="{FE87C63A-D1E7-4E47-9577-83AA75488093}"/>
+																							<AudioSourceRef Name="menu_4" ID="{D4B1FAA3-2706-41A5-A33D-C4D6F65DD6FC}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
