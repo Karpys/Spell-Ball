@@ -2438,6 +2438,10 @@ MonoBehaviour:
   SlowDownEffect: {fileID: 2423710728492747385, guid: cb0234fcf963e9641867b4693a3e13e7, type: 3}
   Bag: {fileID: 8142642357517664067}
   heal: {fileID: 994303911778410088}
+  Regen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21d2d2f44bc38b549b1d60766c4a2866, type: 2}
 --- !u!114 &919132148916143360
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -107,6 +107,7 @@
 								<ObjectRef Name="Play_B_UI_SideSrompt" ID="{47E76CB0-F286-405E-A50B-4E0130FDCE2C}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_B_UI_Click" ID="{6FFC8A7B-BBC9-442B-AA8B-1CA4B8D81A83}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_B_UI_Hover_Small" ID="{8A96AFCD-ED8B-4B2B-A5F0-AB8955B097BF}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}" Origin="Manual" Filter="7"/>
 								<ObjectRef Name="Play_B_UI_Hover_Big" ID="{CA331CFB-DE0F-4DB2-81F2-A25328332211}" WorkUnitID="{66618BCC-2040-47C0-A74B-A2D9200F9D45}" Origin="Manual" Filter="7"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>

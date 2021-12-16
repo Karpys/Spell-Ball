@@ -33,6 +33,9 @@ public class UI_MenuPause : MonoBehaviour
     public GameObject OnQuality;
     public GameObject OnMaster;
 
+    public GameObject Audio;
+    public GameObject Graph;
+
     [Header("SceneParam")]
     public string sceneName;
     public int UIIndex = 0;
@@ -46,6 +49,8 @@ public class UI_MenuPause : MonoBehaviour
     {
         animator = gameObject.transform.GetChild(1).GetComponent<Animator>();
         animFade = fadeRef.GetComponent<Animation>();
+        Audio.gameObject.GetComponent<UI_Options_Audio>().ParamSaved();
+        Graph.gameObject.GetComponent<UI_Options_Graphics>().ParamGraphChanged();
     }
 
     // Update is called once per frame
@@ -118,6 +123,7 @@ public class UI_MenuPause : MonoBehaviour
 
     public void Resume()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         animator.SetBool("Deactive", true);
         unPause = true;
         Time.timeScale = 1f;
@@ -126,6 +132,7 @@ public class UI_MenuPause : MonoBehaviour
     }
     public void Pause()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
         playerDoPause = true;
         Time.timeScale = 0f;
         fond.gameObject.SetActive(true);
@@ -140,12 +147,14 @@ public class UI_MenuPause : MonoBehaviour
     }
     public void Options()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         animator.SetBool("Deactive", true);
         buttonOp.gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
         StartCoroutine("WaitOptions");
     }
     public void MainMenu()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         animator.SetBool("Deactive", true);
         animFade.Play("FadeOut_UI_V001");
         Time.timeScale = 1f;

@@ -148,35 +148,35 @@ MonoBehaviour:
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 8a791cbdd1317e5439ed1de7a2bd835f, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: 9a8bfc7cb37e27041a2c71bfcea7d5c8, type: 2}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 0244c06ecbc8d6943bf10bdb227978a8, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: 69ec3028cacf35d4f96b3a93111c2849, type: 2}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 7c25f4ee83d679d47b6bc366d638b35d, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: b3007fafeebdffb4aad875e0900a9268, type: 2}
       KillPrevious: 1
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: d85ce47d45971374397450d2265d33ad, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: 1ff880d5284916141bf35febb4ce57e2, type: 2}
       KillPrevious: 0
       IsReplable: 0
       HasPlayed: 0
     - Sound:
         idInternal: 0
         valueGuidInternal: 
-        WwiseObjectReference: {fileID: 11400000, guid: 2e83f6d0fdb0a4e40b6a9e1a94f6116f, type: 2}
+        WwiseObjectReference: {fileID: 11400000, guid: 728ea5faeeb9bc048b47982220c9bc72, type: 2}
       KillPrevious: 1
       IsReplable: 0
       HasPlayed: 0

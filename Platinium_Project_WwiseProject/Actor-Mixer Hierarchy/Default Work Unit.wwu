@@ -2848,7 +2848,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+									<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2858,7 +2858,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+											<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2884,7 +2884,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+									<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2894,7 +2894,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+											<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2920,7 +2920,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+									<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2930,7 +2930,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+											<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2956,7 +2956,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{1B3FA015-E037-4EAB-AD00-55AF3EAF547C}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+									<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2966,7 +2966,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0B0256D8-1F42-4487-8B05-608996BD5269}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="MASTER" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
+											<ObjectRef Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}" WorkUnitID="{94BF1C12-2C2D-4A0A-A70B-4D5D177CBB96}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>

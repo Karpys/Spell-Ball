@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0016099811, g: 0.00316656, b: 0.0072645247, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21088,7 +21088,7 @@ MonoBehaviour:
   StopMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cba348cf5ed5eee4085727170a34ee14, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 2c0465c43d27e4348b99288f27110d83, type: 2}
 --- !u!1001 &1766071060
 PrefabInstance:
   m_ObjectHideFlags: 0

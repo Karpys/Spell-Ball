@@ -225,6 +225,9 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
+						<Bus Name="UI" ID="{711BC943-878B-4B8D-A9BA-2C4A8FEA0BCE}">
+							<ObjectLists/>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
