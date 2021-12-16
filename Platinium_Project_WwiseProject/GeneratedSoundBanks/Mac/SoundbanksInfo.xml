@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="51703143" Language="SFX" Hash="230728560">
+		<SoundBank Id="51703143" Language="SFX" Hash="728941473">
 			<ObjectPath>\SoundBanks\Default Work Unit\CHARACTER\S_Characters</ObjectPath>
 			<ShortName>S_Characters</ShortName>
 			<Path>S_Characters.bnk</Path>
@@ -70,7 +70,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="349267893" Language="SFX" Hash="2649490990">
+		<SoundBank Id="349267893" Language="SFX" Hash="3554554139">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI\S_UI</ObjectPath>
 			<ShortName>S_UI</ShortName>
 			<Path>S_UI.bnk</Path>
@@ -109,7 +109,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1200485816" Language="SFX" Hash="618178498">
+		<SoundBank Id="1200485816" Language="SFX" Hash="2722117961">
 			<ObjectPath>\SoundBanks\Default Work Unit\MUSICS\S_MUSIC</ObjectPath>
 			<ShortName>S_MUSIC</ShortName>
 			<Path>S_MUSIC.bnk</Path>
@@ -449,7 +449,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1571743440" Language="SFX" Hash="339077911">
+		<SoundBank Id="1571743440" Language="SFX" Hash="350216480">
 			<ObjectPath>\SoundBanks\Default Work Unit\BOSS\S_Boss</ObjectPath>
 			<ShortName>S_Boss</ShortName>
 			<Path>S_Boss.bnk</Path>

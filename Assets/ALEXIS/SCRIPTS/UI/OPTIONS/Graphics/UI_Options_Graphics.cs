@@ -51,6 +51,8 @@ public class UI_Options_Graphics : MonoBehaviour
 
         animatorRef.SetBool("ENTER_GRA", true);
 
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
+
         PlayerPrefs.SetInt("SaveExist", 1);
         PlayerPrefs.Save();
 
@@ -69,6 +71,12 @@ public class UI_Options_Graphics : MonoBehaviour
             refMenuPause.UIIndex = 2;
         }
 
+        ParamGraphChanged();
+
+    }
+
+    public void ParamGraphChanged()
+    {
         //SAUVEGARDE
         if (PlayerPrefs.HasKey("qualityIndex"))
         {
@@ -117,9 +125,7 @@ public class UI_Options_Graphics : MonoBehaviour
         }
 
 
-
     }
-
 
     public void SetFullscreen(bool isFullscreen)
     {
@@ -154,6 +160,7 @@ public class UI_Options_Graphics : MonoBehaviour
     }
     public void OnBack()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         EventSystem.current.SetSelectedGameObject(null);
         animatorRef.SetBool("QUIT_GRA", true);

@@ -20,6 +20,7 @@ public class UI_FocusMainMenu : MonoBehaviour
 
         refMenu = FindObjectOfType<Manager_MainMenu>();
         refMenu.UIIndex = 0;
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
     }
     private void Start()
     {

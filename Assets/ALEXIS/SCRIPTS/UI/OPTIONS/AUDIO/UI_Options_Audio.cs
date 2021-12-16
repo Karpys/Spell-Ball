@@ -50,7 +50,7 @@ public class UI_Options_Audio : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(master);
 
 
-
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
 
         animatorRef.SetBool("ENTER_AU", true);
 
@@ -79,10 +79,10 @@ public class UI_Options_Audio : MonoBehaviour
     void Start()
     {
         animatorRef = gameObject.GetComponent<Animator>();
-        ParamSaved();
+
 
     }
-    private void ParamSaved()
+    public void ParamSaved()
     {
         PlayerPrefs.SetInt("SaveExist", 1);
         PlayerPrefs.Save();
@@ -136,7 +136,6 @@ public class UI_Options_Audio : MonoBehaviour
         masterV.text = volume.ToString("0"); 
         PlayerPrefs.SetFloat("volumeMaster", volume);
         AkSoundEngine.SetRTPCValue("GP_MASTER", masterS.value);
-        print("sdfdsdfdfsdfs");
         PlayerPrefs.Save();
     }
 
@@ -160,6 +159,7 @@ public class UI_Options_Audio : MonoBehaviour
 
     public void OnBack()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         back.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         EventSystem.current.SetSelectedGameObject(null);
         animatorRef.SetBool("QUIT_AU", true);
