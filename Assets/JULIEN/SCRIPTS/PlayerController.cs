@@ -215,6 +215,7 @@ public class PlayerController : MonoBehaviour
             playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<ParticleSystem>().Stop();
             playerNeedHelp.transform.Find("Heal_Moi_Pitie").GetComponent<HealParticuleManager>().onPlay = false;
             TimeRevive = 0;
+            Regen.Stop(gameObject);
         }
     }
 
