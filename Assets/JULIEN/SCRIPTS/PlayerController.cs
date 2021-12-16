@@ -137,6 +137,7 @@ public class PlayerController : MonoBehaviour
                 dead._animator.SetBool("isDead", false);
                 tryRevive = false;
                 dead.heal.GetComponent<HealParticuleManager>().onPlay = false;
+                TimeRevive = 0;
                 Debug.Log("it is alive");
             }
         }

@@ -13,10 +13,17 @@ public class BossCinematique : MonoBehaviour
     public GameObject LittleSmokeTransform;
     public GameObject SmokeTransform;
 
+    public AK.Wwise.Event BossSound;
+
     public void LittleShake()
     {
         CameraShakeManager.CameraShake.Shake(0.1f, 0.5f, 15);
         Instantiate(LittleSmoke, LittleSmokeTransform.transform.position, LittleSmokeTransform.transform.rotation);
+    }
+
+    public void PlaySoundBoss()
+    {
+        BossSound.Post(gameObject);
     }
 
     public void LongShake()

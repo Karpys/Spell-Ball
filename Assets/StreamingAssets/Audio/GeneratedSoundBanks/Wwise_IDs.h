@@ -19,6 +19,15 @@ namespace AK
         static const AkUniqueID LASER_START_CHARGE = 4154444698U;
         static const AkUniqueID LASER_START_RELEASE = 3217810413U;
         static const AkUniqueID LASER_START_TRIGGER = 3428356050U;
+        static const AkUniqueID PLAY_B_R_CONSTANT = 3973545534U;
+        static const AkUniqueID PLAY_B_R_ONESHOT = 2079967614U;
+        static const AkUniqueID PLAY_B_R_RELEASE = 1182610633U;
+        static const AkUniqueID PLAY_B_R_START = 1030314342U;
+        static const AkUniqueID PLAY_B_SPAWN = 4013727804U;
+        static const AkUniqueID PLAY_B_UI_CLICK = 4253604464U;
+        static const AkUniqueID PLAY_B_UI_HOVER_BIG = 2992176301U;
+        static const AkUniqueID PLAY_B_UI_HOVER_SMALL = 1858133818U;
+        static const AkUniqueID PLAY_B_UI_SIDESROMPT = 2263619650U;
         static const AkUniqueID PLAY_BLUE_POWER1 = 3041349285U;
         static const AkUniqueID PLAY_BLUE_POWER2 = 3041349286U;
         static const AkUniqueID PLAY_BLUE_POWER3 = 3041349287U;
@@ -69,6 +78,7 @@ namespace AK
         static const AkUniqueID S_BOSS = 1571743440U;
         static const AkUniqueID S_CHARACTERS = 51703143U;
         static const AkUniqueID S_MUSIC = 1200485816U;
+        static const AkUniqueID S_UI = 349267893U;
     } // namespace BANKS
 
     namespace BUSSES

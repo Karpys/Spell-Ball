@@ -73,21 +73,22 @@ public class SheildManager : MonoBehaviour
     {
         Debug.Log("disolve");
         int count = sheilds.Count - 1;
-        if (count-1 < 0)
+        if (count - 1 > 0)
         {
-            Destroy(gameObject);
+
             yield break;
         }
         sheilds[count].GetComponent<Sheild>().ChangeShader();
         yield return new WaitForSeconds(2f);
-        count = sheilds.Count - 1;
+        //count = sheilds.Count - 1;
         if (count < 0)
         {
+            Destroy(gameObject);
             yield break;
         }
         Destroy(sheilds[count]);
         sheilds.RemoveAt(count);
-        if(count>0)
+        if (count > 0)
         {
             sheilds[count - 1].GetComponent<Sheild>().lastSield = true;
             sheilds[count - 1].SetActive(true);
