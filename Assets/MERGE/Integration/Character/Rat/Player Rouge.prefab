@@ -1841,6 +1841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5341220796027603195}
   - component: {fileID: 7218780054527777930}
+  - component: {fileID: 5735067999376753596}
   m_Layer: 10
   m_Name: Player_Collision
   m_TagString: Untagged
@@ -1876,6 +1877,19 @@ CapsuleCollider:
   m_Height: 6.014177
   m_Direction: 1
   m_Center: {x: 0, y: 2.507088, z: 0}
+--- !u!114 &5735067999376753596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216360530622857807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26fb2e15258a3e42a775ab59c638a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: {fileID: 919132148916143356}
 --- !u!1 &7410732243680901714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,7 +2373,19 @@ MonoBehaviour:
   ParticleEffectOnHeal: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148916143358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: PlayerDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDamage:
     m_PersistentCalls:
       m_Calls:
@@ -2970,6 +2996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7f0264f914d16a4cb8fdde7d67dd33e, type: 2}
     - target: {fileID: 919132149155446097, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
       propertyPath: m_Name
       value: LowpolyStaff
@@ -3106,13 +3136,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f5a516d2d0b9ec429bcb19de6b0f64d, type: 3}
---- !u!1 &8142642357517664067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f5a516d2d0b9ec429bcb19de6b0f64d, type: 3}
-  m_PrefabInstance: {fileID: 9061545661017522706}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8812324810619348473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1f5a516d2d0b9ec429bcb19de6b0f64d, type: 3}
+  m_PrefabInstance: {fileID: 9061545661017522706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8142642357517664067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f5a516d2d0b9ec429bcb19de6b0f64d, type: 3}
   m_PrefabInstance: {fileID: 9061545661017522706}
   m_PrefabAsset: {fileID: 0}

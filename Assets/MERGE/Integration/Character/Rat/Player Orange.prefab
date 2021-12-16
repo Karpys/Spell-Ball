@@ -318,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567859550904095895}
   - component: {fileID: 1615459327464688183}
+  - component: {fileID: 4656039306630844600}
   m_Layer: 10
   m_Name: Player_Collision
   m_TagString: Untagged
@@ -337,7 +338,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8489681587427790222}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1615459327464688183
 CapsuleCollider:
@@ -353,6 +354,19 @@ CapsuleCollider:
   m_Height: 6.014177
   m_Direction: 1
   m_Center: {x: 0, y: 2.507088, z: 0}
+--- !u!114 &4656039306630844600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695966316778843058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26fb2e15258a3e42a775ab59c638a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: {fileID: 919132148916143356}
 --- !u!1 &697175119072712090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,8 +2313,8 @@ Transform:
   m_Children:
   - {fileID: 6306327656404248958}
   - {fileID: 2867214563485227145}
-  - {fileID: 5336613841964610115}
   - {fileID: 4567859550904095895}
+  - {fileID: 4851823792165054444}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2358,7 +2372,19 @@ MonoBehaviour:
   ParticleEffectOnHeal: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132148916143358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: PlayerDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
   OnDamage:
     m_PersistentCalls:
       m_Calls:
@@ -2411,6 +2437,7 @@ MonoBehaviour:
   TimeForRevive: 5
   SlowDownEffect: {fileID: 2423710728492747385, guid: cb0234fcf963e9641867b4693a3e13e7, type: 3}
   Bag: {fileID: 8142642357517664067}
+  heal: {fileID: 6536730189813034558}
 --- !u!114 &919132148916143360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2621,7 @@ MonoBehaviour:
   Anim: {fileID: 4817139692052885286}
   playerCollider: {fileID: 919132148916143357}
   ShowInspector: 1
---- !u!1001 &7640893629011201563
+--- !u!1001 &7157269077372754868
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2603,7 +2630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2307705884613655640, guid: 21e141971f66baa488706368f6aa18f5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2307705884613655640, guid: 21e141971f66baa488706368f6aa18f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2655,10 +2682,15 @@ PrefabInstance:
       objectReference: {fileID: 9122807134000420660}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21e141971f66baa488706368f6aa18f5, type: 3}
---- !u!4 &5336613841964610115 stripped
+--- !u!1 &6536730189813034558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4171629817169474954, guid: 21e141971f66baa488706368f6aa18f5, type: 3}
+  m_PrefabInstance: {fileID: 7157269077372754868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4851823792165054444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2307705884613655640, guid: 21e141971f66baa488706368f6aa18f5, type: 3}
-  m_PrefabInstance: {fileID: 7640893629011201563}
+  m_PrefabInstance: {fileID: 7157269077372754868}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8240409814443939932
 PrefabInstance:
@@ -2765,11 +2797,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
---- !u!1 &2785953460734911490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6121061463467310174, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
-  m_PrefabInstance: {fileID: 8240409814443939932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2785953460734911503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6121061463467310163, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
@@ -2778,6 +2805,11 @@ Transform:
 --- !u!198 &2785953460734911488 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6121061463467310172, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
+  m_PrefabInstance: {fileID: 8240409814443939932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2785953460734911490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121061463467310174, guid: a1acc0e7004abf645877d672e3e7284a, type: 3}
   m_PrefabInstance: {fileID: 8240409814443939932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8240409815053842384
@@ -2932,7 +2964,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5bdd7cf7995b0ce40b21a0f430ec019b, type: 2}
+      objectReference: {fileID: 2100000, guid: 04db3c7b36c17c54ba150bc70bd720ba, type: 2}
     - target: {fileID: 919132149155446097, guid: e5973deb5c1e0464eb4b0b5e7772f65f, type: 3}
       propertyPath: m_Name
       value: LowpolyStaff

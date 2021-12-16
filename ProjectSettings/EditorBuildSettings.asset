@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ALEXIS/SCENES/Scene_Alexis.unity
-    guid: c32c6718ff620244da7527f14a423249
+    path: Assets/MERGE/Main_menu.unity
+    guid: 4154a4c263059ed4181b1a90e1d238da
   - enabled: 1
-    path: Assets/MERGE/Merge_Sprint4.unity
-    guid: 80bbb31c1a18f2b498ebf48a6f762805
+    path: Assets/MERGE/Scene_Final.unity
+    guid: bf2adcc35cfb6f44b88cafa2f46cf44a
+  - enabled: 1
+    path: Assets/MERGE/Victory_Lose.unity
+    guid: 7729b594d94a804459d3bd01a1c6c069
   m_configObjects: {}

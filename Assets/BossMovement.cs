@@ -16,17 +16,20 @@ public class BossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (Movement.Phases[Movement.ActualPhase].MovementBoss)
+        if (Movement.ActualPhase >= 0)
         {
-            case BossBehavior.BOSSMOVEMENT.IDLE:
-                break;
-            case BossBehavior.BOSSMOVEMENT.LEFTRIGHT:
-                MovementLeftRight();
-                break;
-            case BossBehavior.BOSSMOVEMENT.FOLLOWCLOSESTPLAYER:
-                FollowClosest();
-                break;
+            switch (Movement.Phases[Movement.ActualPhase].MovementBoss)
+            {
+                case BossBehavior.BOSSMOVEMENT.IDLE:
+                    break;
+                case BossBehavior.BOSSMOVEMENT.LEFTRIGHT:
+                    MovementLeftRight();
+                    break;
+                case BossBehavior.BOSSMOVEMENT.FOLLOWCLOSESTPLAYER:
+                    FollowClosest();
+                    break;
 
+            }
         }
         /*if (Movement.Phases[Movement.ActualPhase].MovementBoss == BossBehavior.BOSSMOVEMENT.LEFTRIGHT)
         {

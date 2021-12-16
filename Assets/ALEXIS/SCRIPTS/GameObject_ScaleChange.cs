@@ -4,72 +4,65 @@ using UnityEngine;
 
 public class GameObject_ScaleChange : MonoBehaviour
 {
-    public Vector3 scale = new Vector3(1f,1f,1f);
-    bool goEnter= false;
-    bool goBack = false;
-    public float timer = 0.2f;
 
-    public Vector3 scaleIt;
-    private float timerV;
-    private Vector3 changeScalePlus;
-    private Vector3 changeScaleLow;
+    private bool goEnter= false;
+    private bool goBack = false;
+
+    [SerializeField] private Vector3 scaleIt = new Vector3(1f,1f,1f);
+    private Vector3 plusScale;
+    private Vector3 moinsScale;
+
+    [SerializeField] private float timer = 0.5f;
+    private float timerRef;
+
+    [Range(0, 1)]
+    [SerializeField] private float lerpTime = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
-        timerV = timer;
-        scaleIt = this.transform.localScale;
-        changeScalePlus = this.transform.localScale += scale;
-        changeScaleLow = this.transform.localScale -= scale;
+        timerRef = timer;
+        plusScale = this.transform.localScale + scaleIt;
+        moinsScale = this.transform.localScale;
 
-        GrowUp();
+        /*GrowUp();*/
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-
         if (goEnter == true)
         {
-            timer -= Time.deltaTime;
-            scaleIt = Vector3.Lerp(this.transform.localScale, this.transform.localScale += scale, 1f);
 
-            //if (timer <= 0)
-            //{
-            //    timer = timerV;
-            //    scaleIt = this.transform.localScale;
-            //    Back();
-            //    goEnter = false;
-            //}
+            this.transform.localScale = Vector3.Lerp(this.transform.localScale, plusScale, lerpTime);
+
+            timer -= Time.deltaTime;
+
+            if(timer <= 0)
+            {
+                timer = timerRef;
+                goBack = true;
+                goEnter = false;
+            }
         }
 
-        //if (goBack == true)
-        //{
-        //    timer -= Time.deltaTime;
-        //    scaleIt = Vector3.Lerp(this.transform.localScale, this.transform.localScale -= scale, 1f);
+        if (goBack == true)
+        {
+            this.transform.localScale = Vector3.Lerp(this.transform.localScale, moinsScale, lerpTime);
 
-        //    if (timer <= 0)
-        //    {
-        //        timer = timerV;
-        //        scaleIt = this.transform.localScale;
-        //        goBack = false;
-        //    }
-        //}
+            timer -= Time.deltaTime;
 
+            if (timer <= 0)
+            {
+                timer = timerRef;
+                goBack = false;
+            }
+        }
     }
 
     public void GrowUp()
     {
-
         goEnter = true;
-
-    }
-
-    public void Back()
-    {
-
-        goBack = true;
     }
 }
