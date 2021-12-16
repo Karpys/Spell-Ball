@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6897af06812f2a40bdec9d82e87070a, type: 3}
-  m_Name: B187545A-30C3-4806-8611-5060C6EDFFEC
+  m_Script: {fileID: 11500000, guid: 27ad06a252da6ca4ea06177d47dbb58b, type: 3}
+  m_Name: C2552A52-1F9E-4E20-9B03-A958F9CAFFE7
   m_EditorClassIdentifier: 
-  objectName: Hit_Event
-  id: 577874077
-  guid: B187545A-30C3-4806-8611-5060C6EDFFEC
+  objectName: S_UI
+  id: 349267893
+  guid: C2552A52-1F9E-4E20-9B03-A958F9CAFFE7

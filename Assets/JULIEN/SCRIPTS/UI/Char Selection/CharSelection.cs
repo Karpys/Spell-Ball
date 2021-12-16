@@ -45,6 +45,7 @@ public class CharSelection : MonoBehaviour
         animatorRef = gameObject.GetComponent<Animator>();
 
         animatorRef.SetBool("Active", true);
+        AkSoundEngine.PostEvent("Play_B_UI_Hover_Big", this.gameObject);
     }
 
     private void OnDestroy()
@@ -125,5 +126,6 @@ public class CharSelection : MonoBehaviour
     public void RunExit()
     {
         animatorRef.SetBool("Deactive", true);
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
     }
 }

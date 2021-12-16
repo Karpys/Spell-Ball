@@ -37,7 +37,7 @@ public class UI_Options : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(buttonGraph);
 
-
+        AkSoundEngine.PostEvent("Play_B_UI_SideSrompt", this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
@@ -55,6 +55,7 @@ public class UI_Options : MonoBehaviour
 
     public void OnGraph()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         EventSystem.current.SetSelectedGameObject(null);
         animref.SetBool("QUIT_OP", true);
         StartCoroutine("WaitGraph");
@@ -62,6 +63,7 @@ public class UI_Options : MonoBehaviour
 
     public void OnAudio()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         EventSystem.current.SetSelectedGameObject(null);
         animref.SetBool("QUIT_OP", true);
         StartCoroutine("WaitAudio");
@@ -69,6 +71,7 @@ public class UI_Options : MonoBehaviour
 
     public void OnResetSettings(string SceneName)
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         PlayerPrefs.DeleteAll();
         stopMusicMenu.Post(bank);
         SceneManager.LoadScene(0);
@@ -76,6 +79,7 @@ public class UI_Options : MonoBehaviour
 
     public void OnBack()
     {
+        AkSoundEngine.PostEvent("Play_B_UI_Click", this.gameObject);
         EventSystem.current.SetSelectedGameObject(null);
         animref.SetBool("QUIT_OP", true);
         StartCoroutine("WaitEndAnim");

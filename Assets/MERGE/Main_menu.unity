@@ -21922,8 +21922,8 @@ MonoBehaviour:
     vertical: 1080
   - horizontal: 1280
     vertical: 720
-  - horizontal: 2560
-    vertical: 1440
+  - horizontal: 854
+    vertical: 480
   animatorRef: {fileID: 1284334612}
 --- !u!95 &1284334612
 Animator:
@@ -28499,6 +28499,8 @@ MonoBehaviour:
   launch: {fileID: 1059076264}
   fadeRef: {fileID: 1293887651}
   optionsMenu: {fileID: 749746818}
+  Audio: {fileID: 2043549098}
+  Graph: {fileID: 1284334609}
   charSelectionMenu: {fileID: 2016534237}
   wFocus: 1
   bank: {fileID: 1894513561}
@@ -32224,6 +32226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894513563}
   - component: {fileID: 1894513562}
+  - component: {fileID: 1894513564}
   m_Layer: 0
   m_Name: BankLoader
   m_TagString: Untagged
@@ -32269,6 +32272,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894513564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894513561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7cf5de07e10fd47b11e4a05bc7de44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2bc897b95f88f1e41a19bb4a53ff1034, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1903512773
 PrefabInstance:
   m_ObjectHideFlags: 0
