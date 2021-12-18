@@ -16,6 +16,8 @@ public class VictoryLoseScript : MonoBehaviour
     [SerializeField] private Animator _animatorYellowRat;
 
     [SerializeField] private GameObject bossHeads;
+    [SerializeField] private GameObject bossSmoke;
+    [SerializeField] private Animator _bossAnimator;
 
     [SerializeField] private int NumberOfAnims;
 
@@ -40,12 +42,15 @@ public class VictoryLoseScript : MonoBehaviour
             _animatorYellowRat.transform.parent.position = new Vector3(_animatorYellowRat.transform.parent.position.x, 1f, _animatorYellowRat.transform.parent.position.z);
 
             bossHeads.SetActive(false);
+            bossSmoke.SetActive(true);
             
-            _text.text = "\nVICTORY";
+            _text.text = "VICTORY";
         }
         else
         {
-            _text.text = "\nGAME OVER";
+            _text.text = "GAME OVER";
+            bossSmoke.SetActive(false);
+            _bossAnimator.SetBool("GameOver", true);
         }
         Invoke("GoBackToMenu", 10f);
     }

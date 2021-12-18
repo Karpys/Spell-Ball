@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
            _timer = grabDelay;
            StartCoroutine(ColorParticule());
            balle.GetComponent<Balle>().InfuseSysteme();
-           ThrowBall();
+           ThrowBall(ctx);
         }
     }
 
@@ -232,12 +232,11 @@ public class PlayerController : MonoBehaviour
                Infuse_Sound_Manager.Infuse.Hit_Sound.Post(gameObject);
            }
            _timer = grabDelay;
-           ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .6f, .8f, 2);
-           ThrowBall();
+           ThrowBall(ctx);
        }
    }
 
-   public void ThrowBall()
+   public void ThrowBall(InputAction.CallbackContext ctx)
    {
        Ball BallStats = balle.GetComponent<Ball>();
        balle.GetComponent<Balle>().combo++;
@@ -245,6 +244,8 @@ public class PlayerController : MonoBehaviour
        BallStats.AddEffect();
        BallsInRange.Remove(balle);
        EjectedBalls.Add(balle);
+       
+       ControllerHaptics.instance.ShakeController(ctx.control.device.deviceId, .2f, .4f, 1);
        
        _animator.Play("Hit");
 
