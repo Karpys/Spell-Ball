@@ -22,7 +22,7 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < charInfo.playerPrefabForId.Count; i++)
         {
             Transform spawnForThis = possibleSpawn[Random.Range(0, possibleSpawn.Count)];
             playerInputManager.playerPrefab = charInfo.playerPrefabForId[i];

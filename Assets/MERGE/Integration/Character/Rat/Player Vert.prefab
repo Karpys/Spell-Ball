@@ -2614,7 +2614,7 @@ MonoBehaviour:
     LastMove: {x: 0, y: 0, z: 0}
   Roll_Manager:
     RollCd: -0.33333334
-    RollCdSet: 0
+    RollCdSet: 0.2
     RollDuration: -0.20827098
     RollDurationSet: 0.5
     RollSpeed: 13

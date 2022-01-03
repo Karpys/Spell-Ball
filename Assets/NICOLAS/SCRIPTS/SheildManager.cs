@@ -52,7 +52,7 @@ public class SheildManager : MonoBehaviour
 
     ColorEnum RandomColor()
     {
-        switch(Random.Range(0,4))
+        switch(Random.Range(0,GameOver.instance.player.Count))
         {
             case 0:
                 return ColorEnum.RED;

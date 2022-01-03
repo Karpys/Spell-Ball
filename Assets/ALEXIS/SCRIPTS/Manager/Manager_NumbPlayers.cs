@@ -35,8 +35,10 @@ public class Manager_NumbPlayers: MonoBehaviour
     public void AddPlayer()
     {
         id = 1;
-        if(number<3)
+        if (number < 3)
+        {
             number += 1;
+        }
         manager.playerPrefab = listPlayers[number];
         //AttribuatePlayerList();
 

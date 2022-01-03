@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject [] player = new GameObject [4];
+    public List<PlayerController> player = new List<PlayerController>();
     public GameObject Fade;
     public GameInfo Info;
     //public GameObject Boss;
@@ -23,10 +24,11 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player[0] = GameObject.Find("Player Rouge(Clone)");
+        player = FindObjectsOfType<PlayerController>().ToList();
+        /*player[0] = GameObject.Find("Player Rouge(Clone)");
         player[1] = GameObject.Find("Player Vert(Clone)");
         player[2] = GameObject.Find("Player Orange(Clone)");
-        player[3] = GameObject.Find("Player Bleu(Clone)");
+        player[3] = GameObject.Find("Player Bleu(Clone)");*/
 
     }
 
@@ -41,7 +43,7 @@ public class GameOver : MonoBehaviour
         
         bool end = true;
         Debug.Log("check end"+ end);
-        for(int i = 0; i<player.Length;i++)
+        for(int i = 0; i<player.Count;i++)
         {
             if (player[i].GetComponent<Manager_Life>().GetCurentLife() > 0 && end)
                 end = false;

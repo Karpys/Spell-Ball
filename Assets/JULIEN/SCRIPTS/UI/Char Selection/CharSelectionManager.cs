@@ -55,7 +55,7 @@ public class CharSelectionManager : MonoBehaviour
             _playersInputs[playerInput.playerIndex] = playerInput;
         }
 
-        if (_playerInputManager.playerCount == 4)
+        if (_playerInputManager.playerCount >= 1)
         {
             _startGameText.SetActive(true);
             _pressAXToJoinText.SetActive(false);
@@ -101,7 +101,7 @@ public class CharSelectionManager : MonoBehaviour
     
     private void LaunchGame(InputAction.CallbackContext ctx)
     {
-        if (_playerInputManager.playerCount == 4)
+        if (_playerInputManager.playerCount >= 1)
         {
             _managerMainMenu.LaunchGame(ctx);
         }
@@ -110,7 +110,7 @@ public class CharSelectionManager : MonoBehaviour
     public void RemovePlayer(PlayerInput playerInput)
     {
         print("Remove de joueur");
-        if (_playerInputManager.playerCount <= 4)
+        if (_playerInputManager.playerCount <= 0)
         {
             _startGameText.SetActive(false);
             _pressAXToJoinText.SetActive(true);

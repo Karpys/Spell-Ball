@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         particule.destoy = false;
         particleSystem.GetComponent<Renderer>().material.color = Color.white;
         rb = GetComponent<Rigidbody>();
-        ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
+        /*ManagePlayer = FindObjectOfType<Manager_NumbPlayers>();
 
         if(!ManagePlayer.player1)
         {
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         else if (!ManagePlayer.player4)
         {
             ManagePlayer.player4 = gameObject;
-        }
+        }*/
     }
 
     /*public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
